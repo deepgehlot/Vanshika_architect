@@ -1,0 +1,233 @@
+/* ═══════════════════════════════════════════════════════════ */
+/* Expandable Floating Contact Widget Styles                  */
+/* ═══════════════════════════════════════════════════════════ */
+
+.floating-contact-widget {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  z-index: 9995;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Tablet positioning */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .floating-contact-widget {
+    right: 30px;
+    bottom: 30px;
+  }
+}
+
+/* Mobile positioning */
+@media (max-width: 767px) {
+  .floating-contact-widget {
+    right: 20px;
+    bottom: 25px;
+  }
+}
+
+/* Main Trigger Button */
+.floating-contact-toggle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #25d366;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4), 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.25s ease,
+              opacity 0.25s ease,
+              visibility 0.25s;
+  padding: 0;
+  position: relative;
+}
+
+.floating-contact-toggle:hover,
+.floating-contact-toggle:focus-visible {
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.55), 0 3px 8px rgba(0, 0, 0, 0.2);
+  background-color: #20bd5a;
+}
+
+.floating-contact-toggle:active {
+  transform: scale(0.96);
+}
+
+.floating-contact-toggle svg {
+  display: block;
+  fill: #ffffff;
+  transition: transform 0.25s ease;
+}
+
+/* When menu is expanded, hide main toggle button */
+.floating-contact-widget.is-open .floating-contact-toggle {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: scale(0.85);
+  position: absolute;
+  bottom: 0;
+}
+
+/* Vertical Contact Menu Stack */
+.floating-contact-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(18px) scale(0.92);
+  transform-origin: bottom center;
+  transition: opacity 0.32s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.32s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.32s;
+}
+
+.floating-contact-widget.is-open .floating-contact-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+/* Individual Circular Menu Items */
+.floating-contact-item {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  position: relative;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.25s ease;
+  padding: 0;
+}
+
+.floating-contact-item:hover,
+.floating-contact-item:focus-visible {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.32);
+  color: #ffffff;
+}
+
+.floating-contact-item:active {
+  transform: scale(0.95);
+}
+
+/* Item Specific Colors & Gradients */
+.floating-contact-item.item-phone {
+  background-color: #25d366;
+}
+
+.floating-contact-item.item-phone:hover {
+  background-color: #20bd5a;
+}
+
+.floating-contact-item.item-whatsapp {
+  background-color: #25d366;
+}
+
+.floating-contact-item.item-whatsapp:hover {
+  background-color: #20bd5a;
+}
+
+.floating-contact-item.item-instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.floating-contact-item.item-instagram:hover {
+  filter: brightness(1.1);
+}
+
+.floating-contact-item.item-close {
+  background-color: #5cdb7a;
+}
+
+.floating-contact-item.item-close:hover {
+  background-color: #4ed06d;
+}
+
+.floating-contact-item svg {
+  display: block;
+}
+
+/* Stagger animation on item appearance */
+.floating-contact-widget.is-open .floating-contact-item:nth-child(1) {
+  transition-delay: 0.04s;
+}
+.floating-contact-widget.is-open .floating-contact-item:nth-child(2) {
+  transition-delay: 0.08s;
+}
+.floating-contact-widget.is-open .floating-contact-item:nth-child(3) {
+  transition-delay: 0.12s;
+}
+.floating-contact-widget.is-open .floating-contact-item:nth-child(4) {
+  transition-delay: 0.16s;
+}
+
+/* Accessible Desktop Hover Tooltips */
+.floating-contact-item .contact-tooltip {
+  position: absolute;
+  right: 58px;
+  background-color: rgba(18, 18, 18, 0.88);
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  padding: 5px 10px;
+  border-radius: 6px;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(6px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.floating-contact-item:hover .contact-tooltip {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Hide tooltips on touch/mobile devices */
+@media (hover: none) and (pointer: coarse) {
+  .floating-contact-item .contact-tooltip {
+    display: none !important;
+  }
+}
+
+/* Reduced motion preference support */
+@media (prefers-reduced-motion: reduce) {
+  .floating-contact-widget,
+  .floating-contact-toggle,
+  .floating-contact-menu,
+  .floating-contact-item,
+  .contact-tooltip {
+    transition: none !important;
+    animation: none !important;
+  }
+}

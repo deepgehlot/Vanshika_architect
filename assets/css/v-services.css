@@ -1,0 +1,101 @@
+/* New Services Implementation for Vanshika Website */
+
+.v-services-section {
+    background-color: #ffffff;
+}
+
+.v-service-card-wipe {
+    position: relative;
+    border-radius: 4px;
+    margin-bottom: 0;
+    cursor: pointer;
+    background: #ffffff;
+    overflow: hidden;
+    /* Initial state for GSAP */
+    opacity: 0;
+    transform: translateY(80px);
+}
+
+.v-service-img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.v-service-img img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+    display: block;
+}
+
+.v-service-card-wipe:hover .v-service-img img {
+    transform: scale(1.1);
+}
+
+.v-service-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px;
+    background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.5) 50%, transparent 100%);
+    color: #fff;
+    transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.v-service-info h3 {
+    color: #c29a6c !important;
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-family: 'Futura PT', sans-serif;
+    transition: transform 0.4s ease;
+}
+
+.v-service-text {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    transform: translateY(20px);
+}
+
+.v-service-text p {
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.v-service-card-wipe:hover .v-service-info {
+    padding-bottom: 50px;
+    background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 60%, transparent 100%);
+}
+
+.v-service-card-wipe:hover .v-service-text {
+    max-height: 120px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 991px) {
+    .v-service-img img {
+        height: 400px;
+    }
+}
+
+@media (max-width: 767px) {
+    .v-service-img img {
+        height: 380px;
+    }
+    .v-service-info h3 {
+        font-size: 26px;
+    }
+    .v-service-info {
+        padding: 25px;
+    }
+}
+
+
