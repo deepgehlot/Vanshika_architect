@@ -821,8 +821,9 @@
     }
     */
 
-    // Blog Grid Stagger Animation
+    // Blog Grid Stagger Animation (Disabled - Cards stay static)
     $(window).on('preloaderDone', function () {
+      /*
       if ($('body:not(.awards-page) .gsap-blog-anim').length > 0) {
         gsap.utils.toArray('body:not(.awards-page) .gsap-blog-anim').forEach(function (card, index) {
           gsap.fromTo(card,
@@ -832,7 +833,7 @@
               y: 0,
               duration: 2.5,
               ease: 'power3.out',
-              delay: (index % 3) * 0.2, // simulates a smooth stagger across 3 columns
+              delay: (index % 3) * 0.2,
               scrollTrigger: {
                 trigger: card,
                 start: 'top 85%',
@@ -842,6 +843,7 @@
           );
         });
       }
+      */
 
       // Awards Grid Asymmetrical Slide Animation (Left/Right slide in)
       if ($('.awards-page .gsap-blog-anim').length > 0) {

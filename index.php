@@ -480,21 +480,21 @@
                                 <div class="featured-logos-wrap">
                                     <!-- AD (Architectural Digest) -->
                                     <div class="featured-logo-card" title="Architectural Digest">
-                                        <svg viewBox="0 0 100 46" width="76" height="34">
+                                        <svg viewBox="0 0 100 46" width="102" height="44">
                                             <text x="50" y="26" font-family="'Didot', 'Playfair Display', Georgia, serif" font-size="26" font-weight="900" text-anchor="middle" fill="#000" letter-spacing="1">AD</text>
                                             <text x="50" y="38" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="5.5" font-weight="700" text-anchor="middle" fill="#000" letter-spacing="1.2">ARCHITECTURAL DIGEST</text>
                                         </svg>
                                     </div>
                                     <!-- ELLE DECOR -->
                                     <div class="featured-logo-card" title="ELLE DECOR">
-                                        <svg viewBox="0 0 100 46" width="76" height="34">
+                                        <svg viewBox="0 0 100 46" width="102" height="44">
                                             <text x="50" y="24" font-family="'Didot', 'Bodoni MT', Georgia, serif" font-size="22" font-weight="700" text-anchor="middle" fill="#000" letter-spacing="5">ELLE</text>
                                             <text x="50" y="38" font-family="'Century Gothic', 'Futura', sans-serif" font-size="6.5" font-weight="600" text-anchor="middle" fill="#000" letter-spacing="3.5">DECOR</text>
                                         </svg>
                                     </div>
                                     <!-- ap Beautiful Homes with asianpaints -->
                                     <div class="featured-logo-card" title="Asian Paints Beautiful Homes">
-                                        <svg viewBox="0 0 115 46" width="90" height="34">
+                                        <svg viewBox="0 0 115 46" width="118" height="44">
                                             <text x="16" y="26" font-family="'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="900" fill="#d9381e">ap</text>
                                             <text x="34" y="20" font-family="'Century Gothic', Arial, sans-serif" font-size="6.5" font-weight="700" fill="#111" letter-spacing="0.5">BEAUTIFUL</text>
                                             <text x="34" y="28" font-family="'Century Gothic', Arial, sans-serif" font-size="6.5" font-weight="700" fill="#111" letter-spacing="0.5">HOMES</text>
@@ -503,7 +503,7 @@
                                     </div>
                                     <!-- Livingetc INDIA -->
                                     <div class="featured-logo-card" title="Livingetc INDIA">
-                                        <svg viewBox="0 0 110 46" width="86" height="34">
+                                        <svg viewBox="0 0 110 46" width="112" height="44">
                                             <text x="55" y="25" font-family="'Didot', 'Playfair Display', Georgia, serif" font-size="15" font-weight="900" text-anchor="middle" fill="#000" letter-spacing="0.5">Livingetc</text>
                                             <text x="55" y="37" font-family="'Helvetica Neue', Arial, sans-serif" font-size="6" font-weight="800" text-anchor="middle" fill="#000" letter-spacing="2.2">INDIA</text>
                                         </svg>

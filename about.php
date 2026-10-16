@@ -151,22 +151,24 @@
                             </div>
                         </div>
 
-                        <!-- 3. Bottom Section: CTA Banner with Button (as drawn in diagram) -->
-                        <div class="about-cta-banner-wrapper pt-5 mt-4">
-                            <div class="about-editorial-cta-box text-center">
-                                <span class="cta-overhead-label">START YOUR JOURNEY</span>
-                                <h2 class="cta-headline">Bring Your New Dream Project To Life</h2>
-                                <p class="cta-subtext">
-                                    Have an architectural or interior vision in mind? Let’s collaborate to build a bespoke space tailored to your lifestyle.
-                                </p>
-                                <div class="cta-btn-wrap mt-4">
-                                    <a href="contact.php" class="cta-gold-btn">
-                                        Contact Us <i class="las la-arrow-right"></i>
-                                    </a>
-                                </div>
+                    </div>
+                </section>
+
+                <!-- 3. Full Length Grand CTA Section (Bring Your New Dream Project To Life) -->
+                <section class="about-full-length-cta-section text-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.58)), url('https://res.cloudinary.com/dwzfpa4vq/image/upload/v1782466457/about-bg_vxad3j.jpg');">
+                    <div class="container-fluid px-lg-5 px-md-4 px-3 about-cta-divider-container" style="max-width: 1320px; margin: 0 auto;">
+                        <div class="about-full-cta-inner mx-auto">
+                            <span class="cta-overhead-label">START YOUR JOURNEY</span>
+                            <h2 class="cta-headline">Bring Your New Dream Project To Life</h2>
+                            <p class="cta-subtext">
+                                Have an architectural or interior vision in mind? Let’s collaborate to build a bespoke space tailored to your lifestyle.
+                            </p>
+                            <div class="cta-btn-wrap mt-4">
+                                <a href="contact.php" class="cta-gold-btn">
+                                    Contact Us <i class="las la-arrow-right"></i>
+                                </a>
                             </div>
                         </div>
-
                     </div>
                 </section>
             </main>

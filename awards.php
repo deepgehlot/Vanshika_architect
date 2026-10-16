@@ -510,7 +510,7 @@ $page_title = "Awards & Recognitions";
 
                         <!-- Bottom Block: Featured Articles & Press Coverage -->
                         <div class="articles-coverage-block pt-5 mt-5">
-                            <h3 class="articles-coverage-title mb-4">FEATURED ARTICLES & PRESS</h3>
+                            <h3 class="articles-coverage-title text-center mb-4">FEATURED ARTICLES & PRESS</h3>
                             <div class="row g-4">
                                 <!-- Article 1 -->
                                 <div class="col-lg-4 col-md-6 col-12">

@@ -163,11 +163,10 @@
                                 <!-- 3. Mobile Number & Email -->
                                 <div class="detail-group">
                                     <div class="timing-mobile mb-2">
-                                        <p class="mb-0"><span class="accent-text">Mobile No :</span> <a href="tel:+918504996971">+91 85049 96971</a>, <a href="tel:+919220497876">+91 92204 97876</a></p>
+                                        <p class="mb-0"><span class="accent-text">Mobile No :</span> <a href="tel:+918504996971">+91 85049 96971</a></p>
                                     </div>
                                     <div class="office-emails">
-                                        <p class="mb-1"><span class="accent-text">Email :</span> <a href="mailto:thespacetales@gmail.com">thespacetales@gmail.com</a></p>
-                                        <p class="mb-0"><span class="accent-text">Email :</span> <a href="mailto:contact@thespacetales.com">contact@thespacetales.com</a></p>
+                                        <p class="mb-0"><span class="accent-text">Email :</span> <a href="mailto:thespacetales@gmail.com">thespacetales@gmail.com</a></p>
                                     </div>
                                 </div>
                             </div>

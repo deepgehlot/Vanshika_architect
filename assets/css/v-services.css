@@ -11,9 +11,9 @@
     cursor: pointer;
     background: #ffffff;
     overflow: hidden;
-    /* Initial state for GSAP */
-    opacity: 0;
-    transform: translateY(80px);
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
 }
 
 .v-service-img {

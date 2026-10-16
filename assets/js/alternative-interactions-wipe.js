@@ -335,7 +335,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 );
             }
 
-            // Services Page Hero: fade-up heading and subtitle
+            // Services Page Hero: fade-up heading and subtitle (Disabled - stays static)
+            /*
             const servicesHeroContent = document.querySelector(".services-hero-content");
             if (servicesHeroContent) {
                 const elements = servicesHeroContent.querySelectorAll("h1, p");
@@ -344,6 +345,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     { y: 0, opacity: 1, duration: 1.2, stagger: 0.2, ease: "power3.out" }
                 );
             }
+            */
 
             // 2. Who I Am section: fade-up text on scroll
             const whoIAmContent = document.querySelector("#reveal-about .alternative-content-reveal");
@@ -407,7 +409,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     function initScrollAnimations() {
-        // Services Page (.v-service-card-wipe) Entrance Stagger (All viewports)
+        // Services Page (.v-service-card-wipe) Entrance Stagger (Disabled - Cards stay static)
+        /*
         const serviceCards = document.querySelectorAll('.v-service-card-wipe');
         if (serviceCards.length > 0) {
             serviceCards.forEach(function (card, index) {
@@ -418,16 +421,17 @@ document.addEventListener("DOMContentLoaded", function () {
                         y: 0,
                         duration: 1.5,
                         ease: "power3.out",
-                        delay: (index % 2) * 0.15, // 2 column stagger
+                        delay: (index % 2) * 0.15,
                         scrollTrigger: {
                             trigger: card,
-                            start: "top 95%", // Triggers when the top of the card enters the viewport
+                            start: "top 95%",
                             toggleActions: 'play none none none'
                         }
                     }
                 );
             });
         }
+        */
 
         // Blog Page Hero Title & Subtitle Fadeup (All viewports)
         const blogHeroContent = document.querySelector(".blog-hero-content");
@@ -439,7 +443,8 @@ document.addEventListener("DOMContentLoaded", function () {
             );
         }
 
-        // Blog Page Cards Directional Wipe Reveal (All viewports)
+        // Blog Page Cards Directional Wipe Reveal (Disabled - Cards stay static)
+        /*
         const blogCards = document.querySelectorAll('.blog-section .gsap-blog-anim');
         if (blogCards.length > 0) {
             blogCards.forEach(function (col, index) {
@@ -454,7 +459,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             ease: "power2.out",
                             scrollTrigger: {
                                 trigger: col,
-                                start: "top 90%", // triggers when top of column enters 90% height
+                                start: "top 90%",
                                 toggleActions: 'play none none none'
                             }
                         }
@@ -462,6 +467,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             });
         }
+        */
 
         if (window.innerWidth >= 992) {
             // About Page Overlapping Slide-Up Sections (Pinning previous sections so the next one covers it)

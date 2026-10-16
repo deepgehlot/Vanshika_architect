@@ -2297,11 +2297,11 @@ body.dark .header-sticky .container {
   /* Ensure navigation inner doesn't overlap */
 }
 
-/* Ensure links are white */
+/* Ensure links are white in dark mode, full opacity by default */
 .main-menu ul>li>a,
 body.dark .main-menu ul>li>a {
   color: #fff;
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .main-menu ul>li>a:hover,
@@ -2325,12 +2325,13 @@ body.dark .main-menu ul>li>a:hover {
 .main-menu ul>li>a {
   display: inline-block;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 500;
   text-transform: capitalize;
   line-height: 1;
   padding: 35px 0;
   overflow: hidden;
-  color: #868686;
+  color: #111111;
+  opacity: 1;
 }
 
 .main-menu ul>li:hover>ul {
