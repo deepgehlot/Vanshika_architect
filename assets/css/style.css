@@ -110,7 +110,7 @@ html,
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
   overflow-x: hidden;
 }
 
@@ -2204,13 +2204,13 @@ body.dark .header-area .navigation body.light {
   z-index: 9;
   display: block;
   background: transparent;
-  padding: 15px 0;
+  padding: 13px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 @media (max-width: 991px) {
   .header-area .navigation {
-    padding: 25px 0;
+    padding: 23px 0;
     /* Add space on mobile so logo/burger aren't cramped at top */
   }
 
@@ -2328,7 +2328,7 @@ body.dark .main-menu ul>li>a:hover {
   font-weight: 500;
   text-transform: capitalize;
   line-height: 1;
-  padding: 35px 0;
+  padding: 32px 0;
   overflow: hidden;
   color: #111111;
   opacity: 1;
@@ -7055,7 +7055,7 @@ body.dark .gallery-item {
   z-index: 2;
   overflow: hidden;
   background-color: var(--white-color, #fff);
-  box-shadow: 0 -15px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: none !important;
 }
 
 body.dark .about-section,
@@ -7065,7 +7065,7 @@ body.dark .principal_architect {
 
 body.dark .service-section {
   background-color: var(--black-color, #0F1215);
-  box-shadow: 0 -15px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: none !important;
 }
 
 /* Services Stacked Animations Container */

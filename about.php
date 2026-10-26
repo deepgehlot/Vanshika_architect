@@ -36,11 +36,11 @@
     <!-- Odometer CSS -->
     <link href="assets/css/odometer.min.css" rel="stylesheet">
     <!-- Style CSS -->
-    <link href="assets/css/style.css?v=<?php echo time(); ?>" rel="stylesheet">
+    <link href="assets/css/style.css?v=1.2.3" rel="stylesheet">
     <!-- Alternative Custom Style Override -->
-    <link href="assets/css/alternative-style.css?v=<?php echo time(); ?>" rel="stylesheet">
+    <link href="assets/css/alternative-style.css?v=1.2.6" rel="stylesheet">
     <!-- Floating Contact Widget -->
-    <link href="assets/css/floating-contact.css?v=<?php echo time(); ?>" rel="stylesheet">
+    <link href="assets/css/floating-contact.css?v=1.2.3" rel="stylesheet">
 
 </head>
 
@@ -72,8 +72,7 @@
                             <div class="col-xl-8">
                                 <h6 class="text-uppercase mb-3" style="color: #c29a6c; letter-spacing: 2px;">
                                     About Us</h6>
-                                <h1 class="display-3 text-dark mb-4" style="font-family: 'Futura PT', sans-serif;">
-                                    Architect Vanshika</h1>
+                                <h1 class="display-3 text-uppercase mb-4">Architect Vanshika</h1>
                                 <p class="mb-0 text-muted">A distinguished design practice redefining luxury residential architecture and bespoke interior spaces.</p>
                             </div>
                         </div>
@@ -90,12 +89,12 @@
                             <div class="col-lg-5 col-md-5 col-12">
                                 <div class="about-profile-box">
                                     <div class="about-single-profile-card">
-                                        <img src="assets/img/vans.jpg" alt="Vanshika Agarwal" class="about-single-profile-img">
+                                        <img src="assets/img/WEB/ABOUT ME.webp" alt="Vanshika Agarwal" class="about-single-profile-img">
                                     </div>
                                     <!-- Name and Description under Image as requested -->
                                     <div class="about-profile-meta text-center text-md-start">
                                         <h3 class="about-profile-name">Vanshika Agarwal</h3>
-                                        <span class="about-profile-role">Principal Architect & Founder</span>
+                                        <span class="about-profile-role">Principal Designer & Founder</span>
                                     </div>
                                 </div>
                             </div>
@@ -103,7 +102,7 @@
                             <!-- Right: Editorial Content / Philosophy Story -->
                             <div class="col-lg-7 col-md-7 col-12 ps-lg-5">
                                 <div class="about-story-content">
-                                    <h2 class="about-editorial-title">OUR PHILOSOPHY</h2>
+                                    <h2 class="about-editorial-title">Meet the founder.</h2>
                                     <p class="about-lead-text">
                                         Vanshika Agarwal brings over eight years of refined expertise to luxury interior design and architecture. As the founder and Principal Architect of Vanshika Agarwal Designs, she specializes in transforming high-end bungalows, luxury apartments, and commercial spaces into stunning masterpieces.
                                     </p>
@@ -155,7 +154,7 @@
                 </section>
 
                 <!-- 3. Full Length Grand CTA Section (Bring Your New Dream Project To Life) -->
-                <section class="about-full-length-cta-section text-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.58)), url('https://res.cloudinary.com/dwzfpa4vq/image/upload/v1782466457/about-bg_vxad3j.jpg');">
+                <section class="about-full-length-cta-section text-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.58)), url('assets/img/WEB/CONTACT US.webp');">
                     <div class="container-fluid px-lg-5 px-md-4 px-3 about-cta-divider-container" style="max-width: 1320px; margin: 0 auto;">
                         <div class="about-full-cta-inner mx-auto">
                             <span class="cta-overhead-label">START YOUR JOURNEY</span>
@@ -217,9 +216,9 @@
     <!-- Main JS -->
     <script src="assets/js/main.js"></script>
     <!-- Alternative Theme Custom JS Animations -->
-    <script src="assets/js/alternative-interactions.js?v=<?php echo time(); ?>"></script>
+    <script src="assets/js/alternative-interactions.js?v=1.2.0"></script>
     <!-- Floating Contact JS -->
-    <script src="assets/js/floating-contact.js?v=<?php echo time(); ?>"></script>
+    <script src="assets/js/floating-contact.js?v=1.2.0"></script>
 
     <!-- Simple OnScroll Animation Script -->
     <script>

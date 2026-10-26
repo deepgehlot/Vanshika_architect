@@ -30,6 +30,7 @@
                             <a href="about.php">About Us</a>
                             <a href="services.php">Services</a>
                             <a href="projects.php">Projects</a>
+                            <a href="gallery.php">Gallery</a>
                             <a href="awards.php">Awards</a>
                         </li>
                     </ul>

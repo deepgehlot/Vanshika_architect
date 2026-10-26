@@ -35,14 +35,12 @@
     <link href="assets/css/metismenu.css" rel="stylesheet">
     <!-- Odometer CSS -->
     <link href="assets/css/odometer.min.css" rel="stylesheet">
-    <!-- Dark Style CSS -->
-    <!-- <link href="assets/css/dark.css" rel="stylesheet"> -->
     <!-- Style CSS -->
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/style.css?v=1.2.3" rel="stylesheet">
     <!-- Floating Contact Widget -->
-    <link href="assets/css/floating-contact.css?v=<?php echo time(); ?>" rel="stylesheet">
+    <link href="assets/css/floating-contact.css?v=1.2.3" rel="stylesheet">
     <!-- Alternative Custom Style Override -->
-    <link href="assets/css/alternative-style.css?v=<?php echo time(); ?>" rel="stylesheet">
+    <link href="assets/css/alternative-style.css?v=1.2.6" rel="stylesheet">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
@@ -69,38 +67,37 @@
         <div id="smooth-content">
 
             <!-- Project Detail Hero (Auto-populated by handler) -->
-            <div class="project-hero-section section-padding pb-0 pt-150">
-                <div class="container-fluid px-md-5 px-3">
+            <div class="project-hero-section">
+                <div class="container" style="max-width: 1380px;">
                     <div class="row justify-content-center text-center">
-                        <div class="col-xl-8">
-                            <h1 class="display-3 text-dark mb-4">Loading...</h1>
-                            <p class="mb-0 text-muted text-uppercase letter-spacing-2"></p>
+                        <div class="col-xl-10">
+                            <h1 class="project-title mb-1">Loading...</h1>
+                            <p class="project-category mb-0 text-muted text-uppercase letter-spacing-2"></p>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Project Images Slider (Auto-populated by handler) -->
-            <div class="project-detail-gallery section-padding pt-50 pb-50">
-                <div class="container-fluid px-md-5 px-3">
+            <div class="project-detail-gallery">
+                <div class="container" style="max-width: 1380px;">
                     <div class="row justify-content-center">
                         <div class="col-12">
-                            <!-- Main Slider -->
-                            <div class="project-main-slider mb-4">
+                            <!-- Main Viewing Slide (Scaled to fit viewport comfortably) -->
+                            <div class="project-main-slider mb-3">
                                 <!-- Dynamic Slides -->
                             </div>
 
-                            <!-- Thumbnail Slider -->
+                            <!-- Thumbnail Slider (4-box row layout) -->
                             <div class="project-thumb-slider">
                                 <!-- Dynamic Thumbnails -->
                             </div>
                         </div>
                     </div>
 
-
-                    <div class="row mt-5">
+                    <div class="row mb-4">
                         <div class="col-12 text-center">
-                            <a href="projects.php" class="view-project-btn">Back to Projects</a>
+                            <a href="projects.php" class="view-project-btn" style="margin-top: 33px;">Back to Projects</a>
                         </div>
                     </div>
 
@@ -147,15 +144,15 @@
     <script src="assets/js/SplitText.min.js"></script>
     <script src="assets/js/ScrollSmoother.min.js"></script>
     <script src="assets/js/ScrollTrigger.min.js"></script>
-    <script src="assets/js/smoother-script.js"></script>
+    <script src="assets/js/smoother-script.js?v=1.2.0"></script>
     <script src="assets/js/heading-animation.js"></script>
     <script src="assets/js/paragraph-animation.js"></script>
     <!-- Projects Handler JS -->
-    <script src="assets/js/projects-handler.js"></script>
+    <script src="assets/js/projects-handler.js?v=1.2.0"></script>
     <!-- Main JS -->
     <script src="assets/js/main.js"></script>
     <!-- Floating Contact JS -->
-    <script src="assets/js/floating-contact.js?v=<?php echo time(); ?>"></script>
+    <script src="assets/js/floating-contact.js?v=1.2.0"></script>
 
 </body>
 

@@ -35,14 +35,12 @@
     <link href="assets/css/metismenu.css" rel="stylesheet">
     <!-- Odometer CSS -->
     <link href="assets/css/odometer.min.css" rel="stylesheet">
-    <!-- Dark Style CSS -->
-    <link href="assets/css/dark.css" rel="stylesheet">
     <!-- Style CSS -->
     <link href="assets/css/style.css" rel="stylesheet">
     <!-- Alternative Custom Style Override -->
-    <link href="assets/css/alternative-style.css?v=<?php echo time(); ?>" rel="stylesheet">
+    <link href="assets/css/alternative-style.css?v=1.2.6" rel="stylesheet">
     <!-- Floating Contact Widget -->
-    <link href="assets/css/floating-contact.css?v=<?php echo time(); ?>" rel="stylesheet">
+    <link href="assets/css/floating-contact.css?v=1.2.0" rel="stylesheet">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
@@ -243,7 +241,7 @@
                                 Contact us directly.</h2>
 
                             <div class="circle-btn-wrap">
-                                <a href="contact.html" class="circle-btn-talk">
+                                <a href="contact.php" class="circle-btn-talk">
                                     <span>Contact <br> Us</span>
                                 </a>
                             </div>
@@ -350,7 +348,7 @@
         });
     </script>
     <!-- Floating Contact JS -->
-    <script src="assets/js/floating-contact.js?v=<?php echo time(); ?>"></script>
+    <script src="assets/js/floating-contact.js?v=1.2.0"></script>
 
 </body>
 

@@ -31,6 +31,8 @@
                             <div class="d-flex align-items-center justify-content-end" style="flex: 1;">
                                 <div class="main-menu" style="margin-right: 30px;">
                                     <ul>
+                                        <li><a class="navlink" href="gallery.php"
+                                                style="text-transform: uppercase;">Gallery</a></li>
                                         <li><a class="navlink" href="blog.php"
                                                 style="text-transform: uppercase;">Blogs</a></li>
                                         <li><a class="navlink" href="awards.php"
@@ -49,7 +51,7 @@
                         <div class="logo">
                             <a href="index.php" class="logo">
                                 <img src="assets/img/logo/full_logo.png" alt="Vanshika Logo"
-                                    style="max-height: 63px; width: auto;">
+                                    style="max-height: 60px; width: auto;">
                             </a>
                         </div>
                     </div>
@@ -69,6 +71,7 @@
                                         <li><a href="about.php">About Us</a></li>
                                         <li><a href="services.php">Services</a></li>
                                         <li><a href="projects.php">Projects</a></li>
+                                        <li><a href="gallery.php">Gallery</a></li>
                                         <li><a href="blog.php">Blogs</a></li>
                                         <li><a href="awards.php">Awards</a></li>
                                     </ul>

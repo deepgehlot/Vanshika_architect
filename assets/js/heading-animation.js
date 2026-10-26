@@ -1,5 +1,5 @@
 $(function () {
-
+    if (typeof gsap === "undefined" || typeof SplitText === "undefined") return;
     gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
 
     // Title Animation
@@ -19,7 +19,6 @@ $(function () {
   
       const headingSplitLine = new SplitText(headingAnimationLine, { type: "words" });
       gsap.set(headingAnimationLine, { perspective: 400 });
-      headingSplitLine.split({ type: "words" })
       tl.from(headingSplitLine.words, { 
         duration: 1, 
         delay: 0.2, 

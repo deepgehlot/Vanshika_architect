@@ -34,14 +34,12 @@
     <link href="assets/css/metismenu.css" rel="stylesheet">
     <!-- Odometer CSS -->
     <link href="assets/css/odometer.min.css" rel="stylesheet">
-    <!-- Dark Style CSS -->
-    <!-- <link href="assets/css/dark.css" rel="stylesheet"> -->
     <!-- Style CSS -->
-    <link href="assets/css/style.css?v=<?php echo time(); ?>" rel="stylesheet">
+    <link href="assets/css/style.css?v=1.2.3" rel="stylesheet">
     <!-- Alternative Custom Style Override -->
-    <link href="assets/css/alternative-style.css?v=<?php echo time(); ?>" rel="stylesheet">
+    <link href="assets/css/alternative-style.css?v=1.2.6" rel="stylesheet">
     <!-- Floating Contact Widget -->
-    <link href="assets/css/floating-contact.css?v=<?php echo time(); ?>" rel="stylesheet">
+    <link href="assets/css/floating-contact.css?v=1.2.3" rel="stylesheet">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
@@ -60,6 +58,28 @@
             </div>
         </div>
     </div>
+    <script>
+        // Failsafe: Ensure loader always dismisses swiftly on Contact page
+        (function() {
+            var dismiss = function() {
+                var l = document.getElementById('loader');
+                if (l && l.style.display !== 'none') {
+                    l.style.transition = 'opacity 0.4s ease';
+                    l.style.opacity = '0';
+                    setTimeout(function() { l.style.display = 'none'; }, 400);
+                    document.body.classList.add('preloader-done');
+                    var h = document.querySelector('.header-area');
+                    if (h) h.classList.add('nav-elements-active');
+                }
+            };
+            if (document.readyState === 'complete') {
+                setTimeout(dismiss, 300);
+            } else {
+                window.addEventListener('load', function() { setTimeout(dismiss, 200); });
+                setTimeout(dismiss, 900); // 900ms absolute fallback
+            }
+        })();
+    </script>
 
     <?php include 'header.php'; ?>
 
@@ -73,40 +93,42 @@
             <div class="contact-form-section section-padding pt-150 pb-0" style="margin-top: 60px;">
                 <div class="container-fluid px-md-5 px-3">
                     <div class="row">
-                        <div class="col-lg-6 form-title-anim ">
-                            <span class="small-title">INSPIRE</span>
-                            <h1 class="display-3 text-uppercase mt-2 mb-4 heading-animation" style="line-height: 1.15;">
-                                Let’s <br class="d-none d-lg-block"> Bring Your <br class="d-none d-lg-block"> Vision To <br class="d-none d-lg-block"> Life</h1>
+                        <div class="col-lg-6 d-flex justify-content-center justify-content-lg-center align-items-start">
+                            <div class="contact-title-wrapper" style="max-width: 480px; width: 100%;">
+                                <span class="small-title">INSPIRE</span>
+                                <h1 class="display-3 text-uppercase mt-2 mb-4" style="line-height: 1.12; color: #c29a6c; font-family: 'Futura PT', sans-serif; font-size: 60px;">
+                                    Let’s <br class="d-none d-lg-block"> Bring Your <br class="d-none d-lg-block"> Vision To <br class="d-none d-lg-block"> Life</h1>
+                            </div>
                         </div>
                         <div class="col-lg-6">
-                            <div class="p-animation">
-                                <p class="mb-5">Our experts will be happy to help you create a harmonious space that
+                            <div>
+                                <p class="mb-5 contact-hero-lead">Our experts will be happy to help you create a harmonious space that
                                     suits your needs and style.</p>
                             </div>
 
                             <form id="contact-form" class="minimal-contact-form">
-                                <div class="form-group mb-4 form-anim-item">
+                                <div class="form-group mb-4">
                                     <label for="name" class="sr-only">Your Name</label>
                                     <input type="text" id="name" name="user_name" placeholder="YOUR NAME"
                                         class="form-control-minimal" required>
                                 </div>
-                                <div class="form-group mb-4 form-anim-item">
+                                <div class="form-group mb-4">
                                     <label for="email" class="sr-only">Your Email</label>
                                     <input type="email" id="email" name="user_email" placeholder="YOUR EMAIL"
                                         class="form-control-minimal" required>
                                 </div>
-                                <div class="form-group mb-4 form-anim-item">
+                                <div class="form-group mb-4">
                                     <label for="phone" class="sr-only">Your Phone</label>
                                     <input type="tel" id="phone" name="user_phone" placeholder="YOUR PHONE"
                                         class="form-control-minimal" pattern="[0-9]{10,15}"
                                         title="Please enter a valid phone number (10-15 digits)" required>
                                 </div>
-                                <div class="form-group mb-4 form-anim-item">
+                                <div class="form-group mb-4">
                                     <label for="subject" class="sr-only">Project Type / Subject</label>
                                     <input type="text" id="subject" name="user_subject" placeholder="PROJECT TYPE / SUBJECT"
                                         class="form-control-minimal">
                                 </div>
-                                <div class="form-group mb-4 form-anim-item">
+                                <div class="form-group mb-4">
                                     <label for="message" class="sr-only">Your Message</label>
                                     <input type="text" id="message" name="user_message" placeholder="YOUR MESSAGE"
                                         class="form-control-minimal">
@@ -245,73 +267,10 @@
     <script src="assets/js/heading-animation.js"></script>
     <script src="assets/js/paragraph-animation.js"></script>
     <!-- Main JS -->
-    <script src="assets/js/main.js?v=<?php echo time(); ?>"></script>
+    <script src="assets/js/main.js?v=1.2.0"></script>
     <!-- Alternative Theme Custom JS Animations -->
     <script src="assets/js/alternative-interactions-wipe.js"></script>
 
-    <script title="Contact Animations">
-        $(function () {
-            if (typeof gsap !== 'undefined') {
-                $(window).on('preloaderDone', function () {
-                    // Form section reveal (Title + Form items)
-                    gsap.from(".form-title-anim, .form-anim-item", {
-                        scrollTrigger: {
-                            trigger: ".contact-form-section",
-                            start: "top 80%",
-                        },
-                        y: 40,
-                        opacity: 0,
-                        duration: 1.2,
-                        stagger: 0.2,
-                        ease: "power2.out"
-                    });
-
-                    // 3. Testimonials reveal
-                    gsap.from(".testimonial-header, .contact-testimonial-carousel", {
-                        scrollTrigger: {
-                            trigger: ".contact-testimonials-section",
-                            start: "top 80%",
-                        },
-                        y: 40,
-                        opacity: 0,
-                        duration: 1.2,
-                        stagger: 0.3,
-                        ease: "power2.out"
-                    });
-
-                    // 4. Philosophy Section Reveal
-                    gsap.from(".philosophy-text, .philosophy-image-wrapper", {
-                        scrollTrigger: {
-                            trigger: ".philosophy-section",
-                            start: "top 85%",
-                        },
-                        y: 50,
-                        opacity: 0,
-                        duration: 1.5,
-                        stagger: 0.4,
-                        ease: "power2.out"
-                    });
-
-                    // 5. Simple scroll parallax for images (philosophy only, not hero to avoid height inflation)
-                    gsap.utils.toArray(".philosophy-image-wrapper img").forEach(img => {
-                        gsap.to(img, {
-                            scrollTrigger: {
-                                trigger: img,
-                                start: "top bottom",
-                                end: "bottom top",
-                                scrub: 1.5
-                            },
-                            yPercent: 8,
-                            ease: "none"
-                        });
-                    });
-
-                    // Refresh ScrollTrigger after all animations are set up
-                    ScrollTrigger.refresh();
-                });
-            }
-        });
-    </script>
 
     <!-- PHP Mailer Integration -->
     <script type="text/javascript">
@@ -351,7 +310,7 @@
         });
     </script>
     <!-- Floating Contact JS -->
-    <script src="assets/js/floating-contact.js?v=<?php echo time(); ?>"></script>
+    <script src="assets/js/floating-contact.js?v=1.2.0"></script>
 
 </body>
 

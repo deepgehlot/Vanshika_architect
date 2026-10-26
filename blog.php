@@ -35,14 +35,12 @@
     <link href="assets/css/metismenu.css" rel="stylesheet">
     <!-- Odometer CSS -->
     <link href="assets/css/odometer.min.css" rel="stylesheet">
-    <!-- Dark Style CSS -->
-    <!-- <link href="assets/css/dark.css" rel="stylesheet"> -->
     <!-- Style CSS -->
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/style.css?v=1.2.3" rel="stylesheet">
     <!-- Floating Contact Widget -->
-    <link href="assets/css/floating-contact.css?v=<?php echo time(); ?>" rel="stylesheet">
+    <link href="assets/css/floating-contact.css?v=1.2.3" rel="stylesheet">
     <!-- Alternative Custom Style Override -->
-    <link href="assets/css/alternative-style.css?v=<?php echo time(); ?>" rel="stylesheet">
+    <link href="assets/css/alternative-style.css?v=1.2.6" rel="stylesheet">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
@@ -74,7 +72,7 @@
                 <div class="container-fluid px-md-5 px-3">
                     <div class="row justify-content-center text-center">
                         <div class="col-xl-8 blog-hero-content">
-                            <h1 class="display-3 text-dark mb-4">Inside the Studio</h1>
+                            <h1 class="display-3 text-uppercase mb-4">Inside the Studio</h1>
                             <p class="mb-0 text-muted">A curated look at the spaces where ideas take shape and
                                 creativity flourishes.</p>
                         </div>
@@ -92,7 +90,7 @@
                             <div class="blog-card-unique">
                                 <div class="blog-img">
                                     <a href="blog-detail.php?id=1">
-                                        <img src="	https://res.cloudinary.com/dwzfpa4vq/image/upload/v1782461461/IMG_4346.JPG_wzrxiz.jpg"
+                                        <img src="assets/img/WEB/SERVICES ARCHITECTURE.webp"
                                             alt="Blog Post" class="img-fluid w-100">
                                     </a>
                                     <div class="blog-date">
@@ -116,7 +114,7 @@
                             <div class="blog-card-unique">
                                 <div class="blog-img">
                                     <a href="blog-detail.php?id=2">
-                                        <img src="	https://res.cloudinary.com/dwzfpa4vq/image/upload/v1782461461/IMG_4346.JPG_wzrxiz.jpg"
+                                        <img src="assets/img/WEB/SERVICES STYLING.webp"
                                             alt="Blog Post" class="img-fluid w-100">
                                     </a>
                                     <div class="blog-date">
@@ -139,7 +137,7 @@
                             <div class="blog-card-unique">
                                 <div class="blog-img">
                                     <a href="blog-detail.php?id=3">
-                                        <img src="	https://res.cloudinary.com/dwzfpa4vq/image/upload/v1782461461/IMG_4346.JPG_wzrxiz.jpg"
+                                        <img src="assets/img/WEB/HERITAGE LUXURY.webp"
                                             alt="Blog Post" class="img-fluid w-100">
                                     </a>
                                     <div class="blog-date">
@@ -206,11 +204,11 @@
     <script src="assets/js/heading-animation.js"></script>
     <script src="assets/js/paragraph-animation.js"></script>
     <!-- Main JS -->
-    <script src="assets/js/main.js?v=<?php echo time(); ?>"></script>
+    <script src="assets/js/main.js?v=1.2.0"></script>
     <!-- Alternative Theme Custom JS Animations -->
     <script src="assets/js/alternative-interactions-wipe.js"></script>
     <!-- Floating Contact JS -->
-    <script src="assets/js/floating-contact.js?v=<?php echo time(); ?>"></script>
+    <script src="assets/js/floating-contact.js?v=1.2.0"></script>
 
 </body>
 

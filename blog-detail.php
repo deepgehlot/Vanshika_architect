@@ -6,7 +6,7 @@ $blogs = [
         'category' => 'Architecture',
         'date' => 'Jan 24, 2025',
         'author' => 'Vanshika',
-        'image' => 'assets/img/blog/blog-1.jpg',
+        'image' => 'assets/img/WEB/SERVICES ARCHITECTURE.webp',
         'content' => '
             <p class="mb-4">Sustainable architecture is no longer just a trend; it is a necessity.
                 As we move forward, the integration of eco-friendly materials and energy-efficient
@@ -14,7 +14,7 @@ $blogs = [
                 collective responsibility to reduce our carbon footprint and create healthier living
                 environments.</p>
 
-            <h3 class="text-dark mt-5 mb-4">Embracing Natural Materials</h3>
+            <h3 class="mt-5 mb-4">Embracing Natural Materials</h3>
             <p class="mb-4">One of the key pillars of sustainable design is the use of natural,
                 locally sourced materials. Wood, stone, and bamboo not only provide a warm, organic
                 aesthetic but also have a lower environmental impact compared to synthetic
@@ -27,7 +27,7 @@ $blogs = [
                     breathe and evolve with time."</p>
             </blockquote>
 
-            <h3 class="text-dark mt-5 mb-4">Energy Efficiency and Technology</h3>
+            <h3 class="mt-5 mb-4">Energy Efficiency and Technology</h3>
             <p class="mb-4">Modern homes are smarter than ever. From solar panels to smart
                 thermostats, technology plays a crucial role in minimizing energy consumption.
                 Passive design strategies, such as optimizing natural light and ventilation, further
@@ -35,10 +35,10 @@ $blogs = [
 
             <div class="row my-5">
                 <div class="col-md-6 mb-4 mb-md-0">
-                    <img src="assets/img/blog/blog-2.jpg" alt="Inner Image" class="img-fluid w-100">
+                    <img src="assets/img/WEB/SERVICES ARCHITECTURE.webp" alt="Inner Image" class="img-fluid w-100">
                 </div>
                 <div class="col-md-6">
-                    <img src="assets/img/blog/blog-3.jpg" alt="Inner Image" class="img-fluid w-100">
+                    <img src="assets/img/WEB/SERVICES STYLING.webp" alt="Inner Image" class="img-fluid w-100">
                 </div>
             </div>
 
@@ -54,26 +54,26 @@ $blogs = [
         'category' => 'Interior',
         'date' => 'Jan 15, 2025',
         'author' => 'Vanshika',
-        'image' => 'assets/img/blog/blog-2.jpg',
+        'image' => 'assets/img/WEB/SERVICES STYLING.webp',
         'content' => '
             <p class="mb-4">Minimalism has evolved. It is no longer about stark white walls and empty spaces, but rather about warm minimalism that combines functionality with comfort, texture, and organic materials.</p>
 
-            <h3 class="text-dark mt-5 mb-4">Warm Textures & Earthy Tones</h3>
+            <h3 class="mt-5 mb-4">Warm Textures & Earthy Tones</h3>
             <p class="mb-4">We are moving away from cold grey tones and embracing cream, beige, terracotta, and soft wood grains. This evolution creates spaces that feel uncluttered yet incredibly inviting and cozy.</p>
 
             <blockquote class="blockquote-custom my-5">
                 <p class="mb-0">"Minimalism is not about having less. It is about making room for what matters most, surrounded by pieces that bring joy."</p>
             </blockquote>
 
-            <h3 class="text-dark mt-5 mb-4">Form Follows Feeling</h3>
+            <h3 class="mt-5 mb-4">Form Follows Feeling</h3>
             <p class="mb-4">In 2026, minimalism prioritizes emotional well-being. Every furniture piece is selected not just for its aesthetic value, but for how it contributes to a serene, mindful atmosphere in the home.</p>
 
             <div class="row my-5">
                 <div class="col-md-6 mb-4 mb-md-0">
-                    <img src="assets/img/blog/blog-1.jpg" alt="Inner Image" class="img-fluid w-100">
+                    <img src="assets/img/WEB/SERVICES ARCHITECTURE.webp" alt="Inner Image" class="img-fluid w-100">
                 </div>
                 <div class="col-md-6">
-                    <img src="assets/img/blog/blog-3.jpg" alt="Inner Image" class="img-fluid w-100">
+                    <img src="assets/img/WEB/HERITAGE LUXURY.webp" alt="Inner Image" class="img-fluid w-100">
                 </div>
             </div>
 
@@ -87,26 +87,26 @@ $blogs = [
         'category' => 'Design',
         'date' => 'Dec 10, 2024',
         'author' => 'Vanshika',
-        'image' => 'assets/img/blog/blog-3.jpg',
+        'image' => 'assets/img/WEB/HERITAGE LUXURY.webp',
         'content' => '
             <p class="mb-4">Lighting is the lifeblood of interior design. It has the power to transform a cold room into a warm haven, change the mood instantly, and define how we interact with space.</p>
 
-            <h3 class="text-dark mt-5 mb-4">The Three Layers of Lighting</h3>
+            <h3 class="mt-5 mb-4">The Three Layers of Lighting</h3>
             <p class="mb-4">A well-designed room incorporates ambient, task, and accent lighting. Ambient lighting sets the overall mood, task lighting allows you to work or read, and accent lighting highlights art or architectural details.</p>
 
             <blockquote class="blockquote-custom my-5">
                 <p class="mb-0">"Light does not just make things visible. It shapes how we feel, how we work, and how we experience the beauty of architecture."</p>
             </blockquote>
 
-            <h3 class="text-dark mt-5 mb-4">Smart Integration and Warm Dimming</h3>
+            <h3 class="mt-5 mb-4">Smart Integration and Warm Dimming</h3>
             <p class="mb-4">Modern lighting design embraces warm dimming technologies that mimic natural sunlight patterns, shifting from bright cool light in the afternoon to a warm golden glow in the evening.</p>
 
             <div class="row my-5">
                 <div class="col-md-6 mb-4 mb-md-0">
-                    <img src="assets/img/blog/blog-1.jpg" alt="Inner Image" class="img-fluid w-100">
+                    <img src="assets/img/WEB/SERVICES STYLING.webp" alt="Inner Image" class="img-fluid w-100">
                 </div>
                 <div class="col-md-6">
-                    <img src="assets/img/blog/blog-2.jpg" alt="Inner Image" class="img-fluid w-100">
+                    <img src="assets/img/WEB/HERITAGE LUXURY.webp" alt="Inner Image" class="img-fluid w-100">
                 </div>
             </div>
 
@@ -163,11 +163,11 @@ $current_blog = $blogs[$blog_id];
     <!-- Odometer CSS -->
     <link href="assets/css/odometer.min.css" rel="stylesheet">
     <!-- Alternative Style CSS -->
-    <link href="assets/css/alternative-style.css?v=<?php echo time(); ?>" rel="stylesheet">
+    <link href="assets/css/alternative-style.css?v=1.2.6" rel="stylesheet">
     <!-- Style CSS -->
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/style.css?v=1.2.3" rel="stylesheet">
     <!-- Floating Contact Widget -->
-    <link href="assets/css/floating-contact.css?v=<?php echo time(); ?>" rel="stylesheet">
+    <link href="assets/css/floating-contact.css?v=1.2.3" rel="stylesheet">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
@@ -194,9 +194,9 @@ $current_blog = $blogs[$blog_id];
         }
 
         .blog-hero-section h1 {
-            font-family: 'Futura PT', sans-serif;
-            font-weight: 300 !important;
-            color: #171717 !important;
+            font-family: 'Futura PT', sans-serif !important;
+            font-weight: 400 !important;
+            color: #c29a6c !important;
             line-height: 1.25;
             letter-spacing: -0.5px;
         }
@@ -242,9 +242,9 @@ $current_blog = $blogs[$blog_id];
         }
 
         .blog-content-text h3 {
-            font-family: 'Futura PT', sans-serif;
+            font-family: 'Futura PT', sans-serif !important;
             font-weight: 500 !important;
-            color: #171717 !important;
+            color: #c29a6c !important;
             margin-top: 45px;
             margin-bottom: 20px;
             font-size: 24px;
@@ -260,7 +260,7 @@ $current_blog = $blogs[$blog_id];
         }
 
         .blockquote-custom p {
-            font-family: 'Cinzel', serif;
+            font-family: 'Futura PT', sans-serif !important;
             font-style: italic;
             font-size: 21px !important;
             line-height: 1.6;
@@ -277,13 +277,13 @@ $current_blog = $blogs[$blog_id];
         }
 
         .blog-navigation a {
-            font-family: 'Space Grotesk', sans-serif;
+            font-family: 'Futura PT', sans-serif !important;
             font-weight: 600;
             font-size: 14px;
             text-transform: uppercase;
             letter-spacing: 1px;
             color: #171717 !important;
-            transition: color 0.3s ease;
+        }    transition: color 0.3s ease;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
@@ -343,7 +343,7 @@ $current_blog = $blogs[$blog_id];
                     <div class="row">
                         <div class="col-12 text-start">
                             <span class="text-gold text-uppercase letter-spacing-2 mb-3 d-block"><?php echo $current_blog['category']; ?></span>
-                            <h1 class="display-3 text-dark mb-4"><?php echo $current_blog['title']; ?></h1>
+                            <h1 class="display-3 text-uppercase mb-4"><?php echo $current_blog['title']; ?></h1>
                             <div class="blog-meta">
                                 <span class="me-4"><i class="las la-calendar me-2"></i> <?php echo $current_blog['date']; ?></span>
                                 <span><i class="las la-user me-2"></i> By <?php echo $current_blog['author']; ?></span>
@@ -505,7 +505,7 @@ $current_blog = $blogs[$blog_id];
         });
     </script>
     <!-- Floating Contact JS -->
-    <script src="assets/js/floating-contact.js?v=<?php echo time(); ?>"></script>
+    <script src="assets/js/floating-contact.js?v=1.2.0"></script>
 
 </body>
 

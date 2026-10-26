@@ -35,16 +35,14 @@
     <link href="assets/css/metismenu.css" rel="stylesheet">
     <!-- Odometer CSS -->
     <link href="assets/css/odometer.min.css" rel="stylesheet">
-    <!-- Dark Style CSS -->
-    <!-- <link href="assets/css/dark.css" rel="stylesheet"> -->
     <!-- Style CSS -->
     <link href="assets/css/style.css" rel="stylesheet">
     <!-- Floating Contact Widget -->
-    <link href="assets/css/floating-contact.css?v=<?php echo time(); ?>" rel="stylesheet">
+    <link href="assets/css/floating-contact.css?v=1.2.3" rel="stylesheet">
     <!-- New Services CSS -->
-    <link href="assets/css/v-services.css?v=<?php echo time(); ?>" rel="stylesheet">
+    <link href="assets/css/v-services.css?v=1.2.3" rel="stylesheet">
     <!-- Alternative Custom Style Override -->
-    <link href="assets/css/alternative-style.css?v=<?php echo time(); ?>" rel="stylesheet">
+    <link href="assets/css/alternative-style.css?v=1.2.6" rel="stylesheet">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
@@ -75,8 +73,7 @@
                     <div class="container-fluid px-md-5 px-3">
                         <div class="row justify-content-center text-center">
                             <div class="col-xl-8 services-hero-content">
-                                <h1 class="display-3 mb-4" style="font-family: 'Futura PT', sans-serif; color: #c29a6c;">
-                                    Curating Timeless Luxury</h1>
+                                <h1 class="display-3 text-uppercase mb-4">Curating Timeless Luxury</h1>
                                 <p class="mb-0 text-muted">Discover our specialized design services for high-end
                                     residential, commercial, and hospitality spaces.</p>
                             </div>
@@ -92,7 +89,7 @@
                             <div class="col-lg-6 col-md-6">
                                 <div class="v-service-card-wipe">
                                     <div class="v-service-img">
-                                        <img src="https://res.cloudinary.com/dwzfpa4vq/image/upload/v1782461469/IMG_0276_aofhgf.jpg"
+                                        <img src="assets/img/WEB/SERVICES ARCHITECTURE.webp"
                                             alt="Iconic Architecture">
                                         <div class="v-service-info">
                                             <h3>Architecture</h3>
@@ -110,7 +107,7 @@
                             <div class="col-lg-6 col-md-6">
                                 <div class="v-service-card-wipe">
                                     <div class="v-service-img">
-                                        <img src="https://res.cloudinary.com/dwzfpa4vq/image/upload/v1782463290/IMG_6954-HDR_lccsy8.jpg"
+                                        <img src="assets/img/WEB/SERVICES STYLING.webp"
                                             alt="Interior Design">
                                         <div class="v-service-info">
                                             <h3>Interior Design</h3>
@@ -128,7 +125,7 @@
                             <div class="col-lg-6 col-md-6">
                                 <div class="v-service-card-wipe">
                                     <div class="v-service-img">
-                                        <img src="https://res.cloudinary.com/dwzfpa4vq/image/upload/v1782461466/IMG_0272_adoadr.jpg"
+                                        <img src="assets/img/WEB/HERITAGE LUXURY.webp"
                                             alt="Project Management">
                                         <div class="v-service-info">
                                             <h3>Project Management</h3>
@@ -146,7 +143,7 @@
                             <div class="col-lg-6 col-md-6">
                                 <div class="v-service-card-wipe">
                                     <div class="v-service-img">
-                                        <img src="https://res.cloudinary.com/dwzfpa4vq/image/upload/v1782463283/IMG_7358-HDR_wef7ug.jpg"
+                                        <img src="assets/img/WEB/SERVICES LANDSCAPE.webp"
                                             alt="Historic Preservation">
                                         <div class="v-service-info">
                                             <h3>Landscaping </h3>
@@ -212,11 +209,11 @@
     <script src="assets/js/heading-animation.js"></script>
     <script src="assets/js/paragraph-animation.js"></script>
     <!-- Main JS -->
-    <script src="assets/js/main.js?v=<?php echo time(); ?>"></script>
+    <script src="assets/js/main.js?v=1.2.0"></script>
     <!-- Alternative Theme Custom JS Animations -->
     <script src="assets/js/alternative-interactions-wipe.js"></script>
     <!-- Floating Contact JS -->
-    <script src="assets/js/floating-contact.js?v=<?php echo time(); ?>"></script>
+    <script src="assets/js/floating-contact.js?v=1.2.0"></script>
 
 </body>
 

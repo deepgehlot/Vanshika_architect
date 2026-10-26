@@ -35,14 +35,12 @@
     <link href="assets/css/metismenu.css" rel="stylesheet">
     <!-- Odometer CSS -->
     <link href="assets/css/odometer.min.css" rel="stylesheet">
-    <!-- Dark Style CSS -->
-    <!-- <link href="assets/css/dark.css" rel="stylesheet"> -->
     <!-- Style CSS -->
-    <link href="assets/css/style.css?v=<?php echo time(); ?>" rel="stylesheet">
+    <link href="assets/css/style.css?v=1.2.3" rel="stylesheet">
     <!-- Floating Contact Widget -->
-    <link href="assets/css/floating-contact.css?v=<?php echo time(); ?>" rel="stylesheet">
+    <link href="assets/css/floating-contact.css?v=1.2.3" rel="stylesheet">
     <!-- Alternative Custom Style Override -->
-    <link href="assets/css/alternative-style.css?v=<?php echo time(); ?>" rel="stylesheet">
+    <link href="assets/css/alternative-style.css?v=1.2.6" rel="stylesheet">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
@@ -50,7 +48,7 @@
 
 </head>
 
-<body class="light projects-page">Where sophisticated elegance seamlessly blends with authentic restoration.
+<body class="light projects-page">
 
     <!-- Pre-Loader -->
     <div id="loader">
@@ -74,8 +72,7 @@
                 <div class="container-fluid px-md-5 px-3">
                     <div class="row justify-content-center text-center">
                         <div class="col-xl-8">
-                            <h1 class="display-3 text-dark mb-4" style="font-family: 'Futura PT', sans-serif;">Our
-                                Masterpieces of Modern Heritage</h1>
+                            <h1 class="display-3 text-uppercase mb-4">Our Masterpieces of Modern Heritage</h1>
                             <p class="mb-0 text-muted">Where sophisticated elegance seamlessly blends with authentic
                                 restoration.</p>
                         </div>
@@ -148,17 +145,17 @@
     <script src="assets/js/SplitText.min.js"></script>
     <script src="assets/js/ScrollSmoother.min.js"></script>
     <script src="assets/js/ScrollTrigger.min.js"></script>
-    <script src="assets/js/smoother-script.js"></script>
+    <script src="assets/js/smoother-script.js?v=1.2.0"></script>
     <script src="assets/js/heading-animation.js"></script>
     <script src="assets/js/paragraph-animation.js"></script>
     <!-- Projects Handler JS -->
-    <script src="assets/js/projects-handler.js"></script>
+    <script src="assets/js/projects-handler.js?v=1.2.0"></script>
     <!-- Main JS -->
-    <script src="assets/js/main.js?v=<?php echo time(); ?>"></script>
+    <script src="assets/js/main.js?v=1.2.0"></script>
     <!-- Alternative Theme Custom JS Animations -->
     <script src="assets/js/alternative-interactions-wipe.js"></script>
     <!-- Floating Contact JS -->
-    <script src="assets/js/floating-contact.js?v=<?php echo time(); ?>"></script>
+    <script src="assets/js/floating-contact.js?v=1.2.0"></script>
 
 </body>
 

@@ -32,14 +32,12 @@ $page_title = "Awards & Recognitions";
     <link href="assets/css/metismenu.css" rel="stylesheet">
     <!-- Back to top CSS -->
     <link href="assets/css/backToTop.css" rel="stylesheet">
-    <!-- Dark Style CSS -->
-    <!-- <link href="assets/css/dark.css" rel="stylesheet"> -->
     <!-- Style CSS -->
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/style.css?v=1.2.3" rel="stylesheet">
     <!-- Alternative Custom Style Override -->
-    <link href="assets/css/alternative-style.css?v=<?php echo time(); ?>" rel="stylesheet">
+    <link href="assets/css/alternative-style.css?v=1.2.6" rel="stylesheet">
     <!-- Floating Contact Widget -->
-    <link href="assets/css/floating-contact.css?v=<?php echo time(); ?>" rel="stylesheet">
+    <link href="assets/css/floating-contact.css?v=1.2.3" rel="stylesheet">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
@@ -97,7 +95,7 @@ $page_title = "Awards & Recognitions";
             transform: scale(1.05);
         }
 
-        /* 1. Standard Layout Content Area */
+        /* 1. Standard Layout Content Area */   
         .standard-layout .award-content {
             padding: 24px;
             display: flex;
@@ -367,6 +365,45 @@ $page_title = "Awards & Recognitions";
             padding-bottom: 80px !important;
         }
 
+        /* Featured Articles & Press Styling */
+        .press-badge {
+            color: #c29a6c !important;
+        }
+
+        .editorial-press-card .press-headline,
+        .press-headline {
+            color: #111111 !important;
+        }
+
+        .editorial-press-card .press-read-link,
+        .press-read-link {
+            color: #c29a6c !important;
+        }
+
+        .editorial-press-card .press-read-link i,
+        .press-read-link i {
+            color: #c29a6c !important;
+        }
+
+        .editorial-press-card:hover .press-read-link {
+            color: #111111 !important;
+        }
+
+        .editorial-press-card:hover .press-read-link i {
+            color: #111111 !important;
+        }
+
+        /* Preserved exact visual vertical position after removing AWARDS heading */
+        .awards-editorial-list {
+            padding-top: 62px !important;
+        }
+
+        @media (max-width: 991.98px) {
+            .awards-editorial-list {
+                padding-top: 15px !important;
+            }
+        }
+
     </style>
 </head>
 
@@ -395,8 +432,7 @@ $page_title = "Awards & Recognitions";
                             <div class="col-xl-8">
                                 <h6 class="text-uppercase mb-3" style="color: #c29a6c; letter-spacing: 2px;">
                                     Recognitions</h6>
-                                <h1 class="display-3 text-dark mb-4" style="font-family: 'Futura PT', sans-serif;">
-                                    Awards & Media</h1>
+                                <h1 class="display-3 text-uppercase mb-4">Awards & Media</h1>
                                 <p class="mb-0 text-muted">Celebrating our commitment to design excellence and
                                     innovation in architecture and interior design.</p>
                             </div>
@@ -413,13 +449,12 @@ $page_title = "Awards & Recognitions";
                             <!-- Left: Single Profile Photo -->
                             <div class="col-lg-5 col-md-5 col-12">
                                 <div class="awards-single-profile-card">
-                                    <img src="assets/img/vans.jpg" alt="Vanshika Agarwal" class="awards-single-profile-img">
+                                    <img src="assets/img/WEB/AWARD.webp" alt="Vanshika Agarwal" class="awards-single-profile-img">
                                 </div>
                             </div>
 
                             <!-- Right: Awards List -->
                             <div class="col-lg-7 col-md-7 col-12 ps-lg-5">
-                                <h2 class="awards-editorial-title">AWARDS</h2>
                                 <ul class="awards-editorial-list">
                                     <li><strong>D-LIST 2025</strong></li>
                                     <li><strong>FICCI FLO Chennai Chapter</strong> - UPCOMING ENTREPRENEUR 2024</li>
@@ -436,74 +471,75 @@ $page_title = "Awards & Recognitions";
 
                         <!-- Middle Block: Features & Magazine Logos -->
                         <div class="features-editorial-block pt-5 mt-4">
-                            <div class="row align-items-start gy-4 mb-5">
+                            <div class="row align-items-start gy-4 mb-4">
                                 <div class="col-lg-3 col-md-4 col-12">
                                     <h2 class="awards-editorial-title">FEATURES</h2>
                                 </div>
                                 <div class="col-lg-9 col-md-8 col-12">
                                     <p class="features-editorial-desc">
-                                        Our projects have been featured in the country's top publications including Architectural Digest, Elle Decor, Goodhomes, Ideal home and Garden, Casa Vogue, Better Interiors to name a few.
+                                        Our projects have been featured in the country's top publications including GoodHomes, The Times of India, Architecture + Design, Archello, Architect &amp; Interiors India, and Design Perspective.
                                     </p>
                                 </div>
                             </div>
 
                             <!-- Magazine Logos Cards Grid -->
                             <div class="magazine-logos-editorial-grid">
-                                <!-- 1. AD -->
+                                <!-- 1. Good homes -->
                                 <div class="magazine-item-col">
                                     <div class="magazine-white-box">
-                                        <svg viewBox="0 0 100 65" width="100" height="65">
-                                            <text x="50" y="38" font-family="'Didot', 'Playfair Display', Georgia, serif" font-size="38" font-weight="900" text-anchor="middle" fill="#000" letter-spacing="1">AD</text>
-                                            <text x="50" y="56" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="7" font-weight="700" text-anchor="middle" fill="#000" letter-spacing="1.5">ARCHITECTURAL DIGEST</text>
+                                        <svg viewBox="0 0 120 50" width="120" height="50">
+                                            <text x="60" y="32" font-family="'Century Gothic', 'Futura', 'Montserrat', Arial, sans-serif" font-size="20" font-weight="900" text-anchor="middle" fill="#111" letter-spacing="-0.5">Good<tspan font-weight="400" fill="#444">Homes</tspan></text>
                                         </svg>
                                     </div>
-                                    <span class="magazine-box-caption">ARCHITECTURAL DIGEST - JAN 2022</span>
                                 </div>
 
-                                <!-- 2. Beautiful Homes -->
+                                <!-- 2. Times of India -->
                                 <div class="magazine-item-col">
                                     <div class="magazine-white-box">
-                                        <svg viewBox="0 0 120 60" width="110" height="55">
-                                            <text x="18" y="34" font-family="'Helvetica Neue', Arial, sans-serif" font-size="24" font-weight="900" fill="#d9381e">ap</text>
-                                            <text x="44" y="24" font-family="'Century Gothic', Arial, sans-serif" font-size="9" font-weight="800" fill="#111" letter-spacing="0.5">BEAUTIFUL</text>
-                                            <text x="44" y="36" font-family="'Century Gothic', Arial, sans-serif" font-size="9" font-weight="800" fill="#111" letter-spacing="0.5">HOMES</text>
-                                            <text x="44" y="48" font-family="Arial, sans-serif" font-size="7" font-weight="500" fill="#666">with asianpaints</text>
+                                        <svg viewBox="0 0 130 50" width="120" height="46">
+                                            <text x="65" y="19" font-family="'Times New Roman', 'Playfair Display', Georgia, serif" font-size="9" font-weight="700" text-anchor="middle" fill="#555" letter-spacing="3.5">THE</text>
+                                            <text x="65" y="37" font-family="'Times New Roman', 'Playfair Display', Georgia, serif" font-size="13" font-weight="900" text-anchor="middle" fill="#111" letter-spacing="1.2">TIMES OF INDIA</text>
                                         </svg>
                                     </div>
-                                    <span class="magazine-box-caption">BEAUTIFUL HOMES - DEC 2021</span>
                                 </div>
 
-                                <!-- 3. Elle Decor -->
+                                <!-- 3. Architecture + Design -->
                                 <div class="magazine-item-col">
                                     <div class="magazine-white-box">
-                                        <svg viewBox="0 0 100 60" width="105" height="55">
-                                            <text x="50" y="32" font-family="'Didot', 'Bodoni MT', Georgia, serif" font-size="30" font-weight="700" text-anchor="middle" fill="#000" letter-spacing="6">ELLE</text>
-                                            <text x="50" y="50" font-family="'Century Gothic', 'Futura', sans-serif" font-size="9" font-weight="600" text-anchor="middle" fill="#000" letter-spacing="5">DECOR</text>
+                                        <svg viewBox="0 0 130 55" width="120" height="50">
+                                            <text x="65" y="27" font-family="'Futura', 'Century Gothic', Arial, sans-serif" font-size="22" font-weight="900" text-anchor="middle" fill="#d9381e" letter-spacing="1">A<tspan fill="#111" font-weight="700">+</tspan>D</text>
+                                            <text x="65" y="43" font-family="'Futura', 'Century Gothic', Arial, sans-serif" font-size="6.5" font-weight="700" text-anchor="middle" fill="#222" letter-spacing="1.5">ARCHITECTURE + DESIGN</text>
                                         </svg>
                                     </div>
-                                    <span class="magazine-box-caption">ELLE DECOR - MAR 2023</span>
                                 </div>
 
-                                <!-- 4. Livingetc -->
+                                <!-- 4. Archello -->
                                 <div class="magazine-item-col">
                                     <div class="magazine-white-box">
-                                        <svg viewBox="0 0 110 60" width="110" height="55">
-                                            <text x="55" y="32" font-family="'Didot', 'Playfair Display', Georgia, serif" font-size="21" font-weight="900" text-anchor="middle" fill="#000" letter-spacing="0.5">Livingetc</text>
-                                            <text x="55" y="48" font-family="'Helvetica Neue', Arial, sans-serif" font-size="8.5" font-weight="800" text-anchor="middle" fill="#000" letter-spacing="3">INDIA</text>
+                                        <svg viewBox="0 0 120 50" width="115" height="48">
+                                            <text x="60" y="32" font-family="'Montserrat', 'Helvetica Neue', Arial, sans-serif" font-size="23" font-weight="700" text-anchor="middle" fill="#111" letter-spacing="-0.8">archello</text>
                                         </svg>
                                     </div>
-                                    <span class="magazine-box-caption">LIVINGETC - OCT 2022</span>
                                 </div>
 
-                                <!-- 5. GoodHomes -->
+                                <!-- 5. Architects and interiors India -->
                                 <div class="magazine-item-col">
                                     <div class="magazine-white-box">
-                                        <svg viewBox="0 0 110 60" width="110" height="55">
-                                            <text x="55" y="32" font-family="'Century Gothic', 'Futura', sans-serif" font-size="16" font-weight="800" text-anchor="middle" fill="#111" letter-spacing="1">GOOD</text>
-                                            <text x="55" y="48" font-family="'Century Gothic', 'Futura', sans-serif" font-size="16" font-weight="800" text-anchor="middle" fill="#c29a6c" letter-spacing="1">HOMES</text>
+                                        <svg viewBox="0 0 135 50" width="125" height="46">
+                                            <text x="67" y="19" font-family="'Century Gothic', 'Futura', Arial, sans-serif" font-size="9" font-weight="800" text-anchor="middle" fill="#111" letter-spacing="0.8">ARCHITECT &amp; INTERIORS</text>
+                                            <text x="67" y="35" font-family="'Century Gothic', 'Futura', Arial, sans-serif" font-size="8" font-weight="700" text-anchor="middle" fill="#d9381e" letter-spacing="3">INDIA</text>
                                         </svg>
                                     </div>
-                                    <span class="magazine-box-caption">GOODHOMES - AUG 2021</span>
+                                </div>
+
+                                <!-- 6. Design perspective -->
+                                <div class="magazine-item-col">
+                                    <div class="magazine-white-box">
+                                        <svg viewBox="0 0 130 50" width="120" height="46">
+                                            <text x="65" y="21" font-family="'Futura', 'Century Gothic', Arial, sans-serif" font-size="13" font-weight="900" text-anchor="middle" fill="#111" letter-spacing="2">DESIGN</text>
+                                            <text x="65" y="36" font-family="'Futura', 'Century Gothic', Arial, sans-serif" font-size="9" font-weight="600" text-anchor="middle" fill="#555" letter-spacing="1.8">PERSPECTIVE</text>
+                                        </svg>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -617,11 +653,11 @@ $page_title = "Awards & Recognitions";
     <script src="assets/js/heading-animation.js"></script>
     <script src="assets/js/paragraph-animation.js"></script>
     <!-- Main JS -->
-    <script src="assets/js/main.js?v=<?php echo time(); ?>"></script>
+    <script src="assets/js/main.js?v=1.2.0"></script>
     <!-- Alternative Theme Custom JS Animations -->
     <script src="assets/js/alternative-interactions-wipe.js"></script>
     <!-- Floating Contact JS -->
-    <script src="assets/js/floating-contact.js?v=<?php echo time(); ?>"></script>
+    <script src="assets/js/floating-contact.js?v=1.2.0"></script>
 
 </body>
 

@@ -1,3 +1,4 @@
+
 /**
  * Custom Scroll & Loading Animations for Vanshika Website (Alternative Theme)
  */
@@ -126,186 +127,188 @@ document.addEventListener("DOMContentLoaded", function () {
             headerArea.classList.remove("nav-elements-active");
         }
 
-    // Start with a small size for the preloader logo so it can "increase in size" as it flies
-    if (loaderLogo) {
-        gsap.set(loaderLogo, { width: "120px", height: "auto" });
-    }
-
-    // Flag to track actual window load state
-    let windowLoaded = document.readyState === "complete";
-    if (!windowLoaded) {
-        window.addEventListener("load", function () {
-            windowLoaded = true;
-        });
-    }
-
-    // Preloader Percentage Fill & Circular reveal (tied to actual load state)
-    let progress = 0;
-    const progressInterval = setInterval(() => {
-        if (progress < 90) {
-            progress += Math.floor(Math.random() * 4) + 1; // gradual loading up to 90%
-        } else if (windowLoaded) {
-            progress += 5; // accelerate quickly to 100% once page is fully loaded
+        // Start with a small size for the preloader logo so it can "increase in size" as it flies
+        if (loaderLogo) {
+            gsap.set(loaderLogo, { width: "120px", height: "auto" });
         }
 
-        if (progress >= 100) {
-            progress = 100;
-            clearInterval(progressInterval);
-            triggerLogoTransition();
+        // Flag to track actual window load state
+        let windowLoaded = document.readyState === "complete";
+        if (!windowLoaded) {
+            window.addEventListener("load", function () {
+                windowLoaded = true;
+            });
         }
 
-        // Update circular SVG path offset (dasharray is 289.02)
-        if (circleProgress) {
-            const offset = 289.02 - (progress / 100) * 289.02;
-            circleProgress.style.strokeDashoffset = offset;
-        }
+        // Preloader Percentage Fill & Circular reveal (tied to actual load state)
+        let progress = 0;
+        const progressInterval = setInterval(() => {
+            if (progress < 90) {
+                progress += Math.floor(Math.random() * 4) + 1; // gradual loading up to 90%
+            } else if (windowLoaded) {
+                progress += 5; // accelerate quickly to 100% once page is fully loaded
+            }
 
-        // Update straight loading bar
-        if (loadingBar) {
-            loadingBar.style.width = `${progress}%`;
-        }
+            if (progress >= 100) {
+                progress = 100;
+                clearInterval(progressInterval);
+                triggerLogoTransition();
+            }
 
-        if (progressText) {
-            progressText.textContent = `${progress}%`;
-        }
-        // Circle mask reveals from center outward
-        if (loaderLogoMask) {
-            loaderLogoMask.style.clipPath = `circle(${progress * 0.7}% at 50% 50%)`;
-        }
-    }, 40);
+            // Update circular SVG path offset (dasharray is 289.02)
+            if (circleProgress) {
+                const offset = 289.02 - (progress / 100) * 289.02;
+                circleProgress.style.strokeDashoffset = offset;
+            }
 
-    // Fly to Navbar animation
-    function triggerLogoTransition() {
-        // Determine active header logo based on viewport width
-        const activeNavLogo = window.innerWidth >= 1200 ? desktopNavLogo : mobileNavLogo;
+            // Update straight loading bar
+            if (loadingBar) {
+                loadingBar.style.width = `${progress}%`;
+            }
 
-        if (!activeNavLogo || !loaderLogo) {
-            // Fallback if logo element is not found
-            gsap.to(loader, { opacity: 0, duration: 0.5, onComplete: () => {
-                if (loader) loader.style.display = "none";
-                document.body.classList.add('preloader-done');
-                $(window).trigger('preloaderDone');
-                initScrollAnimations();
-            } });
-            return;
-        }
+            if (progressText) {
+                progressText.textContent = `${progress}%`;
+            }
+            // Circle mask reveals from center outward
+            if (loaderLogoMask) {
+                loaderLogoMask.style.clipPath = `circle(${progress * 0.7}% at 50% 50%)`;
+            }
+        }, 40);
 
-        // Force header logo visibility to 0 initially
-        activeNavLogo.style.opacity = "0";
+        // Fly to Navbar animation
+        function triggerLogoTransition() {
+            // Determine active header logo based on viewport width
+            const activeNavLogo = window.innerWidth >= 1200 ? desktopNavLogo : mobileNavLogo;
 
-        // Wait a small bit to ensure DOM layout has finalized
-        setTimeout(() => {
-            const targetRect = activeNavLogo.getBoundingClientRect();
-            const sourceRect = loaderLogo.getBoundingClientRect();
-
-            // Move original loader logo to body to prevent duplication
-            loaderLogo.style.position = "fixed";
-            loaderLogo.style.left = `${sourceRect.left}px`;
-            loaderLogo.style.top = `${sourceRect.top}px`;
-            loaderLogo.style.width = `${sourceRect.width}px`;
-            loaderLogo.style.height = `${sourceRect.height}px`;
-            loaderLogo.style.zIndex = "999999";
-            loaderLogo.style.margin = "0";
-            loaderLogo.style.transform = "none";
-            loaderLogo.style.transition = "none";
-            document.body.appendChild(loaderLogo);
-
-            // Animate progress bar/circle and text out instantly
-            const elementsToFade = [];
-            const loaderCircle = document.querySelector(".loader-circle-svg");
-            const loadingBarContainer = document.querySelector(".white-preloader .loading-bar-container");
-            if (loaderCircle) elementsToFade.push(loaderCircle);
-            if (loadingBarContainer) elementsToFade.push(loadingBarContainer);
-            if (progressText) elementsToFade.push(progressText);
-            if (elementsToFade.length > 0) {
-                gsap.to(elementsToFade, {
-                    opacity: 0,
-                    duration: 0.2
+            if (!activeNavLogo || !loaderLogo) {
+                // Fallback if logo element is not found
+                gsap.to(loader, {
+                    opacity: 0, duration: 0.5, onComplete: () => {
+                        if (loader) loader.style.display = "none";
+                        document.body.classList.add('preloader-done');
+                        $(window).trigger('preloaderDone');
+                        initScrollAnimations();
+                    }
                 });
+                return;
             }
 
-            // IMMEDIATELY fade out preloader screen and make it click-through
-            gsap.to(loader, {
-                opacity: 0,
-                duration: 0.5,
-                ease: "power2.out",
-                onComplete: () => {
-                    if (loader) loader.style.display = "none";
-                    document.body.classList.add('preloader-done');
-                    $(window).trigger('preloaderDone');
+            // Force header logo visibility to 0 initially
+            activeNavLogo.style.opacity = "0";
+
+            // Wait a small bit to ensure DOM layout has finalized
+            setTimeout(() => {
+                const targetRect = activeNavLogo.getBoundingClientRect();
+                const sourceRect = loaderLogo.getBoundingClientRect();
+
+                // Move original loader logo to body to prevent duplication
+                loaderLogo.style.position = "fixed";
+                loaderLogo.style.left = `${sourceRect.left}px`;
+                loaderLogo.style.top = `${sourceRect.top}px`;
+                loaderLogo.style.width = `${sourceRect.width}px`;
+                loaderLogo.style.height = `${sourceRect.height}px`;
+                loaderLogo.style.zIndex = "999999";
+                loaderLogo.style.margin = "0";
+                loaderLogo.style.transform = "none";
+                loaderLogo.style.transition = "none";
+                document.body.appendChild(loaderLogo);
+
+                // Animate progress bar/circle and text out instantly
+                const elementsToFade = [];
+                const loaderCircle = document.querySelector(".loader-circle-svg");
+                const loadingBarContainer = document.querySelector(".white-preloader .loading-bar-container");
+                if (loaderCircle) elementsToFade.push(loaderCircle);
+                if (loadingBarContainer) elementsToFade.push(loadingBarContainer);
+                if (progressText) elementsToFade.push(progressText);
+                if (elementsToFade.length > 0) {
+                    gsap.to(elementsToFade, {
+                        opacity: 0,
+                        duration: 0.2
+                    });
                 }
-            });
 
-            // IMMEDIATELY show header menu items as logo begins to fly
-            if (headerArea) {
-                headerArea.classList.add("nav-elements-active");
-            }
-
-            // Animate About Hero Image reveal / cutout and texts
-            const aboutHeroPersonImg = document.querySelector(".about-hero-person-img");
-            if (aboutHeroPersonImg) {
-                gsap.fromTo(aboutHeroPersonImg,
-                    { y: 150, opacity: 0 },
-                    {
-                        y: 0,
-                        opacity: 1,
-                        duration: 1.6,
-                        ease: "power4.out",
-                        delay: 0.2
+                // IMMEDIATELY fade out preloader screen and make it click-through
+                gsap.to(loader, {
+                    opacity: 0,
+                    duration: 0.5,
+                    ease: "power2.out",
+                    onComplete: () => {
+                        if (loader) loader.style.display = "none";
+                        document.body.classList.add('preloader-done');
+                        $(window).trigger('preloaderDone');
                     }
-                );
-            }
+                });
 
-            const aboutHeroName = document.querySelector(".about-hero-name");
-            if (aboutHeroName) {
-                gsap.fromTo(aboutHeroName,
-                    { scale: 0.85, opacity: 0 },
-                    {
-                        scale: 1,
-                        opacity: 1,
-                        duration: 2.0,
-                        ease: "power3.out",
-                        delay: 0.4
-                    }
-                );
-            }
-
-            const aboutHeroCursive = document.querySelector(".about-hero-cursive");
-            if (aboutHeroCursive) {
-                gsap.fromTo(aboutHeroCursive,
-                    { scale: 0.6, opacity: 0, rotate: -25 },
-                    {
-                        scale: 1,
-                        opacity: 1,
-                        rotate: -8,
-                        duration: 1.8,
-                        ease: "back.out(1.7)",
-                        delay: 0.8
-                    }
-                );
-            }
-
-            // Animate logo sliding up to the header logo position and scaling up
-            gsap.to(loaderLogo, {
-                left: targetRect.left,
-                top: targetRect.top,
-                width: targetRect.width,
-                height: targetRect.height,
-                duration: 0.9,
-                ease: "power3.out",
-                onComplete: () => {
-                    // Make final header logo visible
-                    activeNavLogo.style.opacity = "1";
-                    // Remove loader logo from page now that header logo is active
-                    loaderLogo.remove();
-
-                    // Trigger scroll reveals initialization
-                    initScrollAnimations();
+                // IMMEDIATELY show header menu items as logo begins to fly
+                if (headerArea) {
+                    headerArea.classList.add("nav-elements-active");
                 }
-            });
-        }, 50);
-    }
-} else {
+
+                // Animate About Hero Image reveal / cutout and texts
+                const aboutHeroPersonImg = document.querySelector(".about-hero-person-img");
+                if (aboutHeroPersonImg) {
+                    gsap.fromTo(aboutHeroPersonImg,
+                        { y: 150, opacity: 0 },
+                        {
+                            y: 0,
+                            opacity: 1,
+                            duration: 1.6,
+                            ease: "power4.out",
+                            delay: 0.2
+                        }
+                    );
+                }
+
+                const aboutHeroName = document.querySelector(".about-hero-name");
+                if (aboutHeroName) {
+                    gsap.fromTo(aboutHeroName,
+                        { scale: 0.85, opacity: 0 },
+                        {
+                            scale: 1,
+                            opacity: 1,
+                            duration: 2.0,
+                            ease: "power3.out",
+                            delay: 0.4
+                        }
+                    );
+                }
+
+                const aboutHeroCursive = document.querySelector(".about-hero-cursive");
+                if (aboutHeroCursive) {
+                    gsap.fromTo(aboutHeroCursive,
+                        { scale: 0.6, opacity: 0, rotate: -25 },
+                        {
+                            scale: 1,
+                            opacity: 1,
+                            rotate: -8,
+                            duration: 1.8,
+                            ease: "back.out(1.7)",
+                            delay: 0.8
+                        }
+                    );
+                }
+
+                // Animate logo sliding up to the header logo position and scaling up
+                gsap.to(loaderLogo, {
+                    left: targetRect.left,
+                    top: targetRect.top,
+                    width: targetRect.width,
+                    height: targetRect.height,
+                    duration: 0.9,
+                    ease: "power3.out",
+                    onComplete: () => {
+                        // Make final header logo visible
+                        activeNavLogo.style.opacity = "1";
+                        // Remove loader logo from page now that header logo is active
+                        loaderLogo.remove();
+
+                        // Trigger scroll reveals initialization
+                        initScrollAnimations();
+                    }
+                });
+            }, 50);
+        }
+    } else {
         // Non-white-preloader pages (about.php): keep header visible, don't hide logos
         if (desktopNavLogo) desktopNavLogo.style.opacity = "1";
         if (mobileNavLogo) mobileNavLogo.style.opacity = "1";
@@ -402,7 +405,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         $(window).on('preloaderDone', runEntranceAnimations);
-        
+
         // Fallback: If preloaderDone event doesn't trigger or triggers too early, run after 2.5 seconds
         setTimeout(runEntranceAnimations, 2500);
     }
@@ -875,20 +878,20 @@ document.addEventListener("DOMContentLoaded", function () {
                     }, 0);
 
                     testimonialTimeline.to(cards[0], { opacity: 0.4, scale: 0.9, duration: 0.5, ease: "power1.inOut" }, 0)
-                                       .to(cards[0].querySelector(".alt-testimonial-img-wrap"), { scale: 0.85, duration: 0.5, ease: "power1.inOut" }, 0);
+                        .to(cards[0].querySelector(".alt-testimonial-img-wrap"), { scale: 0.85, duration: 0.5, ease: "power1.inOut" }, 0);
 
                     testimonialTimeline.to(cards[1], { opacity: 1, scale: 1, duration: 0.5, ease: "power1.inOut" }, 0)
-                                       .to(cards[1].querySelector(".alt-testimonial-img-wrap"), { scale: 1.15, duration: 0.5, ease: "power1.inOut" }, 0)
-                                       .to(cards[1], { opacity: 0.4, scale: 0.9, duration: 0.5, ease: "power1.inOut" }, 0.5)
-                                       .to(cards[1].querySelector(".alt-testimonial-img-wrap"), { scale: 0.85, duration: 0.5, ease: "power1.inOut" }, 0.5);
+                        .to(cards[1].querySelector(".alt-testimonial-img-wrap"), { scale: 1.15, duration: 0.5, ease: "power1.inOut" }, 0)
+                        .to(cards[1], { opacity: 0.4, scale: 0.9, duration: 0.5, ease: "power1.inOut" }, 0.5)
+                        .to(cards[1].querySelector(".alt-testimonial-img-wrap"), { scale: 0.85, duration: 0.5, ease: "power1.inOut" }, 0.5);
 
                     testimonialTimeline.to(cards[2], { opacity: 1, scale: 1, duration: 0.5, ease: "power1.inOut" }, 0.5)
-                                       .to(cards[2].querySelector(".alt-testimonial-img-wrap"), { scale: 1.15, duration: 0.5, ease: "power1.inOut" }, 0.5)
-                                       .to(cards[2], { opacity: 0.4, scale: 0.9, duration: 0.5, ease: "power1.inOut" }, 1.0)
-                                       .to(cards[2].querySelector(".alt-testimonial-img-wrap"), { scale: 0.85, duration: 0.5, ease: "power1.inOut" }, 1.0);
+                        .to(cards[2].querySelector(".alt-testimonial-img-wrap"), { scale: 1.15, duration: 0.5, ease: "power1.inOut" }, 0.5)
+                        .to(cards[2], { opacity: 0.4, scale: 0.9, duration: 0.5, ease: "power1.inOut" }, 1.0)
+                        .to(cards[2].querySelector(".alt-testimonial-img-wrap"), { scale: 0.85, duration: 0.5, ease: "power1.inOut" }, 1.0);
 
                     testimonialTimeline.to(cards[3], { opacity: 1, scale: 1, duration: 0.5, ease: "power1.inOut" }, 1.0)
-                                       .to(cards[3].querySelector(".alt-testimonial-img-wrap"), { scale: 1.15, duration: 0.5, ease: "power1.inOut" }, 1.0);
+                        .to(cards[3].querySelector(".alt-testimonial-img-wrap"), { scale: 1.15, duration: 0.5, ease: "power1.inOut" }, 1.0);
                 }
             }
 
@@ -899,7 +902,7 @@ document.addEventListener("DOMContentLoaded", function () {
             gsap.set("#reveal-about .alternative-content-reveal", { opacity: 1, y: 0 });
             gsap.set("#reveal-about .alternative-content-reveal > *", { opacity: 1, y: 0 });
             gsap.set("#reveal-about .about-content-bg", { opacity: 0.1, scale: 1 });
-            
+
             // 2. Reset Principal Architect image & text columns
             gsap.set("#reveal-architect .alternative-image-reveal", { clipPath: "none", opacity: 1 });
             gsap.set("#reveal-architect .alternative-content-reveal", { opacity: 1, y: 0 });
@@ -989,7 +992,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     }
                 });
             }
-            
+
             // 5. Testimonials: On mobile/tablet, translate track dynamically based on mobile card widths
             const testimonialSection = document.getElementById("testimonial-1");
             if (testimonialSection) {
@@ -1023,20 +1026,20 @@ document.addEventListener("DOMContentLoaded", function () {
                     }, 0);
 
                     testimonialTimeline.to(cards[0], { opacity: 0.4, scale: 0.9, duration: 0.5, ease: "power1.inOut" }, 0)
-                                       .to(cards[0].querySelector(".alt-testimonial-img-wrap"), { scale: 0.85, duration: 0.5, ease: "power1.inOut" }, 0);
+                        .to(cards[0].querySelector(".alt-testimonial-img-wrap"), { scale: 0.85, duration: 0.5, ease: "power1.inOut" }, 0);
 
                     testimonialTimeline.to(cards[1], { opacity: 1, scale: 1, duration: 0.5, ease: "power1.inOut" }, 0)
-                                       .to(cards[1].querySelector(".alt-testimonial-img-wrap"), { scale: 1.15, duration: 0.5, ease: "power1.inOut" }, 0)
-                                       .to(cards[1], { opacity: 0.4, scale: 0.9, duration: 0.5, ease: "power1.inOut" }, 0.5)
-                                       .to(cards[1].querySelector(".alt-testimonial-img-wrap"), { scale: 0.85, duration: 0.5, ease: "power1.inOut" }, 0.5);
+                        .to(cards[1].querySelector(".alt-testimonial-img-wrap"), { scale: 1.15, duration: 0.5, ease: "power1.inOut" }, 0)
+                        .to(cards[1], { opacity: 0.4, scale: 0.9, duration: 0.5, ease: "power1.inOut" }, 0.5)
+                        .to(cards[1].querySelector(".alt-testimonial-img-wrap"), { scale: 0.85, duration: 0.5, ease: "power1.inOut" }, 0.5);
 
                     testimonialTimeline.to(cards[2], { opacity: 1, scale: 1, duration: 0.5, ease: "power1.inOut" }, 0.5)
-                                       .to(cards[2].querySelector(".alt-testimonial-img-wrap"), { scale: 1.15, duration: 0.5, ease: "power1.inOut" }, 0.5)
-                                       .to(cards[2], { opacity: 0.4, scale: 0.9, duration: 0.5, ease: "power1.inOut" }, 1.0)
-                                       .to(cards[2].querySelector(".alt-testimonial-img-wrap"), { scale: 0.85, duration: 0.5, ease: "power1.inOut" }, 1.0);
+                        .to(cards[2].querySelector(".alt-testimonial-img-wrap"), { scale: 1.15, duration: 0.5, ease: "power1.inOut" }, 0.5)
+                        .to(cards[2], { opacity: 0.4, scale: 0.9, duration: 0.5, ease: "power1.inOut" }, 1.0)
+                        .to(cards[2].querySelector(".alt-testimonial-img-wrap"), { scale: 0.85, duration: 0.5, ease: "power1.inOut" }, 1.0);
 
                     testimonialTimeline.to(cards[3], { opacity: 1, scale: 1, duration: 0.5, ease: "power1.inOut" }, 1.0)
-                                       .to(cards[3].querySelector(".alt-testimonial-img-wrap"), { scale: 1.15, duration: 0.5, ease: "power1.inOut" }, 1.0);
+                        .to(cards[3].querySelector(".alt-testimonial-img-wrap"), { scale: 1.15, duration: 0.5, ease: "power1.inOut" }, 1.0);
                 }
             }
         }
@@ -1047,9 +1050,9 @@ document.addEventListener("DOMContentLoaded", function () {
             if (ctaHeading && typeof SplitText !== "undefined") {
                 const split = new SplitText(ctaHeading, { type: "words,chars" });
                 const chars = split.chars;
-                
+
                 gsap.set(chars, { opacity: 0 });
-                
+
                 gsap.to(chars, {
                     opacity: 1,
                     stagger: 0.04,
@@ -1071,12 +1074,12 @@ document.addEventListener("DOMContentLoaded", function () {
         magneticWraps.forEach(wrap => {
             const btn = wrap.querySelector('.circle-btn-talk');
             if (!btn) return;
-            
+
             wrap.addEventListener('mousemove', (e) => {
                 const rect = wrap.getBoundingClientRect();
                 const x = e.clientX - rect.left - rect.width / 2;
                 const y = e.clientY - rect.top - rect.height / 2;
-                
+
                 gsap.to(btn, {
                     x: x * 0.35,
                     y: y * 0.35,
@@ -1084,7 +1087,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     ease: "power2.out"
                 });
             });
-            
+
             wrap.addEventListener('mouseleave', () => {
                 gsap.to(btn, {
                     x: 0,
@@ -1095,28 +1098,17 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
 
-        // Force layout calculations and ScrollTrigger refresh after a short delay to prevent overlapping
-        setTimeout(() => {
-            ScrollTrigger.refresh();
-        }, 500);
+        // Debounced layout calculations and ScrollTrigger refresh
+        let wipeRefreshTimer;
+        const debounceWipeRefresh = (delay) => {
+            clearTimeout(wipeRefreshTimer);
+            wipeRefreshTimer = setTimeout(() => {
+                ScrollTrigger.refresh();
+            }, delay || 150);
+        };
 
-        // Additional refreshes on window load and after load to ensure Cloudinary images don't shift triggers
-        window.addEventListener('load', () => {
-            ScrollTrigger.refresh();
-            setTimeout(() => {
-                ScrollTrigger.refresh();
-            }, 1000);
-            setTimeout(() => {
-                ScrollTrigger.refresh();
-            }, 2500);
-        });
-
-        // Also refresh on preloader finished event
-        $(window).on('preloaderDone', () => {
-            setTimeout(() => {
-                ScrollTrigger.refresh();
-            }, 500);
-        });
+        window.addEventListener('load', () => debounceWipeRefresh(200));
+        $(window).on('preloaderDone', () => debounceWipeRefresh(300));
 
     }
 });

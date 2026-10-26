@@ -1,5 +1,5 @@
 $(function () {
-
+  if (typeof gsap === "undefined" || typeof SplitText === "undefined") return;
   gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
 
   // Paragraph Animation
@@ -10,7 +10,6 @@ $(function () {
       scrollTrigger: {
         trigger: pAnimationLine,
         start: 'top 90%',
-        duration: 2,
         end: 'bottom 60%',
         scrub: false,
         markers: false,
@@ -20,7 +19,6 @@ $(function () {
 
     const pSplitLine = new SplitText(pAnimationLine, { type: "lines" });
     gsap.set(pAnimationLine, { perspective: 400 });
-    pSplitLine.split({ type: "lines" })
     tl.from(pSplitLine.lines, {
       duration: 1, 
       delay: 0.4, 

@@ -1,22 +1,7 @@
 (function ($) {
   "use strict";
 
-  // Header Sticky / Fixed Glassmorphism
   var windowOn = $(window);
-
-  function handleNavbarScroll() {
-    var scroll = windowOn.scrollTop();
-    if (scroll > 15) {
-      $(".header-area").addClass("header-scrolled");
-      $("#header-sticky").addClass("header-sticky");
-    } else {
-      $(".header-area").removeClass("header-scrolled");
-      $("#header-sticky").removeClass("header-sticky");
-    }
-  }
-
-  windowOn.on("scroll", handleNavbarScroll);
-  $(document).ready(handleNavbarScroll);
 
   //Header Search Form
 
@@ -100,68 +85,71 @@
   }
 
   // Hero Area Slider
+  if ($.fn.owlCarousel && $(".homepage-slides").length) {
+    $(".homepage-slides").owlCarousel({
+      items: 1,
+      dots: true,
+      nav: false,
+      loop: true,
+      autoplay: true,
+      autoplayTimeout: 5000,
+      animateIn: "fadeIn",
+      smartSpeed: 2000,
+      slideSpeed: 600,
 
-  $(".homepage-slides").owlCarousel({
-    items: 1,
-    dots: true,
-    nav: false,
-    loop: true,
-    autoplay: true,
-    autoplayTimeout: 5000,
-    animateIn: "fadeIn",
-    smartSpeed: 2000,
-    slideSpeed: 600,
-
-    responsive: {
-      0: {
-        items: 1,
-        nav: false,
-        dots: false,
+      responsive: {
+        0: {
+          items: 1,
+          nav: false,
+          dots: false,
+        },
+        600: {
+          items: 1,
+          nav: false,
+          dots: false,
+        },
+        768: {
+          items: 1,
+        },
+        1100: {
+          items: 1,
+        },
       },
-      600: {
-        items: 1,
-        nav: false,
-        dots: false,
-      },
-      768: {
-        items: 1,
-      },
-      1100: {
-        items: 1,
-      },
-    },
-  });
+    });
+  }
 
   // Portfolio Slider
-  $(".portfolio-slider").slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    centerMode: true,
-    centerPadding: '22%', /* Show partial next/prev slides */
-    arrows: true,
-    dots: false,
-    fade: false,
-    autoplay: true,
-    speed: 1000,
-    autoplaySpeed: 4000,
-    prevArrow: '<button type="button" class="slick-prev"><i class="las la-arrow-left"></i></button>',
-    nextArrow: '<button type="button" class="slick-next"><i class="las la-arrow-right"></i></button>',
-    responsive: [
-      {
-        breakpoint: 1200,
-        settings: {
-          centerPadding: '15%',
+  if ($.fn.slick && $(".portfolio-slider").length) {
+    $(".portfolio-slider").slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      centerMode: true,
+      centerPadding: '22%', /* Show partial next/prev slides */
+      arrows: true,
+      dots: false,
+      fade: false,
+      autoplay: true,
+      speed: 1000,
+      autoplaySpeed: 4000,
+      prevArrow: '<button type="button" class="slick-prev"><i class="las la-arrow-left"></i></button>',
+      nextArrow: '<button type="button" class="slick-next"><i class="las la-arrow-right"></i></button>',
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            centerPadding: '15%',
+          }
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            centerPadding: '0',
+            arrows: false,
+          }
         }
-      },
-      {
-        breakpoint: 767,
-        settings: {
-          centerPadding: '0',
-          arrows: false,
-        }
-      }
-    ]
-  });
+      ]
+    });
+  }
 
   // Testimonial & Service Sliders
   $(function () {
@@ -540,16 +528,18 @@
   //Hide Loading Box (Preloader)
   function handlePreloader() {
     if ($("#loader").length) {
+      if ($("#loader").data('preloader-handled')) return;
+      $("#loader").data('preloader-handled', true);
+      
       var count = 0;
       var counter = setInterval(function () {
         if (count < 101) {
           $('.loading-text').text(count + '%');
           $('.loading-bar').css('width', count + '%');
-          count++;
+          count += 2;
         } else {
           clearInterval(counter);
-          $("#loader").fadeOut(500, function () {
-            // Reveal header after preloader
+          $("#loader").fadeOut(300, function () {
             $('body').addClass('preloader-done');
             var $header = $('.header-area');
             if ($header.length && !$header.hasClass('nav-elements-active')) {
@@ -558,13 +548,32 @@
             $(window).trigger('preloaderDone');
           });
         }
-      }, 20); // Adjust speed of counter here
+      }, 10);
     }
   }
 
   $(window).on("load", function () {
     handlePreloader();
   });
+
+  // Fast trigger on DOM ready if load is delayed
+  $(function () {
+    setTimeout(handlePreloader, 400);
+  });
+
+  // Hard safety fallback: Dismiss loader after 1.2s max under all circumstances
+  setTimeout(function () {
+    if ($("#loader:visible").length) {
+      $("#loader").fadeOut(250, function () {
+        $('body').addClass('preloader-done');
+        var $header = $('.header-area');
+        if ($header.length && !$header.hasClass('nav-elements-active')) {
+          $header.addClass('nav-elements-active');
+        }
+        $(window).trigger('preloaderDone');
+      });
+    }
+  }, 1200);
 
 
   // Visible From Right Slowly Animation
@@ -597,8 +606,8 @@
   }
 
   // Mouse Custom Cursor removed per client request
-  // Hero Slider
-  if ($(".hero-slider").length) {
+  // Hero Slider (only initialize slick if more than 1 slide exists)
+  if ($(".hero-slider").length && $(".hero-slider").children().length > 1) {
     $(".hero-slider").slick({
       fade: true,
       autoplay: true,
@@ -1236,7 +1245,7 @@
     const galleryHeading = document.querySelector('.gallery-section .section-title h2');
     const galleryDesc = document.querySelector('.gallery-section .section-title p');
     if (galleryHeading) {
-      gsap.set(galleryHeading, { opacity: 1, letterSpacing: "2px", scale: 1 });
+      gsap.set(galleryHeading, { opacity: 1, scale: 1 });
     }
     if (galleryDesc) {
       gsap.set(galleryDesc, { opacity: 1, y: 0, rotateX: 0 });
@@ -1299,8 +1308,8 @@
       );
     }
 
-    // Global Subtle Image Parallax Elements
-    const parallaxImages = gsap.utils.toArray('.portfolio-bg, .cta-bg-parallax, .service-img-wrap img, .gallery-img-wrap img');
+    // Global Subtle Image Parallax Elements (excluding static gallery images with transform:none)
+    const parallaxImages = gsap.utils.toArray('.portfolio-bg, .cta-bg-parallax, .service-img-wrap img');
     parallaxImages.forEach(function (img) {
       // Adding a scale helps prevent exposing edges as the item moves
       gsap.fromTo(img,

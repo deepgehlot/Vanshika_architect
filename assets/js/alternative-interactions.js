@@ -20,8 +20,23 @@ document.addEventListener("DOMContentLoaded", function () {
     };
     $(window).on('preloaderDone', playHeroVideo);
     ['touchstart', 'click', 'scroll'].forEach(evt => {
-        window.addEventListener(evt, playHeroVideo, { once: true });
+        window.addEventListener(evt, playHeroVideo, { once: true, passive: true });
     });
+
+    // Auto-pause hero video when scrolled out of view to save massive CPU/GPU decoding resources
+    const heroVideoEl = document.querySelector('.hero-bg-video');
+    if (heroVideoEl && 'IntersectionObserver' in window) {
+        const videoObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    heroVideoEl.play().catch(() => {});
+                } else {
+                    heroVideoEl.pause();
+                }
+            });
+        }, { threshold: 0.05 });
+        videoObserver.observe(heroVideoEl);
+    }
 
     // ── Portfolio fade-in via IntersectionObserver (mobile only) ──
     if (isMobile) {
@@ -885,28 +900,31 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
 
-        // Force layout calculations and ScrollTrigger refresh after a short delay to prevent overlapping
-        setTimeout(() => {
-            ScrollTrigger.refresh();
-        }, 500);
-
-        // Additional refreshes on window load and after load to ensure Cloudinary images don't shift triggers
-        window.addEventListener('load', () => {
-            ScrollTrigger.refresh();
-            setTimeout(() => {
+        // Debounced layout calculations and ScrollTrigger refresh
+        let altRefreshTimer;
+        const debounceRefresh = (delay) => {
+            clearTimeout(altRefreshTimer);
+            altRefreshTimer = setTimeout(() => {
                 ScrollTrigger.refresh();
-            }, 1000);
-            setTimeout(() => {
-                ScrollTrigger.refresh();
-            }, 2500);
-        });
+            }, delay || 150);
+        };
 
-        // Also refresh on preloader finished event
-        $(window).on('preloaderDone', () => {
-            setTimeout(() => {
-                ScrollTrigger.refresh();
-            }, 500);
-        });
+        window.addEventListener('load', () => debounceRefresh(200));
+        $(window).on('preloaderDone', () => debounceRefresh(300));
 
+    }
+
+    // ── Infinite Magazine Logos Marquee (Featured on - Mobile Touch Pause) ──
+    const marqueeTrack = document.querySelector('.featured-logos-track');
+    if (marqueeTrack) {
+        marqueeTrack.addEventListener('touchstart', function () {
+            this.style.animationPlayState = 'paused';
+        }, { passive: true });
+        marqueeTrack.addEventListener('touchend', function () {
+            this.style.animationPlayState = 'running';
+        }, { passive: true });
+        marqueeTrack.addEventListener('touchcancel', function () {
+            this.style.animationPlayState = 'running';
+        }, { passive: true });
     }
 });
