@@ -9,23 +9,23 @@ const LOCAL_PROJECT_DATA = {
         name: "Dinesh Goyal Project",
         category: "Interior Architecture",
         description: "Dark Maximalism Luxury Bungalow",
-        cover: "assets/img/project photos/dinesh goyal cover photo.webp",
+        cover: "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/dinesh goyal cover photo.webp",
         images: [
-            "assets/img/project photos/dinesh goyal cover photo.webp",
-            "assets/img/project photos/dinesh goyal (1).webp",
-            "assets/img/project photos/dinesh goyal (2).webp",
-            "assets/img/project photos/dinesh goyal (3).webp",
-            "assets/img/project photos/dinesh goyal (4).webp",
-            "assets/img/project photos/dinesh goyal (5).webp",
-            "assets/img/project photos/dinesh goyal (6).webp",
-            "assets/img/project photos/dinesh goyal (8).webp",
-            "assets/img/project photos/dinesh goyal (9).webp",
-            "assets/img/project photos/dinesh goyal (10).webp",
-            "assets/img/project photos/dinesh goyal (11).webp",
-            "assets/img/project photos/dinesh goyal (12).webp",
-            "assets/img/project photos/dinesh goyal (13).webp",
-            "assets/img/project photos/dinesh goyal (14).webp",
-            "assets/img/project photos/dinesh goyal (15).webp"
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/dinesh goyal cover photo.webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/dinesh goyal (1).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/dinesh goyal (2).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/dinesh goyal (3).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/dinesh goyal (4).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/dinesh goyal (5).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/dinesh goyal (6).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/dinesh goyal (8).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/dinesh goyal (9).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/dinesh goyal (10).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/dinesh goyal (11).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/dinesh goyal (12).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/dinesh goyal (13).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/dinesh goyal (14).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/dinesh goyal (15).webp"
         ]
     },
     "pratab": {
@@ -33,64 +33,66 @@ const LOCAL_PROJECT_DATA = {
         name: "Pratap Project",
         category: "Heritage & Modern Architecture",
         description: "Opulent Heritage Villa & Modern Living",
-        cover: "assets/img/project photos/pratap cover photo.webp",
+        cover: "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/pratap cover photo.webp",
         images: [
-            "assets/img/project photos/pratap cover photo.webp",
-            "assets/img/project photos/pratap (1).webp",
-            "assets/img/project photos/pratap (2).webp",
-            "assets/img/project photos/pratap (3).webp",
-            "assets/img/project photos/pratap (5).webp",
-            "assets/img/project photos/pratap (6).webp",
-            "assets/img/project photos/pratap (7).webp"
-        ]
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/pratap cover photo.webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/pratap (1).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/pratap (2).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/pratap (3).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/pratap (5).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/pratap (6).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/pratap (7).webp"
+        ],
+        isFeatured: false
     },
     "Rajul": {
         id: "Rajul",
         name: "Rajul Project",
         category: "Luxury Residential Interior",
         description: "Bespoke Contemporary Residence",
-        cover: "assets/img/project photos/rajul cover photo.webp",
+        cover: "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/rajul cover photo.webp",
         images: [
-            "assets/img/project photos/rajul cover photo.webp",
-            "assets/img/project photos/rajul (1).webp",
-            "assets/img/project photos/rajul (3).webp",
-            "assets/img/project photos/rajul (4).webp",
-            "assets/img/project photos/rajul (5).webp",
-            "assets/img/project photos/rajul (6).webp",
-            "assets/img/project photos/rajul (7).webp",
-            "assets/img/project photos/rajul (8).webp",
-            "assets/img/project photos/rajul (9).webp",
-            "assets/img/project photos/rajul (10).webp",
-            "assets/img/project photos/rajul (11).webp",
-            "assets/img/project photos/rajul (12).webp",
-            "assets/img/project photos/rajul (13).webp",
-            "assets/img/project photos/rajul (14).webp",
-            "assets/img/project photos/rajul (15).webp"
-        ]
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/rajul cover photo.webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/rajul (1).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/rajul (3).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/rajul (4).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/rajul (5).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/rajul (6).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/rajul (7).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/rajul (8).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/rajul (9).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/rajul (10).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/rajul (11).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/rajul (12).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/rajul (13).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/rajul (14).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/rajul (15).webp"
+        ],
+        isFeatured: false
     },
     "Anantara": {
         id: "Anantara",
         name: "Anantara Project",
         category: "Hospitality Architecture",
         description: "Grand Luxury Resort & Suites",
-        cover: "assets/img/project photos/ANANATARA cover photo.webp",
+        cover: "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/ANANATARA cover photo.webp",
         images: [
-            "assets/img/project photos/ANANATARA cover photo.webp",
-            "assets/img/project photos/anantara (25).webp",
-            "assets/img/project photos/anantara (1).webp",
-            "assets/img/project photos/anantara (14).webp",
-            "assets/img/project photos/anantara (15).webp",
-            "assets/img/project photos/anantara (16).webp",
-            "assets/img/project photos/anantara (17).webp",
-            "assets/img/project photos/anantara (18).webp",
-            "assets/img/project photos/anantara (19).webp",
-            "assets/img/project photos/anantara (20).webp",
-            "assets/img/project photos/anantara (21).webp",
-            "assets/img/project photos/anantara (22).webp",
-            "assets/img/project photos/anantara (23).webp",
-            "assets/img/project photos/anantara (24).webp",
-            "assets/img/project photos/anantara (26).webp",
-            "assets/img/project photos/anantara (27).webp"
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/ANANATARA cover photo.webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/anantara (25).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/anantara (1).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/anantara (14).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/anantara (15).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/anantara (16).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/anantara (17).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/anantara (18).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/anantara (19).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/anantara (20).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/anantara (21).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/anantara (22).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/anantara (23).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/anantara (24).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/anantara (26).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/anantara (27).webp"
         ]
     },
     "khwaab_jaipur": {
@@ -98,14 +100,14 @@ const LOCAL_PROJECT_DATA = {
         name: "Khwaab Jaipur",
         category: "Interior Architecture",
         description: "Khwaab Jaipur Luxury Experience",
-        cover: "assets/img/project photos/khwaab cover photo.webp",
+        cover: "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/khwaab cover photo.webp",
         images: [
-            "assets/img/project photos/khwaab cover photo.webp",
-            "assets/img/project photos/khwaab (1).webp",
-            "assets/img/project photos/khwaab (2).webp",
-            "assets/img/project photos/khwaab (3).webp",
-            "assets/img/project photos/khwaab (4).webp",
-            "assets/img/project photos/khwaab (5).webp"
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/khwaab cover photo.webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/khwaab (1).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/khwaab (2).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/khwaab (3).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/khwaab (4).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/khwaab (5).webp"
         ]
     },
     "Tejwani": {
@@ -113,12 +115,12 @@ const LOCAL_PROJECT_DATA = {
         name: "Tejwani Project",
         category: "Modern Bungalow Interior",
         description: "Tejwani's Modern Luxury Bungalow",
-        cover: "assets/img/project photos/tejwani cover photo.webp",
+        cover: "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/tejwani cover photo.webp",
         images: [
-            "assets/img/project photos/tejwani cover photo.webp",
-            "assets/img/project photos/tejwani (1).webp",
-            "assets/img/project photos/tejwani (2).webp",
-            "assets/img/project photos/tejwani (4).webp"
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/tejwani cover photo.webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/tejwani (1).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/tejwani (2).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/tejwani (4).webp"
         ]
     },
     "Ranthambore": {
@@ -126,17 +128,17 @@ const LOCAL_PROJECT_DATA = {
         name: "Ranthambore Resort",
         category: "Resort & Heritage Architecture",
         description: "Wilderness Heritage Sanctuary & Luxury Resort",
-        cover: "assets/img/project photos/ranthambore cover photo.webp",
+        cover: "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/ranthambore cover photo.webp",
         images: [
-            "assets/img/project photos/ranthambore cover photo.webp",
-            "assets/img/project photos/ranthambore (1).webp",
-            "assets/img/project photos/ranthambore (8).webp",
-            "assets/img/project photos/ranthambore (9).webp",
-            "assets/img/project photos/ranthambore (11).webp",
-            "assets/img/project photos/ranthambore (12).webp",
-            "assets/img/project photos/ranthambore (13).webp",
-            "assets/img/project photos/ranthambore (14).webp",
-            "assets/img/project photos/ranthambore (15).webp"
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/ranthambore cover photo.webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/ranthambore (1).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/ranthambore (8).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/ranthambore (9).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/ranthambore (11).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/ranthambore (12).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/ranthambore (13).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/ranthambore (14).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/ranthambore (15).webp"
         ]
     },
     "BadalMahal": {
@@ -144,22 +146,35 @@ const LOCAL_PROJECT_DATA = {
         name: "Badal Mahal Kumbhalgarh",
         category: "Heritage & Palace Restoration",
         description: "Historic Kumbhalgarh Heritage Palace Restoration",
-        cover: "assets/img/project photos/BADAL MAHAL F.jpg (1).webp",
+        cover: "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/BADAL MAHAL F.jpg (1).webp",
         images: [
-            "assets/img/project photos/BADAL MAHAL F.jpg (1).webp",
-            "assets/img/project photos/badal mahal kumbhalgarh (1).webp",
-            "assets/img/project photos/badal mahal kumbhalgarh (2).webp",
-            "assets/img/project photos/badal mahal kumbhalgarh (3).webp",
-            "assets/img/project photos/badal mahal kumbhalgarh (4).webp"
-        ]
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/BADAL MAHAL F.jpg (1).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/badal mahal kumbhalgarh (1).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/badal mahal kumbhalgarh (2).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/badal mahal kumbhalgarh (3).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/badal mahal kumbhalgarh (4).webp"
+        ],
+        isFeatured: true
+    },
+    "Taj": {
+        id: "Taj",
+        name: "Taj Project",
+        category: "Heritage Architecture",
+        description: "Historic Luxury Heritage Palace",
+        cover: "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/taj_mind6j.jpg",
+        images: [
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/taj_mind6j.jpg",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/taj2_nf9ocm.jpg",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/taj1_echh4a.jpg",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/taj_zihfiy.jpg"
+        ],
+        isFeatured: false
     }
 };
 
 const CONFIG = {
-    // PASTE YOUR PUBLISHED GOOGLE SHEET CSV URL HERE
-    SHEET_CSV_URL: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRSEn9clTRuerF74EqZLKzceDB4RzSQvBVNWl_z-BQRck6ejdm6IoCKeakx76eZCd22Z2lEi63Af7o6/pub?output=csv',
     CATEGORIES: ['Architecture', 'Interior', 'Heritage', '3D Modeling'],
-    FALLBACK_DATA: Object.values(LOCAL_PROJECT_DATA).map(p => ({
+    PROJECTS: Object.values(LOCAL_PROJECT_DATA).map(p => ({
         ID: p.id,
         Name: p.name,
         Category: p.category,
@@ -167,7 +182,7 @@ const CONFIG = {
         Description: p.description,
         Main_Image: p.cover,
         Gallery_Images: p.images.join(','),
-        Is_Featured: "TRUE"
+        Is_Featured: p.isFeatured !== false ? "TRUE" : "FALSE"
     }))
 };
 
@@ -178,145 +193,15 @@ class ProjectsHandler {
         this.init();
     }
 
-    async init() {
-        try {
-            console.log('🔄 Attempting to fetch project data from Google Sheets...');
+    init() {
+        console.log('✅ Loaded projects from local dataset (100% offline & fast)');
+        this.projects = [...CONFIG.PROJECTS];
+        console.log(`📊 Total Projects Loaded: ${this.projects.length}`);
 
-            // Check for local file protocol (CORS restriction)
-            if (window.location.protocol === 'file:') {
-                const msg = '🚨 Browser Security Error: You are opening this file directly as a local file (file://). ' +
-                    'Please use a local server like "Live Server" in VS Code or web server.';
-                console.error(msg);
-                this.showUIError(msg);
-                return;
-            }
+        // Trigger custom event when data is ready
+        $(window).trigger('projectsLoaded', [this.projects]);
 
-            console.log('🔗 Sheet URL:', CONFIG.SHEET_CSV_URL);
-
-            const data = await this.fetchData();
-            this.projects = this.parseCSV(data);
-            this.mergeLocalData();
-
-            console.log('✅ Connection Successful!');
-            console.log(`📊 Total Projects Loaded: ${this.projects.length}`);
-
-            if (this.projects.length === 0) {
-                console.warn('⚠️ No projects found in the sheet. Falling back to local data.');
-                this.projects = [...CONFIG.FALLBACK_DATA];
-            }
-
-            // Trigger custom event when data is ready
-            $(window).trigger('projectsLoaded', [this.projects]);
-
-            this.router();
-        } catch (error) {
-            const errorMsg = error instanceof Error ? error.message : 'Unknown error';
-            console.error('❌ Failed to fetch from Google Sheets:', errorMsg);
-            console.warn('Using local project data.');
-            this.projects = [...CONFIG.FALLBACK_DATA];
-            $(window).trigger('projectsLoaded', [this.projects]);
-            this.router();
-        }
-    }
-
-    async fetchData() {
-        if (!CONFIG.SHEET_CSV_URL || CONFIG.SHEET_CSV_URL.includes('PASTE_URL_HERE')) {
-            throw new Error('No CSV URL provided in CONFIG');
-        }
-
-        const response = await fetch(CONFIG.SHEET_CSV_URL);
-        if (!response.ok) {
-            throw new Error(`HTTP Error: ${response.status} ${response.statusText}`);
-        }
-
-        let text = await response.text();
-
-        // Remove UTF-8 BOM if present
-        if (text.charCodeAt(0) === 0xFEFF) {
-            text = text.substr(1);
-        }
-        return text;
-    }
-
-    parseCSV(csv) {
-        if (!csv) return [];
-        const lines = csv.split(/\r?\n/);
-        if (lines.length < 2) return [];
-
-        const headers = lines[0].split(',').map(h => h.trim().replace(/^"|"$/g, ''));
-        const result = [];
-
-        for (let i = 1; i < lines.length; i++) {
-            if (!lines[i].trim()) continue;
-
-            const obj = {};
-            const currentLine = lines[i].split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
-
-            let isEmptyRow = true;
-            headers.forEach((header, index) => {
-                let val = currentLine[index] ? currentLine[index].trim().replace(/^"|"$/g, '') : '';
-                obj[header] = val;
-                if (val !== '') {
-                    isEmptyRow = false;
-                }
-            });
-
-            // Skip rows that are completely empty or missing a Project Name/ID
-            if (isEmptyRow || (!obj['ID'] && !obj['Name'])) continue;
-
-            result.push(obj);
-        }
-        return result;
-    }
-
-    mergeLocalData() {
-        const normalize = (str) => (str || '').toString().toLowerCase().replace(/[^a-z0-9]/g, '');
-
-        const findLocal = (idOrName) => {
-            if (!idOrName) return null;
-            const term = normalize(idOrName);
-            for (const key of Object.keys(LOCAL_PROJECT_DATA)) {
-                const cleanKey = normalize(key);
-                if (cleanKey === term) return LOCAL_PROJECT_DATA[key];
-                const item = LOCAL_PROJECT_DATA[key];
-                const cleanName = normalize(item.name);
-                if (cleanName === term || cleanName.includes(term) || term.includes(cleanKey) || term.includes(cleanName)) {
-                    return item;
-                }
-            }
-            return null;
-        };
-
-        const existingKeys = new Set();
-
-        this.projects.forEach(p => {
-            const local = findLocal(p.ID) || findLocal(p.Name);
-            if (local) {
-                existingKeys.add(local.id.toLowerCase());
-                if (local.cover) p.Main_Image = local.cover;
-                if (local.images && local.images.length > 0) {
-                    p.Gallery_Images = local.images.join(',');
-                }
-                if (!p.Category && local.category) p.Category = local.category;
-            }
-        });
-
-        // Add any local projects that were not in the Google Sheet
-        Object.keys(LOCAL_PROJECT_DATA).forEach(key => {
-            if (!existingKeys.has(key.toLowerCase())) {
-                const item = LOCAL_PROJECT_DATA[key];
-                this.projects.push({
-                    ID: item.id,
-                    Name: item.name,
-                    Category: item.category,
-                    Tags: "Architect,Interior,Heritage,3D",
-                    Description: item.description,
-                    Main_Image: item.cover,
-                    Gallery_Images: item.images.join(','),
-                    Is_Featured: "TRUE"
-                });
-            }
-        });
+        this.router();
     }
 
     router() {
@@ -534,7 +419,7 @@ class ProjectsHandler {
 
             images.forEach(img => {
                 if (img) {
-                    const encodedUrl = encodeURI(img).replace(/\(/g, '%28').replace(/\)/g, '%29');
+                    const encodedUrl = this.safeUrl(img);
                     mainHtml += `
                         <div class="project-slide-item">
                             <div class="slide-bg-blur" style="background-image: url('${encodedUrl}')"></div>
@@ -603,8 +488,17 @@ class ProjectsHandler {
         }
     }
 
+    safeUrl(url) {
+        if (!url) return '';
+        try {
+            return encodeURI(decodeURI(url)).replace(/\(/g, '%28').replace(/\)/g, '%29');
+        } catch (e) {
+            return encodeURI(url).replace(/\(/g, '%28').replace(/\)/g, '%29');
+        }
+    }
+
     getSliderItemHTML(p, num) {
-        const coverUrl = encodeURI(p.Main_Image || '').replace(/\(/g, '%28').replace(/\)/g, '%29');
+        const coverUrl = this.safeUrl(p.Main_Image || '');
         return `
             <div class="portfolio-slide-item">
                 <div class="portfolio-img-wrap">
@@ -646,7 +540,7 @@ class ProjectsHandler {
         }
 
         const safeClasses = Array.from(classes).join(' ');
-        const coverUrl = encodeURI(p.Main_Image || '').replace(/\(/g, '%28').replace(/\)/g, '%29');
+        const coverUrl = this.safeUrl(p.Main_Image || '');
 
         return `
             <div class="${safeClasses}">

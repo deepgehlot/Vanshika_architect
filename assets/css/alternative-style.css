@@ -106,6 +106,17 @@ body {
     transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* Header logo initial state - Y-axis animation from bottom to top (niche se uper) */
+.header-area div.logo {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(50px);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
 /* Hide ENTIRE header (logo + nav + hamburger) during preloader on non-home pages */
 body:not(.preloader-done):not(.home-page) .header-area {
   opacity: 0 !important;
@@ -119,6 +130,12 @@ body:not(.preloader-done):not(.home-page) .header-area {
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
+}
+
+.header-area.nav-elements-active div.logo {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  transform: translateY(0) !important;
 }
 
 /* Fixed Navigation Header across all sections & pages (Kept completely transparent) */
@@ -312,9 +329,9 @@ body.light.home-page .header-area:not(.header-scrolled) #hamburger i {
 
 /* Header logo override during loading */
 .header-area .logo img {
-  transform: scale(0.98);
+  /* transform: scale(0.98); */
   transform-origin: center center;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  /* transition: opacity 0.3s ease, transform 0.3s ease; */
 }
 
 /* Scroll overlap page layout - now standard flow sitting after hero */
@@ -3993,7 +4010,7 @@ p {
 
 /* Fix header mobile layout for 992-1199px range (matches d-xl breakpoint) */
 @media (min-width: 992px) and (max-width: 1199px) {
-  .header-area .logo {
+  .header-area div.logo {
     max-width: 70% !important;
     justify-content: left !important;
   }

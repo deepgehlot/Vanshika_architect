@@ -9,7 +9,7 @@
     <title>Architect Vanshika</title>
 
     <!--Favicon-->
-    <link rel="icon" href="assets/img/favicon.png" type="image/png">
+    <link rel="icon" href="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/favicon.png" type="image/png">
 
     <!-- Bootstrap CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -50,7 +50,7 @@
     <!-- Pre-Loader -->
     <div id="loader">
         <div class="loader-content">
-            <img src="assets/img/logo/Short_logo.png" alt="Loader Logo" class="loader-logo">
+            <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/logo/Short_logo.png" alt="Loader Logo" class="loader-logo">
             <div class="loading-bar-container">
                 <div class="loading-bar"></div>
                 <span class="loading-text">0%</span>
@@ -89,7 +89,7 @@
                             <div class="col-lg-5 col-md-5 col-12">
                                 <div class="about-profile-box">
                                     <div class="about-single-profile-card">
-                                        <img src="assets/img/WEB/ABOUT ME.webp" alt="Vanshika Agarwal" class="about-single-profile-img">
+                                        <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/WEB/ABOUT%20ME.webp" alt="Vanshika Agarwal" class="about-single-profile-img">
                                     </div>
                                     <!-- Name and Description under Image as requested -->
                                     <div class="about-profile-meta text-center text-md-start">
@@ -154,7 +154,7 @@
                 </section>
 
                 <!-- 3. Full Length Grand CTA Section (Bring Your New Dream Project To Life) -->
-                <section class="about-full-length-cta-section text-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.58)), url('assets/img/WEB/CONTACT US.webp');">
+                <section class="about-full-length-cta-section text-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.58)), url('https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/WEB/CONTACT US.webp');">
                     <div class="container-fluid px-lg-5 px-md-4 px-3 about-cta-divider-container" style="max-width: 1320px; margin: 0 auto;">
                         <div class="about-full-cta-inner mx-auto">
                             <span class="cta-overhead-label">START YOUR JOURNEY</span>

@@ -9,7 +9,7 @@
     <title>Blog - Architect Vanshika</title>
 
     <!--Favicon-->
-    <link rel="icon" href="assets/img/favicon.png" type="image/png">
+    <link rel="icon" href="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/favicon.png" type="image/png">
 
     <!-- Bootstrap CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -53,7 +53,7 @@
     <!-- Pre-Loader -->
     <div id="loader">
         <div class="loader-content">
-            <img src="assets/img/logo/Short_logo.png" alt="Loader Logo" class="loader-logo">
+            <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/logo/Short_logo.png" alt="Loader Logo" class="loader-logo">
             <div class="loading-bar-container">
                 <div class="loading-bar"></div>
                 <span class="loading-text">0%</span>
@@ -90,7 +90,7 @@
                             <div class="blog-card-unique">
                                 <div class="blog-img">
                                     <a href="blog-detail.php?id=1">
-                                        <img src="assets/img/WEB/SERVICES ARCHITECTURE.webp"
+                                        <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/WEB/SERVICES ARCHITECTURE.webp"
                                             alt="Blog Post" class="img-fluid w-100">
                                     </a>
                                     <div class="blog-date">
@@ -114,7 +114,7 @@
                             <div class="blog-card-unique">
                                 <div class="blog-img">
                                     <a href="blog-detail.php?id=2">
-                                        <img src="assets/img/WEB/SERVICES STYLING.webp"
+                                        <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/WEB/SERVICES STYLING.webp"
                                             alt="Blog Post" class="img-fluid w-100">
                                     </a>
                                     <div class="blog-date">
@@ -137,7 +137,7 @@
                             <div class="blog-card-unique">
                                 <div class="blog-img">
                                     <a href="blog-detail.php?id=3">
-                                        <img src="assets/img/WEB/HERITAGE LUXURY.webp"
+                                        <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/WEB/HERITAGE LUXURY.webp"
                                             alt="Blog Post" class="img-fluid w-100">
                                     </a>
                                     <div class="blog-date">

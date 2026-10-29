@@ -10,7 +10,7 @@
     <title>Vanshika Agarwal</title>
 
     <!--Favicon-->
-    <link rel="icon" href="assets/img/favicon.png" type="image/png">
+    <link rel="icon" href="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/favicon.png" type="image/png">
 
     <!-- Bootstrap CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -53,7 +53,7 @@
             <div class="loader-logo-container">
                 <!-- Inner logo starts clipped out and fills inside a circular mask -->
                 <div class="loader-logo-mask">
-                    <img src="assets/img/logo/full_logo.png" alt="Loader Logo" class="loader-logo">
+                    <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/logo/full_logo.png" alt="Loader Logo" class="loader-logo">
                 </div>
             </div>
             <div class="loading-bar-container">
@@ -75,7 +75,7 @@
                     <div class="hero-slider-item">
                         <video class="hero-bg-video" autoplay loop muted playsinline aria-hidden="true" tabindex="-1">
                             <source
-                                src="assets/img/WEB/Webiste Final Video_squished.mp4"
+                                src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/WEB/Webiste Final Video_squished.mp4"
                                 type="video/mp4">
                         </video>
                     </div>
@@ -93,7 +93,7 @@
                             <!-- Left Column: Image Reveal -->
                             <div class="col-xl-6 col-lg-6 col-md-12 p-0 order-2 order-lg-1 image-col">
                                 <div class="alternative-image-reveal left-reveal">
-                                    <img src="https://res.cloudinary.com/dwzfpa4vq/image/upload/v1782461461/IMG_4346.JPG_wzrxiz.jpg"
+                                    <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/WEB/HERITAGE%20LUXURY.webp"
                                         alt="Mastering Modern Heritage Luxury" decoding="async">
                                 </div>
                             </div>
@@ -150,7 +150,7 @@
                             <!-- Right Column: Image Reveal -->
                             <div class="col-xl-6 col-lg-6 col-md-12 p-0 order-2 order-lg-2 image-col">
                                 <div class="alternative-image-reveal right-reveal">
-                                    <img src="assets/img/WEB/PRINCIPAL DESIGNER.webp"
+                                    <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/WEB/PRINCIPAL DESIGNER.webp"
                                         alt="Principal Architect Vanshika Agarwal" decoding="async">
                                 </div>
                             </div>
@@ -183,7 +183,7 @@
                             <!-- Item 1: Architecture -->
                             <div class="service-stack-item item-1">
                                 <div class="img-curtain">
-                                    <img src="assets/img/WEB/SERVICES ARCHITECTURE.webp"
+                                    <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/WEB/SERVICES ARCHITECTURE.webp"
                                         alt="Architecture" decoding="async">
                                     <div class="overlay-gradient"></div>
                                 </div>
@@ -195,7 +195,7 @@
                             <!-- Item 2: Interior Design -->
                             <div class="service-stack-item item-2">
                                 <div class="img-curtain">
-                                    <img src="assets/img/WEB/SERVICES STYLING.webp"
+                                    <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/WEB/SERVICES STYLING.webp"
                                         alt="Interior Design" decoding="async">
                                     <div class="overlay-gradient"></div>
                                 </div>
@@ -207,7 +207,7 @@
                             <!-- Item 3: Project Management -->
                             <div class="service-stack-item item-3">
                                 <div class="img-curtain">
-                                    <img src="assets/img/WEB/HERITAGE LUXURY.webp"
+                                    <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/WEB/HERITAGE LUXURY.webp"
                                         alt="Project Management" decoding="async">
                                     <div class="overlay-gradient"></div>
                                 </div>
@@ -219,7 +219,7 @@
                             <!-- Item 4: Landscaping -->
                             <div class="service-stack-item item-4">
                                 <div class="img-curtain">
-                                    <img src="assets/img/WEB/SERVICES LANDSCAPE.webp"
+                                    <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/WEB/SERVICES LANDSCAPE.webp"
                                         alt="Landscaping" decoding="async">
                                     <div class="overlay-gradient"></div>
                                 </div>
@@ -254,7 +254,7 @@
                             <div class="gallery-item">
                                 <a href="project-detail.php?id=Dinesh" class="gallery-item-link" style="display: block; width: 100%; height: 100%; text-decoration: none;">
                                     <div class="gallery-img-wrap">
-                                        <img src="assets/img/project photos/dinesh goyal cover photo.webp"
+                                        <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/dinesh goyal cover photo.webp"
                                             alt="Dinesh Goyal Project" decoding="async">
                                         <div class="gallery-hover-overlay">
                                             <div class="hover-content">
@@ -271,7 +271,7 @@
                             <div class="gallery-item">
                                 <a href="project-detail.php?id=pratab" class="gallery-item-link" style="display: block; width: 100%; height: 100%; text-decoration: none;">
                                     <div class="gallery-img-wrap">
-                                        <img src="assets/img/project photos/pratap (3).webp"
+                                        <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/pratap (3).webp"
                                             alt="Pratap Project" decoding="async">
                                         <div class="gallery-hover-overlay">
                                             <div class="hover-content">
@@ -288,7 +288,7 @@
                             <div class="gallery-item span-row-2 rajul-item">
                                 <a href="project-detail.php?id=Rajul" class="gallery-item-link" style="display: block; width: 100%; height: 100%; text-decoration: none;">
                                     <div class="gallery-img-wrap">
-                                        <img src="assets/img/project photos/rajul cover photo.webp"
+                                        <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/rajul cover photo.webp"
                                             alt="Rajul Project" decoding="async">
                                         <div class="gallery-hover-overlay">
                                             <div class="hover-content">
@@ -305,7 +305,7 @@
                             <div class="gallery-item">
                                 <a href="project-detail.php?id=Anantara" class="gallery-item-link" style="display: block; width: 100%; height: 100%; text-decoration: none;">
                                     <div class="gallery-img-wrap">
-                                        <img src="assets/img/project photos/anantara (25).webp"
+                                        <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/anantara (25).webp"
                                             alt="Anantara Project" decoding="async">
                                         <div class="gallery-hover-overlay">
                                             <div class="hover-content">
@@ -536,8 +536,8 @@
                 <!-- CTA Area  -->
                 <section class="cta-img-area section-padding">
                     <div class="cta-bg-parallax"
-                        data-background="assets/img/WEB/CONTACT US.webp"
-                        style="background-image: url('assets/img/WEB/CONTACT US.webp');">
+                        data-background="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/WEB/CONTACT US.webp"
+                        style="background-image: url('https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/WEB/CONTACT US.webp');">
                     </div>
                     <div class="cta-inner text-center">
                         <div class="section-title">

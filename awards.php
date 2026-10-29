@@ -12,7 +12,7 @@ $page_title = "Awards & Recognitions";
     <title>Awards - Architect Vanshika</title>
 
     <!--Favicon-->
-    <link rel="icon" href="assets/img/favicon.png" type="image/png">
+    <link rel="icon" href="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/favicon.png" type="image/png">
 
     <!-- Bootstrap CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -412,7 +412,7 @@ $page_title = "Awards & Recognitions";
     <!-- Pre-Loader -->
     <div id="loader">
         <div class="loader-content">
-            <img src="assets/img/logo/Short_logo.png" alt="Loader Logo" class="loader-logo">
+            <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/logo/Short_logo.png" alt="Loader Logo" class="loader-logo">
             <div class="loading-bar-container">
                 <div class="loading-bar"></div>
                 <span class="loading-text">0%</span>
@@ -449,7 +449,7 @@ $page_title = "Awards & Recognitions";
                             <!-- Left: Single Profile Photo -->
                             <div class="col-lg-5 col-md-5 col-12">
                                 <div class="awards-single-profile-card">
-                                    <img src="assets/img/WEB/AWARD.webp" alt="Vanshika Agarwal" class="awards-single-profile-img">
+                                    <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/WEB/AWARD.webp" alt="Vanshika Agarwal" class="awards-single-profile-img">
                                 </div>
                             </div>
 

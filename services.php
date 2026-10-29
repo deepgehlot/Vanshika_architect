@@ -9,7 +9,7 @@
     <title>Services - Architect Vanshika</title>
 
     <!--Favicon-->
-    <link rel="icon" href="assets/img/favicon.png" type="image/png">
+    <link rel="icon" href="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/favicon.png" type="image/png">
 
     <!-- Bootstrap CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -55,7 +55,7 @@
     <!-- Pre-Loader -->
     <div id="loader">
         <div class="loader-content">
-            <img src="assets/img/logo/Short_logo.png" alt="Loader Logo" class="loader-logo">
+            <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/logo/Short_logo.png" alt="Loader Logo" class="loader-logo">
             <div class="loading-bar-container">
                 <div class="loading-bar"></div>
                 <span class="loading-text">0%</span>
@@ -89,7 +89,7 @@
                             <div class="col-lg-6 col-md-6">
                                 <div class="v-service-card-wipe">
                                     <div class="v-service-img">
-                                        <img src="assets/img/WEB/SERVICES ARCHITECTURE.webp"
+                                        <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/WEB/SERVICES ARCHITECTURE.webp"
                                             alt="Iconic Architecture">
                                         <div class="v-service-info">
                                             <h3>Architecture</h3>
@@ -107,7 +107,7 @@
                             <div class="col-lg-6 col-md-6">
                                 <div class="v-service-card-wipe">
                                     <div class="v-service-img">
-                                        <img src="assets/img/WEB/SERVICES STYLING.webp"
+                                        <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/WEB/SERVICES STYLING.webp"
                                             alt="Interior Design">
                                         <div class="v-service-info">
                                             <h3>Interior Design</h3>
@@ -125,7 +125,7 @@
                             <div class="col-lg-6 col-md-6">
                                 <div class="v-service-card-wipe">
                                     <div class="v-service-img">
-                                        <img src="assets/img/WEB/HERITAGE LUXURY.webp"
+                                        <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/WEB/HERITAGE LUXURY.webp"
                                             alt="Project Management">
                                         <div class="v-service-info">
                                             <h3>Project Management</h3>
@@ -143,7 +143,7 @@
                             <div class="col-lg-6 col-md-6">
                                 <div class="v-service-card-wipe">
                                     <div class="v-service-img">
-                                        <img src="assets/img/WEB/SERVICES LANDSCAPE.webp"
+                                        <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/WEB/SERVICES LANDSCAPE.webp"
                                             alt="Historic Preservation">
                                         <div class="v-service-info">
                                             <h3>Landscaping </h3>

@@ -5,7 +5,7 @@
             <div class="row justify-content-center align-items-center gy-5">
                 <div class="col-lg-4 col-12 text-center">
                     <a href="index.php" class="logo d-inline-block">
-                        <img src="assets/img/logo/Short_logo.png" alt="Vanshika Logo" style="max-width: 180px;">
+                        <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/logo/Short_logo.png" alt="Vanshika Logo" style="max-width: 180px;">
                     </a>
                 </div>
                 <div class="col-lg-4 col-12 text-center">

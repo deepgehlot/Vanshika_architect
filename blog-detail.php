@@ -6,7 +6,7 @@ $blogs = [
         'category' => 'Architecture',
         'date' => 'Jan 24, 2025',
         'author' => 'Vanshika',
-        'image' => 'assets/img/WEB/SERVICES ARCHITECTURE.webp',
+        'image' => 'https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/WEB/SERVICES ARCHITECTURE.webp',
         'content' => '
             <p class="mb-4">Sustainable architecture is no longer just a trend; it is a necessity.
                 As we move forward, the integration of eco-friendly materials and energy-efficient
@@ -35,10 +35,10 @@ $blogs = [
 
             <div class="row my-5">
                 <div class="col-md-6 mb-4 mb-md-0">
-                    <img src="assets/img/WEB/SERVICES ARCHITECTURE.webp" alt="Inner Image" class="img-fluid w-100">
+                    <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/WEB/SERVICES ARCHITECTURE.webp" alt="Inner Image" class="img-fluid w-100">
                 </div>
                 <div class="col-md-6">
-                    <img src="assets/img/WEB/SERVICES STYLING.webp" alt="Inner Image" class="img-fluid w-100">
+                    <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/WEB/SERVICES STYLING.webp" alt="Inner Image" class="img-fluid w-100">
                 </div>
             </div>
 
@@ -54,7 +54,7 @@ $blogs = [
         'category' => 'Interior',
         'date' => 'Jan 15, 2025',
         'author' => 'Vanshika',
-        'image' => 'assets/img/WEB/SERVICES STYLING.webp',
+        'image' => 'https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/WEB/SERVICES STYLING.webp',
         'content' => '
             <p class="mb-4">Minimalism has evolved. It is no longer about stark white walls and empty spaces, but rather about warm minimalism that combines functionality with comfort, texture, and organic materials.</p>
 
@@ -70,10 +70,10 @@ $blogs = [
 
             <div class="row my-5">
                 <div class="col-md-6 mb-4 mb-md-0">
-                    <img src="assets/img/WEB/SERVICES ARCHITECTURE.webp" alt="Inner Image" class="img-fluid w-100">
+                    <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/WEB/SERVICES ARCHITECTURE.webp" alt="Inner Image" class="img-fluid w-100">
                 </div>
                 <div class="col-md-6">
-                    <img src="assets/img/WEB/HERITAGE LUXURY.webp" alt="Inner Image" class="img-fluid w-100">
+                    <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/WEB/HERITAGE LUXURY.webp" alt="Inner Image" class="img-fluid w-100">
                 </div>
             </div>
 
@@ -87,7 +87,7 @@ $blogs = [
         'category' => 'Design',
         'date' => 'Dec 10, 2024',
         'author' => 'Vanshika',
-        'image' => 'assets/img/WEB/HERITAGE LUXURY.webp',
+        'image' => 'https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/WEB/HERITAGE LUXURY.webp',
         'content' => '
             <p class="mb-4">Lighting is the lifeblood of interior design. It has the power to transform a cold room into a warm haven, change the mood instantly, and define how we interact with space.</p>
 
@@ -103,10 +103,10 @@ $blogs = [
 
             <div class="row my-5">
                 <div class="col-md-6 mb-4 mb-md-0">
-                    <img src="assets/img/WEB/SERVICES STYLING.webp" alt="Inner Image" class="img-fluid w-100">
+                    <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/WEB/SERVICES STYLING.webp" alt="Inner Image" class="img-fluid w-100">
                 </div>
                 <div class="col-md-6">
-                    <img src="assets/img/WEB/HERITAGE LUXURY.webp" alt="Inner Image" class="img-fluid w-100">
+                    <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/WEB/HERITAGE LUXURY.webp" alt="Inner Image" class="img-fluid w-100">
                 </div>
             </div>
 
@@ -136,7 +136,7 @@ $current_blog = $blogs[$blog_id];
     <title><?php echo $current_blog['title']; ?> - Architect Vanshika</title>
 
     <!--Favicon-->
-    <link rel="icon" href="assets/img/favicon.png" type="image/png">
+    <link rel="icon" href="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/favicon.png" type="image/png">
 
     <!-- Bootstrap CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -324,7 +324,7 @@ $current_blog = $blogs[$blog_id];
     <!-- Pre-Loader -->
     <div id="loader">
         <div class="loader-content">
-            <img src="assets/img/logo/Short_logo.png" alt="Loader Logo" class="loader-logo">
+            <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/logo/Short_logo.png" alt="Loader Logo" class="loader-logo">
             <div class="loading-bar-container">
                 <div class="loading-bar"></div>
                 <span class="loading-text">0%</span>

@@ -119,8 +119,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const isAlternativePreloader = loader && loader.classList.contains("white-preloader");
 
     if (isAlternativePreloader) {
-        if (desktopNavLogo) desktopNavLogo.style.opacity = "0";
-        if (mobileNavLogo) mobileNavLogo.style.opacity = "0";
+        // desktopNavLogo opacity handled by CSS
+        // mobileNavLogo opacity handled by CSS
 
         // Set up navigation header reference
         if (headerArea) {
@@ -175,146 +175,95 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }, 40);
 
-        // Fly to Navbar animation
+        // Header Logo Entrance Animation (Y-axis: bottom to top / niche se uper)
         function triggerLogoTransition() {
-            // Determine active header logo based on viewport width
-            const activeNavLogo = window.innerWidth >= 1200 ? desktopNavLogo : mobileNavLogo;
-
-            if (!activeNavLogo || !loaderLogo) {
-                // Fallback if logo element is not found
-                gsap.to(loader, {
-                    opacity: 0, duration: 0.5, onComplete: () => {
-                        if (loader) loader.style.display = "none";
-                        document.body.classList.add('preloader-done');
-                        $(window).trigger('preloaderDone');
-                        initScrollAnimations();
-                    }
+            // Animate progress elements out quickly
+            const elementsToFade = [];
+            const loaderCircle = document.querySelector(".loader-circle-svg");
+            const loadingBarContainer = document.querySelector(".white-preloader .loading-bar-container");
+            if (loaderCircle) elementsToFade.push(loaderCircle);
+            if (loadingBarContainer) elementsToFade.push(loadingBarContainer);
+            if (progressText) elementsToFade.push(progressText);
+            if (elementsToFade.length > 0) {
+                gsap.to(elementsToFade, {
+                    opacity: 0,
+                    duration: 0.2
                 });
-                return;
             }
 
-            // Force header logo visibility to 0 initially
-            activeNavLogo.style.opacity = "0";
-
-            // Wait a small bit to ensure DOM layout has finalized
-            setTimeout(() => {
-                const targetRect = activeNavLogo.getBoundingClientRect();
-                const sourceRect = loaderLogo.getBoundingClientRect();
-
-                // Move original loader logo to body to prevent duplication
-                loaderLogo.style.position = "fixed";
-                loaderLogo.style.left = `${sourceRect.left}px`;
-                loaderLogo.style.top = `${sourceRect.top}px`;
-                loaderLogo.style.width = `${sourceRect.width}px`;
-                loaderLogo.style.height = `${sourceRect.height}px`;
-                loaderLogo.style.zIndex = "999999";
-                loaderLogo.style.margin = "0";
-                loaderLogo.style.transform = "none";
-                loaderLogo.style.transition = "none";
-                document.body.appendChild(loaderLogo);
-
-                // Animate progress bar/circle and text out instantly
-                const elementsToFade = [];
-                const loaderCircle = document.querySelector(".loader-circle-svg");
-                const loadingBarContainer = document.querySelector(".white-preloader .loading-bar-container");
-                if (loaderCircle) elementsToFade.push(loaderCircle);
-                if (loadingBarContainer) elementsToFade.push(loadingBarContainer);
-                if (progressText) elementsToFade.push(progressText);
-                if (elementsToFade.length > 0) {
-                    gsap.to(elementsToFade, {
-                        opacity: 0,
-                        duration: 0.2
-                    });
+            // Fade out preloader screen smoothly
+            gsap.to(loader, {
+                opacity: 0,
+                duration: 0.5,
+                ease: "power2.out",
+                onComplete: () => {
+                    if (loader) loader.style.display = "none";
+                    document.body.classList.add('preloader-done');
+                    $(window).trigger('preloaderDone');
+                    initScrollAnimations();
                 }
+            });
 
-                // IMMEDIATELY fade out preloader screen and make it click-through
-                gsap.to(loader, {
-                    opacity: 0,
-                    duration: 0.5,
-                    ease: "power2.out",
-                    onComplete: () => {
-                        if (loader) loader.style.display = "none";
-                        document.body.classList.add('preloader-done');
-                        $(window).trigger('preloaderDone');
+            // Activate header elements
+            if (headerArea) {
+                headerArea.classList.add("nav-elements-active");
+            }
+
+            // Header logo animation is smoothly handled by CSS (.header-area div.logo)
+
+            // Animate About Hero Image reveal / cutout and texts
+            const aboutHeroPersonImg = document.querySelector(".about-hero-person-img");
+            if (aboutHeroPersonImg) {
+                gsap.fromTo(aboutHeroPersonImg,
+                    { y: 150, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 1.6,
+                        ease: "power4.out",
+                        delay: 0.2
                     }
-                });
+                );
+            }
 
-                // IMMEDIATELY show header menu items as logo begins to fly
-                if (headerArea) {
-                    headerArea.classList.add("nav-elements-active");
-                }
-
-                // Animate About Hero Image reveal / cutout and texts
-                const aboutHeroPersonImg = document.querySelector(".about-hero-person-img");
-                if (aboutHeroPersonImg) {
-                    gsap.fromTo(aboutHeroPersonImg,
-                        { y: 150, opacity: 0 },
-                        {
-                            y: 0,
-                            opacity: 1,
-                            duration: 1.6,
-                            ease: "power4.out",
-                            delay: 0.2
-                        }
-                    );
-                }
-
-                const aboutHeroName = document.querySelector(".about-hero-name");
-                if (aboutHeroName) {
-                    gsap.fromTo(aboutHeroName,
-                        { scale: 0.85, opacity: 0 },
-                        {
-                            scale: 1,
-                            opacity: 1,
-                            duration: 2.0,
-                            ease: "power3.out",
-                            delay: 0.4
-                        }
-                    );
-                }
-
-                const aboutHeroCursive = document.querySelector(".about-hero-cursive");
-                if (aboutHeroCursive) {
-                    gsap.fromTo(aboutHeroCursive,
-                        { scale: 0.6, opacity: 0, rotate: -25 },
-                        {
-                            scale: 1,
-                            opacity: 1,
-                            rotate: -8,
-                            duration: 1.8,
-                            ease: "back.out(1.7)",
-                            delay: 0.8
-                        }
-                    );
-                }
-
-                // Animate logo sliding up to the header logo position and scaling up
-                gsap.to(loaderLogo, {
-                    left: targetRect.left,
-                    top: targetRect.top,
-                    width: targetRect.width,
-                    height: targetRect.height,
-                    duration: 0.9,
-                    ease: "power3.out",
-                    onComplete: () => {
-                        // Make final header logo visible
-                        activeNavLogo.style.opacity = "1";
-                        // Remove loader logo from page now that header logo is active
-                        loaderLogo.remove();
-
-                        // Trigger scroll reveals initialization
-                        initScrollAnimations();
+            const aboutHeroName = document.querySelector(".about-hero-name");
+            if (aboutHeroName) {
+                gsap.fromTo(aboutHeroName,
+                    { scale: 0.85, opacity: 0 },
+                    {
+                        scale: 1,
+                        opacity: 1,
+                        duration: 2.0,
+                        ease: "power3.out",
+                        delay: 0.4
                     }
-                });
-            }, 50);
+                );
+            }
+
+            const aboutHeroCursive = document.querySelector(".about-hero-cursive");
+            if (aboutHeroCursive) {
+                gsap.fromTo(aboutHeroCursive,
+                    { scale: 0.6, opacity: 0, rotate: -25 },
+                    {
+                        scale: 1,
+                        opacity: 1,
+                        rotate: -8,
+                        duration: 1.8,
+                        ease: "back.out(1.7)",
+                        delay: 0.8
+                    }
+                );
+            }
         }
     } else {
-        // Non-white-preloader pages (about.php): keep header visible, don't hide logos
+        // Non-white-preloader pages (about.php, contact.php, etc.): animate header logo from bottom to top
         if (desktopNavLogo) desktopNavLogo.style.opacity = "1";
         if (mobileNavLogo) mobileNavLogo.style.opacity = "1";
         if (headerArea) {
             headerArea.classList.add("nav-elements-active");
         }
+
+        // Header logo animation handled by CSS
 
         // Mobile-specific entrance animations for about/services pages
         let animationsInitialized = false;
