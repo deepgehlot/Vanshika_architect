@@ -1,4 +1,4 @@
-<?php $asset_ver = '1.2.6'; ?>
+<?php $asset_ver = '1.3.3'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,6 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
 
     <title>Vanshika Agarwal</title>
+
+    <!-- Preconnect for Google Fonts & CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!--Favicon-->
     <link rel="icon" href="assets/img/favicon.png" type="image/png">
@@ -73,7 +77,7 @@
             <div class="hero-slider-area alternative-hero">
                 <div class="hero-slider">
                     <div class="hero-slider-item">
-                        <video class="hero-bg-video" autoplay loop muted playsinline aria-hidden="true" tabindex="-1">
+                        <video class="hero-bg-video" autoplay loop muted playsinline preload="metadata" aria-hidden="true" tabindex="-1">
                             <source
                                 src="assets/img/WEB/Webiste Final Video_squished.mp4"
                                 type="video/mp4">
@@ -151,7 +155,7 @@
                             <div class="col-xl-6 col-lg-6 col-md-12 p-0 order-2 order-lg-2 image-col">
                                 <div class="alternative-image-reveal right-reveal">
                                     <img src="assets/img/WEB/PRINCIPAL DESIGNER.webp"
-                                        alt="Principal Architect Vanshika Agarwal" decoding="async">
+                                        alt="Principal Architect Vanshika Agarwal" decoding="async" loading="lazy">
                                 </div>
                             </div>
                         </div>
@@ -184,7 +188,7 @@
                             <div class="service-stack-item item-1">
                                 <div class="img-curtain">
                                     <img src="assets/img/WEB/SERVICES ARCHITECTURE.webp"
-                                        alt="Architecture" decoding="async">
+                                        alt="Architecture" decoding="async" loading="lazy">
                                     <div class="overlay-gradient"></div>
                                 </div>
                                 <div class="service-stack-text">
@@ -195,8 +199,8 @@
                             <!-- Item 2: Interior Design -->
                             <div class="service-stack-item item-2">
                                 <div class="img-curtain">
-                                    <img src="assets/img/WEB/SERVICES STYLING.webp"
-                                        alt="Interior Design" decoding="async">
+                                    <img src="assets/img/project photos/dinesh goyal (9).webp"
+                                        alt="Interior Design" decoding="async" loading="lazy">
                                     <div class="overlay-gradient"></div>
                                 </div>
                                 <div class="service-stack-text">
@@ -207,12 +211,12 @@
                             <!-- Item 3: Project Management -->
                             <div class="service-stack-item item-3">
                                 <div class="img-curtain">
-                                    <img src="assets/img/WEB/HERITAGE LUXURY.webp"
-                                        alt="Project Management" decoding="async">
+                                    <img src="assets/img/project photos/dinesh goyal (2).webp"
+                                        alt="Project Management" decoding="async" loading="lazy">
                                     <div class="overlay-gradient"></div>
                                 </div>
                                 <div class="service-stack-text">
-                                    <h3>Project Management</h3>
+                                    <h3> Styling </h3>
                                 </div>
                             </div>
 
@@ -220,7 +224,7 @@
                             <div class="service-stack-item item-4">
                                 <div class="img-curtain">
                                     <img src="assets/img/WEB/SERVICES LANDSCAPE.webp"
-                                        alt="Landscaping" decoding="async">
+                                        alt="Landscaping" decoding="async" loading="lazy">
                                     <div class="overlay-gradient"></div>
                                 </div>
                                 <div class="service-stack-text">
@@ -255,10 +259,10 @@
                                 <a href="project-detail.php?id=Dinesh" class="gallery-item-link" style="display: block; width: 100%; height: 100%; text-decoration: none;">
                                     <div class="gallery-img-wrap">
                                         <img src="assets/img/project photos/dinesh goyal cover photo.webp"
-                                            alt="Dinesh Goyal Project" decoding="async">
+                                            alt="An Eclectic Villa jaipur" decoding="async" loading="lazy">
                                         <div class="gallery-hover-overlay">
                                             <div class="hover-content">
-                                                <h4 class="project-title">Dinesh Goyal</h4>
+                                                <h4 class="project-title">An Eclectic Villa jaipur</h4>
                                                 <span class="project-cta-btn">View Details <i
                                                         class="fal fa-arrow-right"></i></span>
                                             </div>
@@ -272,10 +276,10 @@
                                 <a href="project-detail.php?id=pratab" class="gallery-item-link" style="display: block; width: 100%; height: 100%; text-decoration: none;">
                                     <div class="gallery-img-wrap">
                                         <img src="assets/img/project photos/pratap (3).webp"
-                                            alt="Pratap Project" decoding="async">
+                                            alt="A Classical Bungalow Jaipur" decoding="async" loading="lazy">
                                         <div class="gallery-hover-overlay">
                                             <div class="hover-content">
-                                                <h4 class="project-title">Pratap</h4>
+                                                <h4 class="project-title">A Classical Bungalow Jaipur</h4>
                                                 <span class="project-cta-btn">View Details <i
                                                         class="fal fa-arrow-right"></i></span>
                                             </div>
@@ -289,10 +293,10 @@
                                 <a href="project-detail.php?id=Rajul" class="gallery-item-link" style="display: block; width: 100%; height: 100%; text-decoration: none;">
                                     <div class="gallery-img-wrap">
                                         <img src="assets/img/project photos/rajul cover photo.webp"
-                                            alt="Rajul Project" decoding="async">
+                                            alt="Penthouse in Jaipur" decoding="async" loading="lazy">
                                         <div class="gallery-hover-overlay">
                                             <div class="hover-content">
-                                                <h4 class="project-title">Rajul</h4>
+                                                <h4 class="project-title">Penthouse in Jaipur</h4>
                                                 <span class="project-cta-btn">View Details <i
                                                         class="fal fa-arrow-right"></i></span>
                                             </div>
@@ -306,10 +310,10 @@
                                 <a href="project-detail.php?id=Anantara" class="gallery-item-link" style="display: block; width: 100%; height: 100%; text-decoration: none;">
                                     <div class="gallery-img-wrap">
                                         <img src="assets/img/project photos/anantara (25).webp"
-                                            alt="Anantara Project" decoding="async">
+                                            alt="Anantara Jewel Bagh Hotel jaipur" decoding="async" loading="lazy">
                                         <div class="gallery-hover-overlay">
                                             <div class="hover-content">
-                                                <h4 class="project-title">Anantara</h4>
+                                                <h4 class="project-title">Anantara Jewel Bagh Hotel jaipur</h4>
                                                 <span class="project-cta-btn">View Details <i
                                                         class="fal fa-arrow-right"></i></span>
                                             </div>

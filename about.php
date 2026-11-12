@@ -8,6 +8,10 @@
 
     <title>Architect Vanshika</title>
 
+    <!-- Preconnect for Google Fonts & CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <!--Favicon-->
     <link rel="icon" href="assets/img/favicon.png" type="image/png">
 
@@ -38,7 +42,7 @@
     <!-- Style CSS -->
     <link href="assets/css/style.css?v=1.2.3" rel="stylesheet">
     <!-- Alternative Custom Style Override -->
-    <link href="assets/css/alternative-style.css?v=1.2.6" rel="stylesheet">
+    <link href="assets/css/alternative-style.css?v=1.3.1" rel="stylesheet">
     <!-- Floating Contact Widget -->
     <link href="assets/css/floating-contact.css?v=1.2.3" rel="stylesheet">
 
@@ -70,17 +74,14 @@
                     <div class="container-fluid px-md-5 px-3">
                         <div class="row justify-content-center text-center">
                             <div class="col-xl-8">
-                                <h6 class="text-uppercase mb-3" style="color: #c29a6c; letter-spacing: 2px;">
-                                    About Us</h6>
-                                <h1 class="display-3 text-uppercase mb-4">Architect Vanshika</h1>
-                                <p class="mb-0 text-muted">A distinguished design practice redefining luxury residential architecture and bespoke interior spaces.</p>
+                               
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Main Editorial About Section (Cream Background #faf7f2) -->
-                <section class="about-editorial-main-section py-5">
+                <section class="about-editorial-main-section py-5 ">
                     <div class="container-fluid px-lg-5 px-md-4 px-3" style="max-width: 1320px; margin: 0 auto;">
                         
                         <!-- 1. Top Section: Image (Left) + Content (Right) with Name & Descr under Image -->

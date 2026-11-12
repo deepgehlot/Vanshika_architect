@@ -528,9 +528,10 @@
   //Hide Loading Box (Preloader)
   function handlePreloader() {
     if ($("#loader").length) {
+      if ($("#loader").hasClass('white-preloader')) return; // Handled exclusively with custom choreography in alternative-interactions.js
       if ($("#loader").data('preloader-handled')) return;
       $("#loader").data('preloader-handled', true);
-      
+
       var count = 0;
       var counter = setInterval(function () {
         if (count < 101) {
@@ -563,17 +564,17 @@
 
   // Hard safety fallback: Dismiss loader after 1.2s max under all circumstances
   setTimeout(function () {
-    if ($("#loader:visible").length) {
-      $("#loader").fadeOut(250, function () {
-        $('body').addClass('preloader-done');
-        var $header = $('.header-area');
-        if ($header.length && !$header.hasClass('nav-elements-active')) {
-          $header.addClass('nav-elements-active');
-        }
-        $(window).trigger('preloaderDone');
-      });
-    }
-  }, 1200);
+      if ($("#loader:visible").length && !$("#loader").hasClass('white-preloader')) {
+        $("#loader").fadeOut(250, function () {
+          $('body').addClass('preloader-done');
+          var $header = $('.header-area');
+          if ($header.length && !$header.hasClass('nav-elements-active')) {
+            $header.addClass('nav-elements-active');
+          }
+          $(window).trigger('preloaderDone');
+        });
+      }
+    }, 1200);
 
 
   // Visible From Right Slowly Animation
@@ -1132,37 +1133,38 @@
     // NOTE: About & Principal Architect text animations are handled by alternative-interactions.js
 
     // 3. Bespoke Luxury Design Services Section Animations
-    const serviceHeading = document.querySelector('.service-section .section-heading');
+    const serviceHeading = document.querySelector('.service-section .section-title h2, .service-section .section-heading');
     const serviceDesc = document.querySelector('.service-section p');
     if (serviceHeading) {
       gsap.fromTo(serviceHeading,
-        { opacity: 0, y: -40, rotateX: -20 },
+        { opacity: 0, y: 25 },
         {
           opacity: 1,
           y: 0,
-          rotateX: 0,
-          duration: 1.4,
-          ease: "power3.out",
+          duration: 1,
+          ease: "power2.out",
           scrollTrigger: {
             trigger: serviceHeading,
-            start: "top 90%",
-            toggleActions: "play reverse play reverse"
+            start: "top 92%",
+            toggleActions: "play none none none",
+            once: true
           }
         }
       );
     }
     if (serviceDesc) {
       gsap.fromTo(serviceDesc,
-        { opacity: 0, scale: 0.96 },
+        { opacity: 0, y: 20 },
         {
           opacity: 1,
-          scale: 1,
-          duration: 1.2,
+          y: 0,
+          duration: 1,
           ease: "power2.out",
           scrollTrigger: {
             trigger: serviceDesc,
-            start: "top 90%",
-            toggleActions: "play reverse play reverse"
+            start: "top 92%",
+            toggleActions: "play none none none",
+            once: true
           }
         }
       );

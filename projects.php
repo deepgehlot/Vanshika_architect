@@ -8,6 +8,10 @@
 
     <title>Projects - Architect Vanshika</title>
 
+    <!-- Preconnect for Google Fonts & CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <!--Favicon-->
     <link rel="icon" href="assets/img/favicon.png" type="image/png">
 
@@ -40,7 +44,7 @@
     <!-- Floating Contact Widget -->
     <link href="assets/css/floating-contact.css?v=1.2.3" rel="stylesheet">
     <!-- Alternative Custom Style Override -->
-    <link href="assets/css/alternative-style.css?v=1.2.6" rel="stylesheet">
+    <link href="assets/css/alternative-style.css?v=1.2.9" rel="stylesheet">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"

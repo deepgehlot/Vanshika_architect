@@ -6,7 +6,7 @@
 const LOCAL_PROJECT_DATA = {
     "Dinesh": {
         id: "Dinesh",
-        name: "Dinesh Goyal Project",
+        name: "An Eclectic Villa jaipur",
         category: "Interior Architecture",
         description: "Dark Maximalism Luxury Bungalow",
         cover: "assets/img/project photos/dinesh goyal cover photo.webp",
@@ -30,7 +30,7 @@ const LOCAL_PROJECT_DATA = {
     },
     "pratab": {
         id: "pratab",
-        name: "Pratap Project",
+        name: "A Classical Bungalow Jaipur",
         category: "Heritage & Modern Architecture",
         description: "Opulent Heritage Villa & Modern Living",
         cover: "assets/img/project photos/pratap cover photo.webp",
@@ -46,7 +46,7 @@ const LOCAL_PROJECT_DATA = {
     },
     "Rajul": {
         id: "Rajul",
-        name: "Rajul Project",
+        name: "Penthouse in Jaipur",
         category: "Luxury Residential Interior",
         description: "Bespoke Contemporary Residence",
         cover: "assets/img/project photos/rajul cover photo.webp",
@@ -70,7 +70,7 @@ const LOCAL_PROJECT_DATA = {
     },
     "Anantara": {
         id: "Anantara",
-        name: "Anantara Project",
+        name: "Anantara Jewel Bagh Hotel jaipur",
         category: "Hospitality Architecture",
         description: "Grand Luxury Resort & Suites",
         cover: "assets/img/project photos/ANANATARA cover photo.webp",
@@ -95,9 +95,9 @@ const LOCAL_PROJECT_DATA = {
     },
     "khwaab_jaipur": {
         id: "khwaab_jaipur",
-        name: "Khwaab Jaipur",
+        name: "Khwaab Roof top Resto Bar",
         category: "Interior Architecture",
-        description: "Khwaab Jaipur Luxury Experience",
+        description: "Khwaab Roof top Resto Bar Luxury Experience",
         cover: "assets/img/project photos/khwaab cover photo.webp",
         images: [
             "assets/img/project photos/khwaab cover photo.webp",
@@ -110,15 +110,28 @@ const LOCAL_PROJECT_DATA = {
     },
     "Tejwani": {
         id: "Tejwani",
-        name: "Tejwani Project",
+        name: "A contemporary Bungalow jaipur",
         category: "Modern Bungalow Interior",
-        description: "Tejwani's Modern Luxury Bungalow",
+        description: "A contemporary Bungalow jaipur",
         cover: "assets/img/project photos/tejwani cover photo.webp",
         images: [
             "assets/img/project photos/tejwani cover photo.webp",
             "assets/img/project photos/tejwani (1).webp",
             "assets/img/project photos/tejwani (2).webp",
             "assets/img/project photos/tejwani (4).webp"
+        ]
+    },
+    "Taj": {
+        id: "Taj",
+        name: "Taj hotel at kukas",
+        category: "Heritage",
+        description: "Taj hotel at kukas",
+        cover: "https://res.cloudinary.com/dwzfpa4vq/image/upload/v1782556409/taj_mind6j.jpg",
+        images: [
+            "https://res.cloudinary.com/dwzfpa4vq/image/upload/v1782556409/taj_mind6j.jpg",
+            "https://res.cloudinary.com/dwzfpa4vq/image/upload/v1782560334/taj2_nf9ocm.jpg",
+            "https://res.cloudinary.com/dwzfpa4vq/image/upload/v1782560334/taj1_echh4a.jpg",
+            "https://res.cloudinary.com/dwzfpa4vq/image/upload/v1782560333/taj_zihfiy.jpg"
         ]
     },
     "Ranthambore": {
@@ -180,6 +193,13 @@ class ProjectsHandler {
 
     async init() {
         try {
+            // Performance guard: Only fetch remote project data if the current page actually renders project containers
+            const hasProjectContainers = $('#featured-projects-slider').length || $('.project-grid').length || $('.project-detail-gallery').length;
+            if (!hasProjectContainers) {
+                this.projects = [...CONFIG.FALLBACK_DATA];
+                return;
+            }
+
             console.log('🔄 Attempting to fetch project data from Google Sheets...');
 
             // Check for local file protocol (CORS restriction)
@@ -224,388 +244,457 @@ class ProjectsHandler {
             throw new Error('No CSV URL provided in CONFIG');
         }
 
-        const response = await fetch(CONFIG.SHEET_CSV_URL);
-        if (!response.ok) {
-            throw new Error(`HTTP Error: ${response.status} ${response.statusText}`);
-        }
+        const CACHE_KEY = 'vanshika_projects_csv_cache';
+        const CACHE_TIME_KEY = 'vanshika_projects_csv_cache_time';
+        const CACHE_DURATION = 10 * 60 * 1000; // 10 minutes session cache
 
-        let text = await response.text();
-
-        // Remove UTF-8 BOM if present
-        if (text.charCodeAt(0) === 0xFEFF) {
-            text = text.substr(1);
-        }
-        return text;
-    }
-
-    parseCSV(csv) {
-        if (!csv) return [];
-        const lines = csv.split(/\r?\n/);
-        if (lines.length < 2) return [];
-
-        const headers = lines[0].split(',').map(h => h.trim().replace(/^"|"$/g, ''));
-        const result = [];
-
-        for (let i = 1; i < lines.length; i++) {
-            if (!lines[i].trim()) continue;
-
-            const obj = {};
-            const currentLine = lines[i].split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
-
-            let isEmptyRow = true;
-            headers.forEach((header, index) => {
-                let val = currentLine[index] ? currentLine[index].trim().replace(/^"|"$/g, '') : '';
-                obj[header] = val;
-                if (val !== '') {
-                    isEmptyRow = false;
-                }
-            });
-
-            // Skip rows that are completely empty or missing a Project Name/ID
-            if (isEmptyRow || (!obj['ID'] && !obj['Name'])) continue;
-
-            result.push(obj);
-        }
-        return result;
-    }
-
-    mergeLocalData() {
-        const normalize = (str) => (str || '').toString().toLowerCase().replace(/[^a-z0-9]/g, '');
-
-        const findLocal = (idOrName) => {
-            if (!idOrName) return null;
-            const term = normalize(idOrName);
-            for (const key of Object.keys(LOCAL_PROJECT_DATA)) {
-                const cleanKey = normalize(key);
-                if (cleanKey === term) return LOCAL_PROJECT_DATA[key];
-                const item = LOCAL_PROJECT_DATA[key];
-                const cleanName = normalize(item.name);
-                if (cleanName === term || cleanName.includes(term) || term.includes(cleanKey) || term.includes(cleanName)) {
-                    return item;
-                }
+        try {
+            const cachedData = sessionStorage.getItem(CACHE_KEY);
+            const cachedTime = sessionStorage.getItem(CACHE_TIME_KEY);
+            if (cachedData && cachedTime && (Date.now() - parseInt(cachedTime, 10) < CACHE_DURATION)) {
+                return cachedData;
             }
-            return null;
-        };
+        } catch (e) { }
 
-        const existingKeys = new Set();
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 3500);
 
-        this.projects.forEach(p => {
-            const local = findLocal(p.ID) || findLocal(p.Name);
-            if (local) {
-                existingKeys.add(local.id.toLowerCase());
-                if (local.cover) p.Main_Image = local.cover;
-                if (local.images && local.images.length > 0) {
-                    p.Gallery_Images = local.images.join(',');
+            try {
+                const response = await fetch(CONFIG.SHEET_CSV_URL, { signal: controller.signal });
+                clearTimeout(timeoutId);
+                if (!response.ok) {
+                    throw new Error(`HTTP Error: ${response.status} ${response.statusText}`);
                 }
-                if (!p.Category && local.category) p.Category = local.category;
+
+                let text = await response.text();
+
+                // Remove UTF-8 BOM if present
+                if (text.charCodeAt(0) === 0xFEFF) {
+                    text = text.substr(1);
+                }
+
+                try {
+                    sessionStorage.setItem(CACHE_KEY, text);
+                    sessionStorage.setItem(CACHE_TIME_KEY, Date.now().toString());
+                } catch (e) { }
+
+                return text;
+            } catch (err) {
+                clearTimeout(timeoutId);
+                throw err;
             }
-        });
-
-        // Add any local projects that were not in the Google Sheet
-        Object.keys(LOCAL_PROJECT_DATA).forEach(key => {
-            if (!existingKeys.has(key.toLowerCase())) {
-                const item = LOCAL_PROJECT_DATA[key];
-                this.projects.push({
-                    ID: item.id,
-                    Name: item.name,
-                    Category: item.category,
-                    Tags: "Architect,Interior,Heritage,3D",
-                    Description: item.description,
-                    Main_Image: item.cover,
-                    Gallery_Images: item.images.join(','),
-                    Is_Featured: "TRUE"
-                });
-            }
-        });
-    }
-
-    router() {
-        const path = window.location.pathname;
-        const segments = path.split('/');
-        const fileName = segments.length > 0 ? (segments.pop() || '').toLowerCase() : '';
-
-        // Match home page variations
-        const isHomePage = fileName === '' ||
-            fileName === 'index.html' ||
-            path === '/' ||
-            path.endsWith('/Vanshika_website/') ||
-            path.endsWith('/Vanshika/') ||
-            path.includes('index.html') ||
-            path.includes('index.php');
-
-        if (isHomePage) {
-            console.log('🏠 Rendering Featured Projects Slider');
-            this.renderFeatured();
-        } else if (fileName.includes('projects.html') || fileName.includes('projects.php')) {
-            console.log('📂 Rendering All Projects Grid');
-            this.renderAll();
-        } else if (fileName.includes('project-detail.html') || fileName.includes('project-detail.php')) {
-            console.log('📄 Rendering Project Details');
-            this.renderDetail();
-        }
-    }
-
-    renderFeatured() {
-        const container = $('#featured-projects-slider');
-        if (!container.length) return;
-
-        // Force remove any manually placed spinner inside the container
-        container.find('.spinner-border, .col-12').remove();
-
-        let featured = this.projects.filter(p => p.Is_Featured && p.Is_Featured.trim().toUpperCase() === 'TRUE');
-
-        // Limit to 6 projects max
-        featured = featured.slice(0, 6);
-
-        if (featured.length === 0) {
-            container.html('<div class="col-12 text-center py-5"><p class="text-white">No featured projects found.</p></div>');
-            return;
         }
 
-        let originalLength = featured.length;
-        const isSingle = originalLength === 1;
+        parseCSV(csv) {
+            if (!csv) return [];
+            const lines = csv.split(/\r?\n/);
+            if (lines.length < 2) return [];
 
-        if (originalLength > 1 && originalLength <= 4) {
-            featured = [...featured, ...featured];
-            if (featured.length <= 4) featured = [...featured, ...featured];
-        }
+            const headers = lines[0].split(',').map(h => h.trim().replace(/^"|"$/g, ''));
+            const result = [];
 
-        let html = '';
-        featured.forEach((project, index) => {
-            const realNum = (index % originalLength) + 1;
-            const num = realNum.toString().padStart(2, '0');
-            html += this.getSliderItemHTML(project, num);
-        });
+            for (let i = 1; i < lines.length; i++) {
+                if (!lines[i].trim()) continue;
 
-        container.html(html);
+                const obj = {};
+                const currentLine = lines[i].split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
 
-        if ($.fn.slick) {
-            if (container.hasClass('slick-initialized')) container.slick('unslick');
-
-            container.slick({
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                centerMode: !isSingle,
-                centerPadding: isSingle ? '0' : '22%',
-                arrows: !isSingle,
-                dots: false,
-                infinite: !isSingle,
-                fade: false,
-                autoplay: !isSingle,
-                speed: 1200,
-                autoplaySpeed: 3000,
-                pauseOnHover: false,
-                pauseOnFocus: false,
-                cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
-                prevArrow: '<button type="button" class="slick-prev"><i class="las la-arrow-left"></i></button>',
-                nextArrow: '<button type="button" class="slick-next"><i class="las la-arrow-right"></i></button>',
-                responsive: [
-                    {
-                        breakpoint: 1200,
-                        settings: {
-                            centerPadding: isSingle ? '0' : '15%',
-                        }
-                    },
-                    {
-                        breakpoint: 767,
-                        settings: {
-                            centerPadding: '0',
-                            arrows: false,
-                        }
+                let isEmptyRow = true;
+                headers.forEach((header, index) => {
+                    let val = currentLine[index] ? currentLine[index].trim().replace(/^"|"$/g, '') : '';
+                    obj[header] = val;
+                    if (val !== '') {
+                        isEmptyRow = false;
                     }
-                ]
+                });
+
+                // Skip rows that are completely empty or missing a Project Name/ID
+                if (isEmptyRow || (!obj['ID'] && !obj['Name'])) continue;
+
+                result.push(obj);
+            }
+            return result;
+        }
+
+        mergeLocalData() {
+            const normalize = (str) => (str || '').toString().toLowerCase().replace(/[^a-z0-9]/g, '');
+
+            const findLocal = (idOrName) => {
+                if (!idOrName) return null;
+                const term = normalize(idOrName);
+                for (const key of Object.keys(LOCAL_PROJECT_DATA)) {
+                    const cleanKey = normalize(key);
+                    if (cleanKey === term) return LOCAL_PROJECT_DATA[key];
+                    const item = LOCAL_PROJECT_DATA[key];
+                    const cleanName = normalize(item.name);
+                    if (cleanName === term || cleanName.includes(term) || term.includes(cleanKey) || term.includes(cleanName)) {
+                        return item;
+                    }
+                }
+                return null;
+            };
+
+            const existingKeys = new Set();
+
+            const PROJECT_NAME_MAP = {
+                'khwaab_jaipur': 'Khwaab Roof top Resto Bar',
+                'khwaab': 'Khwaab Roof top Resto Bar',
+                'khwab': 'Khwaab Roof top Resto Bar',
+                'tejwani': 'A contemporary Bungalow jaipur',
+                'anantara': 'Anantara Jewel Bagh Hotel jaipur',
+                'dinesh': 'An Eclectic Villa jaipur',
+                'pratap': 'A Classical Bungalow Jaipur',
+                'pratab': 'A Classical Bungalow Jaipur',
+                'rajul': 'Penthouse in Jaipur',
+                'taj': 'Taj hotel at kukas'
+            };
+
+            this.projects.forEach(p => {
+                const local = findLocal(p.ID) || findLocal(p.Name);
+                if (local) {
+                    existingKeys.add(local.id.toLowerCase());
+                    p.Name = local.name;
+                    if (local.cover) p.Main_Image = local.cover;
+                    if (local.images && local.images.length > 0) {
+                        p.Gallery_Images = local.images.join(',');
+                    }
+                    if (!p.Category && local.category) p.Category = local.category;
+                }
+
+                const pKey = normalize(p.ID) || normalize(p.Name);
+                for (const [mapKey, newName] of Object.entries(PROJECT_NAME_MAP)) {
+                    if (pKey === mapKey || pKey.includes(mapKey) || mapKey.includes(pKey)) {
+                        p.Name = newName;
+                        break;
+                    }
+                }
             });
-        }
 
-        this.refreshAnimations();
-    }
-
-    renderAll() {
-        const container = $('.project-grid');
-        const filterContainer = $('.project-filters');
-        if (!container.length) return;
-
-        const loadingSpinner = $('.loading-spinner');
-
-        // Fixed categories/filters
-        let filterHtml = '<button class="filter-btn active" data-filter="*">All</button>';
-        CONFIG.CATEGORIES.forEach(cat => {
-            const filterClass = cat.toLowerCase().replace(/ /g, '-');
-            filterHtml += `<button class="filter-btn" data-filter=".${filterClass}">${cat}</button>`;
-        });
-        if (filterContainer.length) {
-            filterContainer.html(filterHtml);
-        }
-
-        // Render projects
-        let html = '';
-        this.projects.forEach(project => {
-            html += this.getProjectCardHTML(project, 'col-lg-4 col-md-6 col-12 grid-item');
-        });
-
-        if (loadingSpinner.length) loadingSpinner.remove();
-
-        if (this.projects.length === 0) {
-            container.html('<div class="col-12 text-center py-5"><p class="text-muted">No projects found in the gallery.</p></div>');
-            return;
-        }
-
-        container.html(html);
-
-        // Re-init Isotope
-        if ($.fn.isotope) {
-            if (container.data('isotope')) container.isotope('destroy');
-            container.isotope({
-                itemSelector: '.grid-item',
-                layoutMode: 'fitRows',
-                filter: '*'
-            });
-
-            // Re-bind filter clicks
-            $('.project-filters button').off('click').on('click', function () {
-                $('.project-filters button').removeClass('active');
-                $(this).addClass('active');
-                var selector = $(this).attr('data-filter');
-                container.isotope({ filter: selector });
-                return false;
-            });
-        }
-
-        this.refreshAnimations();
-    }
-
-    renderDetail() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const rawId = urlParams.get('id');
-        const normalize = (str) => (str || '').toString().toLowerCase().replace(/[^a-z0-9]/g, '');
-        const target = normalize(rawId);
-
-        // Find project by ID or Name
-        let project = this.projects.find(p => {
-            const pId = normalize(p.ID);
-            const pName = normalize(p.Name);
-            return pId === target || pName === target || (target && (pId.includes(target) || target.includes(pId) || pName.includes(target) || target.includes(pName)));
-        });
-
-        // Fallback to local project data if not matched
-        if (!project) {
-            for (const key of Object.keys(LOCAL_PROJECT_DATA)) {
-                const item = LOCAL_PROJECT_DATA[key];
-                const keyNorm = normalize(key);
-                const nameNorm = normalize(item.name);
-                if (keyNorm === target || nameNorm === target || (target && (keyNorm.includes(target) || target.includes(keyNorm) || nameNorm.includes(target) || target.includes(nameNorm)))) {
-                    project = {
+            // Add any local projects that were not in the Google Sheet
+            Object.keys(LOCAL_PROJECT_DATA).forEach(key => {
+                if (!existingKeys.has(key.toLowerCase())) {
+                    const item = LOCAL_PROJECT_DATA[key];
+                    this.projects.push({
                         ID: item.id,
                         Name: item.name,
                         Category: item.category,
+                        Tags: "Architect,Interior,Heritage,3D",
                         Description: item.description,
                         Main_Image: item.cover,
-                        Gallery_Images: item.images.join(',')
-                    };
-                    break;
+                        Gallery_Images: item.images.join(','),
+                        Is_Featured: "TRUE"
+                    });
                 }
+            });
+        }
+
+        router() {
+            const path = window.location.pathname;
+            const segments = path.split('/');
+            const fileName = segments.length > 0 ? (segments.pop() || '').toLowerCase() : '';
+
+            // Match home page variations
+            const isHomePage = fileName === '' ||
+                fileName === 'index.html' ||
+                path === '/' ||
+                path.endsWith('/Vanshika_website/') ||
+                path.endsWith('/Vanshika/') ||
+                path.includes('index.html') ||
+                path.includes('index.php');
+
+            if (isHomePage) {
+                console.log('🏠 Rendering Featured Projects Slider');
+                this.renderFeatured();
+            } else if (fileName.includes('projects.html') || fileName.includes('projects.php')) {
+                console.log('📂 Rendering All Projects Grid');
+                this.renderAll();
+            } else if (fileName.includes('project-detail.html') || fileName.includes('project-detail.php')) {
+                console.log('📄 Rendering Project Details');
+                this.renderDetail();
             }
         }
 
-        if (!project && this.projects.length > 0) {
-            project = this.projects[0];
-        }
+        renderFeatured() {
+            const container = $('#featured-projects-slider');
+            if (!container.length) return;
 
-        if (!project) return;
+            // Force remove any manually placed spinner inside the container
+            container.find('.spinner-border, .col-12').remove();
 
-        // Populate Text
-        document.title = `${project.Name} - Architect Vanshika`;
-        $('.project-hero-section h1').text(project.Name);
-        $('.project-hero-section p').text(project.Category || 'Interior & Architecture');
+            let featured = this.projects.filter(p => p.Is_Featured && p.Is_Featured.trim().toUpperCase() === 'TRUE');
 
-        // Populate Sliders
-        const mainSlider = $('.project-main-slider');
-        const thumbSlider = $('.project-thumb-slider');
+            // Limit to 6 projects max
+            featured = featured.slice(0, 6);
 
-        if (mainSlider.length && thumbSlider.length && project.Gallery_Images) {
-            if (mainSlider.hasClass('slick-initialized')) mainSlider.slick('unslick');
-            if (thumbSlider.hasClass('slick-initialized')) thumbSlider.slick('unslick');
+            if (featured.length === 0) {
+                container.html('<div class="col-12 text-center py-5"><p class="text-white">No featured projects found.</p></div>');
+                return;
+            }
 
-            const images = project.Gallery_Images.split(',').map(img => img.trim()).filter(Boolean);
-            let mainHtml = '';
-            let thumbHtml = '';
+            let originalLength = featured.length;
+            const isSingle = originalLength === 1;
 
-            this.injectGalleryStyles();
+            if (originalLength > 1 && originalLength <= 4) {
+                featured = [...featured, ...featured];
+                if (featured.length <= 4) featured = [...featured, ...featured];
+            }
 
-            images.forEach(img => {
-                if (img) {
-                    const encodedUrl = encodeURI(img).replace(/\(/g, '%28').replace(/\)/g, '%29');
-                    mainHtml += `
-                        <div class="project-slide-item">
-                            <div class="slide-bg-blur" style="background-image: url('${encodedUrl}')"></div>
-                            <a href="${encodedUrl}" class="project-popup-link" title="${project.Name}">
-                                <img src="${encodedUrl}" alt="${project.Name}" class="img-fluid">
-                            </a>
-                        </div>
-                    `;
-                    thumbHtml += `<div class="thumb-item"><div class="thumb-img-wrap"><img src="${encodedUrl}" alt="Thumbnail" class="img-fluid w-100"></div></div>`;
-                }
+            let html = '';
+            featured.forEach((project, index) => {
+                const realNum = (index % originalLength) + 1;
+                const num = realNum.toString().padStart(2, '0');
+                html += this.getSliderItemHTML(project, num);
             });
 
-            mainSlider.html(mainHtml);
-            thumbSlider.html(thumbHtml);
+            container.html(html);
 
-            // Re-init Slick
-            mainSlider.slick({
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                arrows: true,
-                fade: true,
-                asNavFor: '.project-thumb-slider'
-            });
-            thumbSlider.slick({
-                slidesToShow: Math.min(images.length, 4),
-                slidesToScroll: 1,
-                asNavFor: '.project-main-slider',
-                dots: false,
-                centerMode: false,
-                focusOnSelect: true,
-                arrows: false,
-                responsive: [
-                    { breakpoint: 992, settings: { slidesToShow: Math.min(images.length, 4) } },
-                    { breakpoint: 768, settings: { slidesToShow: Math.min(images.length, 3) } },
-                    { breakpoint: 480, settings: { slidesToShow: Math.min(images.length, 2) } }
-                ]
-            });
+            if ($.fn.slick) {
+                if (container.hasClass('slick-initialized')) container.slick('unslick');
 
-            // Initialize Magnific Popup on click
-            if ($.fn.magnificPopup) {
-                mainSlider.magnificPopup({
-                    delegate: 'a.project-popup-link',
-                    type: 'image',
-                    gallery: {
-                        enabled: true,
-                        navigateByImgClick: true,
-                        preload: [0, 1]
-                    },
-                    image: {
-                        titleSrc: () => project.Name,
-                        markup: '<div class="mfp-figure"><figure><div class="mfp-img"></div><figcaption><div class="mfp-bottom-bar"><div class="mfp-title"></div><div class="mfp-counter"></div></div></figcaption></figure></div>'
-                    },
-                    removalDelay: 0,
-                    closeOnContentClick: false,
-                    closeBtnInside: false
+                container.slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerMode: !isSingle,
+                    centerPadding: isSingle ? '0' : '22%',
+                    arrows: !isSingle,
+                    dots: false,
+                    infinite: !isSingle,
+                    fade: false,
+                    autoplay: !isSingle,
+                    speed: 1200,
+                    autoplaySpeed: 3000,
+                    pauseOnHover: false,
+                    pauseOnFocus: false,
+                    cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
+                    prevArrow: '<button type="button" class="slick-prev"><i class="las la-arrow-left"></i></button>',
+                    nextArrow: '<button type="button" class="slick-next"><i class="las la-arrow-right"></i></button>',
+                    responsive: [
+                        {
+                            breakpoint: 1200,
+                            settings: {
+                                centerPadding: isSingle ? '0' : '15%',
+                            }
+                        },
+                        {
+                            breakpoint: 767,
+                            settings: {
+                                centerPadding: '0',
+                                arrows: false,
+                            }
+                        }
+                    ]
                 });
             }
 
-            setTimeout(() => {
-                // @ts-ignore
-                if (typeof ScrollTrigger !== 'undefined') {
-                    // @ts-ignore
-                    ScrollTrigger.refresh();
-                }
-            }, 300);
+            this.refreshAnimations();
         }
-    }
 
-    getSliderItemHTML(p, num) {
-        const coverUrl = encodeURI(p.Main_Image || '').replace(/\(/g, '%28').replace(/\)/g, '%29');
-        return `
+        renderAll() {
+            const container = $('.project-grid');
+            const filterContainer = $('.project-filters');
+            if (!container.length) return;
+
+            const loadingSpinner = $('.loading-spinner');
+
+            // Fixed categories/filters
+            let filterHtml = '<button class="filter-btn active" data-filter="*">All</button>';
+            CONFIG.CATEGORIES.forEach(cat => {
+                const filterClass = cat.toLowerCase().replace(/ /g, '-');
+                filterHtml += `<button class="filter-btn" data-filter=".${filterClass}">${cat}</button>`;
+            });
+            if (filterContainer.length) {
+                filterContainer.html(filterHtml);
+            }
+
+            // Render projects
+            let html = '';
+            this.projects.forEach(project => {
+                html += this.getProjectCardHTML(project, 'col-lg-4 col-md-6 col-12 grid-item');
+            });
+
+            if (loadingSpinner.length) loadingSpinner.remove();
+
+            if (this.projects.length === 0) {
+                container.html('<div class="col-12 text-center py-5"><p class="text-muted">No projects found in the gallery.</p></div>');
+                return;
+            }
+
+            container.html(html);
+
+            // Re-init Isotope
+            if ($.fn.isotope) {
+                if (container.data('isotope')) container.isotope('destroy');
+                container.isotope({
+                    itemSelector: '.grid-item',
+                    layoutMode: 'fitRows',
+                    filter: '*'
+                });
+
+                // Re-bind filter clicks
+                $('.project-filters button').off('click').on('click', function () {
+                    $('.project-filters button').removeClass('active');
+                    $(this).addClass('active');
+                    var selector = $(this).attr('data-filter');
+                    container.isotope({ filter: selector });
+                    return false;
+                });
+            }
+
+            this.refreshAnimations();
+        }
+
+        renderDetail() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const rawId = urlParams.get('id');
+            const normalize = (str) => (str || '').toString().toLowerCase().replace(/[^a-z0-9]/g, '');
+            const target = normalize(rawId);
+
+            // Find project by ID or Name
+            let project = this.projects.find(p => {
+                const pId = normalize(p.ID);
+                const pName = normalize(p.Name);
+                return pId === target || pName === target || (target && (pId.includes(target) || target.includes(pId) || pName.includes(target) || target.includes(pName)));
+            });
+
+            // Fallback to local project data if not matched
+            if (!project) {
+                for (const key of Object.keys(LOCAL_PROJECT_DATA)) {
+                    const item = LOCAL_PROJECT_DATA[key];
+                    const keyNorm = normalize(key);
+                    const nameNorm = normalize(item.name);
+                    if (keyNorm === target || nameNorm === target || (target && (keyNorm.includes(target) || target.includes(keyNorm) || nameNorm.includes(target) || target.includes(nameNorm)))) {
+                        project = {
+                            ID: item.id,
+                            Name: item.name,
+                            Category: item.category,
+                            Description: item.description,
+                            Main_Image: item.cover,
+                            Gallery_Images: item.images.join(',')
+                        };
+                        break;
+                    }
+                }
+            }
+
+            if (!project && this.projects.length > 0) {
+                project = this.projects[0];
+            }
+
+            if (!project) return;
+
+            // Populate Text
+            document.title = `${project.Name} - Architect Vanshika`;
+            $('.project-hero-section h1').text(project.Name);
+            $('.project-hero-section p').text(project.Category || 'Interior & Architecture');
+
+            // Populate Sliders
+            const mainSlider = $('.project-main-slider');
+            const thumbSlider = $('.project-thumb-slider');
+
+            if (mainSlider.length && thumbSlider.length && project.Gallery_Images) {
+                if (mainSlider.hasClass('slick-initialized')) mainSlider.slick('unslick');
+                if (thumbSlider.hasClass('slick-initialized')) thumbSlider.slick('unslick');
+
+                const images = project.Gallery_Images.split(',').map(img => img.trim()).filter(Boolean);
+                let mainHtml = '';
+                let thumbHtml = '';
+
+                this.injectGalleryStyles();
+
+                images.forEach(img => {
+                    if (img) {
+                        const encodedUrl = encodeURI(img).replace(/\(/g, '%28').replace(/\)/g, '%29');
+                        mainHtml += `
+                        <div class="project-slide-item">
+                            <a href="${encodedUrl}" class="project-popup-link">
+                                <img src="${encodedUrl}" alt="${project.Name}" class="img-fluid" loading="lazy" draggable="false">
+                            </a>
+                        </div>
+                    `;
+                        thumbHtml += `<div class="thumb-item"><div class="thumb-img-wrap"><img src="${encodedUrl}" alt="Thumbnail" class="img-fluid w-100" loading="lazy" draggable="false"></div></div>`;
+                    }
+                });
+
+                mainSlider.html(mainHtml);
+                thumbSlider.html(thumbHtml);
+
+                // Re-init Slick with optimized smooth performance settings
+                mainSlider.slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: true,
+                    fade: true,
+                    speed: 250,
+                    cssEase: 'ease-out',
+                    useCSS: true,
+                    useTransform: true,
+                    waitForAnimate: false,
+                    touchThreshold: 15,
+                    asNavFor: '.project-thumb-slider'
+                });
+                thumbSlider.slick({
+                    slidesToShow: Math.min(images.length, 4),
+                    slidesToScroll: 1,
+                    asNavFor: '.project-main-slider',
+                    dots: false,
+                    centerMode: false,
+                    focusOnSelect: true,
+                    arrows: false,
+                    speed: 250,
+                    cssEase: 'ease-out',
+                    useCSS: true,
+                    useTransform: true,
+                    waitForAnimate: false,
+                    touchThreshold: 15,
+                    responsive: [
+                        { breakpoint: 992, settings: { slidesToShow: Math.min(images.length, 4) } },
+                        { breakpoint: 768, settings: { slidesToShow: Math.min(images.length, 3) } },
+                        { breakpoint: 480, settings: { slidesToShow: Math.min(images.length, 2) } }
+                    ]
+                });
+
+                // Immediate thumbnail click navigation to prevent any lag
+                thumbSlider.off('click.thumbNav').on('click.thumbNav', '.thumb-item', function () {
+                    const idx = $(this).attr('data-slick-index');
+                    if (idx !== undefined && idx !== null) {
+                        mainSlider.slick('slickGoTo', parseInt(idx, 10));
+                    }
+                });
+
+                // Initialize Magnific Popup on click
+                if ($.fn.magnificPopup) {
+                    mainSlider.magnificPopup({
+                        delegate: 'a.project-popup-link',
+                        type: 'image',
+                        gallery: {
+                            enabled: true,
+                            navigateByImgClick: true,
+                            preload: [0, 1]
+                        },
+                        image: {
+                            titleSrc: () => '',
+                            markup: '<div class="mfp-figure"><figure><div class="mfp-img"></div><figcaption><div class="mfp-bottom-bar"><div class="mfp-counter"></div></div></figcaption></figure></div>'
+                        },
+                        mainClass: 'mfp-fade',
+                        removalDelay: 160,
+                        closeOnContentClick: false,
+                        closeBtnInside: false
+                    });
+                }
+
+                setTimeout(() => {
+                    // @ts-ignore
+                    if (typeof ScrollTrigger !== 'undefined') {
+                        // @ts-ignore
+                        ScrollTrigger.refresh();
+                    }
+                }, 300);
+            }
+        }
+
+        getSliderItemHTML(p, num) {
+            const coverUrl = encodeURI(p.Main_Image || '').replace(/\(/g, '%28').replace(/\)/g, '%29');
+            return `
             <div class="portfolio-slide-item">
                 <div class="portfolio-img-wrap">
                     <div class="portfolio-bg" style="background-image: url('${coverUrl}')"></div>
@@ -621,34 +710,34 @@ class ProjectsHandler {
                 </div>
             </div>
         `;
-    }
-
-    getProjectCardHTML(p, colClass = "") {
-        const classes = new Set();
-        if (colClass) colClass.split(' ').filter(Boolean).forEach(c => classes.add(c));
-
-        const cat = (p.Category || '').toLowerCase();
-        const tags = (p.Tags || '').toLowerCase();
-        const desc = (p.Description || '').toLowerCase();
-        const name = (p.Name || '').toLowerCase();
-        const allText = `${cat} ${tags} ${desc} ${name}`;
-
-        if (allText.includes('architect')) classes.add('architecture');
-        if (allText.includes('interior')) classes.add('interior');
-        if (allText.includes('heritage') || allText.includes('restoration') || allText.includes('palace')) classes.add('heritage');
-        if (allText.includes('3d') || allText.includes('model')) classes.add('3d-modeling');
-        if (allText.includes('resort') || allText.includes('hospitality')) classes.add('resort');
-
-        // Also add direct category slug
-        if (p.Category) {
-            const catSlug = p.Category.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-            if (catSlug) classes.add(catSlug);
         }
 
-        const safeClasses = Array.from(classes).join(' ');
-        const coverUrl = encodeURI(p.Main_Image || '').replace(/\(/g, '%28').replace(/\)/g, '%29');
+        getProjectCardHTML(p, colClass = "") {
+            const classes = new Set();
+            if (colClass) colClass.split(' ').filter(Boolean).forEach(c => classes.add(c));
 
-        return `
+            const cat = (p.Category || '').toLowerCase();
+            const tags = (p.Tags || '').toLowerCase();
+            const desc = (p.Description || '').toLowerCase();
+            const name = (p.Name || '').toLowerCase();
+            const allText = `${cat} ${tags} ${desc} ${name}`;
+
+            if (allText.includes('architect')) classes.add('architecture');
+            if (allText.includes('interior')) classes.add('interior');
+            if (allText.includes('heritage') || allText.includes('restoration') || allText.includes('palace')) classes.add('heritage');
+            if (allText.includes('3d') || allText.includes('model')) classes.add('3d-modeling');
+            if (allText.includes('resort') || allText.includes('hospitality')) classes.add('resort');
+
+            // Also add direct category slug
+            if (p.Category) {
+                const catSlug = p.Category.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+                if (catSlug) classes.add(catSlug);
+            }
+
+            const safeClasses = Array.from(classes).join(' ');
+            const coverUrl = encodeURI(p.Main_Image || '').replace(/\(/g, '%28').replace(/\)/g, '%29');
+
+            return `
             <div class="${safeClasses}">
                 <div class="project-card-unique">
                     <div class="project-img">
@@ -664,34 +753,34 @@ class ProjectsHandler {
                 </div>
             </div>
         `;
-    }
-
-    refreshAnimations() {
-        setTimeout(() => {
-            // @ts-ignore
-            if (typeof ScrollTrigger !== 'undefined') {
-                // @ts-ignore
-                ScrollTrigger.refresh();
-            }
-            $(window).trigger('dynamicContentReady');
-            this.triggerEntranceAnimations();
-        }, 100);
-    }
-
-    triggerEntranceAnimations() {
-        if (typeof gsap !== 'undefined') {
-            $('.project-card-unique').each(function () {
-                if (!$(this).data('animated')) {
-                    $(this).data('animated', true);
-                }
-            });
         }
-    }
 
-    showUIError(message) {
-        const container = $('#featured-projects-slider');
-        const grid = $('.project-grid');
-        const html = `
+        refreshAnimations() {
+            setTimeout(() => {
+                // @ts-ignore
+                if (typeof ScrollTrigger !== 'undefined') {
+                    // @ts-ignore
+                    ScrollTrigger.refresh();
+                }
+                $(window).trigger('dynamicContentReady');
+                this.triggerEntranceAnimations();
+            }, 100);
+        }
+
+        triggerEntranceAnimations() {
+            if (typeof gsap !== 'undefined') {
+                $('.project-card-unique').each(function () {
+                    if (!$(this).data('animated')) {
+                        $(this).data('animated', true);
+                    }
+                });
+            }
+        }
+
+        showUIError(message) {
+            const container = $('#featured-projects-slider');
+            const grid = $('.project-grid');
+            const html = `
             <div class="col-12 text-center py-5">
                 <div class="alert alert-warning d-inline-block p-4" style="background: rgba(194, 154, 108, 0.1); border: 1px solid #c29a6c; color: #fff; max-width: 800px;">
                     <i class="las la-exclamation-triangle" style="font-size: 40px; color: #c29a6c; margin-bottom: 15px; display: block;"></i>
@@ -700,13 +789,24 @@ class ProjectsHandler {
                 </div>
             </div>
         `;
-        if (container.length) container.html(html);
-        if (grid.length) grid.html(html);
-    }
+            if (container.length) container.html(html);
+            if (grid.length) grid.html(html);
+        }
 
-    injectGalleryStyles() {
-        if ($('#gallery-blur-styles').length) return;
-        const css = `
+        injectGalleryStyles() {
+            if ($('#gallery-blur-styles').length) return;
+            const css = `
+            /* Hardware acceleration to keep all slider transitions 60fps */
+            .project-main-slider,
+            .project-thumb-slider,
+            .project-slide-item,
+            .thumb-item,
+            .thumb-img-wrap {
+                -webkit-transform: translateZ(0);
+                transform: translateZ(0);
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+            }
             .project-slide-item {
                 position: relative;
                 overflow: hidden;
@@ -718,18 +818,10 @@ class ProjectsHandler {
                 min-height: 380px;
                 background: #0d0d0d;
                 border-radius: 10px;
+                will-change: opacity;
             }
             .project-slide-item .slide-bg-blur {
-                position: absolute;
-                top: -20px;
-                left: -20px;
-                right: -20px;
-                bottom: -20px;
-                background-size: cover;
-                background-position: center;
-                filter: blur(25px) brightness(0.6);
-                opacity: 0.8;
-                z-index: 0;
+                display: none !important;
             }
             .project-slide-item .project-popup-link {
                 display: flex !important;
@@ -741,6 +833,8 @@ class ProjectsHandler {
                 z-index: 2;
                 cursor: zoom-in;
                 text-decoration: none;
+                -webkit-transform: translateZ(0);
+                transform: translateZ(0);
             }
             .project-slide-item img {
                 position: relative;
@@ -751,6 +845,11 @@ class ProjectsHandler {
                 object-fit: cover;
                 border-radius: 10px;
                 display: block;
+                -webkit-transform: translateZ(0);
+                transform: translateZ(0);
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+                user-select: none;
             }
             .fullscreen-hint {
                 display: none !important;
@@ -760,11 +859,14 @@ class ProjectsHandler {
             }
             .project-thumb-slider .slick-list {
                 margin: 0 -6px;
+                -webkit-transform: translateZ(0);
+                transform: translateZ(0);
             }
             .project-thumb-slider .thumb-item {
                 padding: 0 6px;
                 cursor: pointer;
                 outline: none;
+                -webkit-tap-highlight-color: transparent;
             }
             .project-thumb-slider .thumb-img-wrap {
                 height: 140px;
@@ -772,8 +874,9 @@ class ProjectsHandler {
                 border-radius: 8px;
                 opacity: 0.65;
                 border: 2px solid transparent;
-                transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                transition: opacity 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
                 background: #111;
+                will-change: opacity, border-color;
             }
             .project-thumb-slider .slick-current .thumb-img-wrap,
             .project-thumb-slider .thumb-item:hover .thumb-img-wrap {
@@ -786,6 +889,12 @@ class ProjectsHandler {
                 height: 100%;
                 object-fit: cover;
                 display: block;
+                pointer-events: none;
+                -webkit-transform: translateZ(0);
+                transform: translateZ(0);
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+                user-select: none;
             }
             .project-main-slider .slick-prev, .project-main-slider .slick-next {
                 position: absolute;
@@ -803,9 +912,7 @@ class ProjectsHandler {
                 color: #fff;
                 font-size: 0 !important;
                 line-height: 0 !important;
-                transition: all 0.3s ease;
-                backdrop-filter: blur(4px);
-                -webkit-backdrop-filter: blur(4px);
+                transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
                 cursor: pointer;
             }
             .project-main-slider .slick-prev:hover, .project-main-slider .slick-next:hover {
@@ -834,6 +941,27 @@ class ProjectsHandler {
                 display: block;
                 color: #fff;
             }
+            /* Smooth popup animations without hitching */
+            .mfp-fade.mfp-bg {
+                opacity: 0;
+                transition: opacity 0.2s ease-out;
+            }
+            .mfp-fade.mfp-bg.mfp-ready {
+                opacity: 0.96;
+            }
+            .mfp-fade.mfp-bg.mfp-removing {
+                opacity: 0;
+            }
+            .mfp-fade.mfp-wrap .mfp-content {
+                opacity: 0;
+                transition: opacity 0.2s ease-out;
+            }
+            .mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+                opacity: 1;
+            }
+            .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+                opacity: 0;
+            }
             .mfp-bg {
                 background: #000000 !important;
                 opacity: 0.96 !important;
@@ -857,6 +985,14 @@ class ProjectsHandler {
             .mfp-content .mfp-close {
                 display: none !important;
             }
+            .mfp-title,
+            .mfp-bottom-bar .mfp-title {
+                display: none !important;
+                visibility: hidden !important;
+                height: 0 !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
             .mfp-arrow {
                 width: 52px !important;
                 height: 52px !important;
@@ -876,11 +1012,11 @@ class ProjectsHandler {
             .mfp-arrow-left { left: 20px !important; }
             .mfp-arrow-right { right: 20px !important; }
         `;
-        $('<style id="gallery-blur-styles">').text(css).appendTo('head');
+            $('<style id="gallery-blur-styles">').text(css).appendTo('head');
+        }
     }
-}
 
-// Initialize on document ready
-$(document).ready(() => {
-    window.ProjectsManager = new ProjectsHandler();
-});
+    // Initialize on document ready
+    $(document).ready(() => {
+        window.ProjectsManager = new ProjectsHandler();
+    });

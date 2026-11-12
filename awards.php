@@ -11,6 +11,10 @@ $page_title = "Awards & Recognitions";
 
     <title>Awards - Architect Vanshika</title>
 
+    <!-- Preconnect for Google Fonts & CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <!--Favicon-->
     <link rel="icon" href="assets/img/favicon.png" type="image/png">
 
@@ -35,7 +39,7 @@ $page_title = "Awards & Recognitions";
     <!-- Style CSS -->
     <link href="assets/css/style.css?v=1.2.3" rel="stylesheet">
     <!-- Alternative Custom Style Override -->
-    <link href="assets/css/alternative-style.css?v=1.2.6" rel="stylesheet">
+    <link href="assets/css/alternative-style.css?v=1.2.9" rel="stylesheet">
     <!-- Floating Contact Widget -->
     <link href="assets/css/floating-contact.css?v=1.2.3" rel="stylesheet">
 
@@ -113,11 +117,13 @@ $page_title = "Awards & Recognitions";
             .horizontal-layout {
                 flex-direction: row !important;
                 align-items: stretch !important;
-                height: 280px !important; /* Shorter compact height for Row 1 & Row 3! */
+                min-height: 280px !important;
+                height: auto !important;
             }
             .horizontal-layout .award-img-wrapper {
                 width: 50% !important;
-                height: 100% !important;
+                height: auto !important;
+                min-height: 100% !important;
                 aspect-ratio: auto !important;
             }
             .horizontal-layout .award-content {
@@ -125,7 +131,7 @@ $page_title = "Awards & Recognitions";
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                padding: 30px !important;
+                padding: clamp(18px, 2.5vw, 30px) !important;
             }
             .horizontal-layout.reversed {
                 flex-direction: row-reverse !important;
@@ -133,19 +139,22 @@ $page_title = "Awards & Recognitions";
 
             /* Match companion cards' heights in Row 1 & Row 3 to the horizontal cards */
             .col-custom-35 .hover-layout {
-                height: 280px !important;
+                min-height: 280px !important;
+                height: 100% !important;
             }
 
             /* Row 2 Slightly increased height & image wrapper sizing */
             .row-2-card {
-                height: 420px !important; 
+                min-height: 420px !important; 
+                height: auto !important;
             }
             .row-2-card .award-content {
                 padding: 15px 20px !important;
             }
             .row-2-card.standard-layout .award-img-wrapper {
-                height: 270px !important;
-                aspect-ratio: auto !important;
+                min-height: 250px !important;
+                height: auto !important;
+                aspect-ratio: 16 / 10 !important;
             }
 
             /* Custom Grid widths for magazine flow */

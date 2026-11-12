@@ -135,6 +135,10 @@ $current_blog = $blogs[$blog_id];
 
     <title><?php echo $current_blog['title']; ?> - Architect Vanshika</title>
 
+    <!-- Preconnect for Google Fonts & CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <!--Favicon-->
     <link rel="icon" href="assets/img/favicon.png" type="image/png">
 
@@ -163,9 +167,9 @@ $current_blog = $blogs[$blog_id];
     <!-- Odometer CSS -->
     <link href="assets/css/odometer.min.css" rel="stylesheet">
     <!-- Alternative Style CSS -->
-    <link href="assets/css/alternative-style.css?v=1.2.6" rel="stylesheet">
+    <link href="assets/css/alternative-style.css?v=1.3.1" rel="stylesheet">
     <!-- Style CSS -->
-    <link href="assets/css/style.css?v=1.2.3" rel="stylesheet">
+    <link href="assets/css/style.css?v=1.2.4" rel="stylesheet">
     <!-- Floating Contact Widget -->
     <link href="assets/css/floating-contact.css?v=1.2.3" rel="stylesheet">
 
@@ -223,11 +227,13 @@ $current_blog = $blogs[$blog_id];
             width: 100%;
             height: 100%;
             object-fit: cover !important;
-            transition: transform 0.8s ease;
+            transition: none !important;
+            transform: none !important;
         }
 
         .blog-featured-img:hover img {
-            transform: scale(1.02);
+            transform: none !important;
+            transition: none !important;
         }
 
         .blog-content-text {
@@ -269,7 +275,7 @@ $current_blog = $blogs[$blog_id];
             margin-bottom: 0;
         }
 
-        /* Post Navigation style */
+        /* Post Navigation style - No transitions/animations */
         .blog-navigation {
             border-top: 1px solid rgba(194, 154, 108, 0.2) !important;
             margin-top: 60px;
@@ -283,15 +289,16 @@ $current_blog = $blogs[$blog_id];
             text-transform: uppercase;
             letter-spacing: 1px;
             color: #171717 !important;
-        }    transition: color 0.3s ease;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
+            transition: none !important;
         }
 
         .blog-navigation a i {
             font-size: 18px;
-            transition: transform 0.3s ease;
+            transition: none !important;
+            transform: none !important;
         }
 
         .blog-navigation .nav-prev:hover {
@@ -299,7 +306,7 @@ $current_blog = $blogs[$blog_id];
         }
 
         .blog-navigation .nav-prev:hover i {
-            transform: translateX(-4px);
+            transform: none !important;
         }
 
         .blog-navigation .nav-next:hover {
@@ -307,13 +314,22 @@ $current_blog = $blogs[$blog_id];
         }
 
         .blog-navigation .nav-next:hover i {
-            transform: translateX(4px);
+            transform: none !important;
         }
 
-        /* Responsive image grid in blog content */
+        /* Responsive image grid in blog content - Zero transitions */
         .blog-content-text img {
             border-radius: 4px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+            transition: none !important;
+            transform: none !important;
+        }
+
+        /* Disable all transitions and animations across blog details content */
+        .blog-details-page .blog-hero-section *,
+        .blog-details-page .blog-detail-section * {
+            animation: none !important;
+            transition: none !important;
         }
     </style>
 
@@ -426,84 +442,8 @@ $current_blog = $blogs[$blog_id];
     <script src="assets/js/ScrollSmoother.min.js"></script>
     <script src="assets/js/ScrollTrigger.min.js"></script>
     <script src="assets/js/smoother-script.js"></script>
-    <script src="assets/js/heading-animation.js"></script>
-    <script src="assets/js/paragraph-animation.js"></script>
     <!-- Main JS -->
     <script src="assets/js/main.js"></script>
-
-    <!-- Custom GSAP Blog Detail Animations -->
-    <script>
-        window.addEventListener("load", function() {
-            if (typeof gsap !== 'undefined') {
-                // Register ScrollTrigger
-                gsap.registerPlugin(ScrollTrigger);
-
-                // Fade Up Hero Text, category tag, and meta line on load
-                gsap.from(".blog-hero-section span, .blog-hero-section h1, .blog-hero-section .blog-meta", {
-                    opacity: 0,
-                    y: 60,
-                    duration: 1.4,
-                    stagger: 0.15,
-                    ease: "power3.out"
-                });
-
-                // Main Image elegant parallax scroll effect (no clip-path)
-                gsap.fromTo(".blog-featured-img img", {
-                    scale: 1.15
-                }, {
-                    scale: 1.0,
-                    ease: "none",
-                    scrollTrigger: {
-                        trigger: ".blog-featured-img",
-                        start: "top 95%",
-                        end: "bottom 15%",
-                        scrub: true
-                    }
-                });
-
-                // Left image slides in from left, right image slides in from right (re-triggers on scroll)
-                if (document.querySelector(".blog-content-text .row")) {
-                    gsap.from(".blog-content-text .row .col-md-6:first-child", {
-                        opacity: 0,
-                        x: -120,
-                        duration: 1.5,
-                        ease: "power3.out",
-                        scrollTrigger: {
-                            trigger: ".blog-content-text .row",
-                            start: "top 85%",
-                            toggleActions: "play reverse play reverse"
-                        }
-                    });
-                    gsap.from(".blog-content-text .row .col-md-6:last-child", {
-                        opacity: 0,
-                        x: 120,
-                        duration: 1.5,
-                        ease: "power3.out",
-                        scrollTrigger: {
-                            trigger: ".blog-content-text .row",
-                            start: "top 85%",
-                            toggleActions: "play reverse play reverse"
-                        }
-                    });
-                }
-
-                // General content paragraphs, headings, and quotes fade-up (re-triggers on scroll)
-                gsap.utils.toArray(".blog-content-text > p, .blog-content-text > h3, .blog-content-text > blockquote").forEach(function(element) {
-                    gsap.from(element, {
-                        opacity: 0,
-                        y: 40,
-                        duration: 1.2,
-                        ease: "power2.out",
-                        scrollTrigger: {
-                            trigger: element,
-                            start: "top 90%",
-                            toggleActions: "play reverse play reverse"
-                        }
-                    });
-                });
-            }
-        });
-    </script>
     <!-- Floating Contact JS -->
     <script src="assets/js/floating-contact.js?v=1.2.0"></script>
 

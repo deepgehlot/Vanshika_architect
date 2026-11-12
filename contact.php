@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
 
     <title>Contact Us - Architect Vanshika</title>
+
+    <!-- Preconnect for Google Fonts & CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <!--Favicon-->
     <link rel="icon" href="assets/img/favicon.png" type="image/png">
 
@@ -37,7 +42,7 @@
     <!-- Style CSS -->
     <link href="assets/css/style.css?v=1.2.3" rel="stylesheet">
     <!-- Alternative Custom Style Override -->
-    <link href="assets/css/alternative-style.css?v=1.2.6" rel="stylesheet">
+    <link href="assets/css/alternative-style.css?v=1.3.7" rel="stylesheet">
     <!-- Floating Contact Widget -->
     <link href="assets/css/floating-contact.css?v=1.2.3" rel="stylesheet">
 
@@ -93,10 +98,10 @@
             <div class="contact-form-section section-padding pt-150 pb-0" style="margin-top: 60px;">
                 <div class="container-fluid px-md-5 px-3">
                     <div class="row">
-                        <div class="col-lg-6 d-flex justify-content-center justify-content-lg-center align-items-start">
-                            <div class="contact-title-wrapper" style="max-width: 480px; width: 100%;">
+                        <div class="col-lg-6 d-flex justify-content-start justify-content-lg-center align-items-start">
+                            <div class="contact-title-wrapper">
                                 <span class="small-title">INSPIRE</span>
-                                <h1 class="display-3 text-uppercase mt-2 mb-4" style="line-height: 1.12; color: #c29a6c; font-family: 'Futura PT', sans-serif; font-size: 60px;">
+                                <h1 class="display-3 text-uppercase mt-2 mb-4" style="line-height: 1.12; color: #c29a6c; font-family: 'Futura PT', sans-serif;">
                                     Let’s <br class="d-none d-lg-block"> Bring Your <br class="d-none d-lg-block"> Vision To <br class="d-none d-lg-block"> Life</h1>
                             </div>
                         </div>
@@ -143,11 +148,11 @@
                 </div>
             </div>
 
-            <!-- Map & Office Details Section (2 Sections: Map on Left, Details on Right) -->
+            <!-- Map, Office Details & Email Enquiries Section (3 Boxes in One Line) -->
             <div class="contact-map-section section-padding py-5">
                 <div class="container-fluid px-lg-5 px-md-4 px-3">
                     <div class="map-split-wrapper">
-                        <!-- Section 1: Map Side (Left) -->
+                        <!-- Box 1: Map Side (Left) -->
                         <div class="map-embed-col">
                             <div class="map-embed-container">
                                 <iframe 
@@ -162,7 +167,7 @@
                             </div>
                         </div>
 
-                        <!-- Section 2: Details Side (Right: Single Unified Information Block) -->
+                        <!-- Box 2: Office Details (Center) -->
                         <div class="map-details-col">
                             <div class="map-single-details-card">
                                 <!-- 1. Our Offices & Address (No Corporate Office label) -->
@@ -188,7 +193,32 @@
                                         <p class="mb-0"><span class="accent-text">Mobile No :</span> <a href="tel:+918504996971">+91 85049 96971</a></p>
                                     </div>
                                     <div class="office-emails">
-                                        <p class="mb-0"><span class="accent-text">Email :</span> <a href="mailto:thespacetales@gmail.com">thespacetales@gmail.com</a></p>
+                                        <p class="mb-0"><span class="accent-text">Email :</span> <a href="https://mail.google.com/mail/?view=cm&fs=1&to=thespacetales@gmail.com" target="_blank" rel="noopener noreferrer">thespacetales@gmail.com</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Box 3: Email Enquiries (Right) -->
+                        <div class="map-emails-col">
+                            <div class="map-single-details-card">
+                                <div class="detail-group">
+                                    <h4 class="map-detail-heading">Email Enquiries</h4>
+                                    <div class="contact-email-item mb-3">
+                                        <p class="email-sub-label mb-1">Client Enquiries:</p>
+                                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=enquiries@vanshikaagarwaldesigns.com" target="_blank" rel="noopener noreferrer" class="contact-email-link">enquiries@vanshikaagarwaldesigns.com</a>
+                                    </div>
+                                    <div class="contact-email-item mb-3">
+                                        <p class="email-sub-label mb-1">Media Enquiries:</p>
+                                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@vanshikaagarwaldesigns.com" target="_blank" rel="noopener noreferrer" class="contact-email-link">contact@vanshikaagarwaldesigns.com</a>
+                                    </div>
+                                    <div class="contact-email-item mb-3">
+                                        <p class="email-sub-label mb-1">Vendor Enquiries:</p>
+                                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=admin@vanshikaagarwaldesigns.com" target="_blank" rel="noopener noreferrer" class="contact-email-link">admin@vanshikaagarwaldesigns.com</a>
+                                    </div>
+                                    <div class="contact-email-item mb-0">
+                                        <p class="email-sub-label mb-1">Career Opportunities:</p>
+                                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=career@vanshikaagarwaldesigns.com" target="_blank" rel="noopener noreferrer" class="contact-email-link">career@vanshikaagarwaldesigns.com</a>
                                     </div>
                                 </div>
                             </div>

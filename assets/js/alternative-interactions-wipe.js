@@ -38,71 +38,71 @@ document.addEventListener("DOMContentLoaded", function () {
             }, { threshold: 0.02 });
             portfolioItems.forEach(item => observer.observe(item));
         }
-
-        // ── Mobile menu toggle (alternative theme owns this; main.js skips binding) ──
-        let menuScrollY = 0;
-        const hamburger = document.getElementById('hamburger');
-        const mobileNav = document.querySelector('.mobile-nav');
-        const htmlEl = document.documentElement;
-
-        const preventMenuScroll = (e) => {
-            if (!document.body.classList.contains('menu-open')) return;
-            const scrollable = e.target.closest('.mobile-nav');
-            if (scrollable && scrollable.scrollHeight > scrollable.clientHeight) return;
-            e.preventDefault();
-        };
-
-        const openMobileMenu = () => {
-            menuScrollY = window.scrollY || window.pageYOffset;
-            if (mobileNav) mobileNav.classList.add('show');
-            document.body.classList.add('menu-open');
-            htmlEl.classList.add('menu-open');
-            if (hamburger) hamburger.classList.add('active');
-            document.body.style.top = `-${menuScrollY}px`;
-            document.addEventListener('touchmove', preventMenuScroll, { passive: false });
-            document.addEventListener('wheel', preventMenuScroll, { passive: false });
-        };
-
-        const closeMobileMenu = () => {
-            document.body.classList.remove('menu-open');
-            htmlEl.classList.remove('menu-open');
-            if (hamburger) hamburger.classList.remove('active');
-            if (mobileNav) mobileNav.classList.remove('show');
-            document.body.style.top = '';
-            document.removeEventListener('touchmove', preventMenuScroll, { passive: false });
-            document.removeEventListener('wheel', preventMenuScroll, { passive: false });
-            window.scrollTo(0, menuScrollY);
-        };
-
-        const toggleMobileMenu = (e) => {
-            if (e) {
-                e.preventDefault();
-                e.stopImmediatePropagation();
-            }
-            if (mobileNav && mobileNav.classList.contains('show')) {
-                closeMobileMenu();
-            } else {
-                openMobileMenu();
-            }
-        };
-
-        // Ensure menu starts closed on page load
-        closeMobileMenu();
-
-        // Prevent duplicate handlers from main.js
-        if (typeof $ !== 'undefined') {
-            $('#hamburger').off('click');
-            $('.close-nav').off('click');
-            $('.overlay').off('click');
-        }
-
-        if (hamburger) {
-            hamburger.addEventListener('click', toggleMobileMenu, true);
-        }
-        document.querySelectorAll('.close-nav, .mobile-nav a').forEach(el => {
-            el.addEventListener('click', closeMobileMenu);
-        });
     }
+
+    // ── Mobile menu toggle (active on all screen sizes wherever hamburger appears) ──
+    let menuScrollY = 0;
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.querySelector('.mobile-nav');
+    const htmlEl = document.documentElement;
+
+    const preventMenuScroll = (e) => {
+        if (!document.body.classList.contains('menu-open')) return;
+        const scrollable = e.target.closest('.mobile-nav');
+        if (scrollable && scrollable.scrollHeight > scrollable.clientHeight) return;
+        e.preventDefault();
+    };
+
+    const openMobileMenu = () => {
+        menuScrollY = window.scrollY || window.pageYOffset;
+        if (mobileNav) mobileNav.classList.add('show');
+        document.body.classList.add('menu-open');
+        htmlEl.classList.add('menu-open');
+        if (hamburger) hamburger.classList.add('active');
+        document.body.style.top = `-${menuScrollY}px`;
+        document.addEventListener('touchmove', preventMenuScroll, { passive: false });
+        document.addEventListener('wheel', preventMenuScroll, { passive: false });
+    };
+
+    const closeMobileMenu = () => {
+        document.body.classList.remove('menu-open');
+        htmlEl.classList.remove('menu-open');
+        if (hamburger) hamburger.classList.remove('active');
+        if (mobileNav) mobileNav.classList.remove('show');
+        document.body.style.top = '';
+        document.removeEventListener('touchmove', preventMenuScroll, { passive: false });
+        document.removeEventListener('wheel', preventMenuScroll, { passive: false });
+        window.scrollTo(0, menuScrollY);
+    };
+
+    const toggleMobileMenu = (e) => {
+        if (e) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+        }
+        if (mobileNav && mobileNav.classList.contains('show')) {
+            closeMobileMenu();
+        } else {
+            openMobileMenu();
+        }
+    };
+
+    // Ensure menu starts closed on page load
+    closeMobileMenu();
+
+    // Prevent duplicate handlers from main.js
+    if (typeof $ !== 'undefined') {
+        $('#hamburger').off('click');
+        $('.close-nav').off('click');
+        $('.overlay').off('click');
+    }
+
+    if (hamburger) {
+        hamburger.addEventListener('click', toggleMobileMenu, true);
+    }
+    document.querySelectorAll('.close-nav, .mobile-nav a').forEach(el => {
+        el.addEventListener('click', closeMobileMenu);
+    });
 
     const loader = document.getElementById("loader");
     const loaderLogoMask = document.querySelector(".loader-logo-mask");

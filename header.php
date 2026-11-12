@@ -6,9 +6,9 @@
                 <div class="row align-items-center">
                     <!-- Desktop Navigation -->
                     <div class="col-12 d-none d-xl-block">
-                        <div class="d-flex justify-content-between align-items-center w-100">
+                        <div class="d-flex justify-content-between align-items-center w-100 flex-nowrap">
                             <!-- Left Menu -->
-                            <div class="main-menu text-start" style="flex: 1;">
+                            <div class="main-menu text-start" style="flex: 1 1 auto;">
                                 <ul>
                                     <li><a class="navlink" href="about.php" style="text-transform: uppercase;">About
                                             Us</a></li>
@@ -20,7 +20,7 @@
                             </div>
 
                             <!-- Center Logo -->
-                            <div class="logo text-center" style="flex: 1;">
+                            <div class="logo text-center header-nav-logo" style="flex: 0 0 auto; padding: 0 15px;">
                                 <a href="index.php" class="logo">
                                     <img src="assets/img/logo/full_logo.png" alt="Vanshika Logo"
                                         style="max-height: 48%;">
@@ -28,8 +28,8 @@
                             </div>
 
                             <!-- Right Menu & CTA -->
-                            <div class="d-flex align-items-center justify-content-end" style="flex: 1;">
-                                <div class="main-menu" style="margin-right: 30px;">
+                            <div class="d-flex align-items-center justify-content-end header-nav-right flex-nowrap" style="flex: 1 1 auto;">
+                                <div class="main-menu header-menu-right" style="margin-right: 25px;">
                                     <ul>
                                         <li><a class="navlink" href="gallery.php"
                                                 style="text-transform: uppercase;">Gallery</a></li>
@@ -40,7 +40,7 @@
                                     </ul>
                                 </div>
                                 <a href="contact.php" class="theme-btn"
-                                    style="padding: 12px 25px; text-transform: uppercase; font-size: 18px; line-height: 1; border-radius: 30px;">Let's
+                                    style="padding: 12px 25px; text-transform: uppercase; font-size: 18px; line-height: 1; border-radius: 30px; white-space: nowrap;">Let's
                                     Talk</a>
                             </div>
                         </div>
