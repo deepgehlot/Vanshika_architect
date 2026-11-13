@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!--Favicon-->
-    <link rel="icon" href="assets/img/favicon.png" type="image/png">
+    <link rel="icon" href="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/favicon.png" type="image/png">
 
     <!-- Bootstrap CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -56,7 +56,7 @@
     <!-- Pre-Loader -->
     <div id="loader">
         <div class="loader-content">
-            <img src="assets/img/logo/Short_logo.png" alt="Loader Logo" class="loader-logo">
+            <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/logo/Short_logo.png" alt="Loader Logo" class="loader-logo">
             <div class="loading-bar-container">
                 <div class="loading-bar"></div>
                 <span class="loading-text">0%</span>
@@ -95,7 +95,7 @@
             <!-- CONTACT PAGE CONTENT STARTS HERE -->
 
             <!-- Contact Form Section -->
-            <div class="contact-form-section section-padding pt-150 pb-0" style="margin-top: 60px;">
+            <div class="contact-form-section section-padding pt-150 pb-0 mt-4 " style="margin-top: 60px;">
                 <div class="container-fluid px-md-5 px-3">
                     <div class="row">
                         <div class="col-lg-6 d-flex justify-content-start justify-content-lg-center align-items-start">
@@ -238,7 +238,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="philosophy-image-wrapper">
-                                <img src="https://res.cloudinary.com/dwzfpa4vq/image/upload/v1782466462/process-bg_bykxev.webp"
+                                <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/WEB/HERITAGE%20LUXURY.webp"
                                     alt="Interior Philosophy" class="img-fluid w-100">
                             </div>
                         </div>

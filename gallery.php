@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!--Favicon-->
-    <link rel="icon" href="assets/img/favicon.png" type="image/png">
+    <link rel="icon" href="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/favicon.png" type="image/png">
 
     <!-- Bootstrap CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -45,7 +45,7 @@
     <!-- Pre-Loader -->
     <div id="loader">
         <div class="loader-content">
-            <img src="assets/img/logo/Short_logo.png" alt="Loader Logo" class="loader-logo">
+            <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/logo/Short_logo.png" alt="Loader Logo" class="loader-logo">
             <div class="loading-bar-container">
                 <div class="loading-bar"></div>
                 <span class="loading-text">0%</span>
@@ -82,11 +82,11 @@
         <div id="smooth-content">
 
             <!-- Gallery Hero Section (Clean H1 Heading, No Filters) -->
-            <div class="gallery-hero-section pt-150 pb-2">
+            <div class="gallery-hero-section pt-150 pb-1 ">
                 <div class="container-fluid px-md-5 px-3">
                     <div class="row justify-content-center text-center">
                         <div class="col-xl-8">
-                            <h1 class="gallery-hero-title">GALLERY</h1>
+                            <h1 class="gallery-hero-title mt-4">GALLERY</h1>
                         </div>
                     </div>
                 </div>
@@ -100,9 +100,9 @@
                         <!-- 1. Dinesh Goyal Project -->
                         <div class="col-lg-4 col-md-6 col-12">
                             <div class="custom-gallery-item">
-                                <a href="assets/img/project photos/dinesh goyal cover photo.webp" class="gallery-popup-link" title="An Eclectic Villa jaipur">
+                                <a href="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/dinesh goyal cover photo.webp" class="gallery-popup-link" title="An Eclectic Villa Jaipur">
                                     <div class="custom-gallery-img-wrap">
-                                        <img src="assets/img/project photos/dinesh goyal cover photo.webp" alt="An Eclectic Villa jaipur" class="custom-gallery-img" loading="lazy">
+                                        <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/dinesh goyal cover photo.webp" alt="An Eclectic Villa Jaipur" class="custom-gallery-img" loading="lazy">
                                     </div>
                                 </a>
                             </div>
@@ -111,9 +111,9 @@
                         <!-- 2. Pratap Project -->
                         <div class="col-lg-4 col-md-6 col-12">
                             <div class="custom-gallery-item">
-                                <a href="assets/img/project photos/pratap cover photo.webp" class="gallery-popup-link" title="A Classical Bungalow Jaipur">
+                                <a href="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/pratap cover photo.webp" class="gallery-popup-link" title="A Classical Bungalow Jaipur">
                                     <div class="custom-gallery-img-wrap">
-                                        <img src="assets/img/project photos/pratap cover photo.webp" alt="A Classical Bungalow Jaipur" class="custom-gallery-img" loading="lazy">
+                                        <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/pratap cover photo.webp" alt="A Classical Bungalow Jaipur" class="custom-gallery-img" loading="lazy">
                                     </div>
                                 </a>
                             </div>
@@ -122,9 +122,9 @@
                         <!-- 3. Rajul Project -->
                         <div class="col-lg-4 col-md-6 col-12">
                             <div class="custom-gallery-item">
-                                <a href="assets/img/project photos/rajul cover photo.webp" class="gallery-popup-link" title="Penthouse in Jaipur">
+                                <a href="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/rajul cover photo.webp" class="gallery-popup-link" title="Penthouse In Jaipur">
                                     <div class="custom-gallery-img-wrap">
-                                        <img src="assets/img/project photos/rajul cover photo.webp" alt="Penthouse in Jaipur" class="custom-gallery-img" loading="lazy">
+                                        <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/rajul cover photo.webp" alt="Penthouse In Jaipur" class="custom-gallery-img" loading="lazy">
                                     </div>
                                 </a>
                             </div>
@@ -133,9 +133,9 @@
                         <!-- 4. Anantara Project -->
                         <div class="col-lg-4 col-md-6 col-12">
                             <div class="custom-gallery-item">
-                                <a href="assets/img/project photos/ANANATARA cover photo.webp" class="gallery-popup-link" title="Anantara Jewel Bagh Hotel jaipur">
+                                <a href="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/ANANATARA cover photo.webp" class="gallery-popup-link" title="Anantara Jewel Bagh Hotel Jaipur">
                                     <div class="custom-gallery-img-wrap">
-                                        <img src="assets/img/project photos/ANANATARA cover photo.webp" alt="Anantara Jewel Bagh Hotel jaipur" class="custom-gallery-img" loading="lazy">
+                                        <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/ANANATARA cover photo.webp" alt="Anantara Jewel Bagh Hotel Jaipur" class="custom-gallery-img" loading="lazy">
                                     </div>
                                 </a>
                             </div>
@@ -144,9 +144,9 @@
                         <!-- 5. Ranthambore Resort -->
                         <div class="col-lg-4 col-md-6 col-12">
                             <div class="custom-gallery-item">
-                                <a href="assets/img/project photos/ranthambore cover photo.webp" class="gallery-popup-link" title="Ranthambore Resort">
+                                <a href="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/ranthambore cover photo.webp" class="gallery-popup-link" title="Ranthambore Resort">
                                     <div class="custom-gallery-img-wrap">
-                                        <img src="assets/img/project photos/ranthambore cover photo.webp" alt="Ranthambore Resort" class="custom-gallery-img" loading="lazy">
+                                        <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/ranthambore cover photo.webp" alt="Ranthambore Resort" class="custom-gallery-img" loading="lazy">
                                     </div>
                                 </a>
                             </div>
@@ -155,9 +155,9 @@
                         <!-- 6. Khwaab Jaipur -->
                         <div class="col-lg-4 col-md-6 col-12">
                             <div class="custom-gallery-item">
-                                <a href="assets/img/project photos/khwaab cover photo.webp" class="gallery-popup-link" title="Khwaab Roof top Resto Bar">
+                                <a href="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/khwaab cover photo.webp" class="gallery-popup-link" title="Khwaab Roof Top Resto Bar">
                                     <div class="custom-gallery-img-wrap">
-                                        <img src="assets/img/project photos/khwaab cover photo.webp" alt="Khwaab Roof top Resto Bar" class="custom-gallery-img" loading="lazy">
+                                        <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/khwaab cover photo.webp" alt="Khwaab Roof Top Resto Bar" class="custom-gallery-img" loading="lazy">
                                     </div>
                                 </a>
                             </div>

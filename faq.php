@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!--Favicon-->
-    <link rel="icon" href="assets/img/favicon.png" type="image/png">
+    <link rel="icon" href="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/favicon.png" type="image/png">
 
     <!-- Bootstrap CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -57,7 +57,7 @@
     <!-- Pre-Loader -->
     <div id="loader">
         <div class="loader-content">
-            <img src="assets/img/logo/Short_logo.png" alt="Loader Logo" class="loader-logo">
+            <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/logo/Short_logo.png" alt="Loader Logo" class="loader-logo">
             <div class="loading-bar-container">
                 <div class="loading-bar"></div>
                 <span class="loading-text">0%</span>
@@ -234,7 +234,7 @@
             <!-- Call to Action (CTA) Section -->
             <div class="cta-talk-section section-padding">
                 <div class="cta-talk-bg"
-                    style="background-image: url('https://res.cloudinary.com/diynqy2wn/image/upload/v1776843889/background_architect_xk0vzv.jpg');">
+                    style="background-image: url('https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/WEB/CONTACT US.webp');">
                 </div>
                 <div class="overlay-dark"></div>
                 <div class="container position-relative z-index-1 text-center">

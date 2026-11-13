@@ -638,7 +638,7 @@ body {
   top: auto !important;
   left: auto !important;
   width: 100% !important;
-  height: 220px !important;
+  height: 340px !important;
   overflow: hidden !important;
   border-radius: 4px !important;
   z-index: 1 !important;
@@ -1631,6 +1631,10 @@ body.light .footer-bottom .privacy {
   color: #171717 !important;
 }
 
+body.light .footer-bottom .shapebytes-text {
+  color: #888888 !important;
+}
+
 body.light .footer-up .social-area a {
   color: #555555 !important;
 }
@@ -1999,7 +2003,7 @@ body.light .gallery-quote-box h6.text-gold {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../img/WEB/ABOUT ME.webp");
+  background-image: url("https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/WEB/ABOUT%20ME.webp");
   background-size: cover;
   background-position: center;
   z-index: 1;
@@ -5392,22 +5396,22 @@ body.light.contact-page .submit-arrow-btn:hover {
 }
 
 .map-emails-col .email-sub-label {
-  font-size: 14px;
+  font-size: 15px !important;
   color: #222222;
   font-weight: 500;
   margin-bottom: 2px;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .map-emails-col .contact-email-link {
   color: #3b3b3b;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 15px !important;
   transition: color 0.2s ease;
   word-break: break-word;
   overflow-wrap: anywhere;
   display: inline-block;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .map-emails-col .contact-email-link:hover {
@@ -5436,7 +5440,7 @@ body.light.contact-page .submit-arrow-btn:hover {
 }
 
 .location-address {
-  font-size: 14.5px;
+  font-size: 15px !important;
   line-height: 1.7;
   color: #555555;
   margin-bottom: 0;
@@ -5444,14 +5448,14 @@ body.light.contact-page .submit-arrow-btn:hover {
 
 .office-emails p,
 .timing-mobile p {
-  font-size: 14px;
+  font-size: 15px !important;
   line-height: 1.8;
 }
 
 .accent-text {
   color: #c29a6c;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 15px !important;
   margin-right: 4px;
 }
 
@@ -5459,7 +5463,7 @@ body.light.contact-page .submit-arrow-btn:hover {
 .timing-mobile a {
   color: #3b3b3b;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 15px !important;
   transition: color 0.2s ease;
 }
 
@@ -5470,14 +5474,14 @@ body.light.contact-page .submit-arrow-btn:hover {
 }
 
 .timings-info .timing-hours {
-  font-size: 15px;
+  font-size: 15px !important;
   font-weight: 600;
   color: #222222;
   margin-bottom: 3px;
 }
 
 .timings-info .timing-days {
-  font-size: 13.5px;
+  font-size: 15px !important;
   color: #666666;
 }
 
@@ -5527,12 +5531,14 @@ body.light.contact-page .submit-arrow-btn:hover {
     text-align: left !important;
   }
 
-  .map-emails-col .contact-email-link {
-    font-size: clamp(12.5px, 2.1vw, 14px) !important;
-  }
-
-  .location-address {
-    font-size: clamp(13px, 2.1vw, 14.5px) !important;
+  .map-emails-col .contact-email-link,
+  .map-emails-col .email-sub-label,
+  .location-address,
+  .timings-info .timing-hours,
+  .timings-info .timing-days,
+  .timing-mobile p,
+  .timing-mobile a {
+    font-size: clamp(13.5px, 2.1vw, 15px) !important;
   }
 }
 
@@ -5615,6 +5621,7 @@ body.light.contact-page .submit-arrow-btn:hover {
 
   .email-sub-label {
     text-align: center !important;
+    font-size: 13.5px !important;
   }
 
   .contact-email-link {
@@ -5947,7 +5954,31 @@ body.light .press-read-link,
   display: block;
 }
 
-/* Meet The Founder Heading in about.php - Strictly 1 Line across ALL screen sizes */
+/* Meet The Founder Heading in about.php - Strictly 1 Line & Flush Top-Aligned with Photo */
+@media (min-width: 768px) {
+  .about-profile-story-row {
+    align-items: flex-start !important;
+  }
+
+  .about-profile-story-row .about-profile-box,
+  .about-profile-story-row .about-single-profile-card {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  .about-profile-story-row .about-story-content {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  body.light.about-page .about-editorial-title,
+  .about-profile-story-row .about-editorial-title,
+  .about-editorial-title {
+    margin-top: -6px !important;
+    line-height: 1.1 !important;
+  }
+}
+
 body.light.about-page .about-editorial-title,
 .about-profile-story-row .about-editorial-title,
 .about-editorial-title {
@@ -5960,7 +5991,7 @@ body.light.about-page .about-editorial-title,
   overflow-wrap: normal !important;
   margin-bottom: 22px !important;
   font-size: clamp(32px, 2.5vw, 40px) !important;
-  line-height: 1.25 !important;
+  line-height: 1.1 !important;
   letter-spacing: 1.5px !important;
 }
 
@@ -5970,6 +6001,7 @@ body.light.about-page .about-editorial-title,
   .about-profile-story-row .about-editorial-title {
     font-size: clamp(28px, 2.2vw, 32px) !important;
     letter-spacing: 1.2px !important;
+    margin-top: -6px !important;
   }
 }
 
@@ -5979,6 +6011,7 @@ body.light.about-page .about-editorial-title,
   .about-profile-story-row .about-editorial-title {
     font-size: clamp(23px, 2.3vw, 26px) !important;
     letter-spacing: 1px !important;
+    margin-top: -5px !important;
   }
 }
 
@@ -5988,16 +6021,23 @@ body.light.about-page .about-editorial-title,
   .about-profile-story-row .about-editorial-title {
     font-size: clamp(20px, 2.5vw, 24px) !important;
     letter-spacing: 1px !important;
+    margin-top: -4px !important;
   }
 }
 
 @media (max-width: 767px) {
+
+  .about-profile-story-row .about-story-content {
+    margin-top: 30px !important;
+  }
 
   body.light.about-page .about-editorial-title,
   .about-profile-story-row .about-editorial-title {
     font-size: clamp(17px, 4.8vw, 22px) !important;
     letter-spacing: 1px !important;
     text-align: center !important;
+    margin-top: 0 !important;
+    line-height: 1.25 !important;
   }
 }
 
@@ -6089,7 +6129,7 @@ body.light.about-page .about-editorial-title,
 .about-full-length-cta-section {
   width: 100% !important;
   max-width: 100% !important;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.58)), url('https://res.cloudinary.com/dwzfpa4vq/image/upload/v1782466457/about-bg_vxad3j.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.58)), url('https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/WEB/CONTACT%20US.webp');
   background-size: cover !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
@@ -6173,10 +6213,6 @@ body.light.about-page .about-editorial-title,
 @media (max-width: 991px) {
   .about-profile-box {
     max-width: 360px;
-  }
-
-  .about-story-content {
-    margin-top: 35px;
   }
 
   .about-full-length-cta-section {
@@ -6339,7 +6375,9 @@ body.light.about-page .about-editorial-title,
     margin-bottom: 20px !important;
   }
 
-  .location-address {
+  .location-address,
+  .email-sub-label,
+  .contact-email-link {
     font-size: 13.5px !important;
   }
 }
@@ -7079,7 +7117,7 @@ body {
   }
 
   .service-stack-item {
-    height: 220px !important;
+    height: 260px !important;
   }
 
   .service-stack-item .service-stack-text h3 {
@@ -7599,7 +7637,7 @@ body {
   }
 
   .service-stack-item {
-    height: 210px !important;
+    height: 330px !important;
   }
 }
 
@@ -7662,7 +7700,7 @@ body {
   }
 
   .service-stack-item {
-    height: 200px !important;
+    height: 320px !important;
   }
 }
 
@@ -7720,7 +7758,7 @@ body {
   }
 
   .service-stack-item {
-    height: 195px !important;
+    height: 310px !important;
   }
 
   .horizontal-layout {
@@ -7814,7 +7852,7 @@ body {
   }
 
   .service-stack-item {
-    height: 190px !important;
+    height: 295px !important;
   }
 
   .horizontal-layout {
@@ -8074,4 +8112,29 @@ body {
     padding: 6px 15px !important;
     font-size: 10.5px !important;
   }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   PROJECTS PAGE (projects.php) - HOVER OVERLAY & TITLE 800 WEIGHT
+   ══════════════════════════════════════════════════════════════ */
+body.light.projects-page .project-card-unique .project-info h4,
+.project-card-unique .project-info h4 {
+  font-weight: 800 !important;
+  text-transform: none !important;
+}
+
+body.light.projects-page .project-card-unique .project-overlay,
+.project-card-unique .project-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.96) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.18) 100%) !important;
+}
+
+/* Blog Hero Section - Static (No transition / animation) */
+body.light.blog-page .blog-hero-section h1,
+body.light.blog-page .blog-hero-section p,
+.blog-hero-content h1,
+.blog-hero-content p {
+  transition: none !important;
+  animation: none !important;
+  opacity: 1 !important;
+  transform: none !important;
 }

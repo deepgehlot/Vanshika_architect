@@ -30,8 +30,7 @@ body.light.services-page .service-stack-item {
     top: auto !important;
     left: auto !important;
     width: 100% !important;
-    height: 220px !important;
-    /* Increased by 10% (from 200px to 220px) */
+    height: 340px !important;
     overflow: hidden !important;
     border-radius: 4px !important;
     z-index: 1 !important;
@@ -128,6 +127,36 @@ body.light.services-page .service-stack-item:hover .service-stack-desc {
     transform: translateY(0);
 }
 
+@media (min-width: 1300px) and (max-width: 1399px) {
+    body.light.services-page .service-stack-item {
+        height: 330px !important;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1299px) {
+    body.light.services-page .service-stack-item {
+        height: 320px !important;
+    }
+}
+
+@media (min-width: 1100px) and (max-width: 1199px) {
+    body.light.services-page .service-stack-item {
+        height: 310px !important;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1099px) {
+    body.light.services-page .service-stack-item {
+        height: 295px !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    body.light.services-page .service-stack-item {
+        height: 280px !important;
+    }
+}
+
 @media (max-width: 767px) {
     body.light.services-page .services-stacked-container {
         grid-template-columns: 1fr !important;
@@ -137,7 +166,7 @@ body.light.services-page .service-stack-item:hover .service-stack-desc {
     }
 
     body.light.services-page .service-stack-item {
-        height: 220px !important;
+        height: 260px !important;
     }
 
     body.light.services-page .service-stack-item .service-stack-text h3 {

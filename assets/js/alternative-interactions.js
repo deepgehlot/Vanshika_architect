@@ -458,14 +458,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         */
 
-        // Blog Page Hero Title & Subtitle Fadeup (All viewports)
+        // Blog Page Hero Title & Subtitle - Static (Transition / Animation removed as requested)
         const blogHeroContent = document.querySelector(".blog-hero-content");
         if (blogHeroContent) {
             const elements = blogHeroContent.querySelectorAll("h1, p");
-            gsap.fromTo(elements,
-                { y: 50, opacity: 0 },
-                { y: 0, opacity: 1, duration: 1.4, stagger: 0.2, ease: "power3.out" }
-            );
+            if (typeof gsap !== "undefined") {
+                gsap.set(elements, { y: 0, opacity: 1, clearProps: "all" });
+            }
         }
 
         // Blog Page Cards Directional Wipe Reveal (Disabled - Cards stay static)

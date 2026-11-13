@@ -22,7 +22,7 @@
                             <!-- Center Logo -->
                             <div class="logo text-center header-nav-logo" style="flex: 0 0 auto; padding: 0 15px;">
                                 <a href="index.php" class="logo">
-                                    <img src="assets/img/logo/full_logo.png" alt="Vanshika Logo"
+                                    <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/logo/full_logo.png" alt="Vanshika Logo"
                                         style="max-height: 48%;">
                                 </a>
                             </div>
@@ -50,7 +50,7 @@
                     <div class="col-8 d-block d-xl-none">
                         <div class="logo">
                             <a href="index.php" class="logo">
-                                <img src="assets/img/logo/full_logo.png" alt="Vanshika Logo"
+                                <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/logo/full_logo.png" alt="Vanshika Logo"
                                     style="max-height: 60px; width: auto;">
                             </a>
                         </div>

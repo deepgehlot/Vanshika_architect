@@ -8276,7 +8276,7 @@ body.dark .signature {
   width: 60%;
   /* Adjust size as needed */
   height: 100%;
-  background-image: url('../img/logo/Short_logo.png');
+  background-image: url('https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/logo/Short_logo.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -9073,7 +9073,7 @@ body.dark .signature {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.96) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.18) 100%);
   display: flex;
   align-items: flex-end;
   padding: 40px;
@@ -9109,8 +9109,9 @@ body.dark .signature {
   font-size: 26px;
   margin-bottom: 20px;
   font-family: 'Futura PT', sans-serif;
-  font-weight: 400;
+  font-weight: 800;
   letter-spacing: 1px;
+  text-transform: none;
 }
 
 .project-card-unique .project-info .view-project-btn {

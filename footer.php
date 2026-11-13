@@ -5,7 +5,7 @@
             <div class="row justify-content-between align-items-start gy-5">
                 <div class="col-xl-2 col-lg-2 col-12 text-center align-self-center footer-logo-col">
                     <a href="index.php" class="logo d-inline-block">
-                        <img src="assets/img/logo/Short_logo.png" alt="Vanshika Logo" style="max-width: 215px;">
+                        <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/logo/Short_logo.png" alt="Vanshika Logo" style="max-width: 215px;">
                     </a>
                 </div>
 
@@ -16,11 +16,12 @@
                     </div>
 
                     <div class="company-email">
-                        <p>Have a project in mind?</p>
-                        <a href="mailto:[EMAIL_ADDRESS]">[EMAIL_ADDRESS]</a>
+                        <p>Office Timing</p>
+                        <a href="">09:30 AM – 6:30 PM</a>
+                        <a href="" class="d-block"> (Monday – Saturday)</a>
                     </div>
                     <div class="phone-number">
-                        <p>Mon-Sat, 08.00 AM-06.30 PM</p>
+                        <p>Mobile No.</p>
                         <a href="tel:+918504996971">+91 85049 96971</a>
                     </div>
                 </div>
@@ -80,11 +81,14 @@
 <!-- Footer Bottom Area -->
 <div class="footer-bottom">
     <div class="container">
-        <div class="row justify-content-center align-items-center">
-            <div class="col-lg-6 col-md-6 col-sm-12">
-                <p class="copyright-line">© 2025 Vanshika. All rights reserved.</p>
+        <div class="row justify-content-between align-items-center gy-2">
+            <div class="col-lg-4 col-md-4 col-12 text-center text-md-start">
+                <p class="copyright-line">&copy; <?php echo date("Y"); ?> Vanshika. All rights reserved.</p>
             </div>
-            <div class="col-lg-6 col-md-6 col-12 text-md-end">
+            <div class="col-lg-4 col-md-4 col-12 text-center">
+                <p class="developer-credit">Developed &amp; Design By <span class="shapebytes-text" style="color: #888888;">Shapebytes</span></p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12 text-center text-md-end">
                 <p class="privacy">Privacy Policy | Terms &amp; Conditions</p>
             </div>
         </div>

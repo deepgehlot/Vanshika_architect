@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!--Favicon-->
-    <link rel="icon" href="assets/img/favicon.png" type="image/png">
+    <link rel="icon" href="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/favicon.png" type="image/png">
 
     <!-- Bootstrap CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -59,7 +59,7 @@
     <!-- Pre-Loader -->
     <div id="loader">
         <div class="loader-content">
-            <img src="assets/img/logo/Short_logo.png" alt="Loader Logo" class="loader-logo">
+            <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/logo/Short_logo.png" alt="Loader Logo" class="loader-logo">
             <div class="loading-bar-container">
                 <div class="loading-bar"></div>
                 <span class="loading-text">0%</span>
@@ -77,7 +77,7 @@
                     <div class="container-fluid px-md-5 px-3">
                         <div class="row justify-content-center text-center">
                             <div class="col-xl-8 services-hero-content">
-                                <h1 class="display-3 text-uppercase" style="margin-bottom: 14px;">Curating Timeless Luxury</h1>
+                                <h1 class="display-3 text-uppercase mt-4" style="margin-bottom: 14px;">Curating Timeless Luxury</h1>
                                 <p class="mb-0 text-muted">Discover our specialized design services for high-end
                                     residential, commercial, and hospitality spaces.</p>
                             </div>
@@ -92,7 +92,7 @@
                             <!-- Item 1: Architecture -->
                             <div class="service-stack-item item-1">
                                 <div class="img-curtain">
-                                    <img src="assets/img/WEB/SERVICES ARCHITECTURE.webp"
+                                    <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/WEB/SERVICES ARCHITECTURE.webp"
                                         alt="Architecture" decoding="async" loading="lazy">
                                     <div class="overlay-gradient"></div>
                                 </div>
@@ -107,7 +107,7 @@
                             <!-- Item 2: Interior Design -->
                             <div class="service-stack-item item-2">
                                 <div class="img-curtain">
-                                    <img src="assets/img/project photos/dinesh goyal (9).webp"
+                                    <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/dinesh goyal (9).webp"
                                         alt="Interior Design" decoding="async" loading="lazy">
                                     <div class="overlay-gradient"></div>
                                 </div>
@@ -122,7 +122,7 @@
                             <!-- Item 3: Project Management -->
                             <div class="service-stack-item item-3">
                                 <div class="img-curtain">
-                                    <img src="assets/img/project photos/dinesh goyal (2).webp"
+                                    <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/dinesh goyal (2).webp"
                                         alt="Project Management" decoding="async" loading="lazy">
                                     <div class="overlay-gradient"></div>
                                 </div>
@@ -137,7 +137,7 @@
                             <!-- Item 4: Landscaping -->
                             <div class="service-stack-item item-4">
                                 <div class="img-curtain">
-                                    <img src="assets/img/WEB/SERVICES LANDSCAPE.webp"
+                                    <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/WEB/SERVICES LANDSCAPE.webp"
                                         alt="Landscaping" decoding="async" loading="lazy">
                                     <div class="overlay-gradient"></div>
                                 </div>
