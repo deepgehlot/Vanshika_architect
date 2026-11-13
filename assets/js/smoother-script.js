@@ -51,6 +51,9 @@ $(function () {
     // Start visible at initial load
     showHeaderAnim.progress(1);
 
+    let isHeaderScrolled = false;
+    let isHeaderHidden = false;
+
     ScrollTrigger.create({
       start: "top top",
       onUpdate: (self) => {
@@ -58,21 +61,36 @@ $(function () {
 
         // 1. At the very top (<= 30px): Always visible and transparent
         if (scroll <= 30) {
-          showHeaderAnim.play();
-          $header.removeClass("header-scrolled");
-          $("#header-sticky").removeClass("header-sticky");
+          if (isHeaderHidden) {
+            showHeaderAnim.play();
+            isHeaderHidden = false;
+          }
+          if (isHeaderScrolled) {
+            $header.removeClass("header-scrolled");
+            $("#header-sticky").removeClass("header-sticky");
+            isHeaderScrolled = false;
+          }
           return;
         }
 
         // 2. Scrolling DOWN (self.direction === 1): Hide navbar smoothly
         if (self.direction === 1 && scroll > 60) {
-          showHeaderAnim.reverse();
+          if (!isHeaderHidden) {
+            showHeaderAnim.reverse();
+            isHeaderHidden = true;
+          }
         }
         // 3. Scrolling UP (self.direction === -1): Reveal navbar smoothly
         else if (self.direction === -1) {
-          showHeaderAnim.play();
-          $header.addClass("header-scrolled");
-          $("#header-sticky").addClass("header-sticky");
+          if (isHeaderHidden) {
+            showHeaderAnim.play();
+            isHeaderHidden = false;
+          }
+          if (!isHeaderScrolled) {
+            $header.addClass("header-scrolled");
+            $("#header-sticky").addClass("header-sticky");
+            isHeaderScrolled = true;
+          }
         }
       }
     });

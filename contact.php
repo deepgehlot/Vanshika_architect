@@ -291,7 +291,6 @@
     <script src="assets/js/gsap.min.js"></script>
     <script src="assets/js/gsap-scroll-to-plugin.js"></script>
     <script src="assets/js/SplitText.min.js"></script>
-    <script src="assets/js/ScrollSmoother.min.js"></script>
     <script src="assets/js/ScrollTrigger.min.js"></script>
     <script src="assets/js/smoother-script.js"></script>
     <script src="assets/js/heading-animation.js"></script>
@@ -299,7 +298,7 @@
     <!-- Main JS -->
     <script src="assets/js/main.js?v=1.2.0"></script>
     <!-- Alternative Theme Custom JS Animations -->
-    <script src="assets/js/alternative-interactions-wipe.js"></script>
+    <script src="assets/js/alternative-interactions.js"></script>
 
 
     <!-- PHP Mailer Integration -->

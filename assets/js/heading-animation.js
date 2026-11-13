@@ -2,7 +2,7 @@ $(function () {
   if (typeof gsap === "undefined" || typeof SplitText === "undefined") return;
   let headingAnimationLines = gsap.utils.toArray(".heading-animation");
   if (!headingAnimationLines.length) return;
-  gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
+  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
   // Title Animation
   headingAnimationLines.forEach(headingAnimationLine => {

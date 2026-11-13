@@ -593,7 +593,6 @@
     <script src="assets/js/gsap-scroll-to-plugin.js"></script>
     <script src="assets/js/SplitText.min.js"></script>
     <script src="assets/js/ScrollTrigger.min.js"></script>
-    <script src="assets/js/ScrollSmoother.min.js"></script>
     <script src="assets/js/smoother-script.js?v=<?php echo $asset_ver; ?>"></script>
     <script src="assets/js/heading-animation.js"></script>
     <script src="assets/js/paragraph-animation.js"></script>

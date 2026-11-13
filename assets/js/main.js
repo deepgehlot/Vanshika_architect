@@ -564,17 +564,17 @@
 
   // Hard safety fallback: Dismiss loader after 1.2s max under all circumstances
   setTimeout(function () {
-      if ($("#loader:visible").length && !$("#loader").hasClass('white-preloader')) {
-        $("#loader").fadeOut(250, function () {
-          $('body').addClass('preloader-done');
-          var $header = $('.header-area');
-          if ($header.length && !$header.hasClass('nav-elements-active')) {
-            $header.addClass('nav-elements-active');
-          }
-          $(window).trigger('preloaderDone');
-        });
-      }
-    }, 1200);
+    if ($("#loader:visible").length && !$("#loader").hasClass('white-preloader')) {
+      $("#loader").fadeOut(250, function () {
+        $('body').addClass('preloader-done');
+        var $header = $('.header-area');
+        if ($header.length && !$header.hasClass('nav-elements-active')) {
+          $header.addClass('nav-elements-active');
+        }
+        $(window).trigger('preloaderDone');
+      });
+    }
+  }, 1200);
 
 
   // Visible From Right Slowly Animation
@@ -1012,7 +1012,8 @@
           scrollTrigger: {
             trigger: '.portfolio-section',
             start: "top 80%",
-            toggleActions: "play reverse play reverse"
+            toggleActions: "play none none none",
+            once: true
           }
         }
       );
@@ -1049,7 +1050,8 @@
             scrollTrigger: {
               trigger: item,
               start: "top 85%",
-              toggleActions: "play none none none"
+              toggleActions: "play none none none",
+              once: true
             }
           }
         );
@@ -1074,7 +1076,8 @@
             scrollTrigger: {
               trigger: item,
               start: "top 85%",
-              toggleActions: "play reverse play reverse"
+              toggleActions: "play none none none",
+              once: true
             }
           }
         );
@@ -1091,27 +1094,17 @@
               scrollTrigger: {
                 trigger: item,
                 start: "top 85%",
-                toggleActions: "play reverse play reverse"
+                toggleActions: "play none none none",
+                once: true
               }
             }
           );
         }
       });
-
-      // Pin the blog section so the gallery section slides up over it
-      if (document.querySelector(".blog-section")) {
-        ScrollTrigger.create({
-          trigger: ".blog-section",
-          start: "bottom bottom",
-          end: "+=100%",
-          pin: true,
-          pinSpacing: false
-        });
-      }
     }
 
     // Global Luxury Smooth Text Animation
-    const testimonialAndInnerElements = gsap.utils.toArray('.testimonial-text p, .testimonial-author h6, .testimonial-author p, .gallery-text-box .text-box-inner *, .port-text h3, .port-text p, .port-num');
+    const testimonialAndInnerElements = gsap.utils.toArray('.testimonial-text p, .testimonial-author h6, .testimonial-author p, .gallery-text-box .text-box-inner, .port-text h3, .port-text p, .port-num');
     testimonialAndInnerElements.forEach(function (elem) {
       gsap.fromTo(elem,
         { opacity: 0, y: 30 },
@@ -1123,7 +1116,8 @@
           scrollTrigger: {
             trigger: elem,
             start: "top 95%",
-            toggleActions: "play reverse play reverse"
+            toggleActions: "play none none none",
+            once: true
           }
         }
       );
@@ -1185,7 +1179,8 @@
           scrollTrigger: {
             trigger: projectHeading,
             start: "top 90%",
-            toggleActions: "play reverse play reverse"
+            toggleActions: "play none none none",
+            once: true
           }
         }
       );
@@ -1201,7 +1196,8 @@
           scrollTrigger: {
             trigger: projectDesc,
             start: "top 90%",
-            toggleActions: "play reverse play reverse"
+            toggleActions: "play none none none",
+            once: true
           }
         }
       );
@@ -1221,7 +1217,8 @@
           scrollTrigger: {
             trigger: testHeading,
             start: "top 90%",
-            toggleActions: "play reverse play reverse"
+            toggleActions: "play none none none",
+            once: true
           }
         }
       );
@@ -1237,7 +1234,8 @@
           scrollTrigger: {
             trigger: testDesc,
             start: "top 90%",
-            toggleActions: "play reverse play reverse"
+            toggleActions: "play none none none",
+            once: true
           }
         }
       );
@@ -1268,7 +1266,8 @@
           scrollTrigger: {
             trigger: blogHeading,
             start: "top 90%",
-            toggleActions: "play none none none"
+            toggleActions: "play none none none",
+            once: true
           }
         }
       );
@@ -1284,7 +1283,8 @@
           scrollTrigger: {
             trigger: blogDesc,
             start: "top 90%",
-            toggleActions: "play none none none"
+            toggleActions: "play none none none",
+            once: true
           }
         }
       );
@@ -1304,7 +1304,8 @@
           scrollTrigger: {
             trigger: ctaHeading,
             start: "top 90%",
-            toggleActions: "play reverse play reverse"
+            toggleActions: "play none none none",
+            once: true
           }
         }
       );
@@ -1320,6 +1321,7 @@
           yPercent: 8,
           scale: 1.15,
           ease: "none",
+          force3D: true,
           scrollTrigger: {
             trigger: $(img).parent(),
             start: "top bottom",
@@ -1340,7 +1342,8 @@
         scrollTrigger: {
           trigger: footerBrandText,
           start: "top 95%",
-          toggleActions: "play reverse play reverse"
+          toggleActions: "play none none none",
+          once: true
         }
       });
 

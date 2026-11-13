@@ -2,7 +2,7 @@ $(function () {
   if (typeof gsap === "undefined" || typeof SplitText === "undefined") return;
   let pAnimationLines = gsap.utils.toArray(".p-animation p");
   if (!pAnimationLines.length) return;
-  gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
+  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
   // Paragraph Animation
   pAnimationLines.forEach(pAnimationLine => {
