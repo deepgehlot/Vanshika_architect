@@ -182,7 +182,7 @@
                                 <div class="detail-group mb-4">
                                     <h4 class="map-detail-heading">Office Timings</h4>
                                     <div class="timings-info">
-                                        <p class="timing-hours mb-1">10:30 AM – 6:30 PM</p>
+                                        <p class="timing-hours mb-1">09:30 AM – 6:30 PM</p>
                                         <p class="timing-days mb-0">(Monday – Saturday)</p>
                                     </div>
                                 </div>
@@ -191,9 +191,6 @@
                                 <div class="detail-group">
                                     <div class="timing-mobile mb-2">
                                         <p class="mb-0"><span class="accent-text">Mobile No :</span> <a href="tel:+918504996971">+91 85049 96971</a></p>
-                                    </div>
-                                    <div class="office-emails">
-                                        <p class="mb-0"><span class="accent-text">Email :</span> <a href="https://mail.google.com/mail/?view=cm&fs=1&to=thespacetales@gmail.com" target="_blank" rel="noopener noreferrer">thespacetales@gmail.com</a></p>
                                     </div>
                                 </div>
                             </div>
