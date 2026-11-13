@@ -5965,6 +5965,7 @@ body.light.about-page .about-editorial-title,
 }
 
 @media (min-width: 1200px) and (max-width: 1399px) {
+
   body.light.about-page .about-editorial-title,
   .about-profile-story-row .about-editorial-title {
     font-size: clamp(28px, 2.2vw, 32px) !important;
@@ -5973,6 +5974,7 @@ body.light.about-page .about-editorial-title,
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
+
   body.light.about-page .about-editorial-title,
   .about-profile-story-row .about-editorial-title {
     font-size: clamp(23px, 2.3vw, 26px) !important;
@@ -5981,6 +5983,7 @@ body.light.about-page .about-editorial-title,
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   body.light.about-page .about-editorial-title,
   .about-profile-story-row .about-editorial-title {
     font-size: clamp(20px, 2.5vw, 24px) !important;
@@ -5989,6 +5992,7 @@ body.light.about-page .about-editorial-title,
 }
 
 @media (max-width: 767px) {
+
   body.light.about-page .about-editorial-title,
   .about-profile-story-row .about-editorial-title {
     font-size: clamp(17px, 4.8vw, 22px) !important;
@@ -7837,4 +7841,237 @@ body {
   height: 0 !important;
   padding: 0 !important;
   margin: 0 !important;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   OUR SIGNATURE LUXURY PROJECTS HOVER OVERLAY & TITLE (index.php)
+   Keeps text cleanly bounded inside card bounds across all screens
+   ══════════════════════════════════════════════════════════════ */
+.luxury-gallery-grid .gallery-hover-overlay,
+.gallery-item .gallery-hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 18, 21, 0.75) !important;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+  z-index: 10;
+  text-decoration: none !important;
+  padding: 16px !important;
+  box-sizing: border-box !important;
+}
+
+.luxury-gallery-grid .gallery-item:hover .gallery-hover-overlay,
+.gallery-item:hover .gallery-hover-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.luxury-gallery-grid .hover-content,
+.gallery-item .hover-content {
+  text-align: center !important;
+  width: 100% !important;
+  max-width: 90% !important;
+  padding: 10px 12px !important;
+  transform: translateY(14px);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 auto !important;
+  box-sizing: border-box !important;
+}
+
+.luxury-gallery-grid .gallery-item:hover .hover-content,
+.gallery-item:hover .hover-content {
+  transform: translateY(0);
+}
+
+.luxury-gallery-grid .hover-content .project-title,
+.gallery-hover-overlay .hover-content .project-title,
+.gallery-item .hover-content .project-title,
+.hover-content .project-title {
+  color: #c29a6c !important;
+  font-family: 'Futura PT', sans-serif !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
+  display: block !important;
+  width: 100% !important;
+  max-width: 92% !important;
+  margin: 0 auto 12px auto !important;
+  padding: 0 !important;
+  word-break: normal !important;
+  overflow-wrap: break-word !important;
+  text-align: center !important;
+}
+
+.luxury-gallery-grid .hover-content .project-cta-btn,
+.gallery-hover-overlay .hover-content .project-cta-btn,
+.gallery-item .hover-content .project-cta-btn,
+.hover-content .project-cta-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background-color: #c29a6c !important;
+  color: #ffffff !important;
+  padding: 8px 18px !important;
+  font-size: 11.5px !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  border-radius: 30px !important;
+  transition: background-color 0.25s ease, transform 0.25s ease !important;
+  text-decoration: none !important;
+  margin-top: 2px !important;
+  white-space: nowrap !important;
+}
+
+.luxury-gallery-grid .hover-content .project-cta-btn:hover,
+.hover-content .project-cta-btn:hover {
+  background-color: #ffffff !important;
+  color: #171717 !important;
+  transform: translateY(-2px);
+}
+
+.luxury-gallery-grid .hover-content .project-cta-btn i,
+.hover-content .project-cta-btn i {
+  margin-left: 7px !important;
+  font-size: 11px !important;
+  transition: transform 0.25s ease !important;
+}
+
+.luxury-gallery-grid .hover-content .project-cta-btn:hover i,
+.hover-content .project-cta-btn:hover i {
+  transform: translateX(4px) !important;
+}
+
+/* Responsive typography for card hover text across all viewports */
+@media (min-width: 1400px) {
+
+  .luxury-gallery-grid .hover-content .project-title,
+  .gallery-hover-overlay .hover-content .project-title,
+  .gallery-item .hover-content .project-title,
+  .hover-content .project-title {
+    font-size: 21px !important;
+    line-height: 1.32 !important;
+    letter-spacing: 1.5px !important;
+    margin-bottom: 12px !important;
+  }
+}
+
+@media (min-width: 1300px) and (max-width: 1399px) {
+
+  .luxury-gallery-grid .hover-content .project-title,
+  .gallery-hover-overlay .hover-content .project-title,
+  .gallery-item .hover-content .project-title,
+  .hover-content .project-title {
+    font-size: 19px !important;
+    line-height: 1.3 !important;
+    letter-spacing: 1.2px !important;
+    margin-bottom: 11px !important;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1299px) {
+
+  .luxury-gallery-grid .hover-content .project-title,
+  .gallery-hover-overlay .hover-content .project-title,
+  .gallery-item .hover-content .project-title,
+  .hover-content .project-title {
+    font-size: 17.5px !important;
+    line-height: 1.28 !important;
+    letter-spacing: 1px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .luxury-gallery-grid .hover-content .project-cta-btn,
+  .hover-content .project-cta-btn {
+    padding: 7px 16px !important;
+    font-size: 11px !important;
+  }
+}
+
+@media (min-width: 1100px) and (max-width: 1199px) {
+
+  .luxury-gallery-grid .hover-content .project-title,
+  .gallery-hover-overlay .hover-content .project-title,
+  .gallery-item .hover-content .project-title,
+  .hover-content .project-title {
+    font-size: 16.5px !important;
+    line-height: 1.28 !important;
+    letter-spacing: 0.8px !important;
+    margin-bottom: 9px !important;
+  }
+
+  .luxury-gallery-grid .hover-content .project-cta-btn,
+  .hover-content .project-cta-btn {
+    padding: 7px 15px !important;
+    font-size: 10.5px !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1099px) {
+
+  .luxury-gallery-grid .hover-content .project-title,
+  .gallery-hover-overlay .hover-content .project-title,
+  .gallery-item .hover-content .project-title,
+  .hover-content .project-title {
+    font-size: 15.5px !important;
+    line-height: 1.25 !important;
+    letter-spacing: 0.8px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .luxury-gallery-grid .hover-content .project-cta-btn,
+  .hover-content .project-cta-btn {
+    padding: 6px 14px !important;
+    font-size: 10px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .luxury-gallery-grid .hover-content .project-title,
+  .gallery-hover-overlay .hover-content .project-title,
+  .gallery-item .hover-content .project-title,
+  .hover-content .project-title {
+    font-size: 15.5px !important;
+    line-height: 1.25 !important;
+    letter-spacing: 0.8px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .luxury-gallery-grid .hover-content .project-cta-btn,
+  .hover-content .project-cta-btn {
+    padding: 6px 14px !important;
+    font-size: 10px !important;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .luxury-gallery-grid .hover-content .project-title,
+  .gallery-hover-overlay .hover-content .project-title,
+  .gallery-item .hover-content .project-title,
+  .hover-content .project-title {
+    font-size: 15px !important;
+    line-height: 1.28 !important;
+    letter-spacing: 0.8px !important;
+    margin-bottom: 9px !important;
+  }
+
+  .luxury-gallery-grid .hover-content .project-cta-btn,
+  .hover-content .project-cta-btn {
+    padding: 6px 15px !important;
+    font-size: 10.5px !important;
+  }
 }
