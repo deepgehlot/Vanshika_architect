@@ -1,4 +1,4 @@
-<?php $asset_ver = '1.3.4'; ?>
+<?php $asset_ver = '1.3.9'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -92,10 +92,10 @@
                 <!-- About Section (Row 1: Image Left, Content Right) -->
                 <div class="about-section position-relative alternative-fullscreen-section scroll-reveal-section"
                     id="reveal-about">
-                    <div class="container-fluid p-0 h-100">
-                        <div class="row g-0 h-100 align-items-center">
+                    <div class="container-fluid p-0">
+                        <div class="row g-0 align-items-center">
                             <!-- Left Column: Image Reveal -->
-                            <div class="col-xl-6 col-lg-6 col-md-12 p-0 order-2 order-lg-1 image-col">
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12 p-0 order-2 order-lg-1 image-col">
                                 <div class="alternative-image-reveal left-reveal">
                                     <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/WEB/HERITAGE%20LUXURY.webp"
                                         alt="Mastering Modern Heritage Luxury" decoding="async">
@@ -104,7 +104,7 @@
 
                             <!-- Right Column: Content -->
                             <div
-                                class="col-xl-6 col-lg-6 col-md-12 p-0 order-1 order-lg-2 content-col d-flex align-items-center">
+                                class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12 p-0 order-1 order-lg-2 content-col d-flex align-items-center">
                                 <div class="alternative-content-reveal right-content-reveal">
                                     <h2 class="text-uppercase">Mastering Modern Heritage Luxury</h2>
                                     <h4>"Blending modern elegance with authentic heritage restoration."</h4><br>
@@ -126,11 +126,11 @@
                 <!-- Principal Architect Section (Row 2: Content Left, Image Right) -->
                 <div class="principal_architect position-relative alternative-fullscreen-section scroll-reveal-section"
                     id="reveal-architect">
-                    <div class="container-fluid p-0 h-100">
-                        <div class="row g-0 h-100 align-items-center">
+                    <div class="container-fluid p-0">
+                        <div class="row g-0 align-items-center">
                             <!-- Left Column: Content -->
                             <div
-                                class="col-xl-6 col-lg-6 col-md-12 p-0 order-1 order-lg-1 content-col d-flex align-items-center">
+                                class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12 p-0 order-1 order-lg-1 content-col d-flex align-items-center">
                                 <div class="alternative-content-reveal left-content-reveal">
                                     <h2 class="text-uppercase">Principal <span
                                             class="d-inline d-lg-block">Architect</span></h2>
@@ -152,7 +152,7 @@
                             </div>
 
                             <!-- Right Column: Image Reveal -->
-                            <div class="col-xl-6 col-lg-6 col-md-12 p-0 order-2 order-lg-2 image-col">
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12 p-0 order-2 order-lg-2 image-col">
                                 <div class="alternative-image-reveal right-reveal">
                                     <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/WEB/PRINCIPAL DESIGNER.webp"
                                         alt="Principal Architect Vanshika Agarwal" decoding="async" loading="lazy">
@@ -166,7 +166,7 @@
                 <div class="service-section pt-100">
                     <div class="container">
                         <div class="row justify-content-center text-center mb-60">
-                            <div class="col-xl-10 col-lg-10">
+                            <div class="col-xxl-10 col-xl-10 col-lg-10 col-12">
                                 <div class="section-title mb-30">
                                     <h2 class="text-uppercase">Bespoke Luxury Design Services</h2>
                                 </div>
@@ -240,7 +240,7 @@
                 <div class="gallery-section" id="signature-projects">
                     <div class="container-fluid p-0">
                         <div class="row justify-content-center mb-20">
-                            <div class="col-xl-10 col-lg-10 text-center">
+                            <div class="col-xxl-10 col-xl-10 col-lg-10 col-12 text-center">
                                 <div class="section-title mb-30">
                                     <h2 class="text-uppercase">Our Signature Luxury Projects</h2>
                                     <p

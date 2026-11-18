@@ -32,7 +32,7 @@
     <!-- Floating Contact Widget -->    
     <link href="assets/css/floating-contact.css?v=1.2.3" rel="stylesheet">
     <!-- Alternative Custom Style Override -->
-    <link href="assets/css/alternative-style.css?v=1.2.9" rel="stylesheet">
+    <link href="assets/css/alternative-style.css?v=1.3.7" rel="stylesheet">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
@@ -82,11 +82,11 @@
         <div id="smooth-content">
 
             <!-- Gallery Hero Section (Clean H1 Heading, No Filters) -->
-            <div class="gallery-hero-section pt-150 pb-1 ">
-                <div class="container-fluid px-md-5 px-3">
+            <div class="gallery-hero-section">
+                <div class="container-fluid px-xxl-5 px-lg-4 px-md-3 px-2">
                     <div class="row justify-content-center text-center">
-                        <div class="col-xl-8">
-                            <h1 class="gallery-hero-title mt-4">GALLERY</h1>
+                        <div class="col-xxl-8 col-xl-8 col-lg-10 col-12">
+                            <h1 class="gallery-hero-title">GALLERY</h1>
                         </div>
                     </div>
                 </div>
@@ -94,11 +94,11 @@
 
             <!-- Gallery 3x2 Grid Section (6 Project Images) -->
             <div class="gallery-grid-section">
-                <div class="container-fluid px-lg-5 px-md-4 px-3" style="max-width: 1400px; margin: 0 auto;">
+                <div class="container-fluid px-xxl-5 px-lg-4 px-md-3 px-2" style="max-width: 1400px; margin: 0 auto;">
                     <div class="row g-4" id="galleryGrid">
                         
                         <!-- 1. Dinesh Goyal Project -->
-                        <div class="col-lg-4 col-md-6 col-12">
+                        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-12">
                             <div class="custom-gallery-item">
                                 <a href="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/dinesh goyal cover photo.webp" class="gallery-popup-link" title="An Eclectic Villa Jaipur">
                                     <div class="custom-gallery-img-wrap">
@@ -109,7 +109,7 @@
                         </div>
 
                         <!-- 2. Pratap Project -->
-                        <div class="col-lg-4 col-md-6 col-12">
+                        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-12">
                             <div class="custom-gallery-item">
                                 <a href="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/pratap cover photo.webp" class="gallery-popup-link" title="A Classical Bungalow Jaipur">
                                     <div class="custom-gallery-img-wrap">
@@ -120,7 +120,7 @@
                         </div>
 
                         <!-- 3. Rajul Project -->
-                        <div class="col-lg-4 col-md-6 col-12">
+                        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-12">
                             <div class="custom-gallery-item">
                                 <a href="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/rajul cover photo.webp" class="gallery-popup-link" title="Penthouse In Jaipur">
                                     <div class="custom-gallery-img-wrap">
@@ -131,7 +131,7 @@
                         </div>
 
                         <!-- 4. Anantara Project -->
-                        <div class="col-lg-4 col-md-6 col-12">
+                        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-12">
                             <div class="custom-gallery-item">
                                 <a href="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/ANANATARA cover photo.webp" class="gallery-popup-link" title="Anantara Jewel Bagh Hotel Jaipur">
                                     <div class="custom-gallery-img-wrap">
@@ -142,7 +142,7 @@
                         </div>
 
                         <!-- 5. Ranthambore Resort -->
-                        <div class="col-lg-4 col-md-6 col-12">
+                        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-12">
                             <div class="custom-gallery-item">
                                 <a href="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/ranthambore cover photo.webp" class="gallery-popup-link" title="Ranthambore Resort">
                                     <div class="custom-gallery-img-wrap">
@@ -153,7 +153,7 @@
                         </div>
 
                         <!-- 6. Khwaab Jaipur -->
-                        <div class="col-lg-4 col-md-6 col-12">
+                        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-12">
                             <div class="custom-gallery-item">
                                 <a href="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/khwaab cover photo.webp" class="gallery-popup-link" title="Khwaab Roof Top Resto Bar">
                                     <div class="custom-gallery-img-wrap">

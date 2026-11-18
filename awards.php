@@ -39,7 +39,7 @@ $page_title = "Awards & Recognitions";
     <!-- Style CSS -->
     <link href="assets/css/style.css?v=1.2.3" rel="stylesheet">
     <!-- Alternative Custom Style Override -->
-    <link href="assets/css/alternative-style.css?v=1.2.9" rel="stylesheet">
+    <link href="assets/css/alternative-style.css?v=1.3.6" rel="stylesheet">
     <!-- Floating Contact Widget -->
     <link href="assets/css/floating-contact.css?v=1.2.3" rel="stylesheet">
 
@@ -453,28 +453,20 @@ $page_title = "Awards & Recognitions";
                 <section class="awards-features-main-section py-5">
                     <div class="container-fluid px-lg-5 px-md-4 px-3" style="max-width: 1320px; margin: 0 auto;">
                         
-                        <!-- Top Block: Single Profile Photo (Left) + Awards (Right) -->
-                        <div class="awards-profile-row row align-items-start gy-5 mb-5">
-                            <!-- Left: Single Profile Photo -->
-                            <div class="col-lg-5 col-md-5 col-12">
+                        <!-- Top Block: Award Photos Side by Side -->
+                        <div class="awards-profile-row row align-items-start gy-4 mb-5">
+                            <!-- Left Photo -->
+                            <div class="col-lg-6 col-md-6 col-12">
                                 <div class="awards-single-profile-card">
                                     <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/WEB/AWARD.webp" alt="Vanshika Agarwal" class="awards-single-profile-img">
                                 </div>
                             </div>
 
-                            <!-- Right: Awards List -->
-                            <div class="col-lg-7 col-md-7 col-12 ps-lg-5">
-                                <ul class="awards-editorial-list">
-                                    <li><strong>D-LIST 2025</strong></li>
-                                    <li><strong>FICCI FLO Chennai Chapter</strong> - UPCOMING ENTREPRENEUR 2024</li>
-                                    <li><strong>FOAID 2023</strong> - Gold - Residential apartment large for Interiors</li>
-                                    <li><strong>Wade Excellence 2023</strong> - Residential upto 3000 sq ft - Interior design - Shortlisted</li>
-                                    <li><strong>Wade Excellence 2022</strong> - Residential upto 3000 sq ft - Interior design - Shortlisted</li>
-                                    <li><strong>Architecture & Interior Design Excellence 2020</strong> - Premium residential project</li>
-                                    <li><strong>Architecture & Interior Design Excellence 2020</strong> - Best interior designer under 40</li>
-                                    <li><strong>FOAID 2020</strong> - Silver - Residential apartment large for Interiors</li>
-                                    <li><strong>IGEN 2021</strong> - Top 50 Designers in India</li>
-                                </ul>
+                            <!-- Right Photo (Duplicated for now) -->
+                            <div class="col-lg-6 col-md-6 col-12">
+                                <div class="awards-single-profile-card">
+                                    <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/WEB/AWARD.webp" alt="Vanshika Agarwal" class="awards-single-profile-img">
+                                </div>
                             </div>
                         </div>
 

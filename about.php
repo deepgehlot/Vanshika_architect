@@ -42,7 +42,7 @@
     <!-- Style CSS -->
     <link href="assets/css/style.css?v=1.2.3" rel="stylesheet">
     <!-- Alternative Custom Style Override -->
-    <link href="assets/css/alternative-style.css?v=1.3.1" rel="stylesheet">
+    <link href="assets/css/alternative-style.css?v=1.3.7" rel="stylesheet">
     <!-- Floating Contact Widget -->
     <link href="assets/css/floating-contact.css?v=1.2.3" rel="stylesheet">
 

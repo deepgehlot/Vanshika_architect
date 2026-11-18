@@ -344,12 +344,11 @@ body.light .alternative-overlap-section {
 
 /* Natural Scrolling Sections (No Scroll Hijack / No Transitions) */
 .alternative-fullscreen-section {
-  min-height: 85vh;
+  min-height: auto;
   height: auto;
   width: 100%;
   overflow: visible;
-  display: flex;
-  align-items: center;
+  display: block;
   background: #ffffff;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.01);
 }
@@ -357,15 +356,14 @@ body.light .alternative-overlap-section {
 .alternative-fullscreen-section .row {
   width: 100%;
   margin: 0;
-  min-height: 85vh;
-  align-items: stretch;
+  min-height: auto;
+  align-items: center;
 }
 
 /* Image Reveal Classes - Fully visible without clipping */
 .alternative-image-reveal {
   width: 100%;
-  height: 100%;
-  min-height: 500px;
+  height: auto;
   overflow: hidden;
   position: relative;
   clip-path: none !important;
@@ -380,7 +378,7 @@ body.light .alternative-overlap-section {
 
 /* Content Columns - Fully visible */
 .alternative-content-reveal {
-  padding: 8% 10%;
+  padding: 0;
   opacity: 1 !important;
   transform: none !important;
   transition: none !important;
@@ -393,72 +391,69 @@ body.light .alternative-overlap-section {
 
 /* ══════════════════════════════════════════════════════════════
    MASTERING MODERN HERITAGE LUXURY & PRINCIPAL ARCHITECT
-   (Framed so both sections fit into 1 desktop screen each)
+   Symmetric 1360px Container Matching Services & Signature Projects
 ══════════════════════════════════════════════════════════════ */
 @media (min-width: 992px) {
 
   #reveal-about.about-section,
   #reveal-architect.principal_architect {
-    height: 100vh !important;
-    min-height: 100vh !important;
-    max-height: 100vh !important;
     height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
     width: 100% !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     margin: 0 !important;
-    padding: 70px 0 25px 0 !important;
-    padding: 70px 0 35px 0 !important;
+    padding: clamp(75px, 8.5vh, 105px) 0 !important;
     box-sizing: border-box !important;
-    overflow: hidden !important;
     overflow: visible !important;
     background: #ffffff !important;
   }
 
   #reveal-about .container-fluid,
   #reveal-architect .container-fluid {
-    height: 100% !important;
-    max-width: 1540px !important;
+    height: auto !important;
+    max-width: 1360px !important;
     margin: 0 auto !important;
-    padding: 0 40px !important;
+    padding: 0 20px !important;
     box-sizing: border-box !important;
   }
 
   #reveal-about .row,
   #reveal-architect .row {
-    height: 100% !important;
-    min-height: 0 !important;
+    height: auto !important;
+    min-height: auto !important;
     align-items: center !important;
     margin: 0 !important;
   }
 
-  /* Image Column: Inset frame matching user mockup */
+  /* Image Column: Expands cleanly to fill its 50% half of the 1360px grid */
   #reveal-about .image-col {
-    height: 100% !important;
+    height: auto !important;
     display: flex !important;
     align-items: center !important;
-    justify-content: center !important;
-    padding: 10px 35px 10px 15px !important;
+    justify-content: flex-start !important;
+    padding: 10px 20px 10px 0 !important;
     box-sizing: border-box !important;
   }
 
   #reveal-architect .image-col {
-    height: 100% !important;
+    height: auto !important;
     display: flex !important;
     align-items: center !important;
-    justify-content: center !important;
-    padding: 10px 15px 10px 35px !important;
+    justify-content: flex-end !important;
+    padding: 10px 0 10px 20px !important;
     box-sizing: border-box !important;
   }
 
   #reveal-about .alternative-image-reveal,
   #reveal-architect .alternative-image-reveal {
     width: 100% !important;
-    max-width: 580px !important;
-    height: 100% !important;
-    max-height: calc(100vh - 130px) !important;
-    min-height: 0 !important;
+    max-width: 100% !important;
+    height: 480px !important;
+    min-height: auto !important;
+    max-height: none !important;
     position: relative !important;
     overflow: hidden !important;
     border-radius: 4px !important;
@@ -474,21 +469,44 @@ body.light .alternative-overlap-section {
     display: block !important;
   }
 
-  /* Content Column: Original layout with balanced padding */
+  #reveal-architect .alternative-image-reveal img {
+    object-position: center 25% !important;
+  }
+
+  /* Content Column: Sits flush in its 50% half */
   #reveal-about .content-col {
-    height: 100% !important;
+    height: auto !important;
     display: flex !important;
     align-items: center !important;
-    padding: 10px 15px 10px 35px !important;
+    padding: 10px 0 10px 35px !important;
     box-sizing: border-box !important;
   }
 
   #reveal-architect .content-col {
-    height: 100% !important;
+    height: auto !important;
     display: flex !important;
     align-items: center !important;
-    padding: 10px 35px 10px 15px !important;
+    padding: 10px 35px 10px 0 !important;
     box-sizing: border-box !important;
+  }
+}
+
+/* Maintain identical 1360px maximum width for perfect vertical alignment across all desktop viewports */
+@media (min-width: 1400px) {
+  #reveal-about.about-section,
+  #reveal-architect.principal_architect {
+    padding: clamp(85px, 9.5vh, 120px) 0 !important;
+  }
+
+  #reveal-about .container-fluid,
+  #reveal-architect .container-fluid {
+    max-width: 1360px !important;
+    padding: 0 20px !important;
+  }
+
+  #reveal-about .alternative-image-reveal,
+  #reveal-architect .alternative-image-reveal {
+    height: 500px !important;
   }
 }
 
@@ -499,7 +517,7 @@ body.light .alternative-overlap-section {
     height: auto !important;
     min-height: auto !important;
     max-height: none !important;
-    padding: 50px 15px !important;
+    padding: 65px 15px !important;
     overflow: visible !important;
   }
 
@@ -609,8 +627,8 @@ body {
    BESPOKE LUXURY DESIGN SERVICES - 2x2 GRID (COMPACT ALL-IN-ONE VIEW)
 ══════════════════════════════════════════════════════════════ */
 .service-section.pt-100 {
-  padding-top: 45px !important;
-  padding-bottom: 30px !important;
+  padding-top: 75px !important;
+  padding-bottom: 45px !important;
 }
 
 .service-section .mb-60 {
@@ -628,7 +646,7 @@ body {
   position: relative !important;
   height: auto !important;
   width: 100% !important;
-  max-width: 1220px !important;
+  max-width: 1360px !important;
   margin: 0 auto !important;
   padding: 0 20px 40px !important;
 }
@@ -638,7 +656,7 @@ body {
   top: auto !important;
   left: auto !important;
   width: 100% !important;
-  height: 340px !important;
+  height: 380px !important;
   overflow: hidden !important;
   border-radius: 4px !important;
   z-index: 1 !important;
@@ -706,7 +724,7 @@ body {
    OUR SIGNATURE LUXURY PROJECTS - SINGLE SLIDE COMPACT GRID
 ══════════════════════════════════════════════════════════════ */
 .gallery-section {
-  padding-top: 50px !important;
+  padding-top: 75px !important;
   padding-bottom: 0 !important;
 }
 
@@ -746,7 +764,7 @@ body {
 .luxury-gallery-grid {
   display: grid !important;
   grid-template-columns: repeat(3, 1fr) !important;
-  grid-template-rows: 255px 255px !important;
+  grid-template-rows: 270px 270px !important;
   gap: 18px !important;
   width: 100% !important;
   max-width: 1360px !important;
@@ -844,7 +862,7 @@ body {
 .featured-on-wrapper {
   width: 100% !important;
   max-width: 100% !important;
-  margin: 38px 0 !important;
+  margin: 50px 0 !important;
   padding: 80px 24px !important;
   background: #4a3e36 !important;
   display: flex !important;
@@ -853,6 +871,12 @@ body {
   text-align: center !important;
   box-sizing: border-box !important;
   overflow: hidden !important;
+}
+
+.cta-img-area {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-top: 0 !important;
 }
 
 .featured-on-bar {
@@ -3599,7 +3623,7 @@ body.light .progress-wrap::after {
   }
 }
 
-/* Fix mobile header overlapping the title/hero section on the services, projects, blog, awards, project detail, and blog detail pages */
+/* Fix mobile header overlapping the title/hero section on all internal pages including gallery & about */
 @media (max-width: 991px) {
 
   body.light.services-page .project-hero-section,
@@ -3607,8 +3631,10 @@ body.light .progress-wrap::after {
   body.light.blog-page .blog-hero-section,
   body.light.awards-page .project-hero-section,
   body.light.project-detail-page .project-hero-section,
-  body.light.blog-details-page .blog-hero-section {
-    padding-top: 115px !important;
+  body.light.blog-details-page .blog-hero-section,
+  body.light.about-page .project-hero-section,
+  body.light.gallery-page .gallery-hero-section {
+    padding-top: 120px !important;
   }
 
   .award-img.focus-top-mobile {
@@ -3620,7 +3646,7 @@ body.light .progress-wrap::after {
   }
 }
 
-/* Sync desktop top spacing across all internal pages to match services page spacing (150px) */
+/* Sync desktop top spacing across all internal pages including gallery & about (150px) */
 @media (min-width: 992px) {
 
   body.light.services-page .project-hero-section,
@@ -3628,7 +3654,9 @@ body.light .progress-wrap::after {
   body.light.blog-page .blog-hero-section,
   body.light.awards-page .project-hero-section,
   body.light.project-detail-page .project-hero-section,
-  body.light.blog-details-page .blog-hero-section {
+  body.light.blog-details-page .blog-hero-section,
+  body.light.about-page .project-hero-section,
+  body.light.gallery-page .gallery-hero-section {
     padding-top: 150px !important;
   }
 }
@@ -3641,12 +3669,14 @@ body.light .progress-wrap::after {
   body.light.blog-page .blog-hero-section,
   body.light.awards-page .project-hero-section,
   body.light.project-detail-page .project-hero-section,
-  body.light.blog-details-page .blog-hero-section {
+  body.light.blog-details-page .blog-hero-section,
+  body.light.about-page .project-hero-section,
+  body.light.gallery-page .gallery-hero-section {
     padding-top: 180px !important;
   }
 }
 
-/* Increase top spacing on extra large desktops (>= 1600px, e.g., 1920px) to prevent header overlap */
+/* Increase top spacing on extra large desktops (1600px - 1999px, e.g., 1920px) to prevent header overlap */
 @media (min-width: 1600px) {
 
   body.light.services-page .project-hero-section,
@@ -3654,8 +3684,40 @@ body.light .progress-wrap::after {
   body.light.blog-page .blog-hero-section,
   body.light.awards-page .project-hero-section,
   body.light.project-detail-page .project-hero-section,
-  body.light.blog-details-page .blog-hero-section {
+  body.light.blog-details-page .blog-hero-section,
+  body.light.about-page .project-hero-section,
+  body.light.gallery-page .gallery-hero-section {
     padding-top: 220px !important;
+  }
+}
+
+/* Increase top spacing on 2K / 1440p / 2560px ultra-wide displays (>= 2000px) to prevent header overlap */
+@media (min-width: 2000px) {
+
+  body.light.services-page .project-hero-section,
+  body.light.projects-page .project-hero-section,
+  body.light.blog-page .blog-hero-section,
+  body.light.awards-page .project-hero-section,
+  body.light.project-detail-page .project-hero-section,
+  body.light.blog-details-page .blog-hero-section,
+  body.light.about-page .project-hero-section,
+  body.light.gallery-page .gallery-hero-section {
+    padding-top: 260px !important;
+  }
+}
+
+/* Specific generous top clearance for Gallery and About pages on 2100px+ and 2400px+ (e.g. 2560px) to accommodate full-size navbar logo */
+@media (min-width: 2100px) {
+  body.light.gallery-page .gallery-hero-section,
+  body.light.about-page .project-hero-section {
+    padding-top: 310px !important;
+  }
+}
+
+@media (min-width: 2400px) {
+  body.light.gallery-page .gallery-hero-section,
+  body.light.about-page .project-hero-section {
+    padding-top: 340px !important;
   }
 }
 
@@ -5646,7 +5708,8 @@ body.light.contact-page .submit-arrow-btn:hover {
   padding: 0 !important;
   border-radius: 4px;
   box-shadow: none !important;
-  max-width: 440px;
+  max-width: 100% !important;
+  width: 100% !important;
   margin: 0 auto;
   border: none !important;
 }
@@ -6447,21 +6510,131 @@ body.light.projects-page .project-card-unique .project-img img {
 .gallery-hero-section {
   background: transparent;
   width: 100%;
+  position: relative;
+  z-index: 2;
 }
 
 .gallery-hero-title {
   font-family: 'Futura PT', sans-serif !important;
-  font-size: 46px !important;
+  font-size: clamp(34px, 3.2vw, 54px) !important;
   font-weight: 500 !important;
   letter-spacing: 3px !important;
   text-transform: uppercase !important;
   color: #c29a6c !important;
-  margin-bottom: 0 !important;
+  margin-bottom: clamp(12px, 1.8vh, 25px) !important;
+  line-height: 1.15 !important;
 }
 
 .gallery-grid-section {
-  padding-top: 40px !important;
-  padding-bottom: 90px !important;
+  padding-top: clamp(10px, 1.5vh, 25px) !important;
+  padding-bottom: clamp(60px, 7vh, 100px) !important;
+  position: relative;
+  z-index: 2;
+}
+
+.gallery-grid-section .container-fluid {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1400px) {
+  .gallery-grid-section .container-fluid {
+    max-width: 1540px !important;
+  }
+}
+
+@media (min-width: 1800px) {
+  .gallery-grid-section .container-fluid {
+    max-width: 1750px !important;
+  }
+}
+
+@media (min-width: 2200px) {
+  .gallery-grid-section .container-fluid {
+    max-width: 2000px !important;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   HIGH RESOLUTION (1800px - 2560px+) FOOTER RESPONSIVENESS
+══════════════════════════════════════════════════════════════ */
+@media (min-width: 1800px) {
+  .footer-area .container,
+  .footer-bottom .container {
+    max-width: 1540px !important;
+  }
+
+  .footer-area h5 {
+    font-size: 21px !important;
+    margin-bottom: 18px !important;
+  }
+
+  .footer-area p,
+  .footer-area .company-email p,
+  .footer-area .phone-number p {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+  }
+
+  .footer-area a,
+  .footer-area .company-email a,
+  .footer-area .phone-number a {
+    font-size: 15.5px !important;
+    line-height: 1.7 !important;
+  }
+
+  .footer-area ul.list-unstyled li a {
+    font-size: 16px !important;
+    padding: 6px 0 !important;
+  }
+}
+
+@media (min-width: 2100px) {
+  .footer-area .container,
+  .footer-bottom .container {
+    max-width: 1780px !important;
+  }
+
+  .footer-area h5 {
+    font-size: 24px !important;
+    margin-bottom: 22px !important;
+  }
+
+  .footer-area p,
+  .footer-area .company-email p,
+  .footer-area .phone-number p {
+    font-size: 16.5px !important;
+    line-height: 1.65 !important;
+    margin-bottom: 6px !important;
+  }
+
+  .footer-area a,
+  .footer-area .company-email a,
+  .footer-area .phone-number a {
+    font-size: 17px !important;
+    line-height: 1.8 !important;
+  }
+
+  .footer-area ul.list-unstyled li a {
+    font-size: 17.5px !important;
+    padding: 8px 0 !important;
+  }
+
+  .footer-social-horizontal a {
+    font-size: 17px !important;
+    padding: 8px 18px !important;
+  }
+
+  .footer-bottom p,
+  .footer-bottom .copyright-line,
+  .footer-bottom .developer-credit,
+  .footer-bottom .privacy {
+    font-size: 15px !important;
+  }
+
+  .footer-area .logo img {
+    max-width: 245px !important;
+  }
 }
 
 .custom-gallery-item {
