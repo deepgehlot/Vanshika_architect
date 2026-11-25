@@ -9,23 +9,25 @@ const LOCAL_PROJECT_DATA = {
         "name": "An Eclectic Villa Jaipur",
         "category": "Interior Architecture",
         "description": "Dark Maximalism Luxury Bungalow",
-        "cover": "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/dinesh goyal cover photo.webp",
+        "cover": "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/an eclectic bungalow/an eclectic bungalow  cover photo.webp",
         "images": [
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/dinesh goyal cover photo.webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/dinesh goyal (1).webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/dinesh goyal (2).webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/dinesh goyal (3).webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/dinesh goyal (4).webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/dinesh goyal (5).webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/dinesh goyal (6).webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/dinesh goyal (8).webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/dinesh goyal (9).webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/dinesh goyal (10).webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/dinesh goyal (11).webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/dinesh goyal (12).webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/dinesh goyal (13).webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/dinesh goyal (14).webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/dinesh goyal (15).webp"
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/an eclectic bungalow/an eclectic bungalow  cover photo.webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/an eclectic bungalow/an eclectic bungalow (2 ).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/an eclectic bungalow/an eclectic bungalow (3 ).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/an eclectic bungalow/an eclectic bungalow (4 ).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/an eclectic bungalow/an eclectic bungalow (5 ).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/an eclectic bungalow/an eclectic bungalow (6 ).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/an eclectic bungalow/an eclectic bungalow (7 ).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/an eclectic bungalow/an eclectic bungalow (8 ).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/an eclectic bungalow/an eclectic bungalow (9  ).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/an eclectic bungalow/an eclectic bungalow (10  ).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/an eclectic bungalow/an eclectic bungalow (11 ).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/an eclectic bungalow/an eclectic bungalow (12    ).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/an eclectic bungalow/an eclectic bungalow (13  ).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/an eclectic bungalow/an eclectic bungalow (14 ).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/an eclectic bungalow/an eclectic bungalow (15 ).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/an eclectic bungalow/an eclectic bungalow (16 ).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/an eclectic bungalow/an eclectic bungalow (17).webp"
         ],
         "tags": [
             "architecture",
@@ -37,15 +39,18 @@ const LOCAL_PROJECT_DATA = {
         "name": "A Classical Bungalow Jaipur",
         "category": "Heritage & Modern Architecture",
         "description": "Opulent Heritage Villa & Modern Living",
-        "cover": "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/pratap cover photo.webp",
+        "cover": "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/a classical bungalow/a classical bungalow (1) cover photo.webp",
         "images": [
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/pratap cover photo.webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/pratap (1).webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/pratap (2).webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/pratap (3).webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/pratap (5).webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/pratap (6).webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/pratap (7).webp"
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/a classical bungalow/a classical bungalow (1) cover photo.webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/a classical bungalow/a classical bungalow (2 ).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/a classical bungalow/a classical bungalow (3 ).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/a classical bungalow/a classical bungalow (4 ).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/a classical bungalow/a classical bungalow (5).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/a classical bungalow/a classical bungalow (6  ).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/a classical bungalow/a classical bungalow (7 ).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/a classical bungalow/a classical bungalow (8).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/a classical bungalow/a classical bungalow (9).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/a classical bungalow/a classical bungalow (10).webp"
         ],
         "tags": [
             "architecture",
@@ -85,24 +90,17 @@ const LOCAL_PROJECT_DATA = {
         "name": "Anantara Jewel Bagh Hotel Jaipur",
         "category": "Hospitality Architecture",
         "description": "Grand Luxury Resort & Suites",
-        "cover": "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/ANANATARA cover photo.webp",
+        "cover": "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/anantara/anantara (cover photo).webp",
         "images": [
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/ANANATARA cover photo.webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/anantara (25).webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/anantara (1).webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/anantara (14).webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/anantara (15).webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/anantara (16).webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/anantara (17).webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/anantara (18).webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/anantara (19).webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/anantara (20).webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/anantara (21).webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/anantara (22).webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/anantara (23).webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/anantara (24).webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/anantara (26).webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/anantara (27).webp"
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/anantara/anantara (cover photo).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/anantara/anantara (1 ).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/anantara/anantara (2 ).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/anantara/anantara (3 ).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/anantara/anantara (4 ).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/anantara/anantara (5).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/anantara/anantara (6).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/anantara/anantara (7).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/anantara/anantara (8).webp"
         ],
         "tags": [
             "architecture",
@@ -133,12 +131,18 @@ const LOCAL_PROJECT_DATA = {
         "name": "A Contemporary Bungalow Jaipur",
         "category": "Modern Bungalow Interior",
         "description": "A contemporary Bungalow jaipur",
-        "cover": "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/tejwani cover photo.webp",
+        "cover": "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/a contemporary bungalow/A Contemporary Bungalow Jaipur (1) cover photo.webp",
         "images": [
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/tejwani cover photo.webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/tejwani (1).webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/tejwani (2).webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/tejwani (4).webp"
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/a contemporary bungalow/A Contemporary Bungalow Jaipur (1) cover photo.webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/a contemporary bungalow/A Contemporary Bungalow Jaipur (2 ).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/a contemporary bungalow/A Contemporary Bungalow Jaipur (3 ).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/a contemporary bungalow/A Contemporary Bungalow Jaipur (4  ).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/a contemporary bungalow/A Contemporary Bungalow Jaipur (5  ).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/a contemporary bungalow/A Contemporary Bungalow Jaipur (6  ).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/a contemporary bungalow/A Contemporary Bungalow Jaipur (7 ).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/a contemporary bungalow/A Contemporary Bungalow Jaipur (8 ).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/a contemporary bungalow/A Contemporary Bungalow Jaipur (9).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/a contemporary bungalow/A Contemporary Bungalow Jaipur (10).webp"
         ],
         "tags": [
             "interior",
@@ -150,12 +154,13 @@ const LOCAL_PROJECT_DATA = {
         "name": "Taj Hotel At Kukas",
         "category": "Heritage",
         "description": "Taj hotel at kukas",
-        "cover": "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/taj_mind6j.jpg",
+        "cover": "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/kukas/kukas (1) cover photo.webp",
         "images": [
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/taj_mind6j.jpg",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/taj2_nf9ocm.jpg",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/taj1_echh4a.jpg",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/taj_zihfiy.jpg"
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/kukas/kukas (1) cover photo.webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/kukas/kukas (2 ).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/kukas/kukas (3 ).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/kukas/kukas (4).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/kukas/kukas (5).webp"
         ],
         "tags": [
             "heritage",
@@ -167,17 +172,24 @@ const LOCAL_PROJECT_DATA = {
         "name": "Ranthambore Resort",
         "category": "Resort & Heritage Architecture",
         "description": "Wilderness Heritage Sanctuary & Luxury Resort",
-        "cover": "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/ranthambore cover photo.webp",
+        "cover": "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/ranthambore/ranthambore (1) cover photo.webp",
         "images": [
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/ranthambore cover photo.webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/ranthambore (1).webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/ranthambore (8).webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/ranthambore (9).webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/ranthambore (11).webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/ranthambore (12).webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/ranthambore (13).webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/ranthambore (14).webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/ranthambore (15).webp"
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/ranthambore/ranthambore (1) cover photo.webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/ranthambore/ranthambore (2 ).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/ranthambore/ranthambore (3 ).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/ranthambore/ranthambore (4 ).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/ranthambore/ranthambore (5 ).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/ranthambore/ranthambore (6 ).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/ranthambore/ranthambore (7 ).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/ranthambore/ranthambore (8 ).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/ranthambore/ranthambore (9 ).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/ranthambore/ranthambore (10 ).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/ranthambore/ranthambore (11 ).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/ranthambore/ranthambore (12 ).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/ranthambore/ranthambore (13).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/ranthambore/ranthambore (14 ).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/ranthambore/ranthambore (15).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/ranthambore/ranthambore (16).webp"
         ],
         "tags": [
             "heritage",
@@ -189,16 +201,33 @@ const LOCAL_PROJECT_DATA = {
         "name": "Badal Mahal Kumbhalgarh",
         "category": "Heritage & Palace Restoration",
         "description": "Historic Kumbhalgarh Heritage Palace Restoration",
-        "cover": "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/BADAL MAHAL F.jpg (1).webp",
+        "cover": "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/badal mahal/badal mahal (1) cover photo.webp",
         "images": [
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/BADAL MAHAL F.jpg (1).webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/badal mahal kumbhalgarh (1).webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/badal mahal kumbhalgarh (2).webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/badal mahal kumbhalgarh (3).webp",
-            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/badal mahal kumbhalgarh (4).webp"
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/badal mahal/badal mahal (1) cover photo.webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/badal mahal/badal mahal (2).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/badal mahal/badal mahal (3).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/badal mahal/badal mahal.webp"
         ],
         "tags": [
             "heritage",
+            "architecture"
+        ]
+    },
+    "ContemporaryCondominium": {
+        "id": "ContemporaryCondominium",
+        "name": "A Contemporary Condominium",
+        "category": "Modern Residential Interior",
+        "description": "A Contemporary Condominium Luxury Residence",
+        "cover": "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/a contemporary condominium/a contemporary condominium 1 (cover photo).webp",
+        "images": [
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/a contemporary condominium/a contemporary condominium 1 (cover photo).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/a contemporary condominium/a contemporary condominium (2 ).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/a contemporary condominium/a contemporary condominium (3 ).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/a contemporary condominium/a contemporary condominium (4).webp",
+            "https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/a contemporary condominium/a contemporary condominium (5).webp"
+        ],
+        "tags": [
+            "interior",
             "architecture"
         ]
     }
@@ -437,8 +466,8 @@ class ProjectsHandler {
             'resto': 'khwaab_jaipur',
             'restobar': 'khwaab_jaipur',
             'tejwani': 'Tejwani',
-            'contemporary': 'Tejwani',
             'contemporarybungalow': 'Tejwani',
+            'acontemporarybungalow': 'Tejwani',
             'taj': 'Taj',
             'tajhotel': 'Taj',
             'kukas': 'Taj',
@@ -446,26 +475,55 @@ class ProjectsHandler {
             'resort': 'Ranthambore',
             'badal': 'BadalMahal',
             'badalmahal': 'BadalMahal',
-            'kumbhalgarh': 'BadalMahal'
+            'kumbhalgarh': 'BadalMahal',
+            'acontemporarycondominium': 'ContemporaryCondominium',
+            'contemporarycondominium': 'ContemporaryCondominium',
+            'condominium': 'ContemporaryCondominium',
+            'condo': 'ContemporaryCondominium',
+            'contemporarycondo': 'ContemporaryCondominium'
         };
 
         let resolvedAliasKey = null;
         if (target) {
-            for (const [alias, key] of Object.entries(ALIAS_MAP)) {
-                if (target === alias || (target.length >= 4 && (target.includes(alias) || alias.includes(target)))) {
-                    resolvedAliasKey = key;
-                    break;
+            if (ALIAS_MAP[target]) {
+                resolvedAliasKey = ALIAS_MAP[target];
+            } else if (LOCAL_PROJECT_DATA[rawId] || LOCAL_PROJECT_DATA[target]) {
+                resolvedAliasKey = LOCAL_PROJECT_DATA[rawId] ? rawId : target;
+            } else {
+                const sortedAliases = Object.entries(ALIAS_MAP).sort((a, b) => b[0].length - a[0].length);
+                for (const [alias, key] of sortedAliases) {
+                    if (target.includes(alias) || alias.includes(target)) {
+                        resolvedAliasKey = key;
+                        break;
+                    }
                 }
             }
         }
 
-        // Find project by ID or Name
+        // Find project by exact ID or Name first
         let project = this.projects.find(p => {
             const pId = normalize(p.ID);
             const pName = normalize(p.Name);
-            if (resolvedAliasKey && (pId === normalize(resolvedAliasKey) || pName === normalize(resolvedAliasKey))) return true;
-            return pId === target || pName === target || (target && (pId.includes(target) || target.includes(pId) || pName.includes(target) || target.includes(pName)));
+            return pId === target || pName === target;
         });
+
+        // Next find by resolved alias
+        if (!project && resolvedAliasKey) {
+            project = this.projects.find(p => {
+                const pId = normalize(p.ID);
+                const pName = normalize(p.Name);
+                return pId === normalize(resolvedAliasKey) || pName === normalize(resolvedAliasKey);
+            });
+        }
+
+        // Fallback partial match
+        if (!project && target) {
+            project = this.projects.find(p => {
+                const pId = normalize(p.ID);
+                const pName = normalize(p.Name);
+                return pId.includes(target) || target.includes(pId) || pName.includes(target) || target.includes(pName);
+            });
+        }
 
         // Fallback to local project data if not matched
         if (!project && resolvedAliasKey && LOCAL_PROJECT_DATA[resolvedAliasKey]) {
@@ -506,8 +564,8 @@ class ProjectsHandler {
         if (!project) return;
 
         // Ensure high-res local gallery images are ALWAYS used if available
-        const localMatch = (resolvedAliasKey && LOCAL_PROJECT_DATA[resolvedAliasKey]) ||
-            LOCAL_PROJECT_DATA[project.ID] ||
+        const localMatch = LOCAL_PROJECT_DATA[project.ID] ||
+            (resolvedAliasKey && LOCAL_PROJECT_DATA[resolvedAliasKey]) ||
             Object.values(LOCAL_PROJECT_DATA).find(item => normalize(item.name) === normalize(project.Name) || normalize(item.id) === normalize(project.ID));
 
         if (localMatch && localMatch.images && localMatch.images.length > 0) {
@@ -536,7 +594,15 @@ class ProjectsHandler {
 
             this.injectGalleryStyles();
 
-            images.forEach(img => {
+            // Ensure we have enough slides for smooth infinite loop in Slick (needs at least 8 slides when slidesToShow is 4)
+            let displayImages = [...images];
+            if (displayImages.length > 0 && displayImages.length < 8) {
+                while (displayImages.length < 8) {
+                    displayImages = displayImages.concat(images);
+                }
+            }
+
+            displayImages.forEach(img => {
                 if (img) {
                     const encodedUrl = encodeURI(img).replace(/\(/g, '%28').replace(/\)/g, '%29');
                     mainHtml += `
@@ -560,6 +626,8 @@ class ProjectsHandler {
                 slidesToScroll: 1,
                 arrows: true,
                 fade: true,
+                infinite: true,
+                autoplay: false,
                 speed: 250,
                 cssEase: 'ease-out',
                 useCSS: true,
@@ -576,6 +644,8 @@ class ProjectsHandler {
                 centerMode: false,
                 focusOnSelect: true,
                 arrows: false,
+                infinite: true,
+                autoplay: false,
                 speed: 250,
                 cssEase: 'ease-out',
                 useCSS: true,
@@ -591,9 +661,15 @@ class ProjectsHandler {
 
             // Immediate thumbnail click navigation to prevent any lag
             thumbSlider.off('click.thumbNav').on('click.thumbNav', '.thumb-item', function () {
-                const idx = $(this).attr('data-slick-index');
-                if (idx !== undefined && idx !== null) {
-                    mainSlider.slick('slickGoTo', parseInt(idx, 10));
+                const rawIdx = $(this).attr('data-slick-index');
+                if (rawIdx !== undefined && rawIdx !== null) {
+                    let idx = parseInt(rawIdx, 10);
+                    const slickObj = mainSlider.slick('getSlick');
+                    const total = slickObj ? slickObj.slideCount : 0;
+                    if (total > 0) {
+                        idx = ((idx % total) + total) % total;
+                        mainSlider.slick('slickGoTo', idx);
+                    }
                 }
             });
 
@@ -605,7 +681,8 @@ class ProjectsHandler {
                     gallery: {
                         enabled: true,
                         navigateByImgClick: true,
-                        preload: [0, 1]
+                        preload: [0, 1],
+                        arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"><i class="las la-angle-%dir%"></i></button>'
                     },
                     image: {
                         titleSrc: () => '',
@@ -698,7 +775,7 @@ class ProjectsHandler {
             <div class="${safeClasses}">
                 <div class="project-card-unique">
                     <div class="project-img">
-                        <img src="${coverUrl}" alt="${p.Name}" class="img-fluid" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="${coverUrl}" alt="${p.Name}" class="img-fluid" style="width: 100%; height: 100%; object-fit: cover;" onerror="if(!this.dataset.triedFallback){this.dataset.triedFallback='1';if(this.src.endsWith('.webp'))this.src=this.src.replace(/\.webp$/i,'.jpeg');else if(this.src.endsWith('.jpeg'))this.src=this.src.replace(/\.jpeg$/i,'.webp');}">
                         <div class="project-overlay">
                             <div class="project-info">
                                 <span class="category">${p.Category || ''}</span>

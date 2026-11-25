@@ -360,6 +360,8 @@ body.light .alternative-overlap-section {
   align-items: center;
 }
 
+
+
 /* Image Reveal Classes - Fully visible without clipping */
 .alternative-image-reveal {
   width: 100%;
@@ -447,11 +449,22 @@ body.light .alternative-overlap-section {
     box-sizing: border-box !important;
   }
 
-  #reveal-about .alternative-image-reveal,
+  #reveal-about .alternative-image-reveal {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 585px !important;
+    min-height: auto !important;
+    max-height: none !important;
+    position: relative !important;
+    overflow: hidden !important;
+    border-radius: 4px !important;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08) !important;
+  }
+
   #reveal-architect .alternative-image-reveal {
     width: 100% !important;
     max-width: 100% !important;
-    height: 480px !important;
+    height: 585px !important;
     min-height: auto !important;
     max-height: none !important;
     position: relative !important;
@@ -493,9 +506,10 @@ body.light .alternative-overlap-section {
 
 /* Maintain identical 1360px maximum width for perfect vertical alignment across all desktop viewports */
 @media (min-width: 1400px) {
+
   #reveal-about.about-section,
   #reveal-architect.principal_architect {
-    padding: clamp(85px, 9.5vh, 120px) 0 !important;
+    padding: clamp(95px, 9.5vh, 120px) 0 !important;
   }
 
   #reveal-about .container-fluid,
@@ -504,9 +518,12 @@ body.light .alternative-overlap-section {
     padding: 0 20px !important;
   }
 
-  #reveal-about .alternative-image-reveal,
+  #reveal-about .alternative-image-reveal {
+    height: 605px !important;
+  }
+
   #reveal-architect .alternative-image-reveal {
-    height: 500px !important;
+    height: 605px !important;
   }
 }
 
@@ -547,8 +564,8 @@ body.light .alternative-overlap-section {
     width: 100% !important;
     max-width: 580px !important;
     height: auto !important;
-    max-height: 480px !important;
-    aspect-ratio: 16 / 11 !important;
+    max-height: 585px !important;
+    aspect-ratio: 16 / 13 !important;
     margin: 0 auto !important;
     position: relative !important;
     overflow: hidden !important;
@@ -570,7 +587,7 @@ body.light .alternative-overlap-section {
     height: auto !important;
     max-height: none !important;
     min-height: 0 !important;
-    aspect-ratio: 4 / 5 !important;
+    aspect-ratio: 4 / 6 !important;
     margin: 0 auto !important;
     position: relative !important;
     overflow: hidden !important;
@@ -3623,7 +3640,7 @@ body.light .progress-wrap::after {
   }
 }
 
-/* Fix mobile header overlapping the title/hero section on all internal pages including gallery & about */
+/* Fix mobile header overlapping the title/hero section on all internal pages including gallery, about & contact */
 @media (max-width: 991px) {
 
   body.light.services-page .project-hero-section,
@@ -3633,7 +3650,8 @@ body.light .progress-wrap::after {
   body.light.project-detail-page .project-hero-section,
   body.light.blog-details-page .blog-hero-section,
   body.light.about-page .project-hero-section,
-  body.light.gallery-page .gallery-hero-section {
+  body.light.gallery-page .gallery-hero-section,
+  body.light.contact-page .contact-form-section {
     padding-top: 120px !important;
   }
 
@@ -3646,7 +3664,7 @@ body.light .progress-wrap::after {
   }
 }
 
-/* Sync desktop top spacing across all internal pages including gallery & about (150px) */
+/* Sync desktop top spacing across all internal pages including gallery, about & contact (150px) */
 @media (min-width: 992px) {
 
   body.light.services-page .project-hero-section,
@@ -3656,7 +3674,8 @@ body.light .progress-wrap::after {
   body.light.project-detail-page .project-hero-section,
   body.light.blog-details-page .blog-hero-section,
   body.light.about-page .project-hero-section,
-  body.light.gallery-page .gallery-hero-section {
+  body.light.gallery-page .gallery-hero-section,
+  body.light.contact-page .contact-form-section {
     padding-top: 150px !important;
   }
 }
@@ -3671,7 +3690,8 @@ body.light .progress-wrap::after {
   body.light.project-detail-page .project-hero-section,
   body.light.blog-details-page .blog-hero-section,
   body.light.about-page .project-hero-section,
-  body.light.gallery-page .gallery-hero-section {
+  body.light.gallery-page .gallery-hero-section,
+  body.light.contact-page .contact-form-section {
     padding-top: 180px !important;
   }
 }
@@ -3686,7 +3706,8 @@ body.light .progress-wrap::after {
   body.light.project-detail-page .project-hero-section,
   body.light.blog-details-page .blog-hero-section,
   body.light.about-page .project-hero-section,
-  body.light.gallery-page .gallery-hero-section {
+  body.light.gallery-page .gallery-hero-section,
+  body.light.contact-page .contact-form-section {
     padding-top: 220px !important;
   }
 }
@@ -3701,25 +3722,31 @@ body.light .progress-wrap::after {
   body.light.project-detail-page .project-hero-section,
   body.light.blog-details-page .blog-hero-section,
   body.light.about-page .project-hero-section,
-  body.light.gallery-page .gallery-hero-section {
+  body.light.gallery-page .gallery-hero-section,
+  body.light.contact-page .contact-form-section {
     padding-top: 260px !important;
   }
 }
 
 /* Specific generous top clearance for Gallery and About pages on 2100px+ and 2400px+ (e.g. 2560px) to accommodate full-size navbar logo */
 @media (min-width: 2100px) {
+
   body.light.gallery-page .gallery-hero-section,
-  body.light.about-page .project-hero-section {
-    padding-top: 310px !important;
+  body.light.about-page .project-hero-section .contact-form-section {
+    padding-top: 290px !important;
   }
 }
 
 @media (min-width: 2400px) {
+
   body.light.gallery-page .gallery-hero-section,
-  body.light.about-page .project-hero-section {
-    padding-top: 340px !important;
+  body.light.about-page .project-hero-section .contact-form-section {
+    padding-top: 290px !important;
   }
 }
+
+
+
 
 /* Reduce mobile left/right padding and gutters to increase card width */
 @media (max-width: 767px) {
@@ -5318,7 +5345,7 @@ body.light .emv-desc {
 }
 
 body.light.contact-page .contact-form-section {
-  margin-top: 60px !important;
+  margin-top: 0 !important;
   background-color: transparent !important;
   opacity: 1 !important;
   visibility: visible !important;
@@ -5422,7 +5449,7 @@ body.light.contact-page .submit-arrow-btn:hover {
 
 @media (max-width: 991px) {
   body.light.contact-page .contact-form-section {
-    margin-top: 40px !important;
+    margin-top: 0 !important;
   }
 }
 
@@ -5773,7 +5800,7 @@ body.light.contact-page .submit-arrow-btn:hover {
   line-height: 1.8;
   color: #555555;
   margin-bottom: 0;
-  max-width: 800px;
+  max-width: 100%;
 }
 
 /* Awards Page: Features heading centered on top and description below centered on screens < 1100px */
@@ -6476,31 +6503,195 @@ body.light.about-page .about-editorial-title,
 }
 
 /* ══════════════════════════════════════════════════════════════
-   PROJECTS PAGE ("Our Masterpieces of Modern Heritage") - 15% SMALLER IMAGES
+   PROJECTS, BLOG & GALLERY PAGE (Matching Layout & Left/Right Margins, < 1600px)
    ══════════════════════════════════════════════════════════════ */
-body.light.projects-page .project-gallery-section .container-fluid {
-  max-width: 1260px !important;
-  margin: 0 auto !important;
+@media (max-width: 1599.98px) {
+
+  body.light.projects-page .project-gallery-section .container-fluid,
+  body.light.projects-page .project-hero-section .container-fluid,
+  body.light.blog-page .blog-section .container-fluid,
+  body.light.blog-page .blog-hero-section .container-fluid,
+  body.light.gallery-page .gallery-grid-section .container-fluid,
+  body.light.gallery-page .gallery-hero-section .container-fluid,
+  body.light.gallery-page .container-fluid,
+  .gallery-grid-section .container-fluid {
+    max-width: 1260px !important;
+    margin: 0 auto !important;
+  }
+
+  body.light.projects-page .project-card-unique {
+    margin: 10px 0 24px !important;
+    border-radius: 4px !important;
+    overflow: hidden !important;
+  }
+
+  body.light.projects-page .project-card-unique .project-img {
+    aspect-ratio: 1 / 0.85 !important;
+    /* 15% reduction in height from 1:1 square to fit viewing slide */
+    max-height: 330px !important;
+    width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  body.light.projects-page .project-card-unique .project-img img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
 }
 
-body.light.projects-page .project-card-unique {
-  margin: 10px 0 24px !important;
+/* ══════════════════════════════════════════════════════════════
+   BLOG PAGE (3-Column Neat Grid Matching projects.php Layout)
+   ══════════════════════════════════════════════════════════════ */
+@media (min-width: 992px) {
+  body.light.blog-page .blog-section .row.blog-grid {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    margin-left: -12px !important;
+    margin-right: -12px !important;
+  }
+
+  body.light.blog-page .blog-section .row.blog-grid>[class*="col-"] {
+    flex: 0 0 33.333333% !important;
+    max-width: 33.333333% !important;
+    width: 33.333333% !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+}
+
+body.light.blog-page .blog-card-unique {
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
   border-radius: 4px !important;
   overflow: hidden !important;
+  margin-bottom: 24px !important;
+  border: 1px solid #eaeaea !important;
+  background: #ffffff !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04) !important;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
 }
 
-body.light.projects-page .project-card-unique .project-img {
-  aspect-ratio: 1 / 0.85 !important;
-  /* 15% reduction in height from 1:1 square to fit viewing slide */
-  max-height: 330px !important;
+body.light.blog-page .blog-card-unique:hover {
+  transform: translateY(-4px) !important;
+  border-color: #c29a6c !important;
+  box-shadow: 0 12px 30px rgba(194, 154, 108, 0.12) !important;
+}
+
+body.light.blog-page .blog-card-unique .blog-img {
   width: 100% !important;
   overflow: hidden !important;
+  aspect-ratio: 16 / 11 !important;
+  position: relative !important;
+  flex-shrink: 0 !important;
 }
 
-body.light.projects-page .project-card-unique .project-img img {
+body.light.blog-page .blog-card-unique .blog-img a {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+body.light.blog-page .blog-card-unique .blog-img img {
   width: 100% !important;
   height: 100% !important;
   object-fit: cover !important;
+  display: block !important;
+  transition: transform 0.5s ease !important;
+}
+
+body.light.blog-page .blog-card-unique:hover .blog-img img {
+  transform: scale(1.05) !important;
+}
+
+body.light.blog-page .blog-card-unique .blog-content {
+  padding: clamp(14px, 1.1vw, 22px) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex-grow: 1 !important;
+}
+
+body.light.blog-page .blog-card-unique .blog-category-tag {
+  color: #c29a6c !important;
+  text-transform: uppercase !important;
+  font-size: 11px !important;
+  letter-spacing: 1.5px !important;
+  font-weight: 600 !important;
+  display: inline-block !important;
+  margin-bottom: 6px !important;
+}
+
+body.light.blog-page .blog-card-unique .blog-content h3 {
+  font-size: clamp(16px, 1.0vw, 21px) !important;
+  line-height: 1.35 !important;
+  margin: 0 0 8px 0 !important;
+  font-weight: 500 !important;
+  font-family: 'Space Grotesk', sans-serif !important;
+}
+
+body.light.blog-page .blog-card-unique .blog-content h3 a {
+  color: #111111 !important;
+  text-decoration: none !important;
+  transition: color 0.3s ease !important;
+}
+
+body.light.blog-page .blog-card-unique .blog-content h3 a:hover {
+  color: #c29a6c !important;
+}
+
+body.light.blog-page .blog-card-unique .blog-content p {
+  color: #666666 !important;
+  font-size: clamp(12.5px, 0.78vw, 15px) !important;
+  line-height: 1.55 !important;
+  margin: 0 0 14px 0 !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+}
+
+body.light.blog-page .blog-card-unique .read-more-btn {
+  margin-top: auto !important;
+  font-size: clamp(12px, 0.7vw, 14px) !important;
+  font-weight: 600 !important;
+  color: #111111 !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  transition: color 0.3s ease !important;
+}
+
+body.light.blog-page .blog-card-unique .read-more-btn:hover {
+  color: #c29a6c !important;
+}
+
+body.light.blog-page .blog-card-unique .blog-date {
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  background: #c29a6c !important;
+  color: #000000 !important;
+  padding: 4px 10px !important;
+  text-align: center !important;
+  line-height: 1.1 !important;
+  min-width: 48px !important;
+  z-index: 2 !important;
+}
+
+body.light.blog-page .blog-card-unique .blog-date span:first-child {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  display: block !important;
+  margin-bottom: 1px !important;
+}
+
+body.light.blog-page .blog-card-unique .blog-date span:last-child {
+  font-size: 10px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
   display: block !important;
 }
 
@@ -6533,32 +6724,14 @@ body.light.projects-page .project-card-unique .project-img img {
 }
 
 .gallery-grid-section .container-fluid {
-  max-width: 1400px;
   margin: 0 auto;
-}
-
-@media (min-width: 1400px) {
-  .gallery-grid-section .container-fluid {
-    max-width: 1540px !important;
-  }
-}
-
-@media (min-width: 1800px) {
-  .gallery-grid-section .container-fluid {
-    max-width: 1750px !important;
-  }
-}
-
-@media (min-width: 2200px) {
-  .gallery-grid-section .container-fluid {
-    max-width: 2000px !important;
-  }
 }
 
 /* ══════════════════════════════════════════════════════════════
    HIGH RESOLUTION (1800px - 2560px+) FOOTER RESPONSIVENESS
 ══════════════════════════════════════════════════════════════ */
 @media (min-width: 1800px) {
+
   .footer-area .container,
   .footer-bottom .container {
     max-width: 1540px !important;
@@ -6590,6 +6763,7 @@ body.light.projects-page .project-card-unique .project-img img {
 }
 
 @media (min-width: 2100px) {
+
   .footer-area .container,
   .footer-bottom .container {
     max-width: 1780px !important;
@@ -6817,34 +6991,101 @@ button.mfp-close:hover {
   font-size: 13px !important;
 }
 
-/* Left / Right arrows */
+/* Left / Right popup arrows - matching close button & slider UI */
+button.mfp-arrow,
 .mfp-arrow {
-  width: 52px !important;
-  height: 52px !important;
-  background: rgba(255, 255, 255, 0.12) !important;
-  border: 1px solid rgba(255, 255, 255, 0.25) !important;
-  border-radius: 50% !important;
-  opacity: 0.85 !important;
-  transition: all 0.25s ease !important;
+  position: fixed !important;
   top: 50% !important;
   transform: translateY(-50%) !important;
-  margin-top: 0 !important;
-  z-index: 1000020 !important;
+  width: 50px !important;
+  height: 50px !important;
+  line-height: 48px !important;
+  text-align: center !important;
+  padding: 0 !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+  border: 1px solid rgba(255, 255, 255, 0.28) !important;
+  border-radius: 50% !important;
+  color: #ffffff !important;
+  opacity: 0.9 !important;
+  z-index: 1000050 !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.25s ease !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  margin: 0 !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+  outline: none !important;
 }
 
+button.mfp-arrow:hover,
 .mfp-arrow:hover {
   background: #c29a6c !important;
   border-color: #c29a6c !important;
+  color: #ffffff !important;
   opacity: 1 !important;
   transform: translateY(-50%) scale(1.08) !important;
 }
 
+button.mfp-arrow:active,
+.mfp-arrow:active {
+  transform: translateY(-50%) scale(0.96) !important;
+}
+
+/* Remove Magnific Popup's default CSS border triangles */
+button.mfp-arrow:before,
+button.mfp-arrow:after,
+.mfp-arrow:before,
+.mfp-arrow:after {
+  display: none !important;
+  border: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  content: "" !important;
+}
+
+/* Custom Line Awesome arrow icons */
 .mfp-arrow-left {
-  left: 24px !important;
+  left: 28px !important;
 }
 
 .mfp-arrow-right {
-  right: 24px !important;
+  right: 28px !important;
+}
+
+.mfp-arrow i {
+  font-size: 22px !important;
+  color: inherit !important;
+  display: block !important;
+  line-height: 1 !important;
+  pointer-events: none !important;
+}
+
+/* Fallback icons if element has no inner icon */
+.mfp-arrow-left:empty::before {
+  content: "\f104" !important;
+  font-family: "Line Awesome Free" !important;
+  font-weight: 900 !important;
+  font-size: 22px !important;
+  color: inherit !important;
+  display: block !important;
+  line-height: 1 !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+.mfp-arrow-right:empty::before {
+  content: "\f105" !important;
+  font-family: "Line Awesome Free" !important;
+  font-weight: 900 !important;
+  font-size: 22px !important;
+  color: inherit !important;
+  display: block !important;
+  line-height: 1 !important;
+  width: auto !important;
+  height: auto !important;
 }
 
 @media (max-width: 767px) {
@@ -6865,17 +7106,23 @@ button.mfp-close:hover {
     max-width: 95vw !important;
   }
 
+  button.mfp-arrow,
   .mfp-arrow {
     width: 40px !important;
     height: 40px !important;
+    line-height: 38px !important;
   }
 
   .mfp-arrow-left {
-    left: 10px !important;
+    left: 14px !important;
   }
 
   .mfp-arrow-right {
-    right: 10px !important;
+    right: 14px !important;
+  }
+
+  .mfp-arrow i {
+    font-size: 18px !important;
   }
 }
 
@@ -8299,6 +8546,20 @@ body.light.projects-page .project-card-unique .project-info h4,
 body.light.projects-page .project-card-unique .project-overlay,
 .project-card-unique .project-overlay {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.96) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.18) 100%) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+body.light.projects-page .project-card-unique .project-info,
+.project-card-unique .project-info {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  width: 100% !important;
 }
 
 /* Blog Hero Section - Static (No transition / animation) */
@@ -8310,4 +8571,727 @@ body.light.blog-page .blog-hero-section p,
   animation: none !important;
   opacity: 1 !important;
   transform: none !important;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   HIGH RESOLUTION & ULTRA-WIDE (1600px - 2560px+ / 32-INCH MONITOR) SCALING
+   Strictly applies to 1600px and above only. Below 1600px is 100% untouched.
+   Maintains flexible scaling for containers, heights, grids, images & typography
+   while ensuring the desktop navbar remains strictly in ONE single horizontal line.
+══════════════════════════════════════════════════════════════════════════════ */
+
+/* BASE RULES FOR ALL VIEWPORTS >= 1600px */
+@media (min-width: 1600px) {
+
+  /* 1. NAVBAR - Strictly One Line, Big Responsive Logo (matching 1500px & scaling up smoothly) */
+  .header-area .container {
+    max-width: 94vw !important;
+    width: 94vw !important;
+    padding-left: clamp(15px, 1.5vw, 40px) !important;
+    padding-right: clamp(15px, 1.5vw, 40px) !important;
+  }
+
+  .header-area .navigation {
+    padding: clamp(14px, 1.2vw, 24px) 0 !important;
+  }
+
+  .header-area .d-flex {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    flex-wrap: nowrap !important;
+    width: 100% !important;
+  }
+
+  /* Left Menu */
+  .header-area .main-menu.text-start {
+    flex: 1 1 0% !important;
+    min-width: 0 !important;
+  }
+
+  .header-area .main-menu ul {
+    display: flex !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+    white-space: nowrap !important;
+    gap: clamp(18px, 1.8vw, 45px) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .header-area .main-menu ul li {
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+  }
+
+  .header-area .main-menu ul li a,
+  .header-area .navlink {
+    white-space: nowrap !important;
+    font-size: clamp(17px, 1.05vw, 22px) !important;
+    font-weight: 500 !important;
+    letter-spacing: 1.2px !important;
+  }
+
+  /* Center Logo - Big, Prominent, Responsive matching 1500px and scaling up smoothly */
+  .header-area .header-nav-logo {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex: 0 0 auto !important;
+    padding: 0 clamp(20px, 2.5vw, 60px) !important;
+    flex-shrink: 0 !important;
+  }
+
+  .header-area .logo a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .header-area .logo img {
+    display: block !important;
+    width: auto !important;
+    height: auto !important;
+    max-width: none !important;
+    /* Big responsive size: matches 1500px prominence (~115px) and scales up to 190px+ on 32" / 4K displays */
+    max-height: clamp(110px, 7.5vw, 190px) !important;
+    transform: none !important;
+    transition: max-height 0.3s ease !important;
+  }
+
+  /* Right Menu & CTA */
+  .header-area .header-nav-right {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    flex: 1 1 0% !important;
+    min-width: 0 !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .header-area .header-menu-right {
+    margin-right: clamp(18px, 2vw, 45px) !important;
+    flex-shrink: 0 !important;
+  }
+
+  .header-area .theme-btn {
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    font-size: clamp(15px, 0.95vw, 20px) !important;
+    padding: clamp(11px, 0.75vw, 17px) clamp(22px, 1.5vw, 38px) !important;
+    letter-spacing: 1px !important;
+  }
+
+  /* 2. EXPANSIVE FULL-WIDTH CONTAINER SCALING (Matches user's red border: ~93vw) */
+  .container:not(.header-area .container),
+  body.light .container:not(.header-area .container),
+  body.light.projects-page .project-gallery-section .container-fluid,
+  body.light.projects-page .project-hero-section .container-fluid,
+  .project-gallery-section .container-fluid,
+  #reveal-about .container-fluid,
+  #reveal-architect .container-fluid,
+  body.light #reveal-about .container-fluid,
+  body.light #reveal-architect .container-fluid,
+  body.light:not(.services-page) .services-stacked-container,
+  .luxury-gallery-grid,
+  body.light .luxury-gallery-grid,
+  body.light.awards-page .container-fluid,
+  body.light.awards-page .container-fluid[style*="max-width"],
+  body.light.about-page .container-fluid,
+  body.light.about-page .container-fluid[style*="max-width"],
+  body.light.about-page .about-cta-divider-container,
+  body.light.project-detail-page .container,
+  body.light.project-detail-page .container[style*="max-width"],
+  body.light.contact-page .container,
+  body.light.contact-page .container-fluid,
+  body.light.blog-detail-page .container,
+  body.light .blog-detail-container,
+  body.light.faq-page .container,
+  .footer-area .container,
+  .footer-bottom .container,
+  body.light .footer-area .container,
+  body.light .footer-bottom .container {
+    width: 93vw !important;
+    max-width: 93vw !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* Projects & Services Page Hero width expansion - spans full red box */
+  body.light.projects-page .project-hero-section .col-xl-8,
+  body.light.services-page .project-hero-section .col-xl-8,
+  body.light.services-page .services-hero-content,
+  body.light .project-hero-section .col-xl-8 {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+
+  /* Projects Page Filters */
+  body.light.projects-page .project-filters .filter-btn {
+    font-size: clamp(14px, 0.9vw, 19px) !important;
+    padding: clamp(8px, 0.6vw, 14px) clamp(16px, 1.2vw, 28px) !important;
+    margin: 0 clamp(4px, 0.4vw, 10px) !important;
+  }
+
+  /* Projects Page Cards - Flexible & Proportional (removes 330px height lock) */
+  body.light.projects-page .project-card-unique,
+  .project-card-unique {
+    margin: 14px 0 32px !important;
+    height: auto !important;
+  }
+
+  body.light.projects-page .project-card-unique .project-img,
+  .project-card-unique .project-img {
+    max-height: none !important;
+    height: auto !important;
+    aspect-ratio: 16 / 11 !important;
+    width: 100% !important;
+  }
+
+  body.light.projects-page .project-card-unique .project-info h4 {
+    font-size: clamp(20px, 1.3vw, 28px) !important;
+  }
+
+  body.light.projects-page .project-card-unique .project-info .category {
+    font-size: clamp(12px, 0.75vw, 16px) !important;
+  }
+
+  body.light.projects-page .project-card-unique .view-project-btn {
+    font-size: clamp(12px, 0.75vw, 16px) !important;
+    padding: clamp(8px, 0.5vw, 12px) clamp(16px, 1vw, 24px) !important;
+  }
+
+  /* 3. FLUID TYPOGRAPHY - DYNAMICALLY SCALES WITH SCREEN SIZE (ALL SECTIONS) */
+
+  /* Major Headings / Page Titles Across All Sections */
+  .display-3,
+  h1.display-3,
+  h2.display-3,
+  .section-title h1,
+  .section-title h2,
+  .section-heading,
+  .project-hero-section h1,
+  .services-hero-content h1,
+  .award-hero-content h1,
+  .awards-editorial-title,
+  .gallery-hero-title,
+  .blog-hero-section h1,
+  .contact-form-section h1,
+  #reveal-about h2,
+  #reveal-architect h2,
+  .service-section h2,
+  .gallery-section h2,
+  .cta-inner h2,
+  .cta-headline,
+  .about-editorial-title {
+    font-size: clamp(58px, 3.8vw, 108px) !important;
+    line-height: clamp(68px, 4.4vw, 126px) !important;
+  }
+
+  /* Medium Headings & Subtitles */
+  #reveal-about h4,
+  #reveal-architect h4,
+  .section-title h4,
+  .section-subtitle,
+  .about-story-title,
+  .hero-subtitle {
+    font-size: clamp(21px, 1.35vw, 38px) !important;
+    line-height: clamp(28px, 1.8vw, 48px) !important;
+  }
+
+  /* Component & Card Titles */
+  .service-stack-item .service-stack-text h3,
+  .luxury-gallery-grid .hover-content .project-title,
+  .project-card-unique .project-info h4,
+  .awards-card h3,
+  .awards-list-item h4,
+  .blog-card h3,
+  .feature-item h3 {
+    font-size: clamp(24px, 1.55vw, 44px) !important;
+    line-height: clamp(30px, 1.95vw, 52px) !important;
+  }
+
+  /* Paragraphs & Body Descriptions Across All Sections */
+  #reveal-about p,
+  #reveal-architect p,
+  .service-section p,
+  .gallery-section p,
+  .about-story-content p,
+  .services-hero-content p,
+  .award-hero-content p,
+  .project-hero-section p,
+  .blog-hero-section p,
+  .contact-form-section p,
+  .cta-inner p,
+  .luxury-gallery-grid .hover-content p,
+  body.light p,
+  .lead {
+    font-size: clamp(17px, 1.0vw, 26px) !important;
+    line-height: clamp(30px, 1.9vw, 50px) !important;
+  }
+
+  /* Category, Badges & Metadata */
+  .project-card-unique .project-info .category,
+  .luxury-gallery-grid .hover-content .category,
+  .category,
+  .meta-tag,
+  .award-year {
+    font-size: clamp(12px, 0.75vw, 18px) !important;
+    letter-spacing: clamp(1.5px, 0.1vw, 3px) !important;
+  }
+
+  /* Buttons & Interactive Controls */
+  .project-filters .filter-btn,
+  .view-project-btn,
+  .project-cta-btn,
+  .theme-btn,
+  .btn-custom {
+    font-size: clamp(13px, 0.8vw, 20px) !important;
+    padding: clamp(9px, 0.6vw, 17px) clamp(18px, 1.25vw, 36px) !important;
+  }
+
+  /* Footer Typography */
+  .footer-area h5 {
+    font-size: clamp(20px, 1.3vw, 34px) !important;
+  }
+
+  .footer-area p,
+  .footer-area a,
+  .footer-area ul li a {
+    font-size: clamp(15px, 0.95vw, 24px) !important;
+    line-height: clamp(24px, 1.6vw, 38px) !important;
+  }
+
+  .footer-bottom p,
+  .copyright-text {
+    font-size: clamp(14px, 0.85vw, 20px) !important;
+  }
+
+  /* 4. FLUID COMPONENT HEIGHTS - DYNAMICALLY SCALES WITH SCREEN SIZE */
+  #reveal-about .alternative-image-reveal,
+  #reveal-architect .alternative-image-reveal {
+    height: clamp(670px, 42vw, 1080px) !important;
+    min-height: clamp(670px, 42vw, 1080px) !important;
+  }
+
+  .luxury-gallery-grid {
+    grid-template-rows: clamp(320px, 20vw, 560px) clamp(320px, 20vw, 560px) !important;
+    gap: clamp(20px, 1.2vw, 32px) !important;
+  }
+
+  /* ══════════════════════════════════════════════════════════════
+     SERVICES.PHP - EXACT LAPTOP SCREEN PROPORTIONS (1600px - 5000px+)
+     Matches laptop left & right margins (~8vw each side = 84vw width)
+     Maintains identical 2x2 grid, 16:9 widescreen card ratio, and fluid text
+     ══════════════════════════════════════════════════════════════ */
+  body.light.services-page .services-stacked-container,
+  body.light.services-page .project-hero-section .container-fluid {
+    width: 84vw !important;
+    max-width: 84vw !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-bottom: clamp(40px, 3.5vw, 90px) !important;
+    gap: clamp(16px, 1.25vw, 36px) !important;
+  }
+
+  body.light.services-page .project-hero-section .col-xl-8,
+  body.light.services-page .services-hero-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  body.light.services-page .services-hero-content h1 {
+    font-size: clamp(44px, 3.0vw, 88px) !important;
+    line-height: 1.15 !important;
+    margin-bottom: clamp(10px, 0.7vw, 20px) !important;
+  }
+
+  body.light.services-page .services-hero-content p {
+    font-size: clamp(16px, 0.95vw, 24px) !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Services 2x2 Grid Cards - Identical 16:9 proportion to laptop */
+  body.light.services-page .service-stack-item {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9.2 !important;
+    overflow: hidden !important;
+    border-radius: clamp(4px, 0.35vw, 10px) !important;
+  }
+
+  body.light.services-page .service-stack-item .img-curtain {
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+  }
+
+  body.light.services-page .service-stack-item img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+
+  /* Text inside cards - beautifully scaled with screen size */
+  body.light.services-page .service-stack-item .service-stack-text {
+    bottom: clamp(16px, 1.2vw, 36px) !important;
+    left: clamp(20px, 1.4vw, 42px) !important;
+    right: clamp(20px, 1.4vw, 42px) !important;
+  }
+
+  body.light.services-page .service-stack-item .service-stack-text h3 {
+    font-size: clamp(20px, 1.35vw, 38px) !important;
+    font-weight: 500 !important;
+    line-height: 1.25 !important;
+    margin: 0 !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8) !important;
+  }
+
+  body.light.services-page .service-stack-item .service-stack-desc p {
+    font-size: clamp(13px, 0.85vw, 20px) !important;
+    line-height: 1.45 !important;
+    margin-top: clamp(6px, 0.4vw, 12px) !important;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7) !important;
+  }
+
+  body.light.services-page .service-stack-item:hover .service-stack-desc {
+    max-height: clamp(80px, 6vw, 160px) !important;
+  }
+
+  /* ══════════════════════════════════════════════════════════════
+     BLOG.PHP - MATCHES 1500px PROPORTIONAL SIDE MARGINS (1600px - 5000px+)
+     Preserves exact left & right margins (~8vw each side = 84vw width)
+     Ensures 3 cards stay neatly in a single horizontal row with fluid text
+     ══════════════════════════════════════════════════════════════ */
+  body.light.blog-page .blog-section .container-fluid,
+  body.light.blog-page .blog-hero-section .container-fluid,
+  body.light.blog-page .container-fluid,
+  body.light.blog-page .container {
+    width: 84vw !important;
+    max-width: 84vw !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  body.light.blog-page .blog-hero-section .col-xl-8,
+  body.light.blog-page .blog-hero-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+
+  body.light.blog-page .blog-card-unique .blog-content h3 {
+    font-size: clamp(17px, 1.1vw, 26px) !important;
+  }
+
+  body.light.blog-page .blog-card-unique .blog-content p {
+    font-size: clamp(13px, 0.8vw, 17px) !important;
+  }
+
+  body.light.blog-page .blog-card-unique .read-more-btn {
+    font-size: clamp(12.5px, 0.75vw, 16px) !important;
+  }
+
+  /* ══════════════════════════════════════════════════════════════
+     GALLERY.PHP - MATCHES BLOG.PHP PROPORTIONAL SIDE MARGINS (1600px - 5000px+)
+     Preserves exact left & right margins (~8vw each side = 84vw width)
+     Ensures 3x2 grid stays neatly aligned with identical spacing
+     ══════════════════════════════════════════════════════════════ */
+  body.light.gallery-page .gallery-grid-section .container-fluid,
+  body.light.gallery-page .gallery-hero-section .container-fluid,
+  body.light.gallery-page .container-fluid,
+  body.light.gallery-page .container-fluid[style*="max-width"],
+  .gallery-grid-section .container-fluid {
+    width: 84vw !important;
+    max-width: 84vw !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  body.light.gallery-page .gallery-hero-section .col-xxl-8,
+  body.light.gallery-page .gallery-hero-section .col-xl-8,
+  body.light.gallery-page .gallery-hero-section .col-lg-10 {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+
+  /* Index page fallback for service-stack-item */
+  body.light:not(.services-page) .service-stack-item,
+  .service-stack-item {
+    height: clamp(440px, 28vw, 780px) !important;
+  }
+
+  .horizontal-layout {
+    min-height: clamp(380px, 24vw, 620px) !important;
+  }
+
+  .project-slide-item {
+    height: clamp(660px, 41vw, 1080px) !important;
+    max-height: 78vh !important;
+  }
+
+  .project-thumb-slider .thumb-img-wrap {
+    height: clamp(160px, 10vw, 270px) !important;
+  }
+
+  /* 5. Hero slider fluid height */
+  .hero-slider-area.alternative-hero {
+    height: 100vh !important;
+    min-height: 100vh !important;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   HIGH RESOLUTION FLUID TYPOGRAPHY (1900px to 4000px+)
+   Strictly applies to 1900px and above. Up to 1800px is 100% untouched.
+   Scales text smoothly across the ENTIRE website as screen size increases
+   without altering any UI layouts, containers, columns, or dimensions.
+   ══════════════════════════════════════════════════════════════════════════════ */
+@media (min-width: 1900px) {
+
+  /* 1. PROJECT SECTION CARDS (projects.php & all project grids) */
+  body.light.projects-page .project-card-unique .project-info h4,
+  .project-card-unique .project-info h4 {
+    font-size: clamp(28px, 1.6vw, 68px) !important;
+    line-height: clamp(34px, 1.95vw, 78px) !important;
+    margin-bottom: clamp(10px, 0.6vw, 24px) !important;
+  }
+
+  body.light.projects-page .project-card-unique .project-info .category,
+  .project-card-unique .project-info .category {
+    font-size: clamp(15px, 0.85vw, 36px) !important;
+    letter-spacing: clamp(1.8px, 0.1vw, 4px) !important;
+    margin-bottom: clamp(10px, 0.55vw, 22px) !important;
+  }
+
+  body.light.projects-page .project-card-unique .view-project-btn,
+  .project-card-unique .view-project-btn {
+    font-size: clamp(15px, 0.85vw, 36px) !important;
+    padding: clamp(10px, 0.55vw, 22px) clamp(22px, 1.15vw, 46px) !important;
+  }
+
+  body.light.projects-page .project-card-unique .project-info,
+  .project-card-unique .project-info {
+    padding: clamp(22px, 1.4vw, 52px) !important;
+  }
+
+  body.light.projects-page .project-filters .filter-btn,
+  .project-filters .filter-btn {
+    font-size: clamp(16px, 0.95vw, 38px) !important;
+    padding: clamp(10px, 0.6vw, 24px) clamp(22px, 1.25vw, 50px) !important;
+    margin: 0 clamp(6px, 0.35vw, 15px) !important;
+  }
+
+  /* 2. PAGE TITLES & MAJOR HERO HEADINGS ACROSS ALL SECTIONS */
+  .display-3,
+  h1.display-3,
+  h2.display-3,
+  .section-title h1,
+  .section-title h2,
+  .section-heading,
+  .project-hero-section h1,
+  .services-hero-content h1,
+  .award-hero-content h1,
+  .awards-editorial-title,
+  .gallery-hero-title,
+  .blog-hero-section h1,
+  .contact-form-section h1,
+  #reveal-about h2,
+  #reveal-architect h2,
+  .service-section h2,
+  .gallery-section h2,
+  .cta-inner h2,
+  .cta-headline,
+  .about-editorial-title,
+  .project-hero-content h1 {
+    font-size: clamp(72px, 4.0vw, 160px) !important;
+    line-height: clamp(82px, 4.6vw, 185px) !important;
+  }
+
+  /* 3. SUBTITLES & MEDIUM HEADINGS (H4) */
+  #reveal-about h4,
+  #reveal-architect h4,
+  .section-title h4,
+  .section-subtitle,
+  .about-story-title,
+  .hero-subtitle,
+  h4 {
+    font-size: clamp(26px, 1.45vw, 58px) !important;
+    line-height: clamp(34px, 1.9vw, 76px) !important;
+  }
+
+  /* 4. COMPONENT & CARD HEADINGS (H3 across Blog, Services, Awards, Gallery) */
+  .service-stack-item .service-stack-text h3,
+  body.light.services-page .service-stack-item .service-stack-text h3,
+  .luxury-gallery-grid .hover-content .project-title,
+  .awards-card h3,
+  .awards-list-item h4,
+  .blog-card h3,
+  .feature-item h3,
+  .blog-card-unique .blog-content h3,
+  body.light.blog-page .blog-card-unique .blog-content h3 {
+    font-size: clamp(26px, 1.5vw, 62px) !important;
+    line-height: clamp(32px, 1.8vw, 74px) !important;
+  }
+
+  /* 5. PARAGRAPHS, DESCRIPTIONS & BODY TEXT ACROSS THE ENTIRE WEBSITE */
+  #reveal-about p,
+  #reveal-architect p,
+  .service-section p,
+  .gallery-section p,
+  .about-story-content p,
+  .services-hero-content p,
+  .award-hero-content p,
+  .project-hero-section p,
+  .blog-hero-section p,
+  .contact-form-section p,
+  .cta-inner p,
+  .luxury-gallery-grid .hover-content p,
+  body.light p,
+  .lead,
+  .service-stack-desc p,
+  body.light.services-page .service-stack-item .service-stack-desc p,
+  .blog-card-unique .blog-content p,
+  body.light.blog-page .blog-card-unique .blog-content p,
+  .awards-editorial-desc p,
+  .award-item-desc,
+  .project-detail-desc,
+  .faq-answer p,
+  .accordion-body p {
+    font-size: clamp(20px, 1.15vw, 46px) !important;
+    line-height: clamp(32px, 1.85vw, 75px) !important;
+  }
+
+  /* 6. METADATA, CATEGORIES, BADGES & DATES */
+  .category,
+  .meta-tag,
+  .award-year,
+  .blog-category-tag,
+  .blog-date,
+  .blog-date span {
+    font-size: clamp(14px, 0.8vw, 32px) !important;
+    letter-spacing: clamp(1.8px, 0.1vw, 4px) !important;
+  }
+
+  /* 7. BUTTONS ACROSS THE WEBSITE */
+  .project-cta-btn,
+  .theme-btn,
+  .btn-custom,
+  .read-more-btn,
+  .header-btn .theme-btn {
+    font-size: clamp(16px, 0.95vw, 38px) !important;
+    padding: clamp(12px, 0.7vw, 28px) clamp(24px, 1.4vw, 56px) !important;
+  }
+
+  /* 8. MAIN NAVIGATION MENU LINKS */
+  .header-area .main-menu ul li a {
+    font-size: clamp(16px, 0.95vw, 34px) !important;
+  }
+
+  /* 9. FOOTER TYPOGRAPHY (Headings, Paragraphs, Links, Social & Copyright) */
+  .footer-area h5,
+  .footer-title,
+  .footer-emails-inner h5,
+  .footer-links-inner h5,
+  .footer-follow-row h5 {
+    font-size: clamp(26px, 1.5vw, 60px) !important;
+    line-height: 1.3 !important;
+    margin-bottom: clamp(18px, 1.1vw, 42px) !important;
+  }
+
+  .footer-area p,
+  .footer-area a,
+  .footer-area ul li a,
+  .company-email a,
+  .phone-number a,
+  .footer-social-horizontal a {
+    font-size: clamp(19px, 1.1vw, 44px) !important;
+    line-height: clamp(30px, 1.75vw, 70px) !important;
+  }
+
+  .footer-bottom p,
+  .copyright-text,
+  .copyright-line,
+  .developer-credit,
+  .privacy {
+    font-size: clamp(16px, 0.95vw, 38px) !important;
+  }
+
+  .footer-logo-col .logo img {
+    max-width: clamp(215px, 14vw, 500px) !important;
+  }
+
+  /* 10. CONTACT FORM INPUTS & LABELS */
+  .contact-form-box input,
+  .contact-form-box textarea,
+  .contact-form-box select,
+  .contact-form-box label {
+    font-size: clamp(18px, 1.05vw, 42px) !important;
+  }
+
+  /* 11. FAQ ACCORDION HEADINGS */
+  .accordion-button,
+  .accordion-header {
+    font-size: clamp(22px, 1.3vw, 52px) !important;
+  }
+}
+
+/* TIER 6: 2600px+ (4K Ultra-wide upper container bound) */
+@media (min-width: 2600px) {
+
+  .container:not(.header-area .container),
+  body.light .container:not(.header-area .container),
+  body.light.projects-page .project-gallery-section .container-fluid,
+  body.light.projects-page .project-hero-section .container-fluid,
+  .project-gallery-section .container-fluid,
+  #reveal-about .container-fluid,
+  #reveal-architect .container-fluid,
+  body.light #reveal-about .container-fluid,
+  body.light #reveal-architect .container-fluid,
+  body.light:not(.services-page) .services-stacked-container,
+  .luxury-gallery-grid,
+  body.light .luxury-gallery-grid,
+  body.light.awards-page .container-fluid,
+  body.light.about-page .container-fluid,
+  body.light.project-detail-page .container,
+  .footer-area .container,
+  .footer-bottom .container {
+    max-width: 2600px !important;
+  }
+
+  body.light.blog-page .blog-section .container-fluid,
+  body.light.blog-page .blog-hero-section .container-fluid,
+  body.light.blog-page .container-fluid,
+  body.light.blog-page .container,
+  body.light.gallery-page .gallery-grid-section .container-fluid,
+  body.light.gallery-page .gallery-hero-section .container-fluid,
+  body.light.gallery-page .container-fluid,
+  .gallery-grid-section .container-fluid {
+    max-width: 84vw !important;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   PROJECT DETAILS PAGE (project-detail.php) - NAVBAR & HEADING CLEARANCE
+   Strictly applies from 2100px to 4000px+. Up to 2000px is 100% UNTOUCHED.
+   Increases space between navbar and project heading so they never collide across
+   all projects in projects.json.
+   ══════════════════════════════════════════════════════════════════════════════ */
+@media (min-width: 2100px) {
+  body.light.project-detail-page .project-hero-section {
+    padding-top: clamp(310px, 14.5vw, 560px) !important;
+  }
 }

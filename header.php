@@ -1,7 +1,7 @@
 <!-- Header Area  -->
 <div class="header-area">
     <div id="header-sticky">
-        <div class="navigation">
+        <div class="navigation mb-4">
             <div class="container">
                 <div class="row align-items-center">
                     <!-- Desktop Navigation -->

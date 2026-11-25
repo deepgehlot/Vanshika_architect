@@ -25,8 +25,6 @@
     <link href="assets/css/barfiller.css" rel="stylesheet">
     <!-- Magnific Popup Video -->
     <link href="assets/css/magnific-popup.css" rel="stylesheet">
-    <!-- Flaticon CSS -->
-    <link href="assets/css/flaticon.css" rel="stylesheet">
     <!-- Owl Carousel CSS -->
     <link href="assets/css/owl.carousel.css" rel="stylesheet">
     <!-- Slick Slider CSS -->
@@ -40,9 +38,9 @@
     <!-- Odometer CSS -->
     <link href="assets/css/odometer.min.css" rel="stylesheet">
     <!-- Style CSS -->
-    <link href="assets/css/style.css?v=1.2.3" rel="stylesheet">
+    <link href="assets/css/style.css?v=1.6.7" rel="stylesheet">
     <!-- Alternative Custom Style Override -->
-    <link href="assets/css/alternative-style.css?v=1.3.7" rel="stylesheet">
+    <link href="assets/css/alternative-style.css?v=1.6.7" rel="stylesheet">
     <!-- Floating Contact Widget -->
     <link href="assets/css/floating-contact.css?v=1.2.3" rel="stylesheet">
 
@@ -95,7 +93,7 @@
             <!-- CONTACT PAGE CONTENT STARTS HERE -->
 
             <!-- Contact Form Section -->
-            <div class="contact-form-section section-padding pt-150 pb-0 mt-4 " style="margin-top: 60px;">
+            <div class="contact-form-section pb-0">
                 <div class="container-fluid px-md-5 px-3">
                     <div class="row">
                         <div class="col-lg-6 d-flex justify-content-start justify-content-lg-center align-items-start">

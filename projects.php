@@ -25,8 +25,6 @@
     <link href="assets/css/barfiller.css" rel="stylesheet">
     <!-- Magnific Popup Video -->
     <link href="assets/css/magnific-popup.css" rel="stylesheet">
-    <!-- Flaticon CSS -->
-    <link href="assets/css/flaticon.css" rel="stylesheet">
     <!-- Owl Carousel CSS -->
     <link href="assets/css/owl.carousel.css" rel="stylesheet">
     <!-- Slick Slider CSS -->
@@ -40,11 +38,11 @@
     <!-- Odometer CSS -->
     <link href="assets/css/odometer.min.css" rel="stylesheet">
     <!-- Style CSS -->
-    <link href="assets/css/style.css?v=1.2.3" rel="stylesheet">
+    <link href="assets/css/style.css?v=1.6.7" rel="stylesheet">
     <!-- Floating Contact Widget -->
     <link href="assets/css/floating-contact.css?v=1.2.3" rel="stylesheet">
     <!-- Alternative Custom Style Override -->
-    <link href="assets/css/alternative-style.css?v=1.2.9" rel="stylesheet">
+    <link href="assets/css/alternative-style.css?v=1.6.7" rel="stylesheet">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
@@ -76,7 +74,7 @@
                 <div class="container-fluid px-md-5 px-3">
                     <div class="row justify-content-center text-center">
                         <div class="col-xl-8">
-                            <h1 class="display-3 text-uppercase mb-4 mt-4">Our Masterpieces of Modern Heritage</h1>
+                            <h1 class="display-3 text-uppercase  mt-4">Our Masterpieces of Modern Heritage</h1>
                             <p class="mb-0 text-muted">Where sophisticated elegance seamlessly blends with authentic
                                 restoration.</p>
                         </div>
@@ -152,7 +150,7 @@
     <script src="assets/js/heading-animation.js"></script>
     <script src="assets/js/paragraph-animation.js"></script>
     <!-- Projects Handler JS -->
-    <script src="assets/js/projects-handler.js?v=1.2.0"></script>
+    <script src="assets/js/projects-handler.js?v=1.6.0"></script>
     <!-- Main JS -->
     <script src="assets/js/main.js?v=1.2.0"></script>
     <!-- Alternative Theme Custom JS Animations -->

@@ -152,8 +152,6 @@ $current_blog = $blogs[$blog_id];
     <link href="assets/css/barfiller.css" rel="stylesheet">
     <!-- Magnific Popup Video -->
     <link href="assets/css/magnific-popup.css" rel="stylesheet">
-    <!-- Flaticon CSS -->
-    <link href="assets/css/flaticon.css" rel="stylesheet">
     <!-- Owl Carousel CSS -->
     <link href="assets/css/owl.carousel.css" rel="stylesheet">
     <!-- Slick Slider CSS -->
@@ -167,9 +165,9 @@ $current_blog = $blogs[$blog_id];
     <!-- Odometer CSS -->
     <link href="assets/css/odometer.min.css" rel="stylesheet">
     <!-- Alternative Style CSS -->
-    <link href="assets/css/alternative-style.css?v=1.3.2" rel="stylesheet">
+    <link href="assets/css/alternative-style.css?v=1.6.7" rel="stylesheet">
     <!-- Style CSS -->
-    <link href="assets/css/style.css?v=1.2.5" rel="stylesheet">
+    <link href="assets/css/style.css?v=1.6.7" rel="stylesheet">
     <!-- Floating Contact Widget -->
     <link href="assets/css/floating-contact.css?v=1.2.3" rel="stylesheet">
 

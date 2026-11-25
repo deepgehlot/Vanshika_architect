@@ -28,11 +28,11 @@
     <!-- Metis Menu -->
     <link href="assets/css/metismenu.css" rel="stylesheet">
     <!-- Style CSS -->
-    <link href="assets/css/style.css?v=1.2.3" rel="stylesheet">
+    <link href="assets/css/style.css?v=1.6.7" rel="stylesheet">
     <!-- Floating Contact Widget -->    
     <link href="assets/css/floating-contact.css?v=1.2.3" rel="stylesheet">
     <!-- Alternative Custom Style Override -->
-    <link href="assets/css/alternative-style.css?v=1.3.7" rel="stylesheet">
+    <link href="assets/css/alternative-style.css?v=1.6.7" rel="stylesheet">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
@@ -94,7 +94,7 @@
 
             <!-- Gallery 3x2 Grid Section (6 Project Images) -->
             <div class="gallery-grid-section">
-                <div class="container-fluid px-xxl-5 px-lg-4 px-md-3 px-2" style="max-width: 1400px; margin: 0 auto;">
+                <div class="container-fluid px-xxl-5 px-lg-4 px-md-3 px-2">
                     <div class="row g-4" id="galleryGrid">
                         
                         <!-- 1. Dinesh Goyal Project -->
@@ -224,9 +224,10 @@
                 gallery: {
                     enabled: true,
                     navigateByImgClick: true,
-                    arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>',
+                    arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"><i class="las la-angle-%dir%"></i></button>',
                     tPrev: 'Previous',
                     tNext: 'Next',
+                    preload: [0, 1],
                     tCounter: '<span class="mfp-counter">%curr% of %total%</span>'
                 },
                 image: {
@@ -235,8 +236,9 @@
                     },
                     markup: '<div class="mfp-figure"><figure><div class="mfp-img"></div><figcaption><div class="mfp-bottom-bar"><div class="mfp-title"></div><div class="mfp-counter"></div></div></figcaption></figure></div>'
                 },
+                mainClass: 'mfp-fade',
                 closeBtnInside: false,
-                removalDelay: 0
+                removalDelay: 160
             });
         });
     </script>

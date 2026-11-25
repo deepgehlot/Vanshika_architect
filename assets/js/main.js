@@ -702,7 +702,7 @@
   */
 
   // Project Detail Slider
-  if ($('.project-main-slider').length) {
+  if ($('.project-main-slider').length && !$('.project-main-slider').hasClass('slick-initialized')) {
     // Set background image from the img src for each slide
     $('.project-main-slider .project-slide-item').each(function () {
       var imgSrc = $(this).find('img').attr('src');
@@ -714,6 +714,8 @@
       slidesToScroll: 1,
       arrows: true,
       fade: true,
+      infinite: true,
+      autoplay: false,
       asNavFor: '.project-thumb-slider'
     });
 
@@ -725,6 +727,8 @@
       arrows: false,
       centerMode: true,
       focusOnSelect: true,
+      infinite: true,
+      autoplay: false,
       responsive: [
         {
           breakpoint: 991,

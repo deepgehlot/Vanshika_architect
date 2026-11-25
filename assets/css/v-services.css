@@ -12,30 +12,32 @@
     /* 40% reduction from 24px */
 }
 
-/* Services 2x2 Stacked Grid matching index.php UI */
-body.light.services-page .services-stacked-container {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 16px !important;
-    position: relative !important;
-    height: auto !important;
-    width: 100% !important;
-    max-width: 1220px !important;
-    margin: 0 auto !important;
-    padding: 0 20px 40px !important;
-}
+/* Services 2x2 Stacked Grid matching index.php UI (< 1600px only) */
+@media (max-width: 1599.98px) {
+    body.light.services-page .services-stacked-container {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 16px !important;
+        position: relative !important;
+        height: auto !important;
+        width: 100% !important;
+        max-width: 1220px !important;
+        margin: 0 auto !important;
+        padding: 0 20px 40px !important;
+    }
 
-body.light.services-page .service-stack-item {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    width: 100% !important;
-    height: 340px !important;
-    overflow: hidden !important;
-    border-radius: 4px !important;
-    z-index: 1 !important;
-    opacity: 1 !important;
-    cursor: pointer;
+    body.light.services-page .service-stack-item {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        height: 340px !important;
+        overflow: hidden !important;
+        border-radius: 4px !important;
+        z-index: 1 !important;
+        opacity: 1 !important;
+        cursor: pointer;
+    }
 }
 
 body.light.services-page .service-stack-item .img-curtain {

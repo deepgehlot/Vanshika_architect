@@ -37,9 +37,9 @@ $page_title = "Awards & Recognitions";
     <!-- Back to top CSS -->
     <link href="assets/css/backToTop.css" rel="stylesheet">
     <!-- Style CSS -->
-    <link href="assets/css/style.css?v=1.2.3" rel="stylesheet">
+    <link href="assets/css/style.css?v=1.6.7" rel="stylesheet">
     <!-- Alternative Custom Style Override -->
-    <link href="assets/css/alternative-style.css?v=1.3.6" rel="stylesheet">
+    <link href="assets/css/alternative-style.css?v=1.6.7" rel="stylesheet">
     <!-- Floating Contact Widget -->
     <link href="assets/css/floating-contact.css?v=1.2.3" rel="stylesheet">
 
@@ -439,8 +439,8 @@ $page_title = "Awards & Recognitions";
                     <div class="container-fluid px-md-5 px-3">
                         <div class="row justify-content-center text-center">
                             <div class="col-xl-8">
-                                <h6 class="text-uppercase mb-3 mt-4" style="color: #c29a6c; letter-spacing: 2px;">
-                                    Recognitions</h6>
+                                <!-- <h6 class="text-uppercase mb-3 mt-4" style="color: #c29a6c; letter-spacing: 2px;">
+                                    Recognitions</h6> -->
                                 <h1 class="display-3 text-uppercase mb-4">Awards & Media</h1>
                                 <p class="mb-0 text-muted">Celebrating our commitment to design excellence and
                                     innovation in architecture and interior design.</p>
@@ -462,10 +462,10 @@ $page_title = "Awards & Recognitions";
                                 </div>
                             </div>
 
-                            <!-- Right Photo (Duplicated for now) -->
+                            <!-- Right Photo -->
                             <div class="col-lg-6 col-md-6 col-12">
                                 <div class="awards-single-profile-card">
-                                    <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/WEB/AWARD.webp" alt="Vanshika Agarwal" class="awards-single-profile-img">
+                                    <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/img/img/awards section.webp" alt="Vanshika Agarwal" class="awards-single-profile-img">
                                 </div>
                             </div>
                         </div>

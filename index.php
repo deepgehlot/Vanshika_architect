@@ -1,4 +1,4 @@
-<?php $asset_ver = '1.3.9'; ?>
+<?php $asset_ver = '1.6.3'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,8 +26,6 @@
     <link href="assets/css/barfiller.css" rel="stylesheet">
     <!-- Magnific Popup Video -->
     <link href="assets/css/magnific-popup.css" rel="stylesheet">
-    <!-- Flaticon CSS -->
-    <link href="assets/css/flaticon.css" rel="stylesheet">
     <!-- Owl Carousel CSS -->
     <link href="assets/css/owl.carousel.css" rel="stylesheet">
     <!-- Slick Slider CSS -->
@@ -96,8 +94,8 @@
                         <div class="row g-0 align-items-center">
                             <!-- Left Column: Image Reveal -->
                             <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12 p-0 order-2 order-lg-1 image-col">
-                                <div class="alternative-image-reveal left-reveal">
-                                    <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/WEB/HERITAGE%20LUXURY.webp"
+                                <div class="alternative-image-reveal left-reveal ">
+                                    <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/WEB/HERITAGE%20LUXURY.webp" 
                                         alt="Mastering Modern Heritage Luxury" decoding="async">
                                 </div>
                             </div>
