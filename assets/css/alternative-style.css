@@ -9292,6 +9292,6 @@ body.light.blog-page .blog-hero-section p,
    ══════════════════════════════════════════════════════════════════════════════ */
 @media (min-width: 2100px) {
   body.light.project-detail-page .project-hero-section {
-    padding-top: clamp(310px, 14.5vw, 560px) !important;
+    padding-top: 280px !important;
   }
 }

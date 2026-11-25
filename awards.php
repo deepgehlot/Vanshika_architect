@@ -37,9 +37,9 @@ $page_title = "Awards & Recognitions";
     <!-- Back to top CSS -->
     <link href="assets/css/backToTop.css" rel="stylesheet">
     <!-- Style CSS -->
-    <link href="assets/css/style.css?v=1.6.7" rel="stylesheet">
+    <link href="assets/css/style.css?v=1.6.8" rel="stylesheet">
     <!-- Alternative Custom Style Override -->
-    <link href="assets/css/alternative-style.css?v=1.6.7" rel="stylesheet">
+    <link href="assets/css/alternative-style.css?v=1.6.8" rel="stylesheet">
     <!-- Floating Contact Widget -->
     <link href="assets/css/floating-contact.css?v=1.2.3" rel="stylesheet">
 

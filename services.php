@@ -44,7 +44,7 @@
     <!-- New Services CSS -->
     <link href="assets/css/v-services.css?v=1.3.5" rel="stylesheet">
     <!-- Alternative Custom Style Override -->
-    <link href="assets/css/alternative-style.css?v=1.6.7" rel="stylesheet">
+    <link href="assets/css/alternative-style.css?v=1.6.8" rel="stylesheet">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
