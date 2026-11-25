@@ -9699,3 +9699,80 @@ body.light.awards-page .awards-single-profile-img {
     max-height: 30vh !important;
   }
 }
+
+/* ══════════════════════════════════════════════════════════════
+   MOBILE HERO VIDEO (FULL WIDTH, AUTO HEIGHT) & HAMBURGER STYLING
+   ══════════════════════════════════════════════════════════════ */
+@media (max-width: 991px) {
+  /* Full-width, auto-height hero video on mobile/tablet so nothing is cropped */
+  body.home-page .hero-slider-area.alternative-hero {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    overflow: hidden !important;
+  }
+
+  body.home-page .hero-slider-area.alternative-hero .hero-slider,
+  body.home-page .hero-slider-area.alternative-hero .hero-slider .slick-list,
+  body.home-page .hero-slider-area.alternative-hero .hero-slider .slick-track,
+  body.home-page .hero-slider-area.alternative-hero .hero-slider-item {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  body.home-page .hero-slider-area.alternative-hero .hero-bg-video {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    display: block !important;
+  }
+
+  /* Hamburger over hero (before scroll): transparent bg, white border + white dashes */
+  body.preloader-done.home-page .header-area:not(.header-scrolled) #hamburger,
+  body.home-page .header-area:not(.header-scrolled) #hamburger {
+    background: transparent !important;
+    border: 1.5px solid #ffffff !important;
+    box-shadow: none !important;
+  }
+
+  body.preloader-done.home-page .header-area:not(.header-scrolled) #hamburger span,
+  body.home-page .header-area:not(.header-scrolled) #hamburger span {
+    background-color: #ffffff !important;
+  }
+
+  /* Hamburger when scrolled down (white sticky header) or on light inner pages: transparent bg, dark border + dark dashes */
+  body.preloader-done .header-area.header-scrolled #hamburger,
+  body.preloader-done .header-area #header-sticky.header-sticky #hamburger,
+  body.light:not(.home-page).preloader-done .header-area #hamburger,
+  body.light:not(.home-page) .header-area #hamburger {
+    background: transparent !important;
+    border: 1.5px solid #1a1a1a !important;
+    box-shadow: none !important;
+  }
+
+  body.preloader-done .header-area.header-scrolled #hamburger span,
+  body.preloader-done .header-area #header-sticky.header-sticky #hamburger span,
+  body.light:not(.home-page).preloader-done .header-area #hamburger span,
+  body.light:not(.home-page) .header-area #hamburger span {
+    background-color: #1a1a1a !important;
+  }
+
+  /* Hamburger when mobile menu is open (X state) */
+  body.preloader-done .header-area #hamburger.active,
+  body .header-area #hamburger.active {
+    background: #1a1a1a !important;
+    border: 1.5px solid #1a1a1a !important;
+    box-shadow: none !important;
+  }
+
+  body.preloader-done .header-area #hamburger.active span,
+  body .header-area #hamburger.active span {
+    background-color: #ffffff !important;
+  }
+}
