@@ -8,41 +8,7 @@
 
     <title>Architect Vanshika</title>
 
-    <!-- Preconnect for Google Fonts & CDN -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!--Favicon-->
-    <link rel="icon" href="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/favicon.png" type="image/png">
-
-    <!-- Bootstrap CSS -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Line Awesome CSS -->
-    <link href="assets/css/line-awesome.min.css" rel="stylesheet">
-    <!-- Font Awesome CSS -->
-    <link href="assets/css/fontAwesomePro.css" rel="stylesheet">
-    <!-- Bar Filler CSS -->
-    <link href="assets/css/barfiller.css" rel="stylesheet">
-    <!-- Magnific Popup Video -->
-    <link href="assets/css/magnific-popup.css" rel="stylesheet">
-    <!-- Owl Carousel CSS -->
-    <link href="assets/css/owl.carousel.css" rel="stylesheet">
-    <!-- Slick Slider CSS -->
-    <link href="assets/css/slick.css" rel="stylesheet">
-    <!-- Nice Select  -->
-    <link href="assets/css/nice-select.css" rel="stylesheet">
-    <!-- Back to Top -->
-    <link href="assets/css/backToTop.css" rel="stylesheet">
-    <!-- Metis Menu -->
-    <link href="assets/css/metismenu.css" rel="stylesheet">
-    <!-- Odometer CSS -->
-    <link href="assets/css/odometer.min.css" rel="stylesheet">
-    <!-- Style CSS -->
-    <link href="assets/css/style.css?v=1.6.8" rel="stylesheet">
-    <!-- Alternative Custom Style Override -->
-    <link href="assets/css/alternative-style.css?v=1.6.8" rel="stylesheet">
-    <!-- Floating Contact Widget -->
-    <link href="assets/css/floating-contact.css?v=1.2.3" rel="stylesheet">
+    <?php include 'head-includes.php'; ?>
 
 </head>
 
@@ -112,7 +78,7 @@
                                         "Design is not just about aesthetics; it's about creating spaces that resonate with the soul."
                                     </blockquote>
                                     <p class="about-body-text">
-                                        Whether it’s a sprawling villa or an intimate boutique, her work reflects a deep understanding of spatial dynamics, premium materials, and bespoke craftsmanship. Beyond architecture, her passion extends to art, culture, and travel, continuously bringing fresh global perspectives into her innovative practice.
+                                        Whether it's a sprawling villa or an intimate boutique, her work reflects a deep understanding of spatial dynamics, premium materials, and bespoke craftsmanship. Beyond architecture, her passion extends to art, culture, and travel, continuously bringing fresh global perspectives into her innovative practice.
                                     </p>
                                 </div>
                             </div>
@@ -159,7 +125,7 @@
                             <span class="cta-overhead-label">START YOUR JOURNEY</span>
                             <h2 class="cta-headline">Bring Your New Dream Project To Life</h2>
                             <p class="cta-subtext">
-                                Have an architectural or interior vision in mind? Let’s collaborate to build a bespoke space tailored to your lifestyle.
+                                Have an architectural or interior vision in mind? Let's collaborate to build a bespoke space tailored to your lifestyle.
                             </p>
                             <div class="cta-btn-wrap mt-4">
                                 <a href="contact.php" class="cta-gold-btn">
@@ -177,61 +143,8 @@
     <!-- Floating Contact Widget -->
     <?php include 'floating-contact.php'; ?>
 
-    <!-- jquery -->
-    <script src="assets/js/jquery-3.6.0.min.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="assets/js/bootstrap.min.js"></script>
-    <!-- Pure Counter JS -->
-    <script src="assets/js/pure-counter.js"></script>
-    <!-- Owl Carousel JS -->
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <!-- Slick Slider JS -->
-    <script src="assets/js/slick.min.js"></script>
-    <!-- Magnific Popup JS -->
-    <script src="assets/js/magnific-popup.min.js"></script>
-    <!-- Isotope JS -->
-    <script src="assets/js/isotope-3.0.6-min.js"></script>
-    <!-- Nice Select JS -->
-    <script src="assets/js/jquery.nice-select.min.js"></script>
-    <!-- Back To Top JS -->
-    <script src="assets/js/backToTop.js"></script>
-    <!-- Metis Menu JS -->
-    <script src="assets/js/metismenu.js"></script>
-    <!-- Progress Bar JS -->
-    <script src="assets/js/jquery.barfiller.js"></script>
-    <!-- Appear JS -->
-    <script src="assets/js/jquery.appear.min.js"></script>
-    <!-- Odometer JS -->
-    <script src="assets/js/odometer.min.js"></script>
-    <!-- GSAP Animation JS -->
-    <script src="assets/js/gsap.min.js"></script>
-    <script src="assets/js/gsap-scroll-to-plugin.js"></script>
-    <script src="assets/js/SplitText.min.js"></script>
-    <script src="assets/js/ScrollTrigger.min.js"></script>
-    <script src="assets/js/smoother-script.js"></script>
-    <script src="assets/js/heading-animation.js"></script>
-    <script src="assets/js/paragraph-animation.js"></script>
-    <!-- Main JS -->
-    <script src="assets/js/main.js"></script>
-    <!-- Alternative Theme Custom JS Animations -->
-    <script src="assets/js/alternative-interactions.js?v=1.2.0"></script>
-    <!-- Floating Contact JS -->
-    <script src="assets/js/floating-contact.js?v=1.2.0"></script>
+    <?php include 'scripts-includes.php'; ?>
 
-    <!-- Simple OnScroll Animation Script -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
-        });
-    </script>
 </body>
 
 </html>

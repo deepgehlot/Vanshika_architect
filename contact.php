@@ -8,45 +8,8 @@
 
     <title>Contact Us - Architect Vanshika</title>
 
-    <!-- Preconnect for Google Fonts & CDN -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <?php include 'head-includes.php'; ?>
 
-    <!--Favicon-->
-    <link rel="icon" href="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/favicon.png" type="image/png">
-
-    <!-- Bootstrap CSS -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Line Awesome CSS -->
-    <link href="assets/css/line-awesome.min.css" rel="stylesheet">
-    <!-- Font Awesome CSS -->
-    <link href="assets/css/fontAwesomePro.css" rel="stylesheet">
-    <!-- Bar Filler CSS -->
-    <link href="assets/css/barfiller.css" rel="stylesheet">
-    <!-- Magnific Popup Video -->
-    <link href="assets/css/magnific-popup.css" rel="stylesheet">
-    <!-- Owl Carousel CSS -->
-    <link href="assets/css/owl.carousel.css" rel="stylesheet">
-    <!-- Slick Slider CSS -->
-    <link href="assets/css/slick.css" rel="stylesheet">
-    <!-- Nice Select  -->
-    <link href="assets/css/nice-select.css" rel="stylesheet">
-    <!-- Back to Top -->
-    <link href="assets/css/backToTop.css" rel="stylesheet">
-    <!-- Metis Menu -->
-    <link href="assets/css/metismenu.css" rel="stylesheet">
-    <!-- Odometer CSS -->
-    <link href="assets/css/odometer.min.css" rel="stylesheet">
-    <!-- Style CSS -->
-    <link href="assets/css/style.css?v=1.6.8" rel="stylesheet">
-    <!-- Alternative Custom Style Override -->
-    <link href="assets/css/alternative-style.css?v=1.6.8" rel="stylesheet">
-    <!-- Floating Contact Widget -->
-    <link href="assets/css/floating-contact.css?v=1.2.3" rel="stylesheet">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
 </head>
 
 <body class="light contact-page">
@@ -100,7 +63,7 @@
                             <div class="contact-title-wrapper">
                                 <span class="small-title">INSPIRE</span>
                                 <h1 class="display-3 text-uppercase mt-2 mb-4" style="line-height: 1.12; color: #c29a6c; font-family: 'Futura PT', sans-serif;">
-                                    Let’s <br class="d-none d-lg-block"> Bring Your <br class="d-none d-lg-block"> Vision To <br class="d-none d-lg-block"> Life</h1>
+                                    Let's <br class="d-none d-lg-block"> Bring Your <br class="d-none d-lg-block"> Vision To <br class="d-none d-lg-block"> Life</h1>
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -180,8 +143,8 @@
                                 <div class="detail-group mb-4">
                                     <h4 class="map-detail-heading">Office Timings</h4>
                                     <div class="timings-info">
-                                        <p class="timing-hours mb-1">09:30 AM – 6:30 PM</p>
-                                        <p class="timing-days mb-0">(Monday – Saturday)</p>
+                                        <p class="timing-hours mb-1">09:30 AM &ndash; 6:30 PM</p>
+                                        <p class="timing-days mb-0">(Monday &ndash; Saturday)</p>
                                     </div>
                                 </div>
 
@@ -229,7 +192,7 @@
                         <div class="col-lg-6">
                             <p class="philosophy-text text-uppercase small">
                                 We believe in creating with you, not just for you. Every space is a reflection of shared
-                                vision and open dialogue — bringing depth, harmony, and character to the final design.
+                                vision and open dialogue &mdash; bringing depth, harmony, and character to the final design.
                             </p>
                         </div>
                     </div>
@@ -256,88 +219,43 @@
     <!-- Floating Contact Widget -->
     <?php include 'floating-contact.php'; ?>
 
-    <!-- jquery -->
-    <script src="assets/js/jquery-3.6.0.min.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="assets/js/bootstrap.min.js"></script>
-    <!-- Pure Counter JS -->
-    <script src="assets/js/pure-counter.js"></script>
-    <!-- Owl Carousel JS -->
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <!-- Slick Slider JS -->
-    <script src="assets/js/slick.min.js"></script>
-    <!-- Magnific Popup JS -->
-    <script src="assets/js/magnific-popup.min.js"></script>
-    <!-- Isotope JS -->
-    <script src="assets/js/isotope-3.0.6-min.js"></script>
-    <!-- Nice Select JS -->
-    <script src="assets/js/jquery.nice-select.min.js"></script>
-    <!-- Back To Top JS -->
-    <script src="assets/js/backToTop.js"></script>
-    <!-- Metis Menu JS -->
-    <script src="assets/js/metismenu.js"></script>
-    <!-- Progress Bar JS -->
-    <script src="assets/js/jquery.barfiller.js"></script>
-    <!-- Appear JS -->
-    <script src="assets/js/jquery.appear.min.js"></script>
-    <!-- Odometer JS -->
-    <script src="assets/js/odometer.min.js"></script>
-    <!-- GSAP Animation JS -->
-    <script src="assets/js/gsap.min.js"></script>
-    <script src="assets/js/gsap-scroll-to-plugin.js"></script>
-    <script src="assets/js/SplitText.min.js"></script>
-    <script src="assets/js/ScrollTrigger.min.js"></script>
-    <script src="assets/js/smoother-script.js"></script>
-    <script src="assets/js/heading-animation.js"></script>
-    <script src="assets/js/paragraph-animation.js"></script>
-    <!-- Main JS -->
-    <script src="assets/js/main.js?v=1.2.0"></script>
-    <!-- Alternative Theme Custom JS Animations -->
-    <script src="assets/js/alternative-interactions.js"></script>
+    <?php include 'scripts-includes.php'; ?>
 
-
-    <!-- PHP Mailer Integration -->
-    <script type="text/javascript">
-        document.getElementById('contact-form').addEventListener('submit', function (event) {
-            event.preventDefault();
-
-            // Change button to indicate loading state
+    <!-- Contact Form Handler -->
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
             const submitBtn = this.querySelector('button[type="submit"]');
             const originalBtnContent = submitBtn.innerHTML;
             submitBtn.innerHTML = '<i class="las la-spinner la-spin"></i>';
             submitBtn.disabled = true;
-
             const formData = new FormData(this);
-
             fetch('send_mail.php', {
                 method: 'POST',
                 body: formData
             })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        alert('Message sent successfully! We will get back to you soon.');
-                        this.reset();
-                    } else {
-                        console.error('Failed to send email:', data.message);
-                        alert('Failed to send message: ' + data.message);
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert('An error occurred while sending the message. Please ensure PHP is running and configured correctly.');
-                })
-                .finally(() => {
-                    submitBtn.innerHTML = originalBtnContent;
-                    submitBtn.disabled = false;
-                });
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Message sent successfully! We will get back to you soon.');
+                    this.reset();
+                } else {
+                    alert('Failed to send message: ' + data.message);
+                }
+            })
+            .catch(error => {
+                alert('An error occurred while sending the message. Please ensure PHP is running and configured correctly.');
+            })
+            .finally(() => {
+                submitBtn.innerHTML = originalBtnContent;
+                submitBtn.disabled = false;
+            });
         });
     </script>
-    <!-- Floating Contact JS -->
-    <script src="assets/js/floating-contact.js?v=1.2.0"></script>
 
 </body>
 
 </html>
+
 
 

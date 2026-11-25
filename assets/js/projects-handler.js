@@ -387,7 +387,7 @@ class ProjectsHandler {
         // Render projects
         let html = '';
         this.projects.forEach(project => {
-            html += this.getProjectCardHTML(project, 'col-lg-4 col-md-6 col-12 grid-item');
+            html += this.getProjectCardHTML(project, 'col-xl-4 col-lg-4 col-md-6 col-12 grid-item');
         });
 
         if (loadingSpinner.length) loadingSpinner.remove();
@@ -673,15 +673,16 @@ class ProjectsHandler {
                 }
             });
 
-            // Initialize Magnific Popup on click
+            // Initialize Magnific Popup on click (infinite loop + prev/next arrows + X close button)
             if ($.fn.magnificPopup) {
                 mainSlider.magnificPopup({
-                    delegate: 'a.project-popup-link',
+                    delegate: '.slick-slide:not(.slick-cloned) a.project-popup-link',
                     type: 'image',
                     gallery: {
                         enabled: true,
                         navigateByImgClick: true,
                         preload: [0, 1],
+                        tCounter: '<span class="mfp-counter">%curr% of %total%</span>',
                         arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"><i class="las la-angle-%dir%"></i></button>'
                     },
                     image: {
@@ -691,6 +692,7 @@ class ProjectsHandler {
                     mainClass: 'mfp-fade',
                     removalDelay: 160,
                     closeOnContentClick: false,
+                    showCloseBtn: true,
                     closeBtnInside: false
                 });
             }
@@ -1029,9 +1031,33 @@ class ProjectsHandler {
                 border-radius: 6px !important;
                 box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8) !important;
             }
-            .mfp-figure .mfp-close,
-            .mfp-content .mfp-close {
-                display: none !important;
+            .mfp-close {
+                position: fixed !important;
+                top: 22px !important;
+                right: 26px !important;
+                width: 46px !important;
+                height: 46px !important;
+                line-height: 46px !important;
+                padding: 0 !important;
+                border-radius: 50% !important;
+                background: rgba(255, 255, 255, 0.14) !important;
+                color: #ffffff !important;
+                font-size: 28px !important;
+                font-weight: 300 !important;
+                text-align: center !important;
+                opacity: 0.9 !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                cursor: pointer !important;
+                z-index: 99999 !important;
+                transition: all 0.3s ease !important;
+            }
+            .mfp-close:hover {
+                background: #c29a6c !important;
+                color: #ffffff !important;
+                opacity: 1 !important;
+                transform: scale(1.08) !important;
             }
             .mfp-title,
             .mfp-bottom-bar .mfp-title {
@@ -1044,13 +1070,26 @@ class ProjectsHandler {
             .mfp-arrow {
                 width: 52px !important;
                 height: 52px !important;
-                background: rgba(255, 255, 255, 0.12) !important;
+                background: rgba(255, 255, 255, 0.14) !important;
                 border-radius: 50% !important;
-                opacity: 0.85 !important;
+                opacity: 0.9 !important;
                 transition: all 0.3s ease !important;
                 top: 50% !important;
                 transform: translateY(-50%) !important;
                 margin-top: 0 !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                color: #ffffff !important;
+                font-size: 24px !important;
+            }
+            .mfp-arrow::before,
+            .mfp-arrow::after {
+                display: none !important;
+            }
+            .mfp-arrow i {
+                pointer-events: none !important;
+                line-height: 1 !important;
             }
             .mfp-arrow:hover {
                 background: #c29a6c !important;

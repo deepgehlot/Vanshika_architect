@@ -34,14 +34,16 @@
   });
 
   // magnific popup
-
-  $(".video-play-btn").magnificPopup({
-    type: "iframe",
-  });
+  if ($.fn.magnificPopup && $(".video-play-btn").length) {
+    $(".video-play-btn").magnificPopup({
+      type: "iframe",
+    });
+  }
 
   // Metis Menu
-
-  $("#mobile-menu").metisMenu();
+  if ($.fn.metisMenu && $("#mobile-menu").length) {
+    $("#mobile-menu").metisMenu();
+  }
 
   // Alternative pages with white preloader handle mobile menu in alternative-interactions.js
   const loaderEl = document.getElementById("loader");
@@ -151,319 +153,33 @@
     });
   }
 
-  // Testimonial & Service Sliders
-  $(function () {
-    // Testimonial One
-    if ($(".testimonial-wrapper").length) {
-      $(".testimonial-wrapper").owlCarousel({
-        items: 1,
-        dots: false,
-        nav: true,
-        loop: true,
-        autoplay: true,
-        autoplayTimeout: 5000,
-        smartSpeed: 1000,
-        margin: 30,
-        navText: [
-          "<i class='las la-arrow-left'></i>",
-          "<i class='las la-arrow-right'></i>",
-        ],
-      });
-    }
-
-    // Service Slider (Legacy & New Luxury)
-    if ($(".service-slider, .services-luxury-slider").length) {
-      $(".service-slider, .services-luxury-slider").owlCarousel({
-        items: 1,
-        dots: true,
-        nav: true,
-        loop: true,
-        autoplay: true,
-        autoplayTimeout: 5000,
-        smartSpeed: 1000,
-        margin: 30,
-        navText: [
-          "<i class='las la-arrow-left'></i>",
-          "<i class='las la-arrow-right'></i>",
-        ],
-        responsive: {
-          0: {
-            items: 1,
-            nav: false,
-            dots: false,
-          },
-          768: {
-            items: 1,
-            nav: true,
-          },
-          1100: {
-            items: 1,
-            nav: true,
-            dots: true,
-          },
-        },
-      });
-    }
-  });
-
-  // Testimonial Two
-
-  $(".testimonial-carousel").owlCarousel({
-    items: 1,
-    dots: false,
-    nav: false,
-    loop: true,
-    autoplay: true,
-    autoplayTimeout: 5000,
-    smartSpeed: 3000,
-    slideSpeed: 300,
-    margin: 30,
-    responsive: {
-      0: {
-        items: 1,
-        nav: false,
-        dots: false,
-      },
-      600: {
-        items: 1,
-        nav: false,
-        dots: false,
-      },
-      768: {
-        items: 2,
-        nav: false,
-        dots: false,
-      },
-      1100: {
-        items: 3,
-        nav: false,
-        dots: true,
-      },
-    },
-    navText: [
-      "<i class='las la-arrow-left'></i>",
-      "<i class='las la-arrow-right'></i>",
-    ],
-  });
-
-  // Contact Page Testimonial
-  // Contact Page Testimonial
-  var contactTestimonial = $(".contact-testimonial-carousel");
-  contactTestimonial.owlCarousel({
-    items: 1,
-    dots: false,
-    nav: false,
-    loop: true,
-    autoplay: true,
-    autoplayHoverPause: true,
-    autoplayTimeout: 3000,
-    smartSpeed: 1000,
-    margin: 30,
-    responsive: {
-      0: {
-        items: 1,
-      },
-      768: {
-        items: 2,
-      },
-      992: {
-        items: 2,
-      },
-    },
-  });
-
-  // Custom Navigation for Contact Page Testimonial
-  $('.arrow-icons .la-arrow-left').click(function () {
-    contactTestimonial.trigger('prev.owl.carousel');
-  });
-  $('.arrow-icons .la-arrow-right').click(function () {
-    contactTestimonial.trigger('next.owl.carousel');
-  });
-
-  // Process Slider
-
-  $(".process-wrapper").owlCarousel({
-    items: 1,
-    margin: 30,
-    dots: true,
-    nav: false,
-    loop: true,
-    autoplay: false,
-    navText: [
-      "<i class='las la-arrow-left'></i>",
-      "<i class='las la-arrow-right'></i>",
-    ],
-    responsiveClass: true,
-    responsive: {
-      0: {
-        items: 1,
-        nav: false,
-        dots: true,
-      },
-
-      575: {
-        items: 2,
-        dots: false,
-      },
-
-      767: {
-        items: 2,
-        dots: true,
-      },
-
-      990: {
-        items: 3,
-        dots: false,
-      },
-      1200: {
-        items: 4,
-        dots: true,
-      },
-    },
-  });
-
-
-  // Project Slider
-
-  $(".project-slider").owlCarousel({
-    items: 1,
-    dots: false,
-    nav: true,
-    loop: true,
-    autoplay: false,
-    margin: 20,
-    navText: [
-      "<i class='las la-arrow-left'></i>",
-      "<i class='las la-arrow-right'></i>",
-    ],
-    responsive: {
-      0: {
-        items: 1,
-        nav: false,
-        dots: false,
-      },
-      600: {
-        items: 2,
-        nav: false,
-        dots: false,
-      },
-      768: {
-        items: 3,
-        nav: true,
-        dots: false,
-      },
-      1100: {
-        items: 4,
-        nav: true,
-        dots: false,
-      },
-    },
-  });
-
-  $(".project-slider-2").owlCarousel({
-    items: 1,
-    dots: false,
-    nav: true,
-    loop: true,
-    autoplay: false,
-    margin: 15,
-    navText: [
-      "<i class='las la-arrow-left'></i>",
-      "<i class='las la-arrow-right'></i>",
-    ],
-    responsive: {
-      0: {
-        items: 1,
-        nav: false,
-        dots: false,
-      },
-      600: {
-        items: 1,
-        nav: false,
-        dots: false,
-      },
-      768: {
-        items: 2,
-        nav: true,
-        dots: false,
-      },
-      1100: {
-        items: 2,
-        nav: true,
-        dots: false,
-      },
-    },
-  });
-
-
-  // Feature Slider
-
-  $(".feature_item_one").slick({
-    speed: 8000,
-    autoplay: true,
-    autoplaySpeed: 1000,
-    centerMode: true,
-    cssEase: "linear",
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    variableWidth: true,
-    infinite: true,
-    initialSlide: 1,
-    arrows: false,
-    buttons: false,
-  });
-
-
-  //Progress Bar JS
-
-  $("#bar1").barfiller({
-    barColor: "#171717",
-    duration: 5000,
-  });
-
-  $("#bar2").barfiller({
-    barColor: "#171717",
-    duration: 5000,
-  });
-
-  $("#bar3").barfiller({
-    barColor: "#171717",
-    duration: 5000,
-  });
-
-  // Nice select
-  $("select").niceSelect();
-
-  // Pure Counter
-
-  new PureCounter();
-  new PureCounter({
-    filesizing: true,
-    selector: ".filesizecount",
-    pulse: 2,
-  });
+  // Unused legacy plugins (owlCarousel, barfiller, niceSelect, PureCounter, appear) removed
+  if ($.fn.slick && $(".feature_item_one").length) {
+    $(".feature_item_one").slick({
+      speed: 8000,
+      autoplay: true,
+      autoplaySpeed: 1000,
+      centerMode: true,
+      cssEase: "linear",
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      variableWidth: true,
+      infinite: true,
+      initialSlide: 1,
+      arrows: false,
+      buttons: false,
+    });
+  }
 
   // Active Class
-
   $(".main-menu ul > li > ul li a").on("mouseover", function () {
     $(".main-menu ul > li > ul li a").removeClass("active");
     $(this).addClass("active");
   });
 
-  // Odometer js
-
-  $(".odometer").appear(function (e) {
-    var odo = $(".odometer");
-    odo.each(function () {
-      var countNumber = $(this).attr("data-count");
-      $(this).html(countNumber);
-    });
-  });
-
-
   // Masonry Filter
-
   $(window).on("load", function () {
+    if (!$.fn.isotope || !$(".project-filter").length) return;
     var e = $(".project-filter"),
       a = $("#menu-filter");
     e.isotope({
@@ -608,7 +324,7 @@
 
   // Mouse Custom Cursor removed per client request
   // Hero Slider (only initialize slick if more than 1 slide exists)
-  if ($(".hero-slider").length && $(".hero-slider").children().length > 1) {
+  if ($.fn.slick && $(".hero-slider").length && $(".hero-slider").children().length > 1) {
     $(".hero-slider").slick({
       fade: true,
       autoplay: true,
@@ -625,21 +341,23 @@
 
 
   // About Image Slider (Split Section)
-  $(".about-image-slider").slick({
-    fade: true,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    speed: 2000,
-    infinite: true,
-    cssEase: 'ease-in-out',
-    arrows: false,
-    dots: false,
-    pauseOnHover: false,
-    pauseOnFocus: false,
-  });
+  if ($.fn.slick && $(".about-image-slider").length) {
+    $(".about-image-slider").slick({
+      fade: true,
+      autoplay: true,
+      autoplaySpeed: 4000,
+      speed: 2000,
+      infinite: true,
+      cssEase: 'ease-in-out',
+      arrows: false,
+      dots: false,
+      pauseOnHover: false,
+      pauseOnFocus: false,
+    });
+  }
 
   // Projects Isotope Filter (Handled by projects-handler.js if dynamic, otherwise fallback here)
-  if ($('.project-grid').length && !$('.project-grid').hasClass('dynamic-ready')) {
+  if ($.fn.isotope && $('.project-grid').length && !$('.project-grid').hasClass('dynamic-ready')) {
     var $grid = $('.project-grid').isotope({
       itemSelector: '.grid-item',
       percentPosition: true,
@@ -702,7 +420,7 @@
   */
 
   // Project Detail Slider
-  if ($('.project-main-slider').length && !$('.project-main-slider').hasClass('slick-initialized')) {
+  if ($.fn.slick && $('.project-main-slider').length && !$('.project-main-slider').hasClass('slick-initialized')) {
     // Set background image from the img src for each slide
     $('.project-main-slider .project-slide-item').each(function () {
       var imgSrc = $(this).find('img').attr('src');

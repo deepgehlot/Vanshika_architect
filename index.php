@@ -9,41 +9,7 @@
 
     <title>Vanshika Agarwal</title>
 
-    <!-- Preconnect for Google Fonts & CDN -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!--Favicon-->
-    <link rel="icon" href="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/favicon.png" type="image/png">
-
-    <!-- Bootstrap CSS -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Line Awesome CSS -->
-    <link href="assets/css/line-awesome.min.css" rel="stylesheet">
-    <!-- Font Awesome CSS -->
-    <link href="assets/css/fontAwesomePro.css" rel="stylesheet">
-    <!-- Bar Filler CSS -->
-    <link href="assets/css/barfiller.css" rel="stylesheet">
-    <!-- Magnific Popup Video -->
-    <link href="assets/css/magnific-popup.css" rel="stylesheet">
-    <!-- Owl Carousel CSS -->
-    <link href="assets/css/owl.carousel.css" rel="stylesheet">
-    <!-- Slick Slider CSS -->
-    <link href="assets/css/slick.css" rel="stylesheet">
-    <!-- Nice Select  -->
-    <link href="assets/css/nice-select.css" rel="stylesheet">
-    <!-- Back to Top -->
-    <link href="assets/css/backToTop.css" rel="stylesheet">
-    <!-- Floating Contact Widget -->
-    <link href="assets/css/floating-contact.css?v=<?php echo $asset_ver; ?>" rel="stylesheet">
-    <!-- Metis Menu -->
-    <link href="assets/css/metismenu.css" rel="stylesheet">
-    <!-- Odometer CSS -->
-    <link href="assets/css/odometer.min.css" rel="stylesheet">
-    <!-- Style CSS -->
-    <link href="assets/css/style.css?v=<?php echo $asset_ver; ?>" rel="stylesheet">
-    <!-- Alternative Custom Style Override -->
-    <link href="assets/css/alternative-style.css?v=<?php echo $asset_ver; ?>" rel="stylesheet">
+    <?php include 'head-includes.php'; ?>
 
 </head>
 
@@ -55,7 +21,8 @@
             <div class="loader-logo-container">
                 <!-- Inner logo starts clipped out and fills inside a circular mask -->
                 <div class="loader-logo-mask">
-                    <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/logo/full_logo.png" alt="Loader Logo" class="loader-logo">
+                    <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/logo/full_logo.png" alt="Loader Logo"
+                        class="loader-logo">
                 </div>
             </div>
             <div class="loading-bar-container">
@@ -75,7 +42,8 @@
             <div class="hero-slider-area alternative-hero">
                 <div class="hero-slider">
                     <div class="hero-slider-item">
-                        <video class="hero-bg-video" autoplay loop muted playsinline preload="metadata" aria-hidden="true" tabindex="-1">
+                        <video class="hero-bg-video" autoplay loop muted playsinline preload="metadata"
+                            aria-hidden="true" tabindex="-1">
                             <source
                                 src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/WEB/Webiste Final Video_squished.mp4"
                                 type="video/mp4">
@@ -95,7 +63,7 @@
                             <!-- Left Column: Image Reveal -->
                             <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12 p-0 order-2 order-lg-1 image-col">
                                 <div class="alternative-image-reveal left-reveal ">
-                                    <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/WEB/HERITAGE%20LUXURY.webp" 
+                                    <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/WEB/HERITAGE%20LUXURY.webp"
                                         alt="Mastering Modern Heritage Luxury" decoding="async">
                                 </div>
                             </div>
@@ -128,7 +96,7 @@
                         <div class="row g-0 align-items-center">
                             <!-- Left Column: Content -->
                             <div
-                                class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12 p-0 order-1 order-lg-1 content-col d-flex align-items-center">
+                                class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-12 p-0 order-1 order-lg-1 content-col d-flex align-items-center">
                                 <div class="alternative-content-reveal left-content-reveal">
                                     <h2 class="text-uppercase">Principal <span
                                             class="d-inline d-lg-block">Architect</span></h2>
@@ -142,7 +110,7 @@
                                         elegance ensures every bespoke environment becomes a highly functional, enduring
                                         masterpiece.</p>
                                     <p>Her design philosophy is rooted in the belief that spaces should tell
-                                        stories—blending
+                                        stories&mdash;blending
                                         timeless design with contemporary innovation while prioritizing client
                                         well-being
                                         through thoughtful layouts, quality materials, and refined details.</p>
@@ -150,7 +118,7 @@
                             </div>
 
                             <!-- Right Column: Image Reveal -->
-                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12 p-0 order-2 order-lg-2 image-col">
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-12 p-0 order-2 order-lg-2 image-col">
                                 <div class="alternative-image-reveal right-reveal">
                                     <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/WEB/PRINCIPAL DESIGNER.webp"
                                         alt="Principal Architect Vanshika Agarwal" decoding="async" loading="lazy">
@@ -254,7 +222,8 @@
                         <div class="luxury-gallery-grid">
                             <!-- Item 1: Dinesh Goyal Project (Top Left: Col 1, Row 1) -->
                             <div class="gallery-item">
-                                <a href="project-detail.php?id=Dinesh" class="gallery-item-link" style="display: block; width: 100%; height: 100%; text-decoration: none;">
+                                <a href="project-detail.php?id=Dinesh" class="gallery-item-link"
+                                    style="display: block; width: 100%; height: 100%; text-decoration: none;">
                                     <div class="gallery-img-wrap">
                                         <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/dinesh goyal cover photo.webp"
                                             alt="An Eclectic Villa Jaipur" decoding="async" loading="lazy">
@@ -271,7 +240,8 @@
 
                             <!-- Item 2: Pratap Project (Top Middle: Col 2, Row 1) -->
                             <div class="gallery-item">
-                                <a href="project-detail.php?id=pratab" class="gallery-item-link" style="display: block; width: 100%; height: 100%; text-decoration: none;">
+                                <a href="project-detail.php?id=pratab" class="gallery-item-link"
+                                    style="display: block; width: 100%; height: 100%; text-decoration: none;">
                                     <div class="gallery-img-wrap">
                                         <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/pratap (3).webp"
                                             alt="A Classical Bungalow Jaipur" decoding="async" loading="lazy">
@@ -288,7 +258,8 @@
 
                             <!-- Item 3: Rajul Project (Right Column: Col 3, Spanning Rows 1 & 2) -->
                             <div class="gallery-item span-row-2 rajul-item">
-                                <a href="project-detail.php?id=Rajul" class="gallery-item-link" style="display: block; width: 100%; height: 100%; text-decoration: none;">
+                                <a href="project-detail.php?id=Rajul" class="gallery-item-link"
+                                    style="display: block; width: 100%; height: 100%; text-decoration: none;">
                                     <div class="gallery-img-wrap">
                                         <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/rajul cover photo.webp"
                                             alt="Penthouse In Jaipur" decoding="async" loading="lazy">
@@ -305,7 +276,8 @@
 
                             <!-- Item 4: Anantara Project (Bottom Left: Col 1, Row 2) -->
                             <div class="gallery-item">
-                                <a href="project-detail.php?id=Anantara" class="gallery-item-link" style="display: block; width: 100%; height: 100%; text-decoration: none;">
+                                <a href="project-detail.php?id=Anantara" class="gallery-item-link"
+                                    style="display: block; width: 100%; height: 100%; text-decoration: none;">
                                     <div class="gallery-img-wrap">
                                         <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/project photos/anantara (25).webp"
                                             alt="Anantara Jewel Bagh Hotel Jaipur" decoding="async" loading="lazy">
@@ -323,8 +295,9 @@
                             <!-- Item 5: Quote Box (Bottom Middle: Col 2, Row 2) -->
                             <div class="gallery-item gallery-text-box">
                                 <div class="text-box-inner">
-                                    <div class="quote-symbol">“</div>
-                                    <p class="quote-text">"Architecture should speak of its time and place, but yearn for timelessness."</p>
+                                    <div class="quote-symbol">&ldquo;</div>
+                                    <p class="quote-text">"Architecture should speak of its time and place, but yearn
+                                        for timelessness."</p>
                                 </div>
                             </div>
                         </div>
@@ -340,46 +313,79 @@
                                         <div class="featured-logo-item">
                                             <div class="featured-logo-card" title="Good Homes">
                                                 <svg viewBox="0 0 125 40" width="125" height="38">
-                                                    <text x="62" y="27" font-family="'Century Gothic', 'Futura', 'Montserrat', Arial, sans-serif" font-size="19" font-weight="900" text-anchor="middle" fill="#111" letter-spacing="-0.5">Good<tspan font-weight="400" fill="#333">Homes</tspan></text>
+                                                    <text x="62" y="27"
+                                                        font-family="'Century Gothic', 'Futura', 'Montserrat', Arial, sans-serif"
+                                                        font-size="19" font-weight="900" text-anchor="middle"
+                                                        fill="#111" letter-spacing="-0.5">Good<tspan font-weight="400"
+                                                            fill="#333">Homes</tspan></text>
                                                 </svg>
                                             </div>
                                         </div>
                                         <div class="featured-logo-item">
                                             <div class="featured-logo-card" title="The Times of India">
                                                 <svg viewBox="0 0 148 40" width="148" height="38">
-                                                    <text x="74" y="16" font-family="'Times New Roman', 'Playfair Display', Georgia, serif" font-size="8.5" font-weight="700" text-anchor="middle" fill="#444" letter-spacing="3.5">THE</text>
-                                                    <text x="74" y="32" font-family="'Times New Roman', 'Playfair Display', Georgia, serif" font-size="13" font-weight="900" text-anchor="middle" fill="#111" letter-spacing="1.2">TIMES OF INDIA</text>
+                                                    <text x="74" y="16"
+                                                        font-family="'Times New Roman', 'Playfair Display', Georgia, serif"
+                                                        font-size="8.5" font-weight="700" text-anchor="middle"
+                                                        fill="#444" letter-spacing="3.5">THE</text>
+                                                    <text x="74" y="32"
+                                                        font-family="'Times New Roman', 'Playfair Display', Georgia, serif"
+                                                        font-size="13" font-weight="900" text-anchor="middle"
+                                                        fill="#111" letter-spacing="1.2">TIMES OF INDIA</text>
                                                 </svg>
                                             </div>
                                         </div>
                                         <div class="featured-logo-item">
                                             <div class="featured-logo-card" title="Architecture + Design">
                                                 <svg viewBox="0 0 148 40" width="148" height="38">
-                                                    <text x="74" y="21" font-family="'Futura', 'Century Gothic', Arial, sans-serif" font-size="19" font-weight="900" text-anchor="middle" fill="#d9381e" letter-spacing="1">A<tspan fill="#111" font-weight="700">+</tspan>D</text>
-                                                    <text x="74" y="33" font-family="'Futura', 'Century Gothic', Arial, sans-serif" font-size="6" font-weight="700" text-anchor="middle" fill="#222" letter-spacing="1.5">ARCHITECTURE + DESIGN</text>
+                                                    <text x="74" y="21"
+                                                        font-family="'Futura', 'Century Gothic', Arial, sans-serif"
+                                                        font-size="19" font-weight="900" text-anchor="middle"
+                                                        fill="#d9381e" letter-spacing="1">A<tspan fill="#111"
+                                                            font-weight="700">+</tspan>D</text>
+                                                    <text x="74" y="33"
+                                                        font-family="'Futura', 'Century Gothic', Arial, sans-serif"
+                                                        font-size="6" font-weight="700" text-anchor="middle" fill="#222"
+                                                        letter-spacing="1.5">ARCHITECTURE + DESIGN</text>
                                                 </svg>
                                             </div>
                                         </div>
                                         <div class="featured-logo-item">
                                             <div class="featured-logo-card" title="Archello">
                                                 <svg viewBox="0 0 115 40" width="115" height="38">
-                                                    <text x="57" y="26" font-family="'Montserrat', 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#111" letter-spacing="-0.8">archello</text>
+                                                    <text x="57" y="26"
+                                                        font-family="'Montserrat', 'Helvetica Neue', Arial, sans-serif"
+                                                        font-size="22" font-weight="700" text-anchor="middle"
+                                                        fill="#111" letter-spacing="-0.8">archello</text>
                                                 </svg>
                                             </div>
                                         </div>
                                         <div class="featured-logo-item">
                                             <div class="featured-logo-card" title="Architects and Interiors India">
                                                 <svg viewBox="0 0 158 40" width="158" height="38">
-                                                    <text x="79" y="17" font-family="'Century Gothic', 'Futura', Arial, sans-serif" font-size="8.5" font-weight="800" text-anchor="middle" fill="#111" letter-spacing="0.8">ARCHITECT &amp; INTERIORS</text>
-                                                    <text x="79" y="31" font-family="'Century Gothic', 'Futura', Arial, sans-serif" font-size="7.5" font-weight="700" text-anchor="middle" fill="#d9381e" letter-spacing="3">INDIA</text>
+                                                    <text x="79" y="17"
+                                                        font-family="'Century Gothic', 'Futura', Arial, sans-serif"
+                                                        font-size="8.5" font-weight="800" text-anchor="middle"
+                                                        fill="#111" letter-spacing="0.8">ARCHITECT &amp;
+                                                        INTERIORS</text>
+                                                    <text x="79" y="31"
+                                                        font-family="'Century Gothic', 'Futura', Arial, sans-serif"
+                                                        font-size="7.5" font-weight="700" text-anchor="middle"
+                                                        fill="#d9381e" letter-spacing="3">INDIA</text>
                                                 </svg>
                                             </div>
                                         </div>
                                         <div class="featured-logo-item">
                                             <div class="featured-logo-card" title="Design Perspective">
                                                 <svg viewBox="0 0 142 40" width="142" height="38">
-                                                    <text x="71" y="18" font-family="'Futura', 'Century Gothic', Arial, sans-serif" font-size="11" font-weight="900" text-anchor="middle" fill="#111" letter-spacing="2">DESIGN</text>
-                                                    <text x="71" y="31" font-family="'Futura', 'Century Gothic', Arial, sans-serif" font-size="8" font-weight="600" text-anchor="middle" fill="#555" letter-spacing="1.8">PERSPECTIVE</text>
+                                                    <text x="71" y="18"
+                                                        font-family="'Futura', 'Century Gothic', Arial, sans-serif"
+                                                        font-size="11" font-weight="900" text-anchor="middle"
+                                                        fill="#111" letter-spacing="2">DESIGN</text>
+                                                    <text x="71" y="31"
+                                                        font-family="'Futura', 'Century Gothic', Arial, sans-serif"
+                                                        font-size="8" font-weight="600" text-anchor="middle" fill="#555"
+                                                        letter-spacing="1.8">PERSPECTIVE</text>
                                                 </svg>
                                             </div>
                                         </div>
@@ -388,46 +394,79 @@
                                         <div class="featured-logo-item">
                                             <div class="featured-logo-card" title="Good Homes">
                                                 <svg viewBox="0 0 125 40" width="125" height="38">
-                                                    <text x="62" y="27" font-family="'Century Gothic', 'Futura', 'Montserrat', Arial, sans-serif" font-size="19" font-weight="900" text-anchor="middle" fill="#111" letter-spacing="-0.5">Good<tspan font-weight="400" fill="#333">Homes</tspan></text>
+                                                    <text x="62" y="27"
+                                                        font-family="'Century Gothic', 'Futura', 'Montserrat', Arial, sans-serif"
+                                                        font-size="19" font-weight="900" text-anchor="middle"
+                                                        fill="#111" letter-spacing="-0.5">Good<tspan font-weight="400"
+                                                            fill="#333">Homes</tspan></text>
                                                 </svg>
                                             </div>
                                         </div>
                                         <div class="featured-logo-item">
                                             <div class="featured-logo-card" title="The Times of India">
                                                 <svg viewBox="0 0 148 40" width="148" height="38">
-                                                    <text x="74" y="16" font-family="'Times New Roman', 'Playfair Display', Georgia, serif" font-size="8.5" font-weight="700" text-anchor="middle" fill="#444" letter-spacing="3.5">THE</text>
-                                                    <text x="74" y="32" font-family="'Times New Roman', 'Playfair Display', Georgia, serif" font-size="13" font-weight="900" text-anchor="middle" fill="#111" letter-spacing="1.2">TIMES OF INDIA</text>
+                                                    <text x="74" y="16"
+                                                        font-family="'Times New Roman', 'Playfair Display', Georgia, serif"
+                                                        font-size="8.5" font-weight="700" text-anchor="middle"
+                                                        fill="#444" letter-spacing="3.5">THE</text>
+                                                    <text x="74" y="32"
+                                                        font-family="'Times New Roman', 'Playfair Display', Georgia, serif"
+                                                        font-size="13" font-weight="900" text-anchor="middle"
+                                                        fill="#111" letter-spacing="1.2">TIMES OF INDIA</text>
                                                 </svg>
                                             </div>
                                         </div>
                                         <div class="featured-logo-item">
                                             <div class="featured-logo-card" title="Architecture + Design">
                                                 <svg viewBox="0 0 148 40" width="148" height="38">
-                                                    <text x="74" y="21" font-family="'Futura', 'Century Gothic', Arial, sans-serif" font-size="19" font-weight="900" text-anchor="middle" fill="#d9381e" letter-spacing="1">A<tspan fill="#111" font-weight="700">+</tspan>D</text>
-                                                    <text x="74" y="33" font-family="'Futura', 'Century Gothic', Arial, sans-serif" font-size="6" font-weight="700" text-anchor="middle" fill="#222" letter-spacing="1.5">ARCHITECTURE + DESIGN</text>
+                                                    <text x="74" y="21"
+                                                        font-family="'Futura', 'Century Gothic', Arial, sans-serif"
+                                                        font-size="19" font-weight="900" text-anchor="middle"
+                                                        fill="#d9381e" letter-spacing="1">A<tspan fill="#111"
+                                                            font-weight="700">+</tspan>D</text>
+                                                    <text x="74" y="33"
+                                                        font-family="'Futura', 'Century Gothic', Arial, sans-serif"
+                                                        font-size="6" font-weight="700" text-anchor="middle" fill="#222"
+                                                        letter-spacing="1.5">ARCHITECTURE + DESIGN</text>
                                                 </svg>
                                             </div>
                                         </div>
                                         <div class="featured-logo-item">
                                             <div class="featured-logo-card" title="Archello">
                                                 <svg viewBox="0 0 115 40" width="115" height="38">
-                                                    <text x="57" y="26" font-family="'Montserrat', 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#111" letter-spacing="-0.8">archello</text>
+                                                    <text x="57" y="26"
+                                                        font-family="'Montserrat', 'Helvetica Neue', Arial, sans-serif"
+                                                        font-size="22" font-weight="700" text-anchor="middle"
+                                                        fill="#111" letter-spacing="-0.8">archello</text>
                                                 </svg>
                                             </div>
                                         </div>
                                         <div class="featured-logo-item">
                                             <div class="featured-logo-card" title="Architects and Interiors India">
                                                 <svg viewBox="0 0 158 40" width="158" height="38">
-                                                    <text x="79" y="17" font-family="'Century Gothic', 'Futura', Arial, sans-serif" font-size="8.5" font-weight="800" text-anchor="middle" fill="#111" letter-spacing="0.8">ARCHITECT &amp; INTERIORS</text>
-                                                    <text x="79" y="31" font-family="'Century Gothic', 'Futura', Arial, sans-serif" font-size="7.5" font-weight="700" text-anchor="middle" fill="#d9381e" letter-spacing="3">INDIA</text>
+                                                    <text x="79" y="17"
+                                                        font-family="'Century Gothic', 'Futura', Arial, sans-serif"
+                                                        font-size="8.5" font-weight="800" text-anchor="middle"
+                                                        fill="#111" letter-spacing="0.8">ARCHITECT &amp;
+                                                        INTERIORS</text>
+                                                    <text x="79" y="31"
+                                                        font-family="'Century Gothic', 'Futura', Arial, sans-serif"
+                                                        font-size="7.5" font-weight="700" text-anchor="middle"
+                                                        fill="#d9381e" letter-spacing="3">INDIA</text>
                                                 </svg>
                                             </div>
                                         </div>
                                         <div class="featured-logo-item">
                                             <div class="featured-logo-card" title="Design Perspective">
                                                 <svg viewBox="0 0 142 40" width="142" height="38">
-                                                    <text x="71" y="18" font-family="'Futura', 'Century Gothic', Arial, sans-serif" font-size="11" font-weight="900" text-anchor="middle" fill="#111" letter-spacing="2">DESIGN</text>
-                                                    <text x="71" y="31" font-family="'Futura', 'Century Gothic', Arial, sans-serif" font-size="8" font-weight="600" text-anchor="middle" fill="#555" letter-spacing="1.8">PERSPECTIVE</text>
+                                                    <text x="71" y="18"
+                                                        font-family="'Futura', 'Century Gothic', Arial, sans-serif"
+                                                        font-size="11" font-weight="900" text-anchor="middle"
+                                                        fill="#111" letter-spacing="2">DESIGN</text>
+                                                    <text x="71" y="31"
+                                                        font-family="'Futura', 'Century Gothic', Arial, sans-serif"
+                                                        font-size="8" font-weight="600" text-anchor="middle" fill="#555"
+                                                        letter-spacing="1.8">PERSPECTIVE</text>
                                                 </svg>
                                             </div>
                                         </div>
@@ -436,46 +475,79 @@
                                         <div class="featured-logo-item">
                                             <div class="featured-logo-card" title="Good Homes">
                                                 <svg viewBox="0 0 125 40" width="125" height="38">
-                                                    <text x="62" y="27" font-family="'Century Gothic', 'Futura', 'Montserrat', Arial, sans-serif" font-size="19" font-weight="900" text-anchor="middle" fill="#111" letter-spacing="-0.5">Good<tspan font-weight="400" fill="#333">Homes</tspan></text>
+                                                    <text x="62" y="27"
+                                                        font-family="'Century Gothic', 'Futura', 'Montserrat', Arial, sans-serif"
+                                                        font-size="19" font-weight="900" text-anchor="middle"
+                                                        fill="#111" letter-spacing="-0.5">Good<tspan font-weight="400"
+                                                            fill="#333">Homes</tspan></text>
                                                 </svg>
                                             </div>
                                         </div>
                                         <div class="featured-logo-item">
                                             <div class="featured-logo-card" title="The Times of India">
                                                 <svg viewBox="0 0 148 40" width="148" height="38">
-                                                    <text x="74" y="16" font-family="'Times New Roman', 'Playfair Display', Georgia, serif" font-size="8.5" font-weight="700" text-anchor="middle" fill="#444" letter-spacing="3.5">THE</text>
-                                                    <text x="74" y="32" font-family="'Times New Roman', 'Playfair Display', Georgia, serif" font-size="13" font-weight="900" text-anchor="middle" fill="#111" letter-spacing="1.2">TIMES OF INDIA</text>
+                                                    <text x="74" y="16"
+                                                        font-family="'Times New Roman', 'Playfair Display', Georgia, serif"
+                                                        font-size="8.5" font-weight="700" text-anchor="middle"
+                                                        fill="#444" letter-spacing="3.5">THE</text>
+                                                    <text x="74" y="32"
+                                                        font-family="'Times New Roman', 'Playfair Display', Georgia, serif"
+                                                        font-size="13" font-weight="900" text-anchor="middle"
+                                                        fill="#111" letter-spacing="1.2">TIMES OF INDIA</text>
                                                 </svg>
                                             </div>
                                         </div>
                                         <div class="featured-logo-item">
                                             <div class="featured-logo-card" title="Architecture + Design">
                                                 <svg viewBox="0 0 148 40" width="148" height="38">
-                                                    <text x="74" y="21" font-family="'Futura', 'Century Gothic', Arial, sans-serif" font-size="19" font-weight="900" text-anchor="middle" fill="#d9381e" letter-spacing="1">A<tspan fill="#111" font-weight="700">+</tspan>D</text>
-                                                    <text x="74" y="33" font-family="'Futura', 'Century Gothic', Arial, sans-serif" font-size="6" font-weight="700" text-anchor="middle" fill="#222" letter-spacing="1.5">ARCHITECTURE + DESIGN</text>
+                                                    <text x="74" y="21"
+                                                        font-family="'Futura', 'Century Gothic', Arial, sans-serif"
+                                                        font-size="19" font-weight="900" text-anchor="middle"
+                                                        fill="#d9381e" letter-spacing="1">A<tspan fill="#111"
+                                                            font-weight="700">+</tspan>D</text>
+                                                    <text x="74" y="33"
+                                                        font-family="'Futura', 'Century Gothic', Arial, sans-serif"
+                                                        font-size="6" font-weight="700" text-anchor="middle" fill="#222"
+                                                        letter-spacing="1.5">ARCHITECTURE + DESIGN</text>
                                                 </svg>
                                             </div>
                                         </div>
                                         <div class="featured-logo-item">
                                             <div class="featured-logo-card" title="Archello">
                                                 <svg viewBox="0 0 115 40" width="115" height="38">
-                                                    <text x="57" y="26" font-family="'Montserrat', 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#111" letter-spacing="-0.8">archello</text>
+                                                    <text x="57" y="26"
+                                                        font-family="'Montserrat', 'Helvetica Neue', Arial, sans-serif"
+                                                        font-size="22" font-weight="700" text-anchor="middle"
+                                                        fill="#111" letter-spacing="-0.8">archello</text>
                                                 </svg>
                                             </div>
                                         </div>
                                         <div class="featured-logo-item">
                                             <div class="featured-logo-card" title="Architects and Interiors India">
                                                 <svg viewBox="0 0 158 40" width="158" height="38">
-                                                    <text x="79" y="17" font-family="'Century Gothic', 'Futura', Arial, sans-serif" font-size="8.5" font-weight="800" text-anchor="middle" fill="#111" letter-spacing="0.8">ARCHITECT &amp; INTERIORS</text>
-                                                    <text x="79" y="31" font-family="'Century Gothic', 'Futura', Arial, sans-serif" font-size="7.5" font-weight="700" text-anchor="middle" fill="#d9381e" letter-spacing="3">INDIA</text>
+                                                    <text x="79" y="17"
+                                                        font-family="'Century Gothic', 'Futura', Arial, sans-serif"
+                                                        font-size="8.5" font-weight="800" text-anchor="middle"
+                                                        fill="#111" letter-spacing="0.8">ARCHITECT &amp;
+                                                        INTERIORS</text>
+                                                    <text x="79" y="31"
+                                                        font-family="'Century Gothic', 'Futura', Arial, sans-serif"
+                                                        font-size="7.5" font-weight="700" text-anchor="middle"
+                                                        fill="#d9381e" letter-spacing="3">INDIA</text>
                                                 </svg>
                                             </div>
                                         </div>
                                         <div class="featured-logo-item">
                                             <div class="featured-logo-card" title="Design Perspective">
                                                 <svg viewBox="0 0 142 40" width="142" height="38">
-                                                    <text x="71" y="18" font-family="'Futura', 'Century Gothic', Arial, sans-serif" font-size="11" font-weight="900" text-anchor="middle" fill="#111" letter-spacing="2">DESIGN</text>
-                                                    <text x="71" y="31" font-family="'Futura', 'Century Gothic', Arial, sans-serif" font-size="8" font-weight="600" text-anchor="middle" fill="#555" letter-spacing="1.8">PERSPECTIVE</text>
+                                                    <text x="71" y="18"
+                                                        font-family="'Futura', 'Century Gothic', Arial, sans-serif"
+                                                        font-size="11" font-weight="900" text-anchor="middle"
+                                                        fill="#111" letter-spacing="2">DESIGN</text>
+                                                    <text x="71" y="31"
+                                                        font-family="'Futura', 'Century Gothic', Arial, sans-serif"
+                                                        font-size="8" font-weight="600" text-anchor="middle" fill="#555"
+                                                        letter-spacing="1.8">PERSPECTIVE</text>
                                                 </svg>
                                             </div>
                                         </div>
@@ -484,46 +556,79 @@
                                         <div class="featured-logo-item">
                                             <div class="featured-logo-card" title="Good Homes">
                                                 <svg viewBox="0 0 125 40" width="125" height="38">
-                                                    <text x="62" y="27" font-family="'Century Gothic', 'Futura', 'Montserrat', Arial, sans-serif" font-size="19" font-weight="900" text-anchor="middle" fill="#111" letter-spacing="-0.5">Good<tspan font-weight="400" fill="#333">Homes</tspan></text>
+                                                    <text x="62" y="27"
+                                                        font-family="'Century Gothic', 'Futura', 'Montserrat', Arial, sans-serif"
+                                                        font-size="19" font-weight="900" text-anchor="middle"
+                                                        fill="#111" letter-spacing="-0.5">Good<tspan font-weight="400"
+                                                            fill="#333">Homes</tspan></text>
                                                 </svg>
                                             </div>
                                         </div>
                                         <div class="featured-logo-item">
                                             <div class="featured-logo-card" title="The Times of India">
                                                 <svg viewBox="0 0 148 40" width="148" height="38">
-                                                    <text x="74" y="16" font-family="'Times New Roman', 'Playfair Display', Georgia, serif" font-size="8.5" font-weight="700" text-anchor="middle" fill="#444" letter-spacing="3.5">THE</text>
-                                                    <text x="74" y="32" font-family="'Times New Roman', 'Playfair Display', Georgia, serif" font-size="13" font-weight="900" text-anchor="middle" fill="#111" letter-spacing="1.2">TIMES OF INDIA</text>
+                                                    <text x="74" y="16"
+                                                        font-family="'Times New Roman', 'Playfair Display', Georgia, serif"
+                                                        font-size="8.5" font-weight="700" text-anchor="middle"
+                                                        fill="#444" letter-spacing="3.5">THE</text>
+                                                    <text x="74" y="32"
+                                                        font-family="'Times New Roman', 'Playfair Display', Georgia, serif"
+                                                        font-size="13" font-weight="900" text-anchor="middle"
+                                                        fill="#111" letter-spacing="1.2">TIMES OF INDIA</text>
                                                 </svg>
                                             </div>
                                         </div>
                                         <div class="featured-logo-item">
                                             <div class="featured-logo-card" title="Architecture + Design">
                                                 <svg viewBox="0 0 148 40" width="148" height="38">
-                                                    <text x="74" y="21" font-family="'Futura', 'Century Gothic', Arial, sans-serif" font-size="19" font-weight="900" text-anchor="middle" fill="#d9381e" letter-spacing="1">A<tspan fill="#111" font-weight="700">+</tspan>D</text>
-                                                    <text x="74" y="33" font-family="'Futura', 'Century Gothic', Arial, sans-serif" font-size="6" font-weight="700" text-anchor="middle" fill="#222" letter-spacing="1.5">ARCHITECTURE + DESIGN</text>
+                                                    <text x="74" y="21"
+                                                        font-family="'Futura', 'Century Gothic', Arial, sans-serif"
+                                                        font-size="19" font-weight="900" text-anchor="middle"
+                                                        fill="#d9381e" letter-spacing="1">A<tspan fill="#111"
+                                                            font-weight="700">+</tspan>D</text>
+                                                    <text x="74" y="33"
+                                                        font-family="'Futura', 'Century Gothic', Arial, sans-serif"
+                                                        font-size="6" font-weight="700" text-anchor="middle" fill="#222"
+                                                        letter-spacing="1.5">ARCHITECTURE + DESIGN</text>
                                                 </svg>
                                             </div>
                                         </div>
                                         <div class="featured-logo-item">
                                             <div class="featured-logo-card" title="Archello">
                                                 <svg viewBox="0 0 115 40" width="115" height="38">
-                                                    <text x="57" y="26" font-family="'Montserrat', 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#111" letter-spacing="-0.8">archello</text>
+                                                    <text x="57" y="26"
+                                                        font-family="'Montserrat', 'Helvetica Neue', Arial, sans-serif"
+                                                        font-size="22" font-weight="700" text-anchor="middle"
+                                                        fill="#111" letter-spacing="-0.8">archello</text>
                                                 </svg>
                                             </div>
                                         </div>
                                         <div class="featured-logo-item">
                                             <div class="featured-logo-card" title="Architects and Interiors India">
                                                 <svg viewBox="0 0 158 40" width="158" height="38">
-                                                    <text x="79" y="17" font-family="'Century Gothic', 'Futura', Arial, sans-serif" font-size="8.5" font-weight="800" text-anchor="middle" fill="#111" letter-spacing="0.8">ARCHITECT &amp; INTERIORS</text>
-                                                    <text x="79" y="31" font-family="'Century Gothic', 'Futura', Arial, sans-serif" font-size="7.5" font-weight="700" text-anchor="middle" fill="#d9381e" letter-spacing="3">INDIA</text>
+                                                    <text x="79" y="17"
+                                                        font-family="'Century Gothic', 'Futura', Arial, sans-serif"
+                                                        font-size="8.5" font-weight="800" text-anchor="middle"
+                                                        fill="#111" letter-spacing="0.8">ARCHITECT &amp;
+                                                        INTERIORS</text>
+                                                    <text x="79" y="31"
+                                                        font-family="'Century Gothic', 'Futura', Arial, sans-serif"
+                                                        font-size="7.5" font-weight="700" text-anchor="middle"
+                                                        fill="#d9381e" letter-spacing="3">INDIA</text>
                                                 </svg>
                                             </div>
                                         </div>
                                         <div class="featured-logo-item">
                                             <div class="featured-logo-card" title="Design Perspective">
                                                 <svg viewBox="0 0 142 40" width="142" height="38">
-                                                    <text x="71" y="18" font-family="'Futura', 'Century Gothic', Arial, sans-serif" font-size="11" font-weight="900" text-anchor="middle" fill="#111" letter-spacing="2">DESIGN</text>
-                                                    <text x="71" y="31" font-family="'Futura', 'Century Gothic', Arial, sans-serif" font-size="8" font-weight="600" text-anchor="middle" fill="#555" letter-spacing="1.8">PERSPECTIVE</text>
+                                                    <text x="71" y="18"
+                                                        font-family="'Futura', 'Century Gothic', Arial, sans-serif"
+                                                        font-size="11" font-weight="900" text-anchor="middle"
+                                                        fill="#111" letter-spacing="2">DESIGN</text>
+                                                    <text x="71" y="31"
+                                                        font-family="'Futura', 'Century Gothic', Arial, sans-serif"
+                                                        font-size="8" font-weight="600" text-anchor="middle" fill="#555"
+                                                        letter-spacing="1.8">PERSPECTIVE</text>
                                                 </svg>
                                             </div>
                                         </div>
@@ -560,49 +665,11 @@
     <!-- Floating Contact Widget -->
     <?php include 'floating-contact.php'; ?>
 
-    <!-- jquery -->
-    <script src="assets/js/jquery-3.6.0.min.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="assets/js/bootstrap.min.js"></script>
-    <!-- Pure Counter JS -->
-    <script src="assets/js/pure-counter.js"></script>
-    <!-- Owl Carousel JS -->
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <!-- Slick Slider JS -->
-    <script src="assets/js/slick.min.js"></script>
-    <!-- Magnific Popup JS -->
-    <script src="assets/js/magnific-popup.min.js"></script>
-    <!-- Isotope JS -->
-    <script src="assets/js/isotope-3.0.6-min.js"></script>
-    <!-- Nice Select JS -->
-    <script src="assets/js/jquery.nice-select.min.js"></script>
-    <!-- Back To Top JS -->
-    <script src="assets/js/backToTop.js"></script>
-    <!-- Metis Menu JS -->
-    <script src="assets/js/metismenu.js"></script>
-    <!-- Progress Bar JS -->
-    <script src="assets/js/jquery.barfiller.js"></script>
-    <!-- Appear JS -->
-    <script src="assets/js/jquery.appear.min.js"></script>
-    <!-- Odometer JS -->
-    <script src="assets/js/odometer.min.js"></script>
-    <!-- GSAP Animation JS -->
-    <script src="assets/js/gsap.min.js"></script>
-    <script src="assets/js/gsap-scroll-to-plugin.js"></script>
-    <script src="assets/js/SplitText.min.js"></script>
-    <script src="assets/js/ScrollTrigger.min.js"></script>
-    <script src="assets/js/smoother-script.js?v=<?php echo $asset_ver; ?>"></script>
-    <script src="assets/js/heading-animation.js"></script>
-    <script src="assets/js/paragraph-animation.js"></script>
-    <!-- Projects Handler JS -->
-    <script src="assets/js/projects-handler.js?v=<?php echo $asset_ver; ?>"></script>
-    <!-- Main JS -->
-    <script src="assets/js/main.js"></script>
-
-    <!-- Alternative Theme Custom JS Animations -->
-    <script src="assets/js/alternative-interactions.js?v=<?php echo $asset_ver; ?>"></script>
-    <!-- Floating Contact JS -->
-    <script src="assets/js/floating-contact.js?v=<?php echo $asset_ver; ?>"></script>
+    <?php
+    $use_slick = true;
+    $use_projects_handler = true;
+    include 'scripts-includes.php';
+    ?>
 
 </body>
 

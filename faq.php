@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zxx">
 
 <head>
@@ -8,45 +8,7 @@
 
     <title>FAQ - Architect Vanshika</title>
 
-    <!-- Preconnect for Google Fonts & CDN -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!--Favicon-->
-    <link rel="icon" href="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/favicon.png" type="image/png">
-
-    <!-- Bootstrap CSS -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Line Awesome CSS -->
-    <link href="assets/css/line-awesome.min.css" rel="stylesheet">
-    <!-- Font Awesome CSS -->
-    <link href="assets/css/fontAwesomePro.css" rel="stylesheet">
-    <!-- Bar Filler CSS -->
-    <link href="assets/css/barfiller.css" rel="stylesheet">
-    <!-- Magnific Popup Video -->
-    <link href="assets/css/magnific-popup.css" rel="stylesheet">
-    <!-- Owl Carousel CSS -->
-    <link href="assets/css/owl.carousel.css" rel="stylesheet">
-    <!-- Slick Slider CSS -->
-    <link href="assets/css/slick.css" rel="stylesheet">
-    <!-- Nice Select  -->
-    <link href="assets/css/nice-select.css" rel="stylesheet">
-    <!-- Back to Top -->
-    <link href="assets/css/backToTop.css" rel="stylesheet">
-    <!-- Metis Menu -->
-    <link href="assets/css/metismenu.css" rel="stylesheet">
-    <!-- Odometer CSS -->
-    <link href="assets/css/odometer.min.css" rel="stylesheet">
-    <!-- Style CSS -->
-    <link href="assets/css/style.css" rel="stylesheet">
-    <!-- Alternative Custom Style Override -->
-    <link href="assets/css/alternative-style.css?v=1.6.8" rel="stylesheet">
-    <!-- Floating Contact Widget -->
-    <link href="assets/css/floating-contact.css?v=1.2.0" rel="stylesheet">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <?php include 'head-includes.php'; ?>
 
 </head>
 
@@ -261,98 +223,11 @@
     <!-- Floating Contact Widget -->
     <?php include 'floating-contact.php'; ?>
 
-    <!-- jquery -->
-    <script src="assets/js/jquery-3.6.0.min.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="assets/js/bootstrap.min.js"></script>
-    <!-- Pure Counter JS -->
-    <script src="assets/js/pure-counter.js"></script>
-    <!-- Owl Carousel JS -->
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <!-- Slick Slider JS -->
-    <script src="assets/js/slick.min.js"></script>
-    <!-- Magnific Popup JS -->
-    <script src="assets/js/magnific-popup.min.js"></script>
-    <!-- Isotope JS -->
-    <script src="assets/js/isotope-3.0.6-min.js"></script>
-    <!-- Nice Select JS -->
-    <script src="assets/js/jquery.nice-select.min.js"></script>
-    <!-- Back To Top JS -->
-    <script src="assets/js/backToTop.js"></script>
-    <!-- Metis Menu JS -->
-    <script src="assets/js/metismenu.js"></script>
-    <!-- Progress Bar JS -->
-    <script src="assets/js/jquery.barfiller.js"></script>
-    <!-- Appear JS -->
-    <script src="assets/js/jquery.appear.min.js"></script>
-    <!-- Odometer JS -->
-    <script src="assets/js/odometer.min.js"></script>
-    <!-- GSAP Animation JS -->
-    <script src="assets/js/gsap.min.js"></script>
-    <script src="assets/js/gsap-scroll-to-plugin.js"></script>
-    <script src="assets/js/SplitText.min.js"></script>
-    <script src="assets/js/ScrollTrigger.min.js"></script>
-    <script src="assets/js/smoother-script.js"></script>
-    <script src="assets/js/heading-animation.js"></script>
-    <script src="assets/js/paragraph-animation.js"></script>
-    <!-- Main JS -->
-    <script src="assets/js/main.js"></script>
-
-    <script title="FAQ Animations">
-        $(function () {
-            if (typeof gsap !== 'undefined') {
-                // Wait for preloader to be done
-                $(window).on('preloaderDone', function () {
-                    // 1. Entrance animation for Hero Section
-                    const heroTimeline = gsap.timeline();
-
-                    heroTimeline.fromTo(".faq-hero-section h1",
-                        { opacity: 0, y: 30, rotationX: -15 },
-                        { opacity: 1, y: 0, rotationX: 0, duration: 1.2, ease: "power3.out" }
-                    ).fromTo(".faq-hero-section .p-animation",
-                        { opacity: 0, y: 20 },
-                        { opacity: 1, y: 0, duration: 1, ease: "power2.out" },
-                        "-=0.8"
-                    );
-
-                    // 2. Individual reveal for each FAQ item (one by one as you scroll)
-                    gsap.utils.toArray(".faq-anim-item").forEach((item) => {
-                        gsap.from(item, {
-                            scrollTrigger: {
-                                trigger: item,
-                                start: "top 92%",
-                                once: true
-                            },
-                            y: 40,
-                            opacity: 0,
-                            duration: 1,
-                            ease: "power2.out"
-                        });
-                    });
-
-                    // 3. CTA Section reveal
-                    gsap.from(".cta-talk-section .container", {
-                        scrollTrigger: {
-                            trigger: ".cta-talk-section",
-                            start: "top 80%",
-                        },
-                        y: 60,
-                        opacity: 0,
-                        duration: 1.5,
-                        ease: "power2.out"
-                    });
-
-                    // Refresh ScrollTrigger to ensure positions are correct after DOM settle
-                    ScrollTrigger.refresh();
-                });
-            }
-        });
-    </script>
-    <!-- Floating Contact JS -->
-    <script src="assets/js/floating-contact.js?v=1.2.0"></script>
+    <?php include 'scripts-includes.php'; ?>
 
 </body>
 
 </html>
+
 
 

@@ -457,8 +457,8 @@ body.light .alternative-overlap-section {
     max-height: none !important;
     position: relative !important;
     overflow: hidden !important;
-    border-radius: 4px !important;
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08) !important;
+    /* border-radius: 4px !important; */
+    /* box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08) !important; */
   }
 
   #reveal-architect .alternative-image-reveal {
@@ -469,8 +469,8 @@ body.light .alternative-overlap-section {
     max-height: none !important;
     position: relative !important;
     overflow: hidden !important;
-    border-radius: 4px !important;
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08) !important;
+    /* border-radius: 4px !important; */
+    /* box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08) !important; */
   }
 
   #reveal-about .alternative-image-reveal img,
@@ -569,8 +569,8 @@ body.light .alternative-overlap-section {
     margin: 0 auto !important;
     position: relative !important;
     overflow: hidden !important;
-    border-radius: 6px !important;
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08) !important;
+    /* border-radius: 6px !important; */
+    /* box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08) !important; */
   }
 
   #reveal-about .alternative-image-reveal img {
@@ -9293,5 +9293,409 @@ body.light.blog-page .blog-hero-section p,
 @media (min-width: 2100px) {
   body.light.project-detail-page .project-hero-section {
     padding-top: 280px !important;
+  }
+}
+
+
+
+/* ══════════════════════════════════════════════════════════════
+   HOME PAGE — UNIFORM LEFT & RIGHT SPACING ACROSS ALL 4 SECTIONS
+   Uniform gutter (--home-px) from mobile to 24-inch screens.
+   Skipped: hero (.hero-slider-area), navbar, footer, featured-on, CTA.
+   ══════════════════════════════════════════════════════════════ */
+
+body {
+  --home-px: 20px;
+  --home-py: 40px;
+}
+
+@media (min-width: 768px) {
+  body {
+    --home-px: 40px;
+    --home-py: 55px;
+  }
+}
+
+@media (min-width: 1025px) {
+  body {
+    --home-px: 120px;
+    --home-py: 65px;
+  }
+}
+
+@media (min-width: 1281px) {
+  body {
+    --home-px: 100px;
+    --home-py: 75px;
+  }
+}
+
+@media (min-width: 1600px) {
+  body {
+    --home-px: 280px;
+    --home-py: 90px;
+  }
+}
+
+/* ── ABOUT & PRINCIPAL ARCHITECT: natural image ratio (no crop) ── */
+body.home-page #reveal-about .alternative-image-reveal,
+body.home-page #reveal-architect .alternative-image-reveal {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  min-height: 0 !important;
+  aspect-ratio: unset !important;
+  overflow: visible !important;
+  border-radius: 4px !important;
+  display: flex !important;
+  align-items: center !important;
+  box-shadow: none !important;
+}
+
+body.home-page #reveal-about .alternative-image-reveal img,
+body.home-page #reveal-architect .alternative-image-reveal img {
+  width: auto !important;
+  max-width: 100% !important;
+  height: auto !important;
+  max-height: 72vh !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  display: block !important;
+  border-radius: 4px !important;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* ── ALL SCREEN SIZES (Mobile -> 24" Desktop): exact uniform left/right spacing ── */
+body.home-page #reveal-about.about-section,
+body.home-page #reveal-architect.principal_architect {
+  padding-left: var(--home-px) !important;
+  padding-right: var(--home-px) !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+body.home-page.light #reveal-about .container-fluid,
+body.home-page.light #reveal-architect .container-fluid,
+body.home-page #reveal-about .container-fluid,
+body.home-page #reveal-architect .container-fluid {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+body.home-page #reveal-about .row,
+body.home-page #reveal-architect .row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Services Section — exact same outer padding */
+body.home-page .service-section,
+body.home-page .service-section.pt-100 {
+  padding-left: var(--home-px) !important;
+  padding-right: var(--home-px) !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+body.home-page.light .service-section .container,
+body.home-page .service-section .container,
+body.home-page.light .service-section .container-fluid,
+body.home-page .service-section .container-fluid {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+body.home-page.light:not(.services-page) .services-stacked-container,
+body.home-page .service-section .services-stacked-container,
+body.home-page .services-stacked-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  box-sizing: border-box !important;
+}
+
+body.home-page.light:not(.services-page) .service-stack-item,
+body.home-page .service-stack-item {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+}
+
+body.home-page .service-stack-item .img-curtain,
+body.home-page .service-stack-item img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+}
+
+/* Gallery Section — keep section & Featured On bar full-width, pad heading & grid with --home-px */
+body.home-page .gallery-section {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+body.home-page .gallery-section .container-fluid {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+body.home-page.light .gallery-section .row.justify-content-center,
+body.home-page.light .gallery-section .luxury-gallery-grid,
+body.home-page .gallery-section .row.justify-content-center,
+body.home-page .gallery-section .luxury-gallery-grid {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: var(--home-px) !important;
+  padding-right: var(--home-px) !important;
+  box-sizing: border-box !important;
+}
+
+/* Featured-on bar & CTA — full width */
+body.home-page .featured-on-wrapper {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+body.home-page .cta-img-area {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  border-radius: 0 !important;
+}
+
+/* ── UNIFORM VERTICAL SPACING (--home-py) ACROSS ALL 4 SECTIONS ── */
+body.home-page .scroll-overlap-content {
+  padding-top: var(--home-py) !important;
+}
+
+body.home-page #reveal-about.about-section,
+body.home-page #reveal-architect.principal_architect,
+body.home-page .service-section,
+body.home-page .service-section.pt-100 {
+  padding-top: var(--home-py) !important;
+  padding-bottom: var(--home-py) !important;
+}
+
+body.home-page .gallery-section {
+  padding-top: var(--home-py) !important;
+}
+
+/* ── DESKTOP (>= 992px): align outer edges flush with --home-px & eliminate empty gap ── */
+@media (min-width: 992px) {
+
+  body.home-page #reveal-about .row,
+  body.home-page #reveal-architect .row {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: clamp(32px, 4vw, 60px) !important;
+  }
+
+  /* Exact 50-50 column width for both image and content columns */
+  body.home-page #reveal-about .image-col,
+  body.home-page #reveal-architect .image-col,
+  body.home-page #reveal-about .content-col,
+  body.home-page #reveal-architect .content-col {
+    flex: 1 1 0% !important;
+    width: 50% !important;
+    max-width: 50% !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+  }
+
+  body.home-page #reveal-about .alternative-image-reveal,
+  body.home-page #reveal-architect .alternative-image-reveal {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  body.home-page #reveal-about .alternative-image-reveal {
+    justify-content: flex-start !important;
+  }
+
+  body.home-page #reveal-architect .alternative-image-reveal {
+    justify-content: flex-end !important;
+  }
+
+  body.home-page #reveal-about .alternative-content-reveal,
+  body.home-page #reveal-architect .alternative-content-reveal {
+    width: 100% !important;
+  }
+}
+
+/* ── DESKTOP > 1280px: keep card/grid heights fitting cleanly in viewport ── */
+@media (min-width: 1281px) {
+
+  body.home-page .services-stacked-container {
+    padding-bottom: 20px !important;
+  }
+
+  body.home-page.light:not(.services-page) .service-stack-item,
+  body.home-page .service-stack-item {
+    height: clamp(240px, 27vh, 360px) !important;
+  }
+
+  body.home-page.light .gallery-section .luxury-gallery-grid,
+  body.home-page .gallery-section .luxury-gallery-grid {
+    grid-template-rows: repeat(2, clamp(200px, 24vh, 290px)) !important;
+  }
+}
+
+/* ── MOBILE & TABLET (< 992px): stacked columns align flush with --home-px ── */
+@media (max-width: 991px) {
+
+  body.home-page #reveal-about .image-col,
+  body.home-page #reveal-architect .image-col,
+  body.home-page #reveal-about .content-col,
+  body.home-page #reveal-architect .content-col {
+    padding: 12px 0 !important;
+  }
+
+  body.home-page #reveal-about .alternative-image-reveal,
+  body.home-page #reveal-architect .alternative-image-reveal {
+    justify-content: center !important;
+  }
+
+  body.home-page #reveal-about .alternative-image-reveal img,
+  body.home-page #reveal-architect .alternative-image-reveal img {
+    width: 100% !important;
+    max-height: none !important;
+    margin: 0 auto !important;
+  }
+}
+
+
+/* ══════════════════════════════════════════════════════════════
+   ALL INNER PAGES — UNIFORM LEFT & RIGHT SPACING (--home-px)
+   Matches index.php spacing across every page & responsive screen.
+   Excludes navbar (.header-area) and footer (.footer-area/.footer-bottom).
+   ══════════════════════════════════════════════════════════════ */
+body:not(.home-page) .project-hero-section .container,
+body:not(.home-page) .project-hero-section .container-fluid,
+body:not(.home-page) .about-editorial-main-section .container-fluid,
+body:not(.home-page) .about-full-length-cta-section .container-fluid,
+body:not(.home-page) .awards-features-main-section .container-fluid,
+body:not(.home-page) .blog-hero-section .container,
+body:not(.home-page) .blog-hero-section .container-fluid,
+body:not(.home-page) .blog-section .container-fluid,
+body:not(.home-page) .blog-detail-section .container,
+body:not(.home-page) .contact-form-section .container-fluid,
+body:not(.home-page) .contact-map-section .container-fluid,
+body:not(.home-page) .faq-hero-section .container,
+body:not(.home-page) .faq-section .container,
+body:not(.home-page) .cta-talk-section .container,
+body:not(.home-page) .gallery-hero-section .container-fluid,
+body:not(.home-page) .gallery-grid-section .container-fluid,
+body:not(.home-page) .project-gallery-section .container-fluid,
+body.project-detail-page .container[style*="max-width"],
+body:not(.home-page) .v-services-section .container-fluid {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding-left: var(--home-px) !important;
+  padding-right: var(--home-px) !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* Services page: prevent double horizontal padding on .services-stacked-container */
+body.light.services-page .v-services-section .services-stacked-container,
+body.services-page .services-stacked-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* Projects page: guarantee 3 columns on large screens (992px+ & 24-inch displays) */
+@media (min-width: 992px) {
+  body.light.projects-page .project-grid .grid-item {
+    width: 33.3333% !important;
+    flex: 0 0 33.3333% !important;
+    max-width: 33.3333% !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   AWARDS PAGE — BOTH AWARD IMAGES FULLY VISIBLE ON SCREEN
+   Preserves exact image aspect ratios (no crop) across all viewports.
+   ══════════════════════════════════════════════════════════════ */
+body.light.awards-page .project-hero-section {
+  padding-bottom: 16px !important;
+}
+
+body.light.awards-page .project-hero-section h1 {
+  margin-bottom: 10px !important;
+}
+
+body.light.awards-page .awards-features-main-section {
+  padding-top: clamp(24px, 3vh, 40px) !important;
+}
+
+body.light.awards-page .awards-profile-row {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: clamp(16px, 2.5vw, 36px) !important;
+}
+
+@media (min-width: 768px) {
+  body.light.awards-page .awards-profile-row > [class*="col-"] {
+    flex: 0 0 auto !important;
+    width: auto !important;
+    max-width: 48% !important;
+    padding: 0 !important;
+    margin-top: 0 !important;
+  }
+}
+
+body.light.awards-page .awards-single-profile-card {
+  max-width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin-bottom: 0 !important;
+}
+
+body.light.awards-page .awards-single-profile-img {
+  width: auto !important;
+  max-width: 100% !important;
+  height: auto !important;
+  max-height: clamp(220px, 45vh, 450px) !important;
+  object-fit: contain !important;
+  margin: 0 auto !important;
+  border-radius: 4px !important;
+}
+
+@media (max-width: 767px) {
+  body.light.awards-page .awards-profile-row {
+    gap: 16px !important;
+  }
+
+  body.light.awards-page .awards-single-profile-img {
+    max-height: 30vh !important;
   }
 }
