@@ -22,13 +22,14 @@
                             <!-- Center Logo -->
                             <div class="logo text-center header-nav-logo" style="flex: 0 0 auto; padding: 0 15px;">
                                 <a href="index.php" class="logo">
-                                    <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/logo/full_logo.png" alt="Vanshika Logo"
-                                        style="max-height: 48%;">
+                                    <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/logo/full_logo.png"
+                                        alt="Vanshika Logo" style="max-height: 48%;">
                                 </a>
                             </div>
 
                             <!-- Right Menu & CTA -->
-                            <div class="d-flex align-items-center justify-content-end header-nav-right flex-nowrap" style="flex: 1 1 auto;">
+                            <div class="d-flex align-items-center justify-content-end header-nav-right flex-nowrap"
+                                style="flex: 1 1 auto;">
                                 <div class="main-menu header-menu-right" style="margin-right: 25px;">
                                     <ul>
                                         <li><a class="navlink" href="gallery.php"
@@ -50,8 +51,8 @@
                     <div class="col-8 d-block d-xl-none">
                         <div class="logo">
                             <a href="index.php" class="logo">
-                                <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/logo/full_logo.png" alt="Vanshika Logo"
-                                    style="max-height: 60px; width: auto;">
+                                <img src="https://pub-3adc0bb6be604b0185c926c3b970a081.r2.dev/logo/full_logo.png"
+                                    alt="Vanshika Logo" style="max-height: 60px; width: auto;">
                             </a>
                         </div>
                     </div>
@@ -77,9 +78,9 @@
                                     </ul>
                                 </nav>
                                 <div class="action-bar">
-                                    <a href="mailto:info@Vanshika.com"><i
-                                            class="las la-envelope"></i>info@Vanshika.com</a>
-                                    <a href="tel:123-456-7890"><i class="fal fa-phone"></i>123-456-7890</a>
+                                    <a href="mailto:contact@vanshikaagarwaldesigns.com"><i
+                                            class="las la-envelope"></i>contact@vanshikaagarwaldesigns.com</a>
+                                    <a href="tel:+918504996971"><i class="fal fa-phone"></i>+91 85049 96971</a>
 
                                     <a href="contact.php" class="theme-btn"
                                         style="padding: 12px 25px; text-transform: uppercase; font-size: 13px; line-height: 1; border-radius: 30px; margin-top: 20px;">Let's
