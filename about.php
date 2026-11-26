@@ -65,7 +65,7 @@
                             </div>
 
                             <!-- Right: Editorial Content / Philosophy Story -->
-                            <div class="col-lg-7 col-md-7 col-12 ps-lg-5">
+                            <div class="col-lg-7 col-md-7 col-12">
                                 <div class="about-story-content">
                                     <h2 class="about-editorial-title">Meet the founder.</h2>
                                     <p class="about-lead-text">

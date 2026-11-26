@@ -9776,3 +9776,89 @@ body.light.awards-page .awards-single-profile-img {
     background-color: #ffffff !important;
   }
 }
+
+/* ══════════════════════════════════════════════════════════════
+   ABOUT PAGE — FIT "MEET THE FOUNDER" SECTION COMPLETELY ON SCREEN (> 1000px)
+   Removes wasted hero/section top padding & tightens vertical rhythm.
+   ══════════════════════════════════════════════════════════════ */
+@media (min-width: 1000px) {
+  body.light.about-page .project-hero-section {
+    padding-top: clamp(130px, 13vh, 155px) !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  body.light.about-page .about-editorial-main-section {
+    padding-top: 8px !important;
+    margin-top: 0 !important;
+  }
+
+  body.light.about-page .about-profile-story-row {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    gap: clamp(24px, 3vw, 44px) !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 24px !important;
+  }
+
+  body.light.about-page .about-profile-story-row > .col-lg-5 {
+    flex: 0 0 auto !important;
+    width: auto !important;
+    max-width: 45% !important;
+    padding: 0 !important;
+  }
+
+  body.light.about-page .about-profile-story-row > .col-lg-7 {
+    flex: 1 1 0% !important;
+    width: auto !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+  }
+
+  body.light.about-page .about-profile-box {
+    max-width: none !important;
+    margin: 0 !important;
+  }
+
+  body.light.about-page .about-single-profile-card {
+    display: flex !important;
+    justify-content: flex-start !important;
+  }
+
+  body.light.about-page .about-single-profile-img {
+    width: auto !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: clamp(280px, 52vh, 500px) !important;
+    object-fit: contain !important;
+  }
+
+  body.light.about-page .about-profile-meta {
+    padding-top: 10px !important;
+  }
+
+  body.light.about-page .about-editorial-title {
+    margin-bottom: 14px !important;
+  }
+
+  body.light.about-page .about-lead-text,
+  body.light.about-page .about-body-text {
+    line-height: 1.65 !important;
+    margin-bottom: 12px !important;
+  }
+
+  body.light.about-page .about-editorial-quote {
+    margin: 14px 0 !important;
+    font-size: clamp(16px, 1.3vw, 20px) !important;
+    line-height: 1.4 !important;
+  }
+}
+
+@media (min-width: 1600px) {
+  body.light.about-page .project-hero-section {
+    padding-top: clamp(185px, 15vh, 225px) !important;
+  }
+}
